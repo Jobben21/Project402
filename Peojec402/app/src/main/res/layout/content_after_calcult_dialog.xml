@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_light_transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="84dp"
+                    android:layout_height="61dp"
+                    app:srcCompat="@drawable/mt"
+                    android:id="@+id/imageView8"
+                    android:scaleType="fitXY"
+                    android:paddingRight="20dp"
+                    android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.23">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameofblood"
+                        android:layout_weight="0.13"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/BMR"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:text="@string/BMR2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView64"
+                        android:layout_weight="0.13" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ligthGray" />
+
+            <TextView
+                android:text="เกณฑ์ดัชนีมวลกาย"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView82"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="50dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="น้อยกว่า 18.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView76"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="18.5 - 22.9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView75"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="23.0 - 24.9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView73"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="25.0 - 29.9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView74"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="มากกว่า 30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView54"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="น้ำหนักต่ำกว่าเกณฑ์"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView81"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="สมส่วน"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView80"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="น้ำหนักเกิน"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView79"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="โรคอ้วน"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView78"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:text="โรคอ้วนอันตราย"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView77"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="ปิด"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/close_dialog_bmi"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:textSize="18sp"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
