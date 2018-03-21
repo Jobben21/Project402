@@ -78,7 +78,7 @@ public class AfterBldT extends AppCompatActivity {
             }
         });*/
 
-        sodiumtt = (ImageButton)findViewById(R.id.sodiun_tt);
+      //  sodiumtt = (ImageButton)findViewById(R.id.sodiun_tt);
         potasstt = (ImageButton)findViewById(R.id.potassi_tt);
         cholett = (ImageButton)findViewById(R.id.cl_tt);
         ldltt = (ImageButton)findViewById(R.id.ldl_tt);
@@ -307,9 +307,7 @@ public class AfterBldT extends AppCompatActivity {
     public void seekBar(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1){
 
         seekBar = (SeekBar)findViewById(R.id.seekBar);
-
         seekBarMin = (TextView)findViewById(R.id.seekbarmin);
-
 
         seekBar.setMax(100);
         seekBar.setProgress((int) sugar_ab1);

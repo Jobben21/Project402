@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <TextView
                         android:text="คำอธิบาย :"
@@ -139,7 +139,9 @@
                     android:layout_margin="5dp"
                     app:cardElevation="3dp"
                     android:animateLayoutChanges="true"
-                    android:animationCache="false">
+                    android:animationCache="false"
+                    android:visibility="gone"
+                    android:id="@+id/sugar_bd">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -242,15 +244,6 @@
                             </LinearLayout>
 
 
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="@color/ligthGray"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:visibility="gone" />
-
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
@@ -270,11 +263,12 @@
                                     android:paddingRight="5dp"
                                     android:paddingLeft="5dp"
                                     android:thumbTint="@color/colorPrimary"
-                                    android:progressTint="@color/colorPrimary"
+                                    android:progressTint="@color/sugar"
                                     android:progressBackgroundTint="@color/cardview_shadow_start_color"
                                     android:clickable="true"
                                     android:contextClickable="true"
-                                    android:contentDescription="good" />
+                                    android:contentDescription="good"
+                                    android:tickMark="@drawable/tickmark" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -406,99 +400,150 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:id="@+id/sodium_bd"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:padding="@dimen/shape_size"
                             android:layout_marginLeft="5dp"
-                            android:id="@+id/HeaderLayout">
-
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:paddingRight="10dp"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:id="@+id/image1" />
+                            android:id="@+id/HeaderLayout2">
 
                             <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="5dp">
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:text="@string/sodium2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1" />
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:paddingRight="10dp"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/image1" />
 
-                                <TextView
-                                    android:text="@string/sodium"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:textAlignment="center"
-                                android:paddingLeft="55dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/sodium_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView56" />
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp">
+
+                                    <TextView
+                                        android:text="@string/sodium2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="@string/sodium"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="16sp"
+                                        android:layout_weight="1" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:paddingLeft="55dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/sodium_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView56" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/sodiun_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="35dp" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    style="@android:style/Widget.Material.SeekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="10"
+                                    android:progress="3"
+                                    android:id="@+id/seekBar2"
+                                    android:progressTint="@color/sodium"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView104"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue2"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView98"
+                                        android:layout_weight="1"
+                                        android:textAlignment="textEnd" />
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
+
+
+
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/Childlayout"
+                            android:id="@+id/Childlayout2"
                             android:animateLayoutChanges="true"
                             android:padding="15dp"
-                            android:visibility="gone">
+                            android:visibility="visible">
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -506,7 +551,7 @@
                                 android:id="@+id/nameofblood"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="5dp"
-                                android:text="ระดับน้ำตาล"
+                                android:text="ระดับโซเดียม"
                                 android:textStyle="normal|bold"
                                 android:textSize="18sp" />
 
@@ -528,7 +573,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/dialog_header"
-                                android:text="เกณฑ์มาตราฐานปริมาณน้ำตาลในเลือด "
+                                android:text="เกณฑ์มาตราฐานปริมาณนโซเดียมในเลือด "
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
@@ -536,7 +581,7 @@
                                 android:textAlignment="center" />
 
                             <TextView
-                                android:text="@string/blood_normal"
+                                android:text="@string/sodium_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
@@ -584,7 +629,9 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/potassium_ab">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -592,90 +639,223 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:layout_marginLeft="5dp"
-                            android:padding="@dimen/shape_size">
-
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:paddingRight="10dp"
-                                android:id="@+id/image2" />
+                            android:padding="@dimen/shape_size"
+                            android:id="@+id/HeaderLayout3">
 
                             <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="5dp">
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:text="@string/potassium2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1"
-                                    android:textStyle="normal|bold" />
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:paddingRight="10dp"
+                                    android:id="@+id/image2" />
 
-                                <TextView
-                                    android:text="@string/potassium"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:textAlignment="center"
-                                android:paddingLeft="35dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/potassium_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp"
-                                    android:elevation="0dp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView57" />
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp">
 
+                                    <TextView
+                                        android:text="@string/potassium2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:text="@string/potassium"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textSize="16sp"
+                                        android:layout_weight="1" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:paddingLeft="35dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/potassium_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp"
+                                        android:elevation="0dp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView57" />
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:layout_width="41dp"
+                                    android:layout_height="43dp"
+                                    app:srcCompat="@drawable/information"
+                                    android:id="@+id/potassi_tt"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="30dp" />
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/potassi_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="30dp" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar3"
+                                    android:progressTint="@color/potassium"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_margin="5dp">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView107"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue3"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView105"
+                                        android:layout_weight="1"
+                                        android:textAlignment="textEnd" />
+                                </LinearLayout>
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                        <View
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
+                            android:layout_height="match_parent"
+                            android:id="@+id/Childlayout3"
+                            android:animateLayoutChanges="true"
+                            android:padding="15dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameofblood"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp"
+                                android:text="ระดับโพเเทสเซียม"
+                                android:textStyle="normal|bold"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:text="Fasting blood sugar (FBS) "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Englishname"
+                                android:layout_weight="0.13" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ligthGray"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/dialog_header"
+                                android:text="เกณฑ์มาตราฐานปริมาณนโพเเทสเซียมในเลือด "
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:text="@string/sodium_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloood_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView72"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.13" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
+
+
 
                 </android.support.v7.widget.CardView>
 
@@ -684,7 +864,9 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/choles_bd">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -692,86 +874,228 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:padding="@dimen/shape_size"
-                            android:layout_marginLeft="5dp">
-
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:paddingRight="10dp"
-                                android:id="@+id/image3" />
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/HeaderLayout4">
 
                             <LinearLayout
-                                android:orientation="vertical"
+                                android:orientation="horizontal"
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="5dp">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:text="@string/colesteral2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1" />
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:paddingRight="10dp"
+                                    android:id="@+id/image3" />
 
-                                <TextView
-                                    android:text="@string/colesteral"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:paddingLeft="13dp"
-                                android:paddingRight="5dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/cl_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp">
+
+                                    <TextView
+                                        android:text="@string/colesteral2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="@string/colesteral"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="16sp"
+                                        android:layout_weight="1" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:paddingLeft="13dp"
+                                    android:paddingRight="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/cl_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView58" />
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:layout_width="41dp"
+                                    android:layout_height="43dp"
+                                    app:srcCompat="@drawable/information"
+                                    android:id="@+id/cl_tt"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    style="@style/Widget.AppCompat.SeekBar"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView58" />
+                                    android:max="10"
+                                    android:progress="3"
+                                    android:id="@+id/seekBar4"
+                                    android:progressTint="@color/choles"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_margin="5dp">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView110"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue4"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView108"
+                                        android:layout_weight="1"
+                                        android:textAlignment="textEnd" />
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/cl_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="25dp" />
 
                         </LinearLayout>
-
-                        <View
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
+                            android:layout_height="match_parent"
+                            android:id="@+id/Childlayout4"
+                            android:animateLayoutChanges="true"
+                            android:padding="15dp"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.13"></LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameofblood"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp"
+                                android:text="ระดับไขมันในเส้นเลือด"
+                                android:textStyle="normal|bold"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:text="Fasting blood sugar (FBS) "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Englishname"
+                                android:layout_weight="0.13" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ligthGray"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/dialog_header"
+                                android:text="เกณฑ์มาตราฐาน"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:text="@string/sodium_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloood_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView72"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.13" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -782,7 +1106,9 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/ldl_bd">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -790,86 +1116,218 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:layout_marginLeft="5dp"
-                            android:padding="@dimen/shape_size">
-
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:paddingRight="10dp"
-                                android:id="@+id/image4" />
+                            android:padding="@dimen/shape_size"
+                            android:id="@+id/HeaderLayout5">
 
                             <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="5dp">
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
-                                <TextView
-                                    android:text="@string/hdl2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1" />
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:paddingRight="10dp"
+                                    android:id="@+id/image4" />
 
-                                <TextView
-                                    android:text="@string/ldl"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:paddingLeft="13dp"
-                                android:paddingRight="5dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/ldl_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp"
-                                    android:elevation="0dp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView59" />
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp">
 
+                                    <TextView
+                                        android:text="@string/hdl2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:text="@string/ldl"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:paddingLeft="13dp"
+                                    android:paddingRight="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/ldl_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp"
+                                        android:elevation="0dp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView59" />
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:layout_width="41dp"
+                                    android:layout_height="43dp"
+                                    app:srcCompat="@drawable/information"
+                                    android:id="@+id/ldl_tt"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="25dp" />
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/ldl_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="25dp" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    style="@style/Widget.AppCompat.SeekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="10"
+                                    android:progress="3"
+                                    android:id="@+id/seekBar5"
+                                    android:progressTint="@color/ldl"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_margin="5dp">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView113"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue5"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView111"
+                                        android:layout_weight="1"
+                                        android:textAlignment="textEnd" />
+                                </LinearLayout>
+                            </LinearLayout>
 
                         </LinearLayout>
-                        <View
+
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
+                            android:layout_height="match_parent"
+                            android:id="@+id/Childlayout5"
+                            android:animateLayoutChanges="true"
+                            android:padding="15dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameofblood"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp"
+                                android:text="ระดับไขมันในเลือด"
+                                android:textStyle="normal|bold"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:text="Fasting blood sugar (FBS) "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Englishname"
+                                android:layout_weight="0.13" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ligthGray"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/dialog_header"
+                                android:text="เกณฑ์มาตราฐาน"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:text="@string/sodium_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloood_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView72"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.13" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -880,7 +1338,9 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/hdl_bd">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -888,87 +1348,222 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@android:drawable/screen_background_light_transparent"
-                            android:layout_marginLeft="5dp"
-                            android:padding="@dimen/shape_size">
+                            android:id="@+id/HeaderLayout6">
 
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:paddingRight="10dp"
-                                android:id="@+id/image5" />
+                                android:layout_marginLeft="5dp"
+                                android:padding="@dimen/shape_size">
 
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="5dp">
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:paddingRight="10dp"
+                                    android:id="@+id/image5" />
 
-                                <TextView
-                                    android:text="@string/hdl2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1" />
-
-                                <TextView
-                                    android:text="@string/hdl"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:paddingLeft="13dp"
-                                android:paddingRight="5dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/hdl_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp"
-                                    android:elevation="0dp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView60" />
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="5dp">
+
+                                    <TextView
+                                        android:text="@string/hdl2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="@string/hdl"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="16sp"
+                                        android:layout_weight="1" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:paddingLeft="13dp"
+                                    android:paddingRight="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/hdl_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp"
+                                        android:elevation="0dp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView60" />
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:layout_width="41dp"
+                                    android:layout_height="43dp"
+                                    app:srcCompat="@drawable/information"
+                                    android:id="@+id/hdl_tt"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="25dp" />
 
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/hdl_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="25dp" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    style="@style/Widget.AppCompat.SeekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="10"
+                                    android:progress="3"
+                                    android:id="@+id/seekBar6"
+                                    android:progressTint="@color/hdl"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_margin="5dp">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView116"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue6"
+                                        android:layout_weight="1"
+                                        android:textAlignment="center" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView114"
+                                        android:layout_weight="1"
+                                        android:textAlignment="textEnd" />
+                                </LinearLayout>
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                        <View
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
+                            android:layout_height="match_parent"
+                            android:id="@+id/Childlayout6"
+                            android:animateLayoutChanges="true"
+                            android:padding="15dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameofblood"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp"
+                                android:text="ระดับไขมันในเส้นเลือด"
+                                android:textStyle="normal|bold"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:text="Fasting blood sugar (FBS) "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Englishname"
+                                android:layout_weight="0.13" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ligthGray"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/dialog_header"
+                                android:text="เกณฑ์มาตราฐาน"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:text="@string/sodium_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloood_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:paddingLeft="28dp" />
+
+                            <TextView
+                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView72"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.13" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -979,7 +1574,8 @@
                     android:layout_height="match_parent"
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    android:id="@+id/trigry_bd">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -987,84 +1583,229 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@android:drawable/screen_background_light_transparent"
-                            android:layout_marginLeft="5dp"
-                            android:padding="@dimen/shape_size">
+                            android:id="@+id/HeaderLayout7">
 
-                            <ImageButton
-                                app:srcCompat="@drawable/normal"
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:background="@android:drawable/screen_background_light_transparent"
-                                android:scaleType="fitCenter"
-                                android:layout_width="56dp"
-                                android:layout_height="50dp"
-                                android:paddingRight="10dp"
-                                android:id="@+id/image6" />
+                                android:layout_marginLeft="5dp"
+                                android:padding="@dimen/shape_size">
 
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="10dp">
+                                <ImageButton
+                                    app:srcCompat="@drawable/normal"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:layout_width="56dp"
+                                    android:layout_height="50dp"
+                                    android:paddingRight="10dp"
+                                    android:id="@+id/image6" />
 
-                                <TextView
-                                    android:text="@string/trigri2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView53"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="14sp"
-                                    android:layout_weight="1" />
-
-                                <TextView
-                                    android:text="@string/trigri"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView50"
-                                    android:textSize="16sp"
-                                    android:layout_weight="1" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:paddingLeft="17dp"
-                                android:paddingRight="5dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/tri_ab2"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="@string/ml"
+                                <LinearLayout
+                                    android:orientation="vertical"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView61" />
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp">
+
+                                    <TextView
+                                        android:text="@string/trigri2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView53"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1" />
+
+                                    <TextView
+                                        android:text="@string/trigri"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView50"
+                                        android:textSize="16sp"
+                                        android:layout_weight="1" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:paddingLeft="17dp"
+                                    android:paddingRight="5dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/tri_ab2"
+                                        android:textStyle="normal|bold"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:text="@string/ml"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView61" />
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:layout_width="41dp"
+                                    android:layout_height="43dp"
+                                    app:srcCompat="@drawable/information"
+                                    android:id="@+id/tri_tt"
+                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="25dp" />
 
                             </LinearLayout>
 
-                            <ImageButton
-                                android:layout_width="41dp"
-                                android:layout_height="43dp"
-                                app:srcCompat="@drawable/information"
-                                android:id="@+id/tri_tt"
-                                android:background="@android:drawable/screen_background_light_transparent"
-                                style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                android:scaleType="fitXY"
-                                android:layout_marginLeft="25dp" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <SeekBar
+                                    style="@style/Widget.AppCompat.SeekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="10"
+                                    android:progress="3"
+                                    android:id="@+id/seekBar7"
+                                    android:progressTint="@color/tri"
+                                    android:thumbTint="?attr/colorControlHighlight" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:padding="10dp"
+                                    android:layout_margin="5dp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:text="@string/min"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView119"
+                                        android:textAlignment="textStart"
+                                        android:layout_weight="0.39" />
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/seekbarvalue7"
+                                        android:textAlignment="center"
+                                        android:layout_width="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_weight="0.35" />
+
+                                    <TextView
+                                        android:text="@string/max"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView117"
+                                        android:textAlignment="textEnd"
+                                        android:layout_weight="0.21" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Childlayout7"
+                            android:animateLayoutChanges="true"
+                            android:padding="15dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/nameofblood"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp"
+                                android:text="ระดับไขมันในเส้นเลือด"
+                                android:textStyle="normal|bold"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:text="Triglyceride"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/Englishname"
+                                android:layout_weight="0.13" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ligthGray"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/dialog_header"
+                                android:text="เกณฑ์มาตราฐาน"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:textAlignment="textStart" />
+
+                            <TextView
+                                android:text="@string/tri_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloood_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView99"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView72"
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.13" />
 
                         </LinearLayout>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
 
                     </LinearLayout>
 
@@ -1084,7 +1825,7 @@
                         android:text="เมนูหลัก"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button2"
+                        android:id="@+id/home"
                         style="@style/Widget.AppCompat.Button.Colored"
                         android:background="@drawable/mybutton"
                         android:textColor="@color/button_text_color"

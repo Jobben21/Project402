@@ -125,8 +125,37 @@
 
     <!-- Description blood-->
 
+    <string name="min">ระดับต่ำ 0</string>
+    <string name="max">ระดับสูง 200</string>
+
     <string name="blood_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  70-120 mg/dl</string>
     <string name="blood_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
     <string name="blood_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="sodium_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  135-145 mg/dl</string>
+    <string name="sodium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
+    <string name="sodium_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="potassium_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  70-120 mg/dl</string>
+    <string name="potassium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
+    <string name="potassium_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="hdl_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  40-149 mg/dl</string>
+    <string name="hdl_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
+    <string name="hdl_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="ldl_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  0-159 mg/dl</string>
+    <string name="ldl_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
+    <string name="ldl_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="chl_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  150-199 mg/dl</string>
+    <string name="chl_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dL</string>
+    <string name="chl_abnormal" >ค่ามากกว่าปกติ \u0020\u0020\u0020\u0020  มากกว่า 126 mg/dL</string>
+
+    <string name="tri_normal"   >ค่ามาตรฐาน  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  40-149 mg/dl</string>
+    <string name="tri_abnormal2">ค่่ากือบสูง  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  150-199 mg/dl</string>
+    <string name="tri_abnormal" >ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 200-499 mg/dl</string>
+    <string name="tri_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  500 mg/dl</string>
+
 
 </resources>
