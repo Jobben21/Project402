@@ -171,7 +171,8 @@
                             android:layout_marginTop="5dp"
                             android:elevation="0dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="70 - 120" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -252,7 +253,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="135 - 145" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -334,7 +336,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="3.5 - 5.0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -415,7 +418,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint=">200" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -496,7 +500,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="100" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -577,7 +582,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="40 - 50" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -660,7 +666,8 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:hint="40 - 149" />
                     </LinearLayout>
 
                     <LinearLayout
