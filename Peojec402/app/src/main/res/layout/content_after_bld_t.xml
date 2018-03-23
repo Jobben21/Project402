@@ -140,7 +140,7 @@
                     app:cardElevation="3dp"
                     android:animateLayoutChanges="true"
                     android:animationCache="false"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/sugar_bd">
 
                     <LinearLayout
@@ -295,7 +295,7 @@
                                         android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="ระดับสูง 100"
+                                        android:text="ระดับสูง 200"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarmax"
@@ -325,14 +325,16 @@
                                 android:layout_marginTop="5dp"
                                 android:text="ระดับน้ำตาล"
                                 android:textStyle="normal|bold"
-                                android:textSize="18sp" />
+                                android:textSize="18sp"
+                                android:textAlignment="textStart" />
 
                             <TextView
                                 android:text="Fasting blood sugar (FBS) "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:textAlignment="textStart" />
 
                             <View
                                 android:layout_width="match_parent"
@@ -345,12 +347,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/dialog_header"
-                                android:text="เกณฑ์มาตราฐานปริมาณน้ำตาลในเลือด "
+                                android:text="เกณฑ์มาตราฐาน"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
                                 android:text="@string/blood_normal"
@@ -358,27 +360,24 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
-
-                            <TextView
-                                android:text="@string/blood_abnormal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
-                                android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
                                 android:text="@string/blood_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:id="@+id/blood_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/blood_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -402,7 +401,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:id="@+id/sodium_bd"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -495,10 +494,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar2"
                                     android:progressTint="@color/sodium"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?attr/colorControlHighlight"
+                                    android:clickable="false" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -511,7 +510,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView104"
-                                        android:layout_weight="1" />
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -519,15 +519,17 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue2"
                                         android:layout_weight="1"
-                                        android:textAlignment="center" />
+                                        android:textAlignment="center"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView98"
                                         android:layout_weight="1"
-                                        android:textAlignment="textEnd" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -556,7 +558,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:text="Fasting blood sugar (FBS) "
+                                android:text="Sodium"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
@@ -573,12 +575,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/dialog_header"
-                                android:text="เกณฑ์มาตราฐานปริมาณนโซเดียมในเลือด "
+                                android:text="เกณฑ์มาตราฐาน"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
                                 android:text="@string/sodium_normal"
@@ -586,27 +588,24 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal"
+                                android:text="@string/sodium_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal2"
+                                android:text="@string/sodium_abnormal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -630,7 +629,7 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/potassium_ab">
 
                     <LinearLayout
@@ -747,7 +746,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView107"
-                                        android:layout_weight="1" />
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -755,15 +755,17 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue3"
                                         android:layout_weight="1"
-                                        android:textAlignment="center" />
+                                        android:textAlignment="center"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView105"
                                         android:layout_weight="1"
-                                        android:textAlignment="textEnd" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -789,7 +791,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:text="Fasting blood sugar (FBS) "
+                                android:text="Potassium"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
@@ -806,40 +808,37 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/dialog_header"
-                                android:text="เกณฑ์มาตราฐานปริมาณนโพเเทสเซียมในเลือด "
+                                android:text="เกณฑ์มาตราฐาน"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
-                                android:text="@string/sodium_normal"
+                                android:text="@string/potassium_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal"
+                                android:text="@string/potassium_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal2"
+                                android:text="@string/potassium_abnormal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -865,7 +864,7 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/choles_bd">
 
                     <LinearLayout
@@ -984,7 +983,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView110"
-                                        android:layout_weight="1" />
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -992,15 +992,17 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue4"
                                         android:layout_weight="1"
-                                        android:textAlignment="center" />
+                                        android:textAlignment="center"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView108"
                                         android:layout_weight="1"
-                                        android:textAlignment="textEnd" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -1033,7 +1035,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:text="Fasting blood sugar (FBS) "
+                                android:text="Total-Cholesterol"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
@@ -1055,35 +1057,32 @@
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
-                                android:text="@string/sodium_normal"
+                                android:text="@string/chl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal"
+                                android:text="@string/chl_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal2"
+                                android:text="@string/chl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1107,7 +1106,7 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/ldl_bd">
 
                     <LinearLayout
@@ -1223,7 +1222,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView113"
-                                        android:layout_weight="1" />
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -1231,15 +1231,17 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue5"
                                         android:layout_weight="1"
-                                        android:textAlignment="center" />
+                                        android:textAlignment="center"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView111"
                                         android:layout_weight="1"
-                                        android:textAlignment="textEnd" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -1265,7 +1267,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:text="Fasting blood sugar (FBS) "
+                                android:text="Low-density lipoprotein cholesterol "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
@@ -1287,35 +1289,48 @@
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
-                                android:text="@string/sodium_normal"
+                                android:text="@string/ldl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal"
+                                android:text="@string/ldl_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal2"
+                                android:text="@string/ldl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/ldl_abnormal4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView106"
                                 android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:text="@string/ldl_abnormal5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView109"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1339,7 +1354,7 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:id="@+id/hdl_bd">
 
                     <LinearLayout
@@ -1452,14 +1467,15 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="5dp"
-                                    android:layout_margin="5dp">
+                                    android:layout_margin="10dp">
 
                                     <TextView
                                         android:text="@string/min"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView116"
-                                        android:layout_weight="1" />
+                                        android:layout_weight="1"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -1467,15 +1483,17 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue6"
                                         android:layout_weight="1"
-                                        android:textAlignment="center" />
+                                        android:textAlignment="center"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max6"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView114"
                                         android:layout_weight="1"
-                                        android:textAlignment="textEnd" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -1501,7 +1519,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:text="Fasting blood sugar (FBS) "
+                                android:text="Hight-density lipoprotein"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/Englishname"
@@ -1523,35 +1541,40 @@
                                 android:textSize="16sp"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:textAlignment="center" />
+                                android:textAlignment="textStart" />
 
                             <TextView
-                                android:text="@string/sodium_normal"
+                                android:text="@string/hdl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal"
+                                android:text="@string/hdl_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_weight="0.13" />
 
                             <TextView
-                                android:text="@string/blood_abnormal2"
+                                android:text="@string/hdl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/hdl_abnormal4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView112"
                                 android:layout_weight="0.13"
-                                android:paddingLeft="28dp" />
+                                android:layout_marginTop="10dp" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1575,7 +1598,8 @@
                     app:cardCornerRadius="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
-                    android:id="@+id/trigry_bd">
+                    android:id="@+id/trigry_bd"
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -1690,12 +1714,13 @@
                                     android:weightSum="1">
 
                                     <TextView
-                                        android:text="@string/min"
+                                        android:text="ระดับต่ำ 30"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView119"
                                         android:textAlignment="textStart"
-                                        android:layout_weight="0.39" />
+                                        android:layout_weight="0.39"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="TextView"
@@ -1704,15 +1729,17 @@
                                         android:textAlignment="center"
                                         android:layout_width="wrap_content"
                                         android:gravity="center"
-                                        android:layout_weight="0.35" />
+                                        android:layout_weight="0.35"
+                                        android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="@string/max"
+                                        android:text="@string/max7"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView117"
                                         android:textAlignment="textEnd"
-                                        android:layout_weight="0.21" />
+                                        android:layout_weight="0.21"
+                                        android:textStyle="normal|bold" />
                                 </LinearLayout>
 
                             </LinearLayout>
