@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/screen_background_light_transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardMaxElevation="@dimen/cardview_default_radius"
+        app:cardCornerRadius="@dimen/cardview_shapefood">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="103dp"
+                    android:layout_height="79dp"
+                    app:srcCompat="@drawable/standard"
+                    android:id="@+id/imageView8"
+                    android:scaleType="fitXY"
+                    android:paddingRight="20dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.23">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameofblood"
+                        android:layout_weight="0.13"
+                        android:layout_marginTop="20dp"
+                        android:text="ระดับน้ำตาล"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:text="Fasting blood sugar (FBS) "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Englishname"
+                        android:layout_weight="0.13" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ligthGray" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dialog_header"
+                        android:text="ผลการตรวจปริมาณน้ำตาลในเลือด "
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:text="ค่ามาตรฐาน"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView67"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:text="ค่าน้อยกว่าปกติ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView66"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:text="ค่ามากกว่าปกติ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView65"
+                            android:layout_marginTop="10dp"
+                            android:paddingRight="40dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="70-120 mg/dl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dialog_normal"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:text="น้อยกวา่า 60 mg/dL "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dialog_normal2"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:text="มากกว่า 126 mg/dL "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dialog_normal3"
+                            android:layout_marginTop="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView72"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="5dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_menu_info_details"
+                        android:id="@+id/imageButton4"
+                        android:background="@android:drawable/screen_background_light_transparent"
+                        android:layout_marginLeft="10dp"
+                        style="@style/Widget.AppCompat.ImageButton" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="ปิด"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/close_dialog"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
