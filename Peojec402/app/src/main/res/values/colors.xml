@@ -21,4 +21,14 @@
     <color name="colorfood2">#ff9800</color>
     <color name="backgroundor">#fbd3a8</color>
 
+    <color name="sugar">#ffa726</color>
+    <color name="sodium">#ffca28</color>
+    <color name="potassium">#ffee58</color>
+    <color name="choles">#d4e157</color>
+    <color name="ldl">#9ccc65</color>
+    <color name="hdl">#8bc34a</color>
+    <color name="tri">#66bb6a</color>
+
+
+
 </resources>

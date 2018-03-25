@@ -122,7 +122,12 @@ public class MainMenu extends AppCompatActivity{
                 nNextBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+<<<<<<< HEAD
                         Intent intent = new Intent(MainMenu.this,LoginActivity.class);
+=======
+                        Intent intent = new Intent(MainMenu.this,LoginActivity
+                                .class);
+>>>>>>> 2b3bfce90c2f6547fd49dfbdbe9adeaa6a7c2c0b
                         startActivity(intent);
                     }
                 });
