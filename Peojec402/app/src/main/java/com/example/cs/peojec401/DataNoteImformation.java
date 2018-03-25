@@ -4,6 +4,9 @@ package com.example.cs.peojec401;
  * Created by hp on 22/2/2561.
  */
 
+
+
+
 public class DataNoteImformation {
 
       public static int[] Menufood = {
@@ -29,3 +32,4 @@ public class DataNoteImformation {
 
 
 }
+

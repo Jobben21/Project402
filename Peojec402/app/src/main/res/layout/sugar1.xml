@@ -33,7 +33,7 @@
                         <ImageView
                             android:layout_height="182dp"
                             app:srcCompat="@drawable/kung"
-                            android:id="@+id/imageView2"
+                            android:id="@+id/food_sugar"
                             android:layout_width="match_parent" />
 
                         <View

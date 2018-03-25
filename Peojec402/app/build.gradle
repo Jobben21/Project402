@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.2"
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.example.cs.peojec401"
         minSdkVersion 15
@@ -39,4 +40,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.aakira:expandable-layout:1.4.2@aar'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0' //"ล็อคอิน"
+    compile 'com.squareup.picasso:picasso:2.5.1' //load img from url picasso
 }

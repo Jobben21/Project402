@@ -122,7 +122,7 @@ public class MainMenu extends AppCompatActivity{
                 nNextBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainMenu.this,NavigationActivity.class);
+                        Intent intent = new Intent(MainMenu.this,LoginActivity.class);
                         startActivity(intent);
                     }
                 });
