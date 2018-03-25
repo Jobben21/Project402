@@ -137,15 +137,15 @@ public class Fragment_B extends Fragment {
         String message1 = "";
 
         if (70 <= sugar && sugar<= 100) {
-            message1 =  "smilee";
+            message1 =  "ok";
         }
         else {
              if (sugar < 70) {
-                message1 = "sadd";
+                message1 = "cancell";
             } else if (sugar > 130) {
-                message1 = "sadd";
+                message1 = "cancell";
             } else {
-                message1 = "normal";
+                message1 = "normall";
             }
         }
         return message1;
@@ -155,12 +155,12 @@ public class Fragment_B extends Fragment {
         String message2 = "";
 
         if (136 <= sodium && sodium<= 145) {
-            message2 = "smilee";
+            message2 = "ok";
         } else if (sodium < 136) {
-            message2 = "sadd";
+            message2 = "cancel";
         }
         else if (sodium > 146)  {
-            message2 = "sadd";
+            message2 = "cancell";
         }
         else{
             message2 = "normal";
@@ -172,15 +172,15 @@ public class Fragment_B extends Fragment {
         String message3 = "";
 
         if (3.5 <= potassium && potassium <= 5.1) {
-            message3 = "smilee";
+            message3 = "ok";
         } else if (potassium < 3.5 ) {
-            message3 = "sadd";
+            message3 = "cancell";
         }
         else if (potassium > 5.1)  {
-            message3 = "sadd";
+            message3 = "cancell";
         }
         else{
-            message3 = "normal";
+            message3 = "ok";
         }
         return message3;
 
@@ -191,15 +191,15 @@ public class Fragment_B extends Fragment {
         String message4 = "";
 
         if (50 <= choles && choles<= 200) {
-            message4 ="smilee";
+            message4 ="ok";
         } else if (choles < 40) {
-            message4 = "sadd";
+            message4 = "cancell";
         }
         else if (choles > 300)  {
-            message4 = "sadd";
+            message4 = "cancell";
         }
         else  {
-            message4 = "normal";
+            message4 = "ok";
         }
         return message4;
     }
@@ -209,10 +209,10 @@ public class Fragment_B extends Fragment {
         String message5 = "";
 
         if (0 <= ldl && ldl<= 100) {
-            message5 = "smilee";
+            message5 = "ok";
         }
         else if (ldl > 100)  {
-            message5 = "sadd";
+            message5 = "cancell";
         }
 
         return message5;
@@ -222,15 +222,15 @@ public class Fragment_B extends Fragment {
         String message6 = "";
 
         if (35 <= hdl && hdl<= 60) {
-            message6 = "smilee";
+            message6 = "ok";
         } else if (hdl < 35) {
-            message6= "sadd";
+            message6= "cancell";
         }
         else if (hdl > 60)  {
-            message6 = "smilee";
+            message6 = "ok";
         }
         else   {
-            message6 = "normal";
+            message6 = "ok";
         }
         return message6;
     }
@@ -240,15 +240,15 @@ public class Fragment_B extends Fragment {
         String message7 = "";
 
         if (50 <= tri && tri<= 200) {
-            message7 = "smilee";
+            message7 = "ok";
         } else if (tri < 50) {
-            message7 = "sadd";
+            message7 = "cancell";
         }
         else if (tri > 200)  {
-            message7 = "sadd";
+            message7 = "cancell";
         }
         else  {
-            message7 = "normal";
+            message7 = "ok";
         }
         return message7;
     }

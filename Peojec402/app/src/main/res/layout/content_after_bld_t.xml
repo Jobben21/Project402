@@ -168,7 +168,7 @@
                                 <ImageButton
                                     android:layout_width="56dp"
                                     android:layout_height="50dp"
-                                    app:srcCompat="@drawable/normal"
+                                    app:srcCompat="@drawable/ok"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     android:scaleType="fitCenter"
                                     android:paddingRight="10dp"
@@ -424,8 +424,8 @@
                                 android:layout_height="match_parent">
 
                                 <ImageButton
-                                    app:srcCompat="@drawable/normal"
-                                    android:background="@android:drawable/screen_background_light_transparent"
+                                    app:srcCompat="@drawable/cancell"
+                                    android:background="@android:color/transparent"
                                     android:scaleType="fitCenter"
                                     android:paddingRight="10dp"
                                     android:layout_width="56dp"

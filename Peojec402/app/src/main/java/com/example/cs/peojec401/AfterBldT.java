@@ -2,7 +2,6 @@ package com.example.cs.peojec401;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,15 +26,12 @@ public class AfterBldT extends AppCompatActivity {
     private ImageButton sugartt,sodiumtt,potasstt,cholett,ldltt,hdltt,tritt;
     private TextView sugar_ab2,sodium_ab2,potass_ab2,chole_ab2,ldl_ab2,hdl_ab2,tri_ab2;
     private TextView description_doc,description_smile,description_sad;
-    private Dialog sugar_dd,sodium_dd,potass_dd,chole_dd,ldl_dd,hdl_dd,tri_dd;
-    private Button button_dialog;
     final Context context = this;
     private Button next ,home;
     private SeekBar seekBar,seekBar2,seekBar3,seekBar4,seekBar5,seekBar6,seekBar7;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     LinearLayout HeaderLayout,HeaderLayout2,HeaderLayout3,HeaderLayout4,HeaderLayout5,HeaderLayout6,HeaderLayout7;
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
-    final ArrayList<TextView> seekBbar = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,8 +100,6 @@ public class AfterBldT extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Toast toast = Toast.makeText (AfterBldT.this, "Selected " +listResult2.toString(), Toast.LENGTH_LONG );
                 toast.show ( );
 
@@ -176,7 +170,7 @@ public class AfterBldT extends AppCompatActivity {
 
     String result = "";
 
-     if(message1.equals("sadd")) {
+     if(message1.equals("cancell")) {
 
          result = "Suagr_0";
 
@@ -190,7 +184,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result2 = "";
 
-        if(message2.equals("sadd")) {
+        if(message2.equals("cancell")) {
 
             result2 = "Sodium_0";
 
@@ -204,7 +198,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result3 = "";
 
-        if(message3.equals("sadd")) {
+        if(message3.equals("cancell")) {
 
             result3 = "Potassium_0";
 
@@ -218,7 +212,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result4 = "";
 
-        if(message6.equals("sadd")) {
+        if(message6.equals("cancell")) {
 
             result4 = "CH_0";
 
@@ -232,7 +226,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result5 = "";
 
-        if(message4.equals("sadd")) {
+        if(message4.equals("cancell")) {
 
             result5 = "LDL_0";
 
@@ -246,7 +240,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result6 = "";
 
-        if(message5.equals("sadd")){
+        if(message5.equals("cancell")){
 
             result6 = "HDL_0";
 
@@ -260,7 +254,7 @@ public class AfterBldT extends AppCompatActivity {
 
         String result7 = "";
 
-        if(message7.equals("sadd")){
+        if(message7.equals("cancell")){
 
             result7 = "TRI_0";
 
@@ -270,6 +264,7 @@ public class AfterBldT extends AppCompatActivity {
         }
         return result7;
     }
+
     public void seekBar(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1){
 
         seekBar = (SeekBar)findViewById(R.id.seekBar);
@@ -525,7 +520,6 @@ public class AfterBldT extends AppCompatActivity {
 
 
     }
-
     public void layOutDescription(){
 
         ChildLayout = (LinearLayout) findViewById(R.id.Childlayout);
@@ -847,241 +841,6 @@ public class AfterBldT extends AppCompatActivity {
 
     }
 
-   /* private void expand() {
-        //set Visible
-        ChildLayout.setVisibility(View.VISIBLE);
-        ChildLayout2.setVisibility(View.VISIBLE);
-        ChildLayout3.setVisibility(View.VISIBLE);
-        ChildLayout4.setVisibility(View.VISIBLE);
-        ChildLayout5.setVisibility(View.VISIBLE);
-        ChildLayout6.setVisibility(View.VISIBLE);
-        ChildLayout7.setVisibility(View.VISIBLE);
-
-        final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-        final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-
-        ChildLayout.measure(widthSpec, heightSpec);
-        ChildLayout2.measure(widthSpec, heightSpec);
-        ChildLayout3.measure(widthSpec, heightSpec);
-        ChildLayout4.measure(widthSpec, heightSpec);
-        ChildLayout5.measure(widthSpec, heightSpec);
-        ChildLayout6.measure(widthSpec, heightSpec);
-        ChildLayout7.measure(widthSpec, heightSpec);
-
-        ValueAnimator mAnimator = slideAnimator(0,ChildLayout.getMeasuredHeight());
-        ValueAnimator mAnimator2 = slideAnimator2(0,ChildLayout2.getMeasuredHeight());
-        ValueAnimator mAnimator3 = slideAnimator3(0,ChildLayout3.getMeasuredHeight());
-        ValueAnimator mAnimator4 = slideAnimator4(0,ChildLayout4.getMeasuredHeight());
-        ValueAnimator mAnimator5 = slideAnimator5(0,ChildLayout5.getMeasuredHeight());
-        ValueAnimator mAnimator6 = slideAnimator6(0,ChildLayout6.getMeasuredHeight());
-        ValueAnimator mAnimator7 = slideAnimator7(0,ChildLayout7.getMeasuredHeight());
-
-        mAnimator.start();
-        mAnimator2.start();
-        mAnimator3.start();
-        mAnimator4.start();
-        mAnimator5.start();
-        mAnimator6.start();
-        mAnimator7.start();
-
-    }*/
-
-  /*  private void collapse() {
-        int finalHeight =  ChildLayout.getHeight();
-        int finalHeight2 =  ChildLayout2.getHeight();
-        int finalHeight3 =  ChildLayout3.getHeight();
-        int finalHeight4 =  ChildLayout4.getHeight();
-        int finalHeight5 =  ChildLayout5.getHeight();
-        int finalHeight6 =  ChildLayout6.getHeight();
-        int finalHeight7 =  ChildLayout7.getHeight();
-
-        ValueAnimator mAnimator = slideAnimator(finalHeight,0);
-        ValueAnimator mAnimator2 = slideAnimator2(finalHeight2,0);
-        ValueAnimator mAnimator3 = slideAnimator3(finalHeight3,0);
-        ValueAnimator mAnimator4 = slideAnimator4(finalHeight4,0);
-        ValueAnimator mAnimator5 = slideAnimator5(finalHeight5,0);
-        ValueAnimator mAnimator6 = slideAnimator6(finalHeight6,0);
-        ValueAnimator mAnimator7 = slideAnimator7(finalHeight7,0);
-
-
-        mAnimator.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator2.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator2) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout2.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator3.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator3) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout3.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator4.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator4) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout4.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator5.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator5) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout5.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator6.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator6) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout6.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-        mAnimator7.addListener(new Animator.AnimatorListener() {
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animator7) {
-                //Height=0, but it set visibility to GONE
-                ChildLayout7.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-
-        });
-
-        mAnimator.start();
-        mAnimator2.start();
-        mAnimator3.start();
-        mAnimator4.start();
-        mAnimator5.start();
-        mAnimator6.start();
-        mAnimator7.start();
-
-    }*/
 
     private ValueAnimator slideAnimator(int start, int end) {
 

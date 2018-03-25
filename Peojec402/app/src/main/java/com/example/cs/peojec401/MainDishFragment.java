@@ -134,9 +134,7 @@ public class MainDishFragment extends Fragment
             return dataList.size();
         }
 
-
     }
-
     public void onClickMenu(){
 
 

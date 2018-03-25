@@ -70,15 +70,15 @@
                     android:padding="10dp">
 
                     <ImageButton
-                        android:layout_width="73dp"
                         android:id="@+id/oneh"
                         android:background="@drawable/imageview_selector"
                         android:layout_height="69dp"
                         style="@android:style/Widget.Holo.ImageButton"
                         android:soundEffectsEnabled="false"
                         android:contextClickable="true"
-                        android:src="@drawable/bloodt"
-                        android:scaleType="fitXY" />
+                        android:src="@drawable/blooddrop"
+                        android:scaleType="fitXY"
+                        android:layout_width="65dp" />
 
                     <TextView
                         android:text="Blood-Test"
@@ -117,7 +117,7 @@
                         android:layout_width="75dp"
                         android:layout_height="69dp"
                         android:id="@+id/twoh"
-                        android:src="@drawable/menut"
+                        android:src="@drawable/recipe"
                         android:scaleType="fitXY"
                         android:background="@drawable/imageview_selector" />
 
