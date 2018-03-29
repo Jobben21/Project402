@@ -299,13 +299,14 @@ public class AfterBldT extends AppCompatActivity {
         seekBar5.setProgress((int) ldl_ab1);
         seekBar6.setProgress((int) hdl_ab1);
         seekBar7.setProgress((int) tri_ab1);
+
         updatePercentValue(seekBar.getProgress());
-        updatePercentValue(seekBar2.getProgress());
-        updatePercentValue(seekBar3.getProgress());
-        updatePercentValue(seekBar4.getProgress());
-        updatePercentValue(seekBar5.getProgress());
-        updatePercentValue(seekBar6.getProgress());
-        updatePercentValue(seekBar7.getProgress());
+        updatePercentValue2(seekBar2.getProgress());
+        updatePercentValue3(seekBar3.getProgress());
+        updatePercentValue4(seekBar4.getProgress());
+        updatePercentValue5(seekBar5.getProgress());
+        updatePercentValue6(seekBar6.getProgress());
+        updatePercentValue7(seekBar7.getProgress());
 
 
 
@@ -347,7 +348,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar2) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar2.getProgress());
+                updatePercentValue2(seekBar2.getProgress());
 
 
             }
@@ -369,7 +370,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar3) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar3.getProgress());
+                updatePercentValue3(seekBar3.getProgress());
 
 
             }
@@ -391,7 +392,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar4) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar4.getProgress());
+                updatePercentValue4(seekBar4.getProgress());
 
 
             }
@@ -413,7 +414,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar5) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar5.getProgress());
+                updatePercentValue5(seekBar5.getProgress());
 
 
             }
@@ -435,7 +436,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar6) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar.getProgress());
+                updatePercentValue6(seekBar.getProgress());
 
 
             }
@@ -457,7 +458,7 @@ public class AfterBldT extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar7) {
                 // TODO Auto-generated method stub
-                updatePercentValue(seekBar7.getProgress());
+                updatePercentValue7(seekBar7.getProgress());
 
 
             }
@@ -509,17 +510,51 @@ public class AfterBldT extends AppCompatActivity {
 
     }
     private void updatePercentValue(int progressValue) {
+
         seekBarMin.setText("ระดับน้ำตาล "+progressValue);
-        seekBarvalue2.setText("ระดับโซเดียม "+progressValue);
-        seekBarvalue3.setText("ระดับโพเเทสเซียม "+progressValue);
-        seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+progressValue);
-        seekBarvalue5.setText("ระดับเเอลดีเอล "+progressValue);
-        seekBarvalue6.setText("ระดับเอซดีเเอล "+progressValue);
-        seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ "+progressValue);
-
-
 
     }
+    private void updatePercentValue2(int progressValue) {
+
+        seekBarvalue2.setText("ระดับโซเดียม " + progressValue);
+
+    }private void updatePercentValue3(int progressValue) {
+
+
+    seekBarvalue3.setText("ระดับโพเเทสเซียม " + progressValue);
+
+
+
+
+    }private void updatePercentValue4(int progressValue) {
+
+
+        seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+progressValue);
+
+
+    }private void updatePercentValue5(int progressValue) {
+
+
+        seekBarvalue5.setText("ระดับเเอลดีเอล "+progressValue);
+
+
+
+
+    }private void updatePercentValue6(int progressValue) {
+
+
+        seekBarvalue6.setText("ระดับเอซดีเเอล "+progressValue);
+
+
+
+
+    }private void updatePercentValue7(int progressValue) {
+
+
+        seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ " + progressValue);
+
+    }
+
     public void layOutDescription(){
 
         ChildLayout = (LinearLayout) findViewById(R.id.Childlayout);

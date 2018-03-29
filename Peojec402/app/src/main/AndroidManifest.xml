@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -52,10 +53,18 @@
             android:name=".FoodActivity"
             android:label="@string/title_activity_food"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DocumentFood"></activity>
+        <activity android:name=".DocumentFood" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".Profile.MainProfileActivity"
+            android:label="@string/title_activity_main_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

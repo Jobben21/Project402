@@ -136,7 +136,7 @@ public class Fragment_B extends Fragment {
 
         String message1 = "";
 
-        if (70 <= sugar && sugar<= 100) {
+        if (sugar>=70 && sugar<= 120) {
             message1 =  "ok";
         }
         else {
@@ -157,7 +157,7 @@ public class Fragment_B extends Fragment {
         if (136 <= sodium && sodium<= 145) {
             message2 = "ok";
         } else if (sodium < 136) {
-            message2 = "cancel";
+            message2 = "cancell";
         }
         else if (sodium > 146)  {
             message2 = "cancell";

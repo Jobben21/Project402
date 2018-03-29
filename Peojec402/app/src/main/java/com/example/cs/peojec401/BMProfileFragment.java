@@ -1,5 +1,6 @@
 package com.example.cs.peojec401;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,14 +12,14 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BloodsProileFragment.OnFragmentInteractionListener} interface
+ * {@link BMProfileFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class BloodsProileFragment extends Fragment {
+public class BMProfileFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public BloodsProileFragment() {
+    public BMProfileFragment() {
         // Required empty public constructor
     }
 
@@ -27,7 +28,7 @@ public class BloodsProileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bloods_proile, container, false);
+        return inflater.inflate(R.layout.fragment_bmprofile, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -37,7 +38,7 @@ public class BloodsProileFragment extends Fragment {
         }
     }
 
-  /*  @Override
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
@@ -46,7 +47,7 @@ public class BloodsProileFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-    }*/
+    }
 
     @Override
     public void onDetach() {

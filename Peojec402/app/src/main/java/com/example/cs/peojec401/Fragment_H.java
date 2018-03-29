@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 /**
  * Created by hp on 9/1/2561.
@@ -17,7 +17,7 @@ public class Fragment_H extends Fragment  {
 
 
 
-    private ImageButton onet_t;
+    private CardView onet_t;
 
 
     public Fragment_H(){
@@ -27,7 +27,7 @@ public class Fragment_H extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final  View v =  inflater.inflate(R.layout.fragment_layout_h,container,false);
         Bundle bundle = getArguments();
-        onet_t = (ImageButton) v.findViewById(R.id.oneh);
+        onet_t = (CardView) v.findViewById(R.id.function1);
         onet_t.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -42,7 +42,7 @@ public class Fragment_H extends Fragment  {
             }
         });
 
-        ImageButton   twot = (ImageButton) v.findViewById(R.id.twoh);
+        CardView   twot = (CardView) v.findViewById(R.id.function2);
         twot.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -56,7 +56,7 @@ public class Fragment_H extends Fragment  {
             }
         });
 
-        ImageButton threet = (ImageButton) v.findViewById(R.id.threeh);
+        CardView threet = (CardView) v.findViewById(R.id.function3);
         threet.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -70,7 +70,7 @@ public class Fragment_H extends Fragment  {
             }
         });
 
-        ImageButton  fourt = (ImageButton) v.findViewById(R.id.fourh);
+        CardView  fourt = (CardView) v.findViewById(R.id.function4);
         fourt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -35,9 +35,10 @@
                         android:layout_margin="5dp">
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center">
 
                             <ImageView
                                 android:layout_width="73dp"
@@ -52,7 +53,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView4"
                                 android:layout_weight="1"
-                                android:layout_marginTop="25dp"
+                                android:layout_marginTop="15dp"
                                 android:textStyle="normal|bold"
                                 android:textSize="14sp"
                                 android:fontFamily="sans-serif" />
@@ -147,6 +148,151 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="49dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@drawable/blooddrop"
+                            android:id="@+id/imageView22" />
+
+                        <TextView
+                            android:text="ประวัติผลตรวจเลือด"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView124"
+                            android:paddingLeft="20dp"
+                            android:layout_marginTop="19dp"
+                            android:textSize="16sp"
+                            android:textStyle="normal|bold"
+                            android:paddingRight="10dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:srcCompat="@drawable/ic_chevron_right"
+                                android:id="@+id/imageButton2"
+                                android:background="@android:drawable/screen_background_light_transparent"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="right"
+                                android:textAlignment="textEnd"
+                                android:foregroundGravity="right"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="49dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@drawable/pro"
+                            android:id="@+id/imageView22" />
+
+                        <TextView
+                            android:text="ประวัติส่วนตัว"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView124"
+                            android:paddingLeft="20dp"
+                            android:layout_marginTop="19dp"
+                            android:textSize="16sp"
+                            android:textStyle="normal|bold"
+                            android:paddingRight="50dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <ImageButton
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:srcCompat="@drawable/ic_chevron_right"
+                                android:id="@+id/imageButton2"
+                                android:background="@android:drawable/screen_background_light_transparent"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="right"
+                                android:textAlignment="textEnd"
+                                android:foregroundGravity="right"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.28" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -346,7 +492,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -534,6 +681,14 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <Button
+                android:text="clickme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bloodprofile"
+                android:background="@drawable/mybutton" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

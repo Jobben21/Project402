@@ -167,12 +167,12 @@
 
                                 <ImageButton
                                     android:layout_width="56dp"
-                                    android:layout_height="50dp"
                                     app:srcCompat="@drawable/ok"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     android:scaleType="fitCenter"
                                     android:paddingRight="10dp"
-                                    android:id="@+id/image" />
+                                    android:id="@+id/image"
+                                    android:layout_height="52dp" />
 
                                 <LinearLayout
                                     android:orientation="vertical"
@@ -253,7 +253,7 @@
                                 android:animateLayoutChanges="true">
 
                                 <SeekBar
-                                    style="@android:style/Widget.Material.Light.SeekBar"
+                                    style="@android:style/Widget.Material.SeekBar.Discrete"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:max="10"
