@@ -15,6 +15,8 @@ import android.view.View.OnClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -163,6 +165,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         final EditText e_age = (EditText)findViewById(R.id.Age_login);
         final EditText e_height = (EditText)findViewById(R.id.Height_login);
         final EditText e_weight = (EditText)findViewById(R.id.weight_login);
+        final RadioGroup gender = (RadioGroup) findViewById(R.id.radio_gender);
+
+        int checkedRadioButtonID = gender.getCheckedRadioButtonId ( );
+        RadioButton checkedRadioButton = ( RadioButton )findViewById ( checkedRadioButtonID );
+
+        String checkedLabel = checkedRadioButton.getText ( ).toString ( );
 
 
         final AlertDialog.Builder ad= new AlertDialog.Builder(this);
@@ -188,6 +196,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         para.add(new BasicNameValuePair("age",e_age.getText().toString()));
         para.add(new BasicNameValuePair("height",e_height.getText().toString()));
         para.add(new BasicNameValuePair("weight",e_weight.getText().toString()));
+        para.add(new BasicNameValuePair("gender",checkedLabel));
 
 
 

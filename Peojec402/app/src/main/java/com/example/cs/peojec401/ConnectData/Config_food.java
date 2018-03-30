@@ -9,9 +9,13 @@ public class Config_food {
 
     //Tags used in the JSON String
     public static final String ID= "id";
-    public static final String FOOD_NAME = "food_name";
+    public static final String FOOD_NAME = "name";
     public static final String FOODPIC = "foodpic";
     public static final String ENERGY= "energy";
+    public static final String CARBO="carbohydrate";
+    public static final String FAT="fat";
+    public static final String PROTEIN="protein";
+    public static final String SUGAR="sugar";
 
     //JSON array name
     public static final String JSON_ARRAY = "result";

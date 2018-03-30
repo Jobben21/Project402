@@ -1,5 +1,5 @@
 <?php
-	header("foodmenu-type:text/javascript;charset=utf-8");
+	header("user-type:text/javascript;charset=utf-8");
 	define('HOST', 'localhost');
 	define('USER', 'root');
 	define('PASS', 'cs402');
@@ -22,12 +22,16 @@
 
 		while($row = mysqli_fetch_array($r)){
 			array_push($result,array(
-			
+			'ID'=>$row['ID'],
 			'name'=>$row['food_name'],
 			'foodpic'=>$row['foodpic'],
 			'food_disease'=>$row['food_disease'],
 			'food_type'=>$row['food_type'],
-			'energy'=>$row['energy']
+			'energy'=>$row['energy'],
+			'carbohydrate'=>$row['carbohydrate'],
+			'fat'=>$row['fat'],
+			'protein'=>$row['protein'],
+			'sugar'=>$row['sugar']
 			
     ));
 }

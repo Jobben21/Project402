@@ -42,8 +42,8 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="249dp"
-                            app:srcCompat="@drawable/menufood"
-                            android:id="@+id/MainDish_image"
+
+                            android:id="@+id/foodpic"
                             android:layout_weight="1"
                             android:scaleType="fitXY"
                             android:visibility="visible"
@@ -74,37 +74,46 @@
                                     android:layout_weight="1"
                                     android:layout_margin="10dp">
 
-                                    <TextView
-                                        android:text="เต้าหูหล้น"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/MainDish_food"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold"
-                                        android:textSize="18sp" />
 
-                                    <TextView
-                                        android:text="ส่วนประกอบ"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView41"
-                                        android:layout_weight="1"
-                                        android:layout_marginTop="5dp"
-                                        android:textColor="@color/materialYellow" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/food_name"
+                                            android:textSize="18dp"
+                                            android:layout_marginTop="5dp"
+                                            />
+                                    <!--<TextView-->
 
-                                    <TextView
-                                        android:text="1."
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView71"
-                                        android:layout_weight="1"
-                                        android:layout_marginTop="5dp" />
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:id="@+id/food_name"-->
+                                        <!--android:layout_marginTop="5dp"-->
+                                        <!--android:textSize="18sp"-->
+                                        <!--android:textAlignment="center" />-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/textView71"-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="5dp"-->
+                                        <!--android:layout_weight="1"-->
+                                        <!--android:text="1." />-->
+
+                                    <!--<TextView-->
+                                        <!--android:text="ส่วนประกอบ"-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:id="@+id/textView41"-->
+                                        <!--android:layout_weight="1"-->
+                                        <!--android:layout_marginTop="5dp"-->
+                                        <!--android:textColor="@color/materialYellow" />-->
+
                                 </LinearLayout>
 
                                 <View
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
-                                    android:background="?android:attr/colorControlHighlight"
+
                                     android:layout_weight="1"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="5dp" />
@@ -250,10 +259,10 @@
                                             android:paddingRight="5dp" />
 
                                         <TextView
-                                            android:text="170"
+                                            android:text="-"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView85"
+                                            android:id="@+id/energy_food"
                                             android:layout_marginTop="5dp"
                                             android:textSize="24sp"
                                             android:textAlignment="center" />
@@ -284,10 +293,10 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="5.0"
+                                            android:text="-"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView90"
+                                            android:id="@+id/carbo_food"
                                             android:layout_marginTop="5dp"
                                             android:textAlignment="center"
                                             android:textSize="24sp" />
@@ -322,10 +331,10 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="14.2"
+                                            android:text="-"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView93"
+                                            android:id="@+id/fat_food"
                                             android:textAlignment="center"
                                             android:textSize="24sp" />
 
@@ -354,10 +363,10 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="5.6"
+                                            android:text="-"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView95"
+                                            android:id="@+id/protein_food"
                                             android:textAlignment="center"
                                             android:textSize="24sp" />
                                     </LinearLayout>
@@ -384,10 +393,10 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="1.0"
+                                            android:text="-"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView96"
+                                            android:id="@+id/sugar_food"
                                             android:textAlignment="center"
                                             android:textSize="24sp" />
                                     </LinearLayout>

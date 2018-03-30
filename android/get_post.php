@@ -26,7 +26,8 @@
 			'name'=>$row['name'],
 			'age'=>$row['age'],
 			'height'=>$row['height'],
-			'weight'=>$row['weight']
+			'weight'=>$row['weight'],
+			'gender'=>$row['gender']
     ));
 }
 

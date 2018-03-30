@@ -27,7 +27,7 @@ import org.json.JSONObject;
 
 public class Fragment_P extends Fragment{
 
-    private TextView  name_profile,age_profile,height_profile,weight_profile,BMI_profile,BMR_profile;
+    private TextView  name_profile,age_profile,height_profile,weight_profile,BMI_profile,BMR_profile,gender_profile;
     ArrayList<Example> calculator;
     private Button bloodprofile;
     private JSONArray result;
@@ -45,7 +45,7 @@ public class Fragment_P extends Fragment{
         age_profile = (TextView) view.findViewById(R.id.age_Profile);
         height_profile = (TextView) view.findViewById(R.id.height_profile);
         weight_profile = (TextView) view.findViewById(R.id.weight_profile);
-
+        gender_profile = (TextView) view.findViewById(R.id.gender_profile);
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
         bloodprofile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,10 +83,11 @@ public class Fragment_P extends Fragment{
                             //Storing the Array of JSON String to our JSON Array
                             result = j.getJSONArray(Config.JSON_ARRAY);
 
-                            name_profile.setText(getName(2));
-                            age_profile.setText(getAge(2));
-                            height_profile.setText(getHeight(2));
-                            weight_profile.setText(getWeight(2));
+                            name_profile.setText(getName(0));
+                            age_profile.setText(getAge(0));
+                            height_profile.setText(getHeight(0));
+                            weight_profile.setText(getWeight(0));
+                            gender_profile.setText(getGender(0));
                             //Calling method getStudents to get the students from the JSON Array
                             //getStudents(result);
                         } catch (JSONException e) {
@@ -128,40 +129,55 @@ public class Fragment_P extends Fragment{
 
     //Doing the same with this method as we did with getName()
     private String getAge(int position){
-        String course="";
+        String age="";
         try {
             JSONObject json = result.getJSONObject(position);
-            course = json.getString(Config.AGE);
+           age = json.getString(Config.AGE);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return course;
+        return age;
     }
 
     //Doing the same with this method as we did with getName()
     private String getHeight(int position){
-        String session="";
+        String height="";
         try {
             JSONObject json = result.getJSONObject(position);
-            session = json.getString(Config.HEIGHT);
+            height = json.getString(Config.HEIGHT);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return session;
+        return height;
     }
     private String getWeight(int position){
-        String name="";
+        String weight="";
         try {
             //Getting object of given index
             JSONObject json = result.getJSONObject(position);
 
             //Fetching name from that object
-            name = json.getString(Config.WEIGHT);
+            weight = json.getString(Config.WEIGHT);
         } catch (JSONException e) {
             e.printStackTrace();
         }
         //Returning the name
-        return name;
+        return weight;
+    }
+
+    private String getGender(int position){
+        String gender="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            gender = json.getString(Config.GENDER);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return gender;
     }
 
     @Override

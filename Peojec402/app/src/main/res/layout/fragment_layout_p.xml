@@ -87,19 +87,19 @@
                                     android:paddingRight="50dp" />
 
                                 <TextView
-                                    android:text="สมชาย"
+                                    android:id="@+id/name_profile"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/name_profile"
-                                    android:textSize="18sp"
-                                    android:paddingRight="20dp" />
+                                    android:paddingRight="20dp"
+
+                                    android:textSize="18sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/last_profile"
                                     android:layout_weight="1"
-                                    android:text="คำพูน"
+
                                     android:textSize="18sp" />
                             </LinearLayout>
 
@@ -127,10 +127,10 @@
                                     android:paddingRight="45dp" />
 
                                 <TextView
-                                    android:text="@string/man"
+                                    android:text="-"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView43"
+                                    android:id="@+id/gender_profile"
                                     android:layout_weight="1"
                                     android:textSize="18sp" />
 

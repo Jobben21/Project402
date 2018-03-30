@@ -13,7 +13,7 @@ public class Config {
     public static final String AGE = "age";
     public static final String HEIGHT= "height";
     public static final String WEIGHT= "weight";
-
+    public static final String GENDER= "gender";
     //JSON array name
     public static final String JSON_ARRAY = "result";
 }

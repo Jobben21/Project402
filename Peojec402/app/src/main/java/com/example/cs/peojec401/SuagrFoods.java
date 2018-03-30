@@ -109,7 +109,7 @@ public class SuagrFoods extends AppCompatActivity {
                             //Storing the Array of JSON String to our JSON Array
                             result = j.getJSONArray(Config_food.JSON_ARRAY);
                             // " เอาลิ้ง URL ใน ดาต้ามาใส่ เลข 1 คือ ตำแหน่ง ของ array"
-                            url=getName(1);
+                            url=getName(0);
                             Picasso.with(getApplicationContext())
                                     .load(url)
                                     .into(img_food);
