@@ -167,6 +167,7 @@
     <string name="tri_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 500 mg/dl</string>
     <string name="title_activity_main_profile">MainProfileActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_register__login">Register_LoginActivity</string>
 
 
 </resources>

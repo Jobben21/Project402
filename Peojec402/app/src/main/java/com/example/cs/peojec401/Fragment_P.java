@@ -3,6 +3,7 @@ package com.example.cs.peojec401;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class Fragment_P extends Fragment{
     private TextView  name_profile,age_profile,height_profile,weight_profile,BMI_profile,BMR_profile;
     ArrayList<Example> calculator;
     private Button bloodprofile;
+    private CardView cardView;
     private JSONArray result;
 
 
@@ -45,12 +47,22 @@ public class Fragment_P extends Fragment{
         age_profile = (TextView) view.findViewById(R.id.age_Profile);
         height_profile = (TextView) view.findViewById(R.id.height_profile);
         weight_profile = (TextView) view.findViewById(R.id.weight_profile);
-
+        cardView = (CardView)view.findViewById(R.id.bloodProfile);
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
-        bloodprofile.setOnClickListener(new View.OnClickListener() {
+
+        cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getBaseContext(),ProfileActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        bloodprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getBaseContext(),NavigationActivity.class);
                 startActivity(intent);
 
             }
