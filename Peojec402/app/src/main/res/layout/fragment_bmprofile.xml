@@ -19,20 +19,23 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/backGround"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="5dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bloodt"
                 android:id="@+id/imageView23"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:layout_marginTop="10dp" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -68,20 +71,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:text="น้ำตาล"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView142"
-                        android:paddingRight="40dp" />
-
-                    <TextView
-                        android:text="( 70 -120 )"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView141"
-                        android:textColor="?android:attr/colorAccent" />
 
                     <TextView
                         android:layout_width="wrap_content"

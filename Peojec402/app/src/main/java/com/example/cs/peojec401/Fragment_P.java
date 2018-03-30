@@ -47,11 +47,8 @@ public class Fragment_P extends Fragment{
         age_profile = (TextView) view.findViewById(R.id.age_Profile);
         height_profile = (TextView) view.findViewById(R.id.height_profile);
         weight_profile = (TextView) view.findViewById(R.id.weight_profile);
-<<<<<<< HEAD
         gender_profile = (TextView) view.findViewById(R.id.gender_profile);
-=======
         cardView = (CardView)view.findViewById(R.id.bloodProfile);
->>>>>>> 1282d129af1525abf39474b92a7cf3c4f781acc7
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
 
         cardView.setOnClickListener(new View.OnClickListener() {
