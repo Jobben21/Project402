@@ -276,7 +276,7 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/menufood"
+                                    app:srcCompat="@drawable/spagetty"
                                     android:id="@+id/imageView"
                                     android:layout_weight="0.63"
                                     android:layout_height="130dp" />

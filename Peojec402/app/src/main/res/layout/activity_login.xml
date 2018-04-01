@@ -225,7 +225,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radio_gender"
-                                android:layout_marginLeft="15dp">
+                                android:layout_marginLeft="15dp"
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:text="@string/man"

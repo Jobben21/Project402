@@ -39,7 +39,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="30dp"
+            android:weightSum="1">
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -47,7 +48,10 @@
                 android:background="?attr/colorButtonNormal"
                 app:cardBackgroundColor="?android:attr/textColorTertiaryInverse"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
+                android:layout_marginRight="5dp"
+                android:layout_weight="2.80"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -55,76 +59,74 @@
                     android:layout_height="match_parent"
                     android:weightSum="1"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2.80">
 
-                    <ImageView
-                        android:layout_width="29dp"
-                        android:layout_height="34dp"
-                        app:srcCompat="@drawable/username"
-                        android:id="@+id/imageView24"
-                        android:layout_weight="0.03"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="5dp" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.03">
 
-                    <EditText
-                        android:layout_width="242dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/username2"
-                        android:hint="ชื่อผู้ใช้งาน"
-                        android:ellipsize="start"
-                        android:gravity="center_horizontal" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="34dp"
+                            app:srcCompat="@drawable/username"
+                            android:id="@+id/imageView24"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+                    </LinearLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="?android:attr/textColorTertiaryInverse"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:elevation="0dp">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="266dp"
+                        android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="268dp"
+                            android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="29dp"
-                        android:layout_height="34dp"
-                        app:srcCompat="@drawable/pass"
-                        android:id="@+id/imageView25"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="5dp" />
-
-                    <EditText
-                        android:layout_width="247dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:ems="10"
-                        android:id="@+id/password2"
-                        android:hint="รหัสเข้าใช้งาน"
-                        android:gravity="center_horizontal"
-                        android:ellipsize="start" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="ชื่อผู้ใช้งาน (สมชาย)"
+                                android:id="@+id/username2" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:text="เข้าสู่ระบบ"
-                android:layout_width="222dp"
+                android:layout_width="276dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/login2"
                 android:background="@drawable/mybutton"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
 
+            <Button
+                android:text="ลงทะเบียนเข้าใช้งาน"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/register"
+                android:background="@drawable/mybutton2"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:textStyle="normal|bold" />
         </LinearLayout>
 
     </LinearLayout>
