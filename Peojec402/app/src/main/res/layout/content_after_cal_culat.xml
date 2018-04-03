@@ -128,8 +128,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="1">
+                        android:weightSum="1"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:text="0"
@@ -138,7 +138,6 @@
                             android:id="@+id/bmi"
                             android:textStyle="normal|bold"
                             android:textSize="40sp"
-                            android:textColor="@color/colorAccent"
                             android:layout_marginLeft="30dp" />
 
                         <TextView
@@ -152,13 +151,13 @@
                         <ImageButton
                             android:layout_width="43dp"
                             android:layout_height="47dp"
-                            app:srcCompat="@drawable/information"
+                            app:srcCompat="@drawable/ic_info_outline"
                             android:id="@+id/BMIinformation"
                             android:background="@android:drawable/screen_background_light_transparent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="40dp"
                             android:scaleType="fitXY"
                             android:layout_marginBottom="20dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="20dp"
                             android:layout_weight="0.02" />
 
                     </LinearLayout>
@@ -265,7 +264,6 @@
                                 android:layout_marginTop="5dp">
 
                                 <TextView
-                                    android:text="@string/explanation"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView51" />
@@ -295,8 +293,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/bmr"
                             android:textStyle="normal|bold"
-                            android:textSize="40sp"
-                            android:textColor="@color/colorAccent" />
+                            android:textSize="40sp" />
 
                         <TextView
                             android:text="เเคลอรี่"
@@ -323,7 +320,8 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_marginTop="10dp"
                 android:layout_margin="20dp"
-                android:background="@drawable/mybutton" />
+                android:background="@drawable/mybutton"
+                android:textColor="?android:attr/textColorTertiary" />
         </LinearLayout>
     </ScrollView>
 

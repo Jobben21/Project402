@@ -31,7 +31,7 @@
                 android:id="@+id/textView139"
                 android:textStyle="normal|bold"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_marginTop="20dp" />
         </LinearLayout>
 
@@ -51,17 +51,15 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="2.80"
                 android:layout_margin="5dp"
-                app:cardCornerRadius="5dp">
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:weightSum="1"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
                     android:padding="10dp"
-                    android:layout_margin="5dp"
                     android:layout_weight="2.80">
 
                     <LinearLayout
@@ -75,8 +73,9 @@
                             android:layout_height="34dp"
                             app:srcCompat="@drawable/username"
                             android:id="@+id/imageView24"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp" />
+                            android:layout_marginTop="13dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="5dp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -92,7 +91,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:hint="ชื่อผู้ใช้งาน (สมชาย)"
-                                android:id="@+id/username2" />
+                                android:id="@+id/username2"
+                                android:textSize="16sp" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
 
@@ -114,8 +114,7 @@
                 android:background="@drawable/mybutton"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center"
-                android:textSize="18sp"
-                android:textStyle="normal|bold" />
+                android:textSize="16sp" />
 
             <Button
                 android:text="ลงทะเบียนเข้าใช้งาน"
@@ -124,9 +123,8 @@
                 android:id="@+id/register"
                 android:background="@drawable/mybutton2"
                 android:layout_marginTop="30dp"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:textStyle="normal|bold" />
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical|center_horizontal" />
         </LinearLayout>
 
     </LinearLayout>

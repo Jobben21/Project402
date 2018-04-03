@@ -119,9 +119,9 @@
         completions."
     </string>
 
-    <string name="Age_login">อายุ (25) ปี</string>
-    <string name="weight_login">น้ำหนัก (56) กิโลกรัม</string>
-    <string name="height_login">ส่วนสูง (173) เซนติเมตร</string>
+    <string name="Age_login">อายุ</string>
+    <string name="weight_login">น้ำหนัก</string>
+    <string name="height_login">ส่วนสูง</string>
 
     <!-- Description blood-->
 
