@@ -19,48 +19,48 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 app:cardCornerRadius="5dp"
-                app:cardElevation="3dp"
-                android:layout_margin="5dp">
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
                         android:weightSum="1">
 
                         <ImageView
+                            android:id="@+id/imageView5"
                             android:layout_width="49dp"
                             android:layout_height="54dp"
-                            app:srcCompat="@drawable/test"
-                            android:id="@+id/imageView5" />
+                            app:srcCompat="@drawable/test" />
 
                         <TextView
-                            android:text="เลือกโรงพยาบาล"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:id="@+id/textView83"
-                            android:textStyle="normal|bold"
-                            android:textSize="16sp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_weight="1"
-                            android:layout_marginTop="25dp" />
-
-                        <TextView
-                            android:text="ผลตรวจเลือด"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView30"
-                            android:layout_weight="0.15"
-                            android:layout_marginTop="30dp"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_weight="1"
+                            android:text="เลือกโรงพยาบาล"
+                            android:textSize="16sp"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="0.15"
+                            android:text="ผลตรวจเลือด"
                             android:textSize="18sp"
                             android:textStyle="normal|bold"
                             android:visibility="gone" />
@@ -68,46 +68,46 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="112dp"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
 
                         <RadioGroup
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_marginBottom="5dp"
                             android:layout_marginLeft="60dp"
-                            android:layout_marginBottom="5dp">
+                            android:orientation="vertical">
 
                             <RadioButton
-                                android:text="@string/hospital2"
+                                android:id="@+id/radioButton4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/radioButton4"
                                 android:layout_weight="1"
-                                android:checked="true" />
+                                android:checked="true"
+                                android:text="@string/hospital2" />
 
                             <RadioButton
-                                android:text="@string/hospital1"
+                                android:id="@+id/radioButton3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/radioButton3"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"
+                                android:text="@string/hospital1" />
 
                             <RadioButton
-                                android:text="@string/hospital3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:id="@+id/radioButton2"
-                                android:layout_weight="1" />
-
-                            <RadioButton
-                                android:text="@string/hospital4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/hospital3" />
+
+                            <RadioButton
                                 android:id="@+id/radioButton"
-                                android:layout_weight="1" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/hospital4" />
 
                         </RadioGroup>
 
@@ -119,74 +119,74 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
-                app:cardElevation="3dp"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:layout_marginLeft="60dp">
+                        android:layout_marginLeft="60dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
 
                         <TextView
-                            android:text="@string/sugar"
+                            android:id="@+id/textView45"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
                             android:layout_weight="1"
+                            android:text="@string/sugar"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="Sugar"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="Sugar" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
+                            android:id="@+id/sugar_t"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
-                            android:id="@+id/sugar_t"
-                            android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:elevation="0dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="70 - 120" />
+                            android:hint="70 - 120"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -194,81 +194,83 @@
 
 
             </android.support.v7.widget.CardView>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="3dp"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:layout_marginLeft="55dp">
+                        android:layout_marginLeft="55dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
 
                         <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/sodium2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
-                            android:layout_weight="1"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/sodium"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/sodium" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
                             android:id="@+id/sodium_t"
-                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="135 - 145" />
+                            android:hint="135 - 145"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -280,78 +282,79 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="3dp"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:layout_marginLeft="30dp">
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
 
                         <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/potassium2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
-                            android:layout_weight="1"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/potassium"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/potassium" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
                             android:id="@+id/potassium_t"
-                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="3.5 - 5.0" />
+                            android:hint="3.5 - 5.0"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -363,77 +366,78 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="3dp"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/colesteral2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
-                            android:layout_weight="1"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/colesteral"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/colesteral" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
                             android:id="@+id/choles_t"
-                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint=">200" />
+                            android:hint=">200"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -445,77 +449,78 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="3dp"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/ldl2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
-                            android:layout_weight="1"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/ldl"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/ldl" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
                             android:id="@+id/ldl_t"
-                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="100" />
+                            android:hint="100"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -527,77 +532,78 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardElevation="3dp"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/hdl2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
-                            android:layout_weight="1"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/hdl"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/hdl" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
+                            android:id="@+id/hdl_t"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
-                            android:id="@+id/hdl_t"
-                            android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="40 - 50" />
+                            android:hint="40 - 50"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="5dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -609,79 +615,79 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/ligthGray"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.16"
+                android:background="@color/ligthGray" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="@dimen/cardview_shapefood"
-                app:cardElevation="3dp"
+                android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="@dimen/cardview_shapefood"
+                app:cardElevation="3dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="5dp"
-                        android:layout_marginLeft="5dp">
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
 
                         <TextView
-                            android:text="@string/trigri2"
+                            android:id="@+id/textView45"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView45"
                             android:layout_weight="1"
+                            android:text="@string/trigri2"
                             android:textStyle="normal|bold" />
 
                         <TextView
-                            android:text="@string/trigri"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView46"
+                            android:layout_gravity="right"
                             android:layout_weight="1"
-                            android:layout_gravity="right" />
+                            android:text="@string/trigri" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                         <EditText
+                            android:id="@+id/tri_t"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number|numberSigned|numberDecimal"
-                            android:ems="4"
-                            android:id="@+id/tri_t"
-                            android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:ellipsize="start"
+                            android:ems="4"
                             android:gravity="center"
-                            android:hint="40 - 149" />
+                            android:hint="40 - 149"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:padding="10dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:orientation="vertical"
                         android:padding="10dp">
 
                         <TextView
-                            android:text="@string/ml"
+                            android:id="@+id/textView47"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView47"
                             android:layout_marginTop="5dp"
+                            android:text="@string/ml"
                             android:textStyle="normal|bold" />
 
                     </LinearLayout>
@@ -692,15 +698,15 @@
             </android.support.v7.widget.CardView>
 
             <Button
-                android:text="คำนวน"
+                android:id="@+id/button_blood"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_blood"
-                android:gravity="center"
                 android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_margin="20dp"
                 android:background="@drawable/mybutton"
+                android:gravity="center"
+                android:text="คำนวน"
                 android:textColor="?android:attr/textColorTertiary" />
 
         </LinearLayout>

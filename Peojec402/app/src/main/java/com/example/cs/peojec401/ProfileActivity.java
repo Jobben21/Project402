@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private ImageButton bloodProfile;
+    private Button nextbt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         bloodProfile = (ImageButton) findViewById(R.id.next);
+
         bloodProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

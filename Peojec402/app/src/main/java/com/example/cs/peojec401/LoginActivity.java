@@ -194,7 +194,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
 
-        String url = "http://192.168.1.6/android/addData.php?status=0";
+        String url = "http://192.168.1.37/android/addData.php?status=0";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 
