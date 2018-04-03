@@ -149,16 +149,15 @@
                             android:layout_marginTop="5dp" />
 
                         <ImageButton
-                            android:layout_width="43dp"
-                            android:layout_height="47dp"
+                            android:layout_width="31dp"
+                            android:layout_height="35dp"
                             app:srcCompat="@drawable/ic_info_outline"
                             android:id="@+id/BMIinformation"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:layout_marginLeft="40dp"
                             android:scaleType="fitXY"
                             android:layout_marginBottom="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_weight="0.02" />
+                            android:layout_marginTop="20dp" />
 
                     </LinearLayout>
 

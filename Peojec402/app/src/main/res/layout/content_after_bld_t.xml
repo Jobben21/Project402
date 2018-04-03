@@ -204,8 +204,7 @@
                                     android:layout_height="match_parent"
                                     android:textAlignment="center"
                                     android:gravity="center"
-                                    android:paddingLeft="70dp"
-                                    android:paddingRight="5dp"
+                                    android:paddingLeft="60dp"
                                     android:layout_weight="0.55">
 
                                     <TextView
@@ -226,9 +225,8 @@
                                 </LinearLayout>
 
                                 <ImageView
-                                    android:layout_width="23dp"
                                     android:layout_height="26dp"
-                                    app:srcCompat="@drawable/arrow"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/sugar_bttt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
@@ -237,10 +235,11 @@
                                     android:layout_gravity="bottom|right"
                                     android:focusable="false"
                                     android:contextClickable="true"
-                                    android:layout_marginLeft="35dp"
+                                    android:layout_marginLeft="30dp"
                                     android:visibility="visible"
                                     android:layout_marginBottom="15dp"
-                                    android:paddingTop="5dp" />
+                                    android:paddingTop="5dp"
+                                    android:layout_width="21dp" />
 
                             </LinearLayout>
 
@@ -422,7 +421,8 @@
                             <LinearLayout
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:weightSum="1">
 
                                 <ImageButton
                                     app:srcCompat="@drawable/cancell"
@@ -465,7 +465,8 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:textAlignment="center"
-                                    android:paddingLeft="55dp">
+                                    android:paddingLeft="55dp"
+                                    android:paddingRight="10dp">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -481,6 +482,16 @@
                                         android:id="@+id/textView56" />
 
                                 </LinearLayout>
+
+                                <ImageView
+                                    app:srcCompat="@drawable/info"
+                                    android:id="@+id/imageView29"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="26dp"
+                                    android:layout_marginLeft="35dp"
+                                    android:paddingTop="5dp" />
 
                             </LinearLayout>
 
@@ -712,14 +723,15 @@
                                 </LinearLayout>
 
                                 <ImageButton
-                                    android:layout_width="41dp"
-                                    android:layout_height="43dp"
-                                    app:srcCompat="@drawable/information"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/potassi_tt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="30dp" />
+                                    android:layout_marginLeft="43dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -945,15 +957,16 @@
                                 </LinearLayout>
 
                                 <ImageButton
-                                    android:layout_width="41dp"
-                                    android:layout_height="43dp"
-                                    app:srcCompat="@drawable/information"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/cl_tt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="25dp"
-                                    android:layout_weight="1" />
+                                    android:layout_marginLeft="43dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -1185,14 +1198,15 @@
                                 </LinearLayout>
 
                                 <ImageButton
-                                    android:layout_width="41dp"
-                                    android:layout_height="43dp"
-                                    app:srcCompat="@drawable/information"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/ldl_tt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="25dp" />
+                                    android:layout_marginLeft="43dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginTop="10dp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -1436,14 +1450,15 @@
                                 </LinearLayout>
 
                                 <ImageButton
-                                    android:layout_width="41dp"
-                                    android:layout_height="43dp"
-                                    app:srcCompat="@drawable/information"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/hdl_tt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="25dp" />
+                                    android:layout_marginLeft="43dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginTop="10dp" />
 
                             </LinearLayout>
 
@@ -1678,14 +1693,15 @@
                                 </LinearLayout>
 
                                 <ImageButton
-                                    android:layout_width="41dp"
-                                    android:layout_height="43dp"
-                                    app:srcCompat="@drawable/information"
+                                    app:srcCompat="@drawable/info"
                                     android:id="@+id/tri_tt"
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="25dp" />
+                                    android:layout_marginLeft="43dp"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginTop="10dp" />
 
                             </LinearLayout>
 
