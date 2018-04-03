@@ -421,9 +421,13 @@
                             android:ellipsize="start"
                             android:ems="4"
                             android:gravity="center"
+<<<<<<< HEAD
                             android:hint=">200"
                             android:inputType="number|numberSigned|numberDecimal"
                             android:padding="10dp" />
+=======
+                            android:hint="200" />
+>>>>>>> 5e36dbd35c879fe637e98d4af4922129d3ca165f
                     </LinearLayout>
 
                     <LinearLayout

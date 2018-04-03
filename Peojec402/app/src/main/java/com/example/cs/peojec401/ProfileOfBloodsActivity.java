@@ -2,6 +2,7 @@ package com.example.cs.peojec401;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+<<<<<<< HEAD:Peojec402/app/src/main/java/com/example/cs/peojec401/BloodsProfile.java
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,12 +16,11 @@ import com.example.cs.peojec401.ConnectData.Config_bt;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+=======
+import android.support.v7.widget.Toolbar;
+>>>>>>> 5e36dbd35c879fe637e98d4af4922129d3ca165f:Peojec402/app/src/main/java/com/example/cs/peojec401/ProfileOfBloodsActivity.java
 
-/**
- * Created by hp on 1/4/2561.
- */
-
-public class BloodsProfile extends AppCompatActivity{
+public class ProfileOfBloodsActivity extends AppCompatActivity {
 
     private TextView p_sugar,p_choles,p_hdl,p_ldl,p_potas,p_tri,p_so;
     private JSONArray result;
@@ -28,8 +28,11 @@ public class BloodsProfile extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bloods_profile);
+        setContentView(R.layout.activity_profile_of_bloods);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+<<<<<<< HEAD:Peojec402/app/src/main/java/com/example/cs/peojec401/BloodsProfile.java
 
         p_sugar = (TextView) findViewById(R.id.profile_sugar);
         p_choles = (TextView)findViewById(R.id.Profile_choles);
@@ -41,6 +44,8 @@ public class BloodsProfile extends AppCompatActivity{
 
       //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar6);
         //setSupportActionBar(toolbar);
+=======
+>>>>>>> 5e36dbd35c879fe637e98d4af4922129d3ca165f:Peojec402/app/src/main/java/com/example/cs/peojec401/ProfileOfBloodsActivity.java
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -152,6 +157,7 @@ public class BloodsProfile extends AppCompatActivity{
         return ldl;
     }
 
+<<<<<<< HEAD:Peojec402/app/src/main/java/com/example/cs/peojec401/BloodsProfile.java
     private String getPotassium(int position){
         String potas="";
         try {
@@ -199,10 +205,13 @@ public class BloodsProfile extends AppCompatActivity{
 
 
 
+=======
+>>>>>>> 5e36dbd35c879fe637e98d4af4922129d3ca165f:Peojec402/app/src/main/java/com/example/cs/peojec401/ProfileOfBloodsActivity.java
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
+
 
 }

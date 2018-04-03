@@ -45,7 +45,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ProfileActivity.this,BloodsProfile.class);
+                Intent intent = new Intent(ProfileActivity.this,ProfileOfBloodsActivity.class);
                 startActivity(intent);
             }
         });

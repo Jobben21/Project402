@@ -109,7 +109,8 @@
                                     android:text="@string/explanation"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView51" />
+                                    android:id="@+id/textView51"
+                                    android:textColor="@color/red_btn_bg_color" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -149,16 +150,15 @@
                             android:layout_marginTop="5dp" />
 
                         <ImageButton
-                            android:layout_width="43dp"
-                            android:layout_height="47dp"
-                            app:srcCompat="@drawable/ic_info_outline"
+                            app:srcCompat="@drawable/info"
                             android:id="@+id/BMIinformation"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:layout_marginLeft="40dp"
                             android:scaleType="fitXY"
                             android:layout_marginBottom="20dp"
                             android:layout_marginTop="20dp"
-                            android:layout_weight="0.02" />
+                            android:layout_width="21dp"
+                            android:layout_height="21dp" />
 
                     </LinearLayout>
 
@@ -315,8 +315,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button_cal"
                 android:layout_weight="1"
-                android:textStyle="normal|bold"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_marginTop="10dp"
                 android:layout_margin="20dp"

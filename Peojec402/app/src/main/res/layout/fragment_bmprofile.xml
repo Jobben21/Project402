@@ -32,11 +32,11 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 app:srcCompat="@drawable/bloodt"
                 android:id="@+id/imageView23"
-                android:padding="5dp"
-                android:layout_marginTop="10dp" />
+                android:paddingRight="5dp"
+                android:paddingLeft="4dp" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -46,26 +46,28 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
 
                     <TextView
                         android:text="แปรผลตรวจเลือดครั้งที่ 1"
-                        android:layout_width="match_parent"
+                        android:layout_width="233dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView140"
                         android:textStyle="normal|bold"
-                        android:textSize="18sp"
-                        android:layout_marginTop="15dp"
-                        android:layout_weight="1" />
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="0.62" />
 
 
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_chevron_right"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/info"
                         android:id="@+id/next"
                         android:background="@android:drawable/screen_background_light_transparent"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:scaleType="fitXY" />
                 </LinearLayout>
 
                 <LinearLayout

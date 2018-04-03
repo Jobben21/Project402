@@ -17,7 +17,7 @@ public class Register_LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_register__login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar5);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.bloods);
         setSupportActionBar(toolbar);
 
         username = (EditText)findViewById(R.id.username2);
