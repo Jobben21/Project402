@@ -508,8 +508,9 @@
                                     android:max="10"
                                     android:id="@+id/seekBar2"
                                     android:progressTint="@color/sodium"
-                                    android:thumbTint="?attr/colorControlHighlight"
-                                    android:clickable="false" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -745,7 +746,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/seekBar3"
                                     android:progressTint="@color/potassium"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -983,7 +986,9 @@
                                     android:progress="3"
                                     android:id="@+id/seekBar4"
                                     android:progressTint="@color/choles"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1223,7 +1228,9 @@
                                     android:progress="3"
                                     android:id="@+id/seekBar5"
                                     android:progressTint="@color/ldl"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1476,7 +1483,9 @@
                                     android:progress="3"
                                     android:id="@+id/seekBar6"
                                     android:progressTint="@color/hdl"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1719,7 +1728,9 @@
                                     android:progress="3"
                                     android:id="@+id/seekBar7"
                                     android:progressTint="@color/tri"
-                                    android:thumbTint="?attr/colorControlHighlight" />
+                                    android:thumbTint="?android:attr/textColorTertiary"
+                                    android:clickable="true"
+                                    android:contextClickable="true" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"

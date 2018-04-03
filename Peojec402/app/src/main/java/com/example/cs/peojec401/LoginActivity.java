@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar5);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.bloods);
         setSupportActionBar(toolbar);
 
 

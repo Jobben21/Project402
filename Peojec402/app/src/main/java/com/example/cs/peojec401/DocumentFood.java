@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -53,15 +52,15 @@ public class DocumentFood extends AppCompatActivity {
         foodpic = (ImageView)  findViewById(R.id.foodpic);
         getData();
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getIncomingintent();
     }
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        onBackPressed();
-//        return true;
-//    }
+     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 //    private void getIncomingintent(){
 //        Log.d(TAG,"getIntent : checking for coming extra");
 //
