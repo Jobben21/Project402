@@ -198,78 +198,78 @@
                             android:layout_marginLeft="20dp">
 
                             <LinearLayout
-                                android:orientation="vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
                                 android:paddingLeft="15dp"
-                                android:paddingRight="30dp"
-                                android:layout_marginTop="5dp">
+                                android:paddingRight="30dp">
 
                                 <TextView
-                                    android:text="0"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/profile_sugar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="15dp"
-                                    android:textStyle="normal|bold"
+                                    android:text="0"
                                     android:textAlignment="center"
-                                    android:textSize="18sp" />
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="0"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/profile_sodium"
-                                    android:layout_marginTop="30dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp"
-                                    android:textAlignment="center" />
-
-                                <TextView
-                                    android:text="0"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+
+                                <TextView
                                     android:id="@+id/profile_potassium"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="25dp"
-                                    android:textStyle="normal|bold"
+                                    android:text="0"
+                                    android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:textAlignment="center" />
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="0"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/Profile_choles"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="30dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
+                                    android:text="0"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="0"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/Profile_ldl"
-                                    android:layout_marginTop="25dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="0"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="25dp"
+                                    android:text="0"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+
+                                <TextView
                                     android:id="@+id/profile_hdl"
-                                    android:layout_marginTop="25dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="0"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/profile_tri"
                                     android:layout_marginTop="25dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
+                                    android:text="0"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
+
+                                <TextView
+                                    android:id="@+id/profile_tri"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="25dp"
+                                    android:text="0"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
 
                             </LinearLayout>
 
