@@ -179,6 +179,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         String checkedLabel = checkedRadioButton.getText ( ).toString ( );
 
 
+
         final AlertDialog.Builder ad= new AlertDialog.Builder(this);
 
         ad.setTitle("Error!");

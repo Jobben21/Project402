@@ -509,6 +509,7 @@ public class AfterBldT extends AppCompatActivity {
         });
 
     }
+
     private void updatePercentValue(int progressValue) {
 
         seekBarMin.setText("ระดับน้ำตาล "+progressValue);
@@ -518,21 +519,16 @@ public class AfterBldT extends AppCompatActivity {
 
         seekBarvalue2.setText("ระดับโซเดียม " + progressValue);
 
-    }private void updatePercentValue3(int progressValue) {
-
-
+    }
+    private void updatePercentValue3(int progressValue) {
     seekBarvalue3.setText("ระดับโพเเทสเซียม " + progressValue);
 
-
-
-
-    }private void updatePercentValue4(int progressValue) {
-
-
+    }
+    private void updatePercentValue4(int progressValue) {
         seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+progressValue);
 
-
-    }private void updatePercentValue5(int progressValue) {
+    }
+    private void updatePercentValue5(int progressValue) {
 
 
         seekBarvalue5.setText("ระดับเเอลดีเอล "+progressValue);
@@ -540,15 +536,15 @@ public class AfterBldT extends AppCompatActivity {
 
 
 
-    }private void updatePercentValue6(int progressValue) {
+    }
+    private void updatePercentValue6(int progressValue) {
 
 
         seekBarvalue6.setText("ระดับเอซดีเเอล "+progressValue);
 
 
-
-
-    }private void updatePercentValue7(int progressValue) {
+    }
+    private void updatePercentValue7(int progressValue) {
 
 
         seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ " + progressValue);
@@ -630,7 +626,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout2.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout2.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator2(0,ChildLayout2.getMeasuredHeight());
                     mAnimator.start();
                 }else{
                     int finalHeight =  ChildLayout2.getHeight();
@@ -672,7 +668,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout3.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout3.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator3(0,ChildLayout3.getMeasuredHeight());
                     mAnimator.start();
                 }else{
                     int finalHeight =  ChildLayout3.getHeight();
@@ -714,7 +710,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout4.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout4.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator4(0,ChildLayout4.getMeasuredHeight());
                     mAnimator.start();
                 }else{
                     int finalHeight =  ChildLayout4.getHeight();
@@ -756,7 +752,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout5.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout5.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator5(0,ChildLayout5.getMeasuredHeight());
                     mAnimator.start();
                 }else{
                     int finalHeight =  ChildLayout5.getHeight();
@@ -798,7 +794,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout6.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout6.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator6(0,ChildLayout6.getMeasuredHeight());
                     mAnimator.start();
                 }else{
                     int finalHeight =  ChildLayout6.getHeight();
@@ -840,7 +836,7 @@ public class AfterBldT extends AppCompatActivity {
                     final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                     ChildLayout7.measure(widthSpec, heightSpec);
-                    ValueAnimator mAnimator = slideAnimator(0,ChildLayout7.getMeasuredHeight());
+                    ValueAnimator mAnimator = slideAnimator7(0,ChildLayout7.getMeasuredHeight());
                     mAnimator.start();                }
                 else{
                     int finalHeight =  ChildLayout7.getHeight();
@@ -875,7 +871,6 @@ public class AfterBldT extends AppCompatActivity {
         });
 
     }
-
 
     private ValueAnimator slideAnimator(int start, int end) {
 

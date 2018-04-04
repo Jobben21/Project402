@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
@@ -26,27 +28,18 @@ public class Fragment_B extends Fragment {
     private AfterBldT afterBldT;
     private EditText sugart,sodium_t,potassium_t,choles_t,ldl_t,hdl_t,tri_t;
     private Spinner hospitalSpinner;
-
+    private ArrayList<EditText> BloodList;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view =  inflater.inflate(R.layout.fragment_layout_b,container,false);
 
-        sugart = (EditText)view.findViewById(R.id.sugar_t);
-        sodium_t = (EditText)view.findViewById(R.id.sodium_t);
-        potassium_t = (EditText)view.findViewById(R.id. potassium_t );
-        choles_t = (EditText)view.findViewById(R.id.choles_t);
-        ldl_t = (EditText)view.findViewById(R.id. ldl_t );
-        hdl_t = (EditText)view.findViewById(R.id.sodium_t);
-        tri_t= (EditText)view.findViewById(R.id. tri_t);
-
-       // hospitalSpinner = (Spinner)view.findViewById(R.id.spinnerblood);
+        Blood(view);
 
         button_b = (Button)view.findViewById(R.id.button_blood);
         button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (sugart.getText().length() == 0) {
                     sugart.setError("กรอกข้อมูลให้ครบถ้วน");
 
@@ -58,7 +51,6 @@ public class Fragment_B extends Fragment {
                             .setConfirmText("ใช่").setCancelText("ไม่")
                             .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
                         @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
-
                             inputBloodTest();
 
                         }}).show();
@@ -71,11 +63,31 @@ public class Fragment_B extends Fragment {
     }
 
 
-
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-
         getActivity().setTitle("ผลตรวจเลือด");
+    }
+
+    public void Blood(View view){
+
+        sugart = (EditText)view.findViewById(R.id.sugar_t);
+        sodium_t = (EditText)view.findViewById(R.id.sodium_t);
+        potassium_t = (EditText)view.findViewById(R.id. potassium_t );
+        choles_t = (EditText)view.findViewById(R.id.choles_t);
+        ldl_t = (EditText)view.findViewById(R.id. ldl_t );
+        hdl_t = (EditText)view.findViewById(R.id.sodium_t);
+        tri_t= (EditText)view.findViewById(R.id. tri_t);
+
+        ArrayList<EditText> FirstList = new ArrayList<EditText>(){{
+            add(sugart);
+            add(sodium_t);
+            add(potassium_t);
+            add(choles_t);
+            add(ldl_t);
+            add(hdl_t);
+            add(tri_t);
+        }};
+
 
     }
     public void inputBloodTest(){
@@ -104,7 +116,6 @@ public class Fragment_B extends Fragment {
         float ldl = Float.parseFloat(ldl_t.getText().toString());
         ldlInBlood(ldl);
         String  Ldl =  ldlInBlood(ldl);
-
 
 
         float tri= Float.parseFloat( tri_t.getText().toString());
@@ -185,7 +196,6 @@ public class Fragment_B extends Fragment {
         return message3;
 
     }
-
     private String cholesInBlood(float choles) {
 
         String message4 = "";
@@ -195,7 +205,7 @@ public class Fragment_B extends Fragment {
         } else if (choles < 40) {
             message4 = "cancell";
         }
-        else if (choles > 300)  {
+        else if (choles > 100)  {
             message4 = "cancell";
         }
         else  {
@@ -203,7 +213,6 @@ public class Fragment_B extends Fragment {
         }
         return message4;
     }
-
     private String ldlInBlood(float ldl) {
 
         String message5 = "";
@@ -234,7 +243,6 @@ public class Fragment_B extends Fragment {
         }
         return message6;
     }
-
     private String triInBlood(float tri) {
 
         String message7 = "";
