@@ -12,6 +12,8 @@ public class DataNoteImformation {
       public static int[] Menufood = {
             R.drawable.menufood,
             R.drawable.menufoodt,
+              R.drawable.fish
+
           /*  R.drawable.menufood,
             R.drawable.menufoodt,
             R.drawable.menufood,
@@ -20,11 +22,12 @@ public class DataNoteImformation {
             R.drawable.menufoodt,
             R.drawable.menufood,
             R.drawable.menufoodt,*/};
-    public static String[] textArray = {"บะหมี่หมูตุ๋น น้ำซุปโชยุต้นตำรับ","截圖工具","dsdddd"};
-    public static String[] dateArray = {"ส่วนผสมประกอบไปด้วย","dddddddddddd"};
+    public static String[] textArray = {"บะหมี่หมูตุ๋น น้ำซุปโชยุต้นตำรับ","截圖工具","ปลาจะละเม็ดนึ่งเห็ดหอม"};
+    public static String[] dateArray = {"ส่วนผสมประกอบไปด้วย","dddddddddddd","นึ่งปลาด้วยไฟแรง ป้องกัน ปลาไม่ให้เหม็นคาวได้\n" +
+            "ปลาจะละเม็ดมีสองชนิด \n"};
     public static String[] id = {"1","2"};
 
-    public static String[] maindish_food = {"เต้าหู้หล่น","กุ้งผัเดเมล็ดมะขาม"};
+    public static String[] maindish_food = {"เต้าหู้หล่น","กุ้งผัเดเมล็ดมะขาม","ปลาจะละเม็ดนึ่งเห็ดหอม"};
     public static int[] maindish_image = {
             R.drawable.menufood,
             R.drawable.menufoodt};
