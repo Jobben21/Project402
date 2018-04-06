@@ -77,24 +77,9 @@ public class Fragment_B extends Fragment {
         button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (sugar_t.getText().length() == 0) {
-                    sugar_t.setError("กรอกข้อมูลให้ครบถ้วน");
-
-                    new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
-                            .setConfirmText("ใช่").setCancelText("ไม่")
-                            .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            inputBloodTest();
-
-                            if (sugar_t.getText().length() == 0) {
-                                sugar_t.setError("กรอกข้อมูลให้ครบถ้วน");
-
-                            } else if (sugar_t.getText().length() >= 6) {
-                                sugar_t.setError("ใส่ข้อมูลไม่ถูกต้อง");
 
 
-                            } else {
+
                                 if (SaveData()) {
 
                                     new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
@@ -109,11 +94,9 @@ public class Fragment_B extends Fragment {
                                     }).show();
 
                                 }
-                            }
 
-                        }
-                    });
-                }
+
+
 
 
             }
@@ -210,7 +193,6 @@ public class Fragment_B extends Fragment {
                 return str.toString();
             }
 
-
             @Override
             public void onViewCreated(View view, Bundle savedInstanceState) {
                 getActivity().setTitle("ผลตรวจเลือด");
@@ -239,37 +221,74 @@ public class Fragment_B extends Fragment {
 
             }
 
+            public void inputBloodTest2() {
+
+
+            }
             public void inputBloodTest() {
 
-                float sugar = Float.parseFloat(sugar_t.getText().toString());
-                sugarInBlood(sugar);
-                String Sugar = sugarInBlood(sugar);
+                String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri;
+                float sugar,sodium,potassium,choles,hdl,ldl,tri;
 
-                float sodium = Float.parseFloat(sodium_t.getText().toString());
-                sodiumInBlood(sodium);
-                String Sodium = sodiumInBlood(sodium);
-
-                float potassium = Float.parseFloat(potassium_t.getText().toString());
-                potassiumInBlood(potassium);
-                String Potassium = potassiumInBlood(potassium);
-
-                float choles = Float.parseFloat(choles_t.getText().toString());
-                String Choles = cholesInBlood(choles);
-
-
-                float hdl = Float.parseFloat(hdl_t.getText().toString());
-                hdlInBlood(hdl);
-                String Hdl = hdlInBlood(hdl);
-
-
-                float ldl = Float.parseFloat(ldl_t.getText().toString());
-                ldlInBlood(ldl);
-                String Ldl = ldlInBlood(ldl);
-
-
-                float tri = Float.parseFloat(tri_t.getText().toString());
-                String Tri = triInBlood(tri);
-
+                if(sugar_t.getText().length() == 0) {
+                     sugar_t.setText("0");
+                     sugar = Float.parseFloat(sugar_t.getText().toString());
+                     sugarInBlood(sugar);
+                     Sugar = sugarInBlood(sugar);
+                }else{
+                    sugar = Float.parseFloat(sugar_t.getText().toString());
+                    Sugar = sugarInBlood(sugar);
+                }
+                if(sodium_t.getText().length() == 0) {
+                    sodium_t.setText("0");
+                    sodium = Float.parseFloat(sodium_t.getText().toString());
+                    Sodium = sodiumInBlood(sodium);
+                }else{
+                    sodium = Float.parseFloat(sodium_t.getText().toString());
+                    Sodium = sodiumInBlood(sodium);
+                }
+                if( potassium_t.getText().length() == 0) {
+                    potassium_t.setText("0");
+                    potassium = Float.parseFloat(potassium_t.getText().toString());
+                    Potassium = potassiumInBlood(potassium);
+                }else{
+                    potassium = Float.parseFloat(potassium_t.getText().toString());
+                    Potassium = potassiumInBlood(potassium);
+                }
+                if( choles_t.getText().length() == 0) {
+                    choles_t.setText("0");
+                    choles = Float.parseFloat(choles_t.getText().toString());
+                    Choles = cholesInBlood(choles);
+                }else{
+                    choles = Float.parseFloat(choles_t.getText().toString());
+                    Choles = cholesInBlood(choles);
+                }
+                if( hdl_t.getText().length() == 0) {
+                    hdl_t.setText("0");
+                    hdl = Float.parseFloat(hdl_t.getText().toString());
+                    Hdl = hdlInBlood(hdl);
+                }
+                else{
+                    hdl = Float.parseFloat(hdl_t.getText().toString());
+                    Hdl = hdlInBlood(hdl);
+                }
+                if( ldl_t.getText().length() == 0) {
+                    ldl_t.setText("0");
+                    ldl = Float.parseFloat(ldl_t.getText().toString());
+                    Ldl = ldlInBlood(ldl);
+                }
+                else{
+                    ldl = Float.parseFloat(ldl_t.getText().toString());
+                    Ldl = ldlInBlood(ldl);
+                }
+                if( tri_t.getText().length() == 0) {
+                    tri_t.setText("0");
+                    tri = Float.parseFloat(tri_t.getText().toString());
+                    Tri = triInBlood(tri);
+                }else{
+                    tri = Float.parseFloat(tri_t.getText().toString());
+                    Tri = triInBlood(tri);
+                }
                 afterBldT = new AfterBldT();
                 Intent intent = new Intent(getActivity().getBaseContext(), AfterBldT.class);
                 intent.putExtra("sugar", sugar);
@@ -298,7 +317,11 @@ public class Fragment_B extends Fragment {
 
                 if (sugar >= 70 && sugar <= 120) {
                     message1 = "ok";
-                } else {
+                }
+                else if(sugar == 0){
+                    message1 = "minus";
+                }
+                else{
                     if (sugar < 70) {
                         message1 = "cancell";
                     } else if (sugar > 130) {
@@ -316,6 +339,8 @@ public class Fragment_B extends Fragment {
 
                 if (136 <= sodium && sodium <= 145) {
                     message2 = "ok";
+                }   else if(sodium == 0){
+                    message2 = "minus";
                 } else if (sodium < 136) {
                     message2 = "cancell";
                 } else if (sodium > 146) {
@@ -332,7 +357,9 @@ public class Fragment_B extends Fragment {
 
                 if (3.5 <= potassium && potassium <= 5.1) {
                     message3 = "ok";
-                } else if (potassium < 3.5) {
+                }    else if(potassium == 0){
+                    message3 = "minus";
+                }else if (potassium < 3.5) {
                     message3 = "cancell";
                 } else if (potassium > 5.1) {
                     message3 = "cancell";
@@ -349,7 +376,9 @@ public class Fragment_B extends Fragment {
 
                 if (50 <= choles && choles <= 200) {
                     message4 = "ok";
-                } else if (choles < 40) {
+                }    else if(choles == 0){
+                    message4 = "minus";
+                }else if (choles < 40) {
                     message4 = "cancell";
                 } else if (choles > 100) {
                     message4 = "cancell";
@@ -365,7 +394,9 @@ public class Fragment_B extends Fragment {
 
                 if (0 <= ldl && ldl <= 100) {
                     message5 = "ok";
-                } else if (ldl > 100) {
+                }    else if(ldl == 0){
+                    message5 = "minus";
+                }else if (ldl > 100) {
                     message5 = "cancell";
                 }
 
@@ -378,7 +409,9 @@ public class Fragment_B extends Fragment {
 
                 if (35 <= hdl && hdl <= 60) {
                     message6 = "ok";
-                } else if (hdl < 35) {
+                }    else if(hdl == 0){
+                    message6 = "minus";
+                }else if (hdl < 35) {
                     message6 = "cancell";
                 } else if (hdl > 60) {
                     message6 = "ok";
@@ -394,6 +427,8 @@ public class Fragment_B extends Fragment {
 
                 if (50 <= tri && tri <= 200) {
                     message7 = "ok";
+                }   else if(tri == 0){
+                    message7 = "minus";
                 } else if (tri < 50) {
                     message7 = "cancell";
                 } else if (tri > 200) {
