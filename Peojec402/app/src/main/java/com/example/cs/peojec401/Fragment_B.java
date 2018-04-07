@@ -51,7 +51,8 @@ public class Fragment_B extends Fragment {
     private EditText sugar_t,sodium_t,potassium_t,choles_t,ldl_t,hdl_t,tri_t;
     private Spinner hospitalSpinner;
     private ArrayList<EditText> BloodList;
-
+    private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri;
+    private  float sugar,sodium,potassium,choles,hdl,ldl,tri;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_layout_b, container, false);
@@ -77,28 +78,19 @@ public class Fragment_B extends Fragment {
         button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-                                if (SaveData()) {
-
-                                    new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
-                                            .setConfirmText("ใช่").setCancelText("ไม่")
-                                            .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                        @Override
-                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                                            inputBloodTest();
-
-                                        }
-                                    }).show();
-
-                                }
-
-
-
-
-
+               // if(sugar_t.getText().length() == 0){
+               //     new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                 //           .setTitleText("แปรผลตรวจเลือด")
+                   //         .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
+                     //       .setConfirmText("ตกลง")
+                       //     .show();
+                //}
+                //else {
+                 //   if(SaveData()) {
+                        inputBloodTest();
+                        Blood();
+                   // }
+              //  }
             }
         });
         return view;
@@ -198,37 +190,8 @@ public class Fragment_B extends Fragment {
                 getActivity().setTitle("ผลตรวจเลือด");
             }
 
-            public void Blood(View view) {
 
-                sugar_t = (EditText) view.findViewById(R.id.sugar_t);
-                sodium_t = (EditText) view.findViewById(R.id.sodium_t);
-                potassium_t = (EditText) view.findViewById(R.id.potassium_t);
-                choles_t = (EditText) view.findViewById(R.id.choles_t);
-                ldl_t = (EditText) view.findViewById(R.id.ldl_t);
-                hdl_t = (EditText) view.findViewById(R.id.sodium_t);
-                tri_t = (EditText) view.findViewById(R.id.tri_t);
-
-                ArrayList<EditText> FirstList = new ArrayList<EditText>() {{
-                    add(sugar_t);
-                    add(sodium_t);
-                    add(potassium_t);
-                    add(choles_t);
-                    add(ldl_t);
-                    add(hdl_t);
-                    add(tri_t);
-                }};
-
-
-            }
-
-            public void inputBloodTest2() {
-
-
-            }
             public void inputBloodTest() {
-
-                String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri;
-                float sugar,sodium,potassium,choles,hdl,ldl,tri;
 
                 if(sugar_t.getText().length() == 0) {
                      sugar_t.setText("0");
@@ -289,27 +252,52 @@ public class Fragment_B extends Fragment {
                     tri = Float.parseFloat(tri_t.getText().toString());
                     Tri = triInBlood(tri);
                 }
-                afterBldT = new AfterBldT();
-                Intent intent = new Intent(getActivity().getBaseContext(), AfterBldT.class);
-                intent.putExtra("sugar", sugar);
-                intent.putExtra("sodium", sodium);
-                intent.putExtra("potassium", potassium);
-                intent.putExtra("choles", choles);
-                intent.putExtra("ldl", ldl);
-                intent.putExtra("hdl", hdl);
-                intent.putExtra("tri", tri);
-
-                intent.putExtra("message1", Sugar);
-                intent.putExtra("message2", Sodium);
-                intent.putExtra("message3", Potassium);
-                intent.putExtra("message4", Choles);
-                intent.putExtra("message5", Ldl);
-                intent.putExtra("message6", Hdl);
-                intent.putExtra("message7", Tri);
-
-                startActivity(intent);
 
             }
+
+            public void Blood() {
+
+                ArrayList<String> FirstList = new ArrayList<>();
+                FirstList.add(Sugar);
+                FirstList.add(Sodium);
+                FirstList.add(Potassium);
+                FirstList.add(Choles);
+                FirstList.add(Ldl);
+                FirstList.add(Hdl);
+                FirstList.add(Tri);
+
+
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
+                                    .setConfirmText("ใช่").setCancelText("ไม่")
+                                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+
+                                    afterBldT = new AfterBldT();
+                                    Intent intent = new Intent(getActivity().getBaseContext(), AfterBldT.class);
+                                    intent.putExtra("sugar", sugar);
+                                    intent.putExtra("sodium", sodium);
+                                    intent.putExtra("potassium", potassium);
+                                    intent.putExtra("choles", choles);
+                                    intent.putExtra("ldl", ldl);
+                                    intent.putExtra("hdl", hdl);
+                                    intent.putExtra("tri", tri);
+
+                                    intent.putExtra("message1", Sugar);
+                                    intent.putExtra("message2", Sodium);
+                                    intent.putExtra("message3", Potassium);
+                                    intent.putExtra("message4", Choles);
+                                    intent.putExtra("message5", Ldl);
+                                    intent.putExtra("message6", Hdl);
+                                    intent.putExtra("message7", Tri);
+
+                                    startActivity(intent);
+
+
+                                }
+                            }).show();
+
+                        }
 
             private String sugarInBlood(float sugar) {
 
@@ -321,7 +309,7 @@ public class Fragment_B extends Fragment {
                 else if(sugar == 0){
                     message1 = "minus";
                 }
-                else{
+                else {
                     if (sugar < 70) {
                         message1 = "cancell";
                     } else if (sugar > 130) {
@@ -392,9 +380,9 @@ public class Fragment_B extends Fragment {
 
                 String message5 = "";
 
-                if (0 <= ldl && ldl <= 100) {
+                if (30< ldl && ldl <= 100) {
                     message5 = "ok";
-                }    else if(ldl == 0){
+                } else if(ldl == 0){
                     message5 = "minus";
                 }else if (ldl > 100) {
                     message5 = "cancell";

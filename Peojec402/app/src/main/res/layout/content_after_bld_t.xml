@@ -643,7 +643,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:visibility="visible"
-                    android:id="@+id/potassium_ab">
+                    android:id="@+id/potassium_bd">
 
                     <LinearLayout
                         android:orientation="vertical"

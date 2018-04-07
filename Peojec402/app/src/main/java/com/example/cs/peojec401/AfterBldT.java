@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,13 +26,13 @@ public class AfterBldT extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     private ImageButton sugartt,sodiumtt,potasstt,cholett,ldltt,hdltt,tritt;
     private TextView sugar_ab2,sodium_ab2,potass_ab2,chole_ab2,ldl_ab2,hdl_ab2,tri_ab2;
-    private TextView description_doc,description_smile,description_sad;
     final Context context = this;
     private Button next ,home;
     private SeekBar seekBar,seekBar2,seekBar3,seekBar4,seekBar5,seekBar6,seekBar7;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     LinearLayout HeaderLayout,HeaderLayout2,HeaderLayout3,HeaderLayout4,HeaderLayout5,HeaderLayout6,HeaderLayout7;
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
+    CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,7 @@ public class AfterBldT extends AppCompatActivity {
 
         seekBar(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
         inputData(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
-
+        layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
 
         String message1 = intent.getStringExtra("message1");
         String message2 = intent.getStringExtra("message2");
@@ -131,10 +132,40 @@ public class AfterBldT extends AppCompatActivity {
         tri_ab2 =(TextView)findViewById(R.id.tri_ab2);
         tri_ab2.setText(String.format("%.1f",tri_ab1));
 
-
     }
 
-    public void showImage(String message1,String message2 ,String message3,String message4,String message5,String message6,String message7){
+    public void  layoutgone(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1 ) {
+
+        Main = (CardView) findViewById(R.id.sugar_bd);
+        Main2 = (CardView) findViewById(R.id.sodium_bd);
+        Main3 = (CardView) findViewById(R.id.potassium_bd);
+        Main4 = (CardView) findViewById(R.id.choles_bd);
+        Main5 = (CardView) findViewById(R.id.ldl_bd);
+        Main6 = (CardView) findViewById(R.id.hdl_bd);
+        Main7 = (CardView) findViewById(R.id.trigry_bd);
+
+        if(sugar_ab1 == 0.0){
+            Main.setVisibility(View.GONE);
+        }if(sodium_ab1 == 0.0){
+            Main2.setVisibility(View.GONE);
+        }if(potass_ab1 == 0.0){
+            Main3.setVisibility(View.GONE);
+        } if(chole_ab1 == 0.0){
+            Main4.setVisibility(View.GONE);
+        } if(ldl_ab1 == 0.0){
+            Main5.setVisibility(View.GONE);
+        } if(hdl_ab1 == 0.0){
+            Main6.setVisibility(View.GONE);
+        } if( tri_ab1 == 0.0){
+            Main7.setVisibility(View.GONE);
+        }
+
+
+
+
+
+    }
+        public void showImage(String message1,String message2 ,String message3,String message4,String message5,String message6,String message7){
 
         int resource_id = this.getResources().getIdentifier("drawable/"+message1, null, this.getPackageName());
         ImageView imageView = (ImageView)findViewById(R.id.image);
