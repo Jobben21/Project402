@@ -229,7 +229,7 @@
                                     android:id="@+id/profile_potassium"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="25dp"
+                                    android:layout_marginTop="20dp"
                                     android:text="0"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
@@ -239,7 +239,7 @@
                                     android:id="@+id/Profile_choles"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="30dp"
+                                    android:layout_marginTop="25dp"
                                     android:text="0"
                                     android:textSize="18sp"
                                     android:textStyle="normal|bold" />
@@ -257,7 +257,7 @@
                                     android:id="@+id/profile_hdl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="25dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="0"
                                     android:textSize="18sp"
                                     android:textStyle="normal|bold" />
