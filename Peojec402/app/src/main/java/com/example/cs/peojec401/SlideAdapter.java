@@ -29,22 +29,24 @@ public class SlideAdapter extends PagerAdapter {
         };
 
         public String[] lst_title = {
-                "ONE","TWO","THREE","FOUR"
+                "แอปพลิเคชั่นเเนะนำเมนูอาหาร","ผลตรวจเลือด","เเนะนำเมนูอาหาร","เเนะนำเมนูอาหารตามโรค"
         };
 
         public String[] lst_description = {
-                "According to South Korea's Unification Ministry," +"\n"+
-                        "        North Korea made the first contact " +"\n"+
-                        "via the phone line at exactly the time ordered.",
-                "According to South Korea's Unification Ministry," +"\n"+
-                        "        North Korea made the first contact" +"\n"+
-                        " via the phone line at exactly the time ordered.",
-                "According to South Korea's Unification Ministry," +"\n"+
-                        "        North Korea made the first contact" +"\n"+
-                        " via the phone line at exactly the time ordered.",
-                "According to South Korea's Unification Ministry," +"\n"+
-                        "        North Korea made the first contact" +"\n"+
-                        " via the phone line at exactly the time ordered."
+
+                "ในปัจจุบันผู้สูงอายุหันมาสนใจดูเเลสุขภาพ"+"\n"+
+                        "มากขึ้น การรับประทานอาหารเป็นปัจจัยที่สำคัญ"+"\n"+
+                        "ดังนั้น ผู้สูอายุควรใส่ใจเรื่องอาหารเพื่อสุขภาพที่ดีขึ้น",
+                "นำผลตรวจเลือดที่ได้จากโรงพยาบาล " +"\n"+
+                        "มาแปรผลผล เพื่อตรวจสอบความผิดปกติ" +"\n"+
+                        "หรือไม่ พร้อมคำอธิบายผลตตรวจเลือดในเเต่ล่ะช่วง",
+                "เเนะนำเมนูอาหารที่เหมาะสมกับสุขภาพ" +"\n"+
+                        "ร่างกายของผู้ใช้งานโดยใช้ผลตรวจเลือดมาวิเคราะห์",
+                      //  " via the phone line at exactly the time ordered."
+
+                "เเนะนำเมนูอาหารเฉพาะโรคนั้น ๆ เช่น" +"\n"+
+                        "โรคเบาหวาน โรคไต โรคความดันสูง โรคหัวใจ" +"\n"+
+                        "เพื่อให้ผู้ใช้งานสามารถทำเมนูให้เหมาะสมกับสุขภาพได้"
         };
 
          public int[] lst_backgroundColor = {

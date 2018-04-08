@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/parentLayout"
@@ -46,7 +47,7 @@
                             android:id="@+id/foodpic"
                             android:layout_weight="1"
                             android:scaleType="fitXY"
-                            android:visibility="gone"
+                            android:visibility="visible"
                             android:padding="10dp" />
                     </LinearLayout>
 
@@ -75,13 +76,14 @@
                                     android:layout_margin="10dp">
 
 
-                                        <TextView
+                                    <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/food_name"
-                                            android:textSize="18dp"
+                                            android:textSize="18sp"
                                             android:layout_marginTop="5dp"
-                                            />
+                                            tools:text="แกงเหลือง"
+                                            android:textStyle="normal|bold" />
                                     <!--<TextView-->
 
                                         <!--android:layout_width="match_parent"-->
@@ -110,14 +112,6 @@
 
                                 </LinearLayout>
 
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="5dp" />
-
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
@@ -132,15 +126,34 @@
                                         android:id="@+id/textView41"
                                         android:layout_marginTop="5dp"
                                         android:textStyle="normal|bold"
-                                        android:textSize="18sp" />
+                                        android:textSize="18sp"
+                                        android:textColor="@color/colorNavigation" />
 
                                     <TextView
-                                        android:text="TextView"
+                                        android:text="ปลากะพงขอดเกล็ดล้างน้ําแล่เอาแต่เนื้อ 200 กรัม  "
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/Option_foods"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginBottom="5dp" />
+                                        android:layout_marginBottom="5dp"
+                                        android:textAlignment="viewStart"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:text="มะละกอดิบ (1 ลูก) ปอกเปลือกนั่นแฉลบ 300 กรัม "
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView43"
+                                        android:layout_marginTop="5dp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:text="ส้มแขกชิ้นบาง ๆ 10 ชิ้น"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView85"
+                                        android:layout_marginTop="5dp"
+                                        android:visibility="gone" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -177,25 +190,27 @@
                                         android:textStyle="normal|bold"
                                         android:textSize="18sp"
                                         android:layout_marginTop="5dp"
-                                        android:textColor="?attr/colorControlNormal" />
+                                        android:textColor="@color/colorNavigation" />
 
                                     <TextView
-                                        android:text="1. "
+                                        android:text="1. ทาน้ํามะนาวให้ทั่วชิ้นปลา นั่นเนื้อปลากะพงเป็นชิ้นขนาด 12 นิ้ว"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView69"
                                         android:layout_weight="1"
-                                        android:layout_marginTop="5dp" />
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:text="2. ใส่น้ําลงในหม้อ ตั้งไฟกลาง พอเดือด ใส่น้ําพริกแกง คนให้ละลาย ใส่มะละกอ สม แขก น้ําปลา น้ําตาลปีบ เดือดอีกครั้ง พอมะละกอสุก ใส่ปลา พอปลาสุก ชิมรส ปรับให้รส กลมกล่อม ปิดไฟ ตักใส่ถ้วย กินร้อน ๆ ช้อนชา "
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView71"
+                                        android:layout_weight="1"
+                                        android:visibility="gone" />
 
                                 </LinearLayout>
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:background="@color/ligthGray"
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="5dp" />
 
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
@@ -287,7 +302,7 @@
                                             android:paddingRight="5dp" />
 
                                         <TextView
-                                            android:text="-"
+                                            android:text="150"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/energy_food"
@@ -321,7 +336,7 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="-"
+                                            android:text="30"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/carbo_food"
@@ -359,7 +374,7 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="-"
+                                            android:text="2.6"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/fat_food"
@@ -391,7 +406,7 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="-"
+                                            android:text="10"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/protein_food"
@@ -421,7 +436,7 @@
                                             android:textStyle="normal|bold" />
 
                                         <TextView
-                                            android:text="-"
+                                            android:text="0"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/sugar_food"
