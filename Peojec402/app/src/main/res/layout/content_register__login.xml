@@ -101,6 +101,19 @@
 
         </LinearLayout>
 
+        <TextView
+            android:text="ลืมชื่อผู้ใช้งาน ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView90"
+            android:layout_margin="5dp"
+            android:textAlignment="textEnd"
+            android:autoLink="all"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:textIsSelectable="true"
+            android:linksClickable="true" />
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -112,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/login2"
                 android:background="@drawable/mybutton"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:layout_gravity="center"
                 android:textSize="16sp" />
 

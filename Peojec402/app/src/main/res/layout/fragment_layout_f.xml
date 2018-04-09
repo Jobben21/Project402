@@ -53,7 +53,7 @@
 
                                 <ImageView
                                     android:layout_width="157dp"
-                                    app:srcCompat="@drawable/menufood"
+                                    app:srcCompat="@drawable/shirm"
                                     android:id="@+id/imageView"
                                     android:layout_height="123dp" />
 
@@ -161,7 +161,7 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/menufood"
+                                    app:srcCompat="@drawable/fish"
                                     android:id="@+id/imageView"
                                     android:layout_weight="0.63"
                                     android:layout_height="130dp" />
@@ -386,7 +386,7 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/menufood"
+                                    app:srcCompat="@drawable/tofuu"
                                     android:id="@+id/imageView"
                                     android:layout_weight="0.63"
                                     android:layout_height="130dp" />
