@@ -86,11 +86,11 @@ public class Fragment_B extends Fragment {
                        //     .show();
                 //}
                 //else {
-                 //   if(SaveData()) {
+                   if(SaveData()) {
                         inputBloodTest();
                         Blood();
                    // }
-              //  }
+                }
             }
         });
         return view;
@@ -98,16 +98,10 @@ public class Fragment_B extends Fragment {
 
             public boolean SaveData() {
 
-//        final EditText e_sugar = (EditText) findViewById(R.id.sugar_t);
-//        final EditText e_sodium = (EditText)findViewById(R.id.sodium_t);
-//        final EditText e_potassium = (EditText)findViewById(R.id.potassium_t);
-//        final EditText e_choles = (EditText)findViewById(R.id.choles_t);
-//        final EditText e_hdl = (EditText)findViewById(R.id.hdl_t);
-//        final EditText e_ldl = (EditText)findViewById(R.id.ldl_t);
-//        final EditText e_trigly = (EditText)findViewById(R.id.tri_t);
 
 
-                String url = "http://192.168.1.37/android/add_bt.php?status=0";
+
+                String url = "http://192.168.1.40/android/add_bt.php?status=0";
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
 

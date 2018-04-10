@@ -6,11 +6,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -20,7 +43,7 @@ public class AfterCalCulat extends AppCompatActivity{
     private ImageButton information;
     final Context context = this;
     private Button button_dialog2;
-
+    private TextView bmi,bmr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +51,8 @@ public class AfterCalCulat extends AppCompatActivity{
         Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar2);
 
-
+//       bmi_p = (TextView) findViewById(R.id.bmi);
+//        bmr_p = (TextView) findViewById(R.id.bmr);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -123,7 +147,81 @@ public class AfterCalCulat extends AppCompatActivity{
         description.setText(message);
 
 
+        SaveData();
+    }
 
+
+    public boolean SaveData() {
+
+
+
+
+        String url = "http://192.168.1.40/android/add_bmr.php?status=0";
+
+        List<NameValuePair> para = new ArrayList<NameValuePair>();
+
+        para.add(new BasicNameValuePair("bmi", bmr.getText().toString()));
+        para.add(new BasicNameValuePair("bmr", bmi.getText().toString()));
+
+
+        String resultServer = gettHttpPost(url, para);
+
+        String StatusId = "";
+        String Error = "Unknow Status!";
+        String a = "";
+        JSONObject c;
+        try {
+            c = new JSONObject(resultServer);
+            a = c.getString("StatusID");
+            StatusId = c.getString("StatusID");
+
+            Error = c.getString("Error");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Toast.makeText(getApplicationContext(), StatusId,
+                Toast.LENGTH_SHORT).show();
+
+
+
+        return true;
+    }
+
+
+    private String gettHttpPost(String url, List<NameValuePair> para) {
+
+        StringBuilder str = new StringBuilder();
+        HttpClient client = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url);
+
+        try {
+            httppost.setEntity(new UrlEncodedFormEntity(para, "UTF-8"));
+
+            HttpResponse response = client.execute(httppost);
+            StatusLine statusline = response.getStatusLine();
+            int statusCode = statusline.getStatusCode();
+            if (statusCode == 200) {
+
+                HttpEntity entity = response.getEntity();
+                InputStream content = entity.getContent();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    str.append(line);
+                }
+            } else {
+                Log.e("Log", "Failed to download result..");
+            }
+
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return str.toString();
     }
 
 
