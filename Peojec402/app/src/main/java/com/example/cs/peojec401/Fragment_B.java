@@ -78,19 +78,37 @@ public class Fragment_B extends Fragment {
         button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // if(sugar_t.getText().length() == 0){
-               //     new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                 //           .setTitleText("แปรผลตรวจเลือด")
-                   //         .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
-                     //       .setConfirmText("ตกลง")
-                       //     .show();
-                //}
-                //else {
-                   if(SaveData()) {
+             /*   if(sugar_t.getText().length() == 0 ||
+                        sodium_t.getText().length() == 0 ||
+                        potassium_t.getText().length() == 0 ||
+                         ldl_t.getText().length() == 0 || hdl_t.getText().length() == 0 || choles_t.getText().length() == 0
+                || tri_t.getText().length() == 0 )
+                {
+
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("แปรผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
+                            .setConfirmText("ตกลง")
+                            .show();
+                }
+
+              /*  else if(sugar_t.getText().length() == 0 &&
+                        sodium_t.getText().length() == 0 &&
+                        potassium_t.getText().length() == 0 &&
+                        ldl_t.getText().length() == 0 && hdl_t.getText().length() == 0 && choles_t.getText().length() == 0
+                        && tri_t.getText().length() == 0 ){
+
+
                         inputBloodTest();
                         Blood();
-                   // }
+
                 }
+                else {*/
+                  if(SaveData()) {
+                        inputBloodTest();
+                        Blood();
+                    }
+                //}
             }
         });
         return view;

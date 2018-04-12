@@ -32,16 +32,30 @@ public class Register_LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.PROGRESS_TYPE);
-                pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-                pDialog.setTitleText("รอสักครู่");
-                pDialog.setCancelable(false);
-                pDialog.show();
+                if(username.getText().toString().isEmpty()){
 
+                    new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("เข้าสู่ระบบ")
+                            .setContentText("กรอกชื่อผู้ใช้งานให้ครบถ้วน")
+                            .setConfirmText("ตกลง")
+                            .show();
 
-                Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
-                startActivity(intent);
+                   // username.setError("กรอกชื่อผู้ใช้งานให้ครบถ้วน");
+                }
+
+                else {
+                    SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+                    pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                    pDialog.setTitleText("รอสักครู่");
+                    pDialog.setCancelable(false);
+                    pDialog.show();
+
+                    Intent intent = new Intent(Register_LoginActivity.this, NavigationActivity.class);
+                    startActivity(intent);
+                }
             }
+
+
 
         });
 
