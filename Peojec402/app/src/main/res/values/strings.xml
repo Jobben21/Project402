@@ -169,6 +169,7 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_register__login">Register_LoginActivity</string>
     <string name="title_activity_profile_of_bloods">ProfileOfBloodsActivity</string>
+    <string name="title_activity_after_cal_culate2">AfterCalCulate2</string>
 
 
 </resources>

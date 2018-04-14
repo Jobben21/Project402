@@ -121,10 +121,10 @@ public class Fragment_C extends Fragment {
             age_cal.setError("กรอกอายุให้ถูกต้อง 1 - 100");
         }
         if(weight_cal.getText().length() == 0 ){
-            weight_cal.setError("กรอกข้อมูงน้ำหนัก");
+            weight_cal.setError("กรอกข้อมูงล้ำหนัก");
         }
         if(height_cal.getText().length() == 0){
-            height_cal.setError("กรอกสข้อมูล่วนสูง");
+            height_cal.setError("กรอกข้อมูส่วนสูง");
         }
 
 

@@ -104,7 +104,7 @@ public class Fragment_B extends Fragment {
 
                 }
                 else {*/
-                  if(SaveData()) {
+                 if(SaveData()) {
                         inputBloodTest();
                         Blood();
                     }
