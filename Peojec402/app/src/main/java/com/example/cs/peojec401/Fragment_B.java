@@ -107,7 +107,7 @@ public class Fragment_B extends Fragment {
                  if(SaveData()) {
                         inputBloodTest();
                         Blood();
-                    }
+                  }
                 //}
             }
         });
