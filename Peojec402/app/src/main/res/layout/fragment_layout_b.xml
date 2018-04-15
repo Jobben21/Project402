@@ -708,7 +708,7 @@
                 android:background="@drawable/mybutton"
                 android:gravity="center"
                 android:text="คำนวน"
-                android:textColor="?android:attr/textColorTertiary" />
+                android:textColor="?android:attr/textColorPrimaryDisableOnly" />
 
         </LinearLayout>
     </ScrollView>

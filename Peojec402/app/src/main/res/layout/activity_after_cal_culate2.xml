@@ -17,7 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+            app:title="คำนวนปริมาณไขมัน"
+            app:titleMarginStart="70dp"
+            app:titleTextColor="@color/backGround"
+            app:titleTextAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
 
     </android.support.design.widget.AppBarLayout>
 

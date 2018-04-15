@@ -124,7 +124,7 @@ public class AfterCalCulat extends AppCompatActivity{
         description.setText(message);
 
 
-      //  SaveData();
+       SaveData();
     }
 
     public void popUp(){
