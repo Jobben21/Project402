@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             app:cardCornerRadius="@dimen/cardview_shapefood"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+                android:visibility="visible">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -217,34 +218,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:id="@+id/BMI1"
-                android:visibility="gone" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:id="@+id/BMI2"
-                android:visibility="gone" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:id="@+id/BMI3"
-                android:visibility="gone" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:id="@+id/BMI4"
-                android:visibility="gone" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
                 android:id="@+id/BMI5"
                 app:cardCornerRadius="10dp">
 
@@ -272,7 +245,7 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/bmi5_description"
                             android:layout_margin="5dp"
-                            android:text="@string/txtCredits"
+                            android:text="textview"
                             android:autoLink="none|all"
                             android:linksClickable="true" />
                         <View
@@ -303,7 +276,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/ligthGray"
-                            android:layout_marginTop="10dp" />
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/view1" />
 
                         <TextView
                             android:text="TextView"
@@ -315,7 +289,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/ligthGray"
-                            android:layout_marginTop="10dp" />
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/view2" />
 
                         <TextView
                             android:text="TextView"
@@ -328,6 +303,18 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+            <TextView
+                android:text="*กองออกกำลังกาย เพื่อสุขภาพ กรมอนามัย กระทรวงสาธารณสุข"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView95"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="viewEnd"
+                android:textStyle="normal|italic"
+                android:textColor="@color/colorNavigation"
+                android:layout_marginBottom="10dp" />
 
         </LinearLayout>
 
