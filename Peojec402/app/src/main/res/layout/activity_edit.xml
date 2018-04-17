@@ -105,7 +105,7 @@
                                         android:layout_height="match_parent">
 
                                         <AutoCompleteTextView
-                                            android:id="@+id/email"
+                                            android:id="@+id/email_edit"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:hint="@string/prompt_email"
@@ -254,7 +254,7 @@
                                                     android:layout_height="match_parent"
                                                     android:inputType="numberDecimal"
                                                     android:ems="3"
-                                                    android:id="@+id/Age_login"
+                                                    android:id="@+id/Age_edit"
                                                     android:hint="@string/Age_login"
 
                                                     android:ellipsize="middle"
@@ -278,7 +278,7 @@
                                                     android:layout_height="wrap_content"
                                                     android:inputType="numberDecimal"
                                                     android:ems="10"
-                                                    android:id="@+id/Height_login"
+                                                    android:id="@+id/Height_edit"
                                                     android:layout_weight="1"
                                                     android:hint="@string/height_login"
 
@@ -302,7 +302,7 @@
                                                     android:layout_height="wrap_content"
                                                     android:inputType="numberDecimal"
                                                     android:ems="10"
-                                                    android:id="@+id/weight_login"
+                                                    android:id="@+id/weight_edit"
                                                     android:layout_weight="1"
                                                     android:hint="@string/weight_login"
 
@@ -322,7 +322,7 @@
                                             <RadioGroup
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:id="@+id/radio_gender"
+                                                android:id="@+id/radio_gender_edit"
                                                 android:orientation="horizontal">
 
                                                 <RadioButton
@@ -351,7 +351,7 @@
                         </LinearLayout>
 
                         <Button
-                            android:id="@+id/email_sign_in_button"
+                            android:id="@+id/email_edit_button"
                             style="@style/Widget.AppCompat.Button.Colored"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
