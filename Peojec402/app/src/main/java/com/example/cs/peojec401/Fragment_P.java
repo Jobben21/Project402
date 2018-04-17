@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class Fragment_P extends Fragment{
     private TextView  name_profile,age_profile,height_profile,weight_profile,BMI_profile,BMR_profile,gender_profile;
     ArrayList<Example> calculator;
     private Button bloodprofile;
+    private ImageButton editprofile;
     private CardView cardView;
     private JSONArray result;
 
@@ -50,6 +52,8 @@ public class Fragment_P extends Fragment{
         gender_profile = (TextView) view.findViewById(R.id.gender_profile);
         cardView = (CardView)view.findViewById(R.id.bloodProfile);
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
+        editprofile = (ImageButton)view.findViewById(R.id.editprofile);
+
 
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +68,15 @@ public class Fragment_P extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getBaseContext(),NavigationActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        editprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getBaseContext(),EditActivity.class);
                 startActivity(intent);
 
             }

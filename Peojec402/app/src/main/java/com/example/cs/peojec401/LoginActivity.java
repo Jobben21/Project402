@@ -79,8 +79,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.bloods);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.loginn);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         // Set up the login form.
@@ -162,7 +165,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
 
-
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 
     //// "SAVE DATA"

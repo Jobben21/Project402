@@ -82,7 +82,8 @@
         <activity
             android:name=".AfterCalCulate2"
             android:label="@string/title_activity_after_cal_culate2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditActivity"></activity>
     </application>
 
 </manifest>

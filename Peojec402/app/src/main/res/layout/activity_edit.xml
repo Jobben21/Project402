@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgfive">
+    android:background="@drawable/bg6">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:background="@android:drawable/screen_background_light_transparent">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:toolbarId="@+id/loginn"
+                android:layout_height="match_parent"
+                app:toolbarId="@+id/register"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
                 app:contentScrim="?attr/colorPrimary">
 
                 <android.support.v7.widget.Toolbar
-                    android:id="@+id/loginn"
+                    android:id="@+id/register"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_width="match_parent"></android.support.v7.widget.Toolbar>
             </android.support.design.widget.CollapsingToolbarLayout>
@@ -60,14 +60,13 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="10dp">
+                            android:layout_height="match_parent">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView63"
-                                android:text="ลงชื่อเข้าใช้งาน"
+                                android:text="เเก้ไขข้อมูลส่วนตัว"
                                 android:textSize="16sp"
                                 android:textAlignment="center"
                                 android:textStyle="normal|bold" />
@@ -150,7 +149,7 @@
                             android:layout_marginTop="10dp">
 
                             <TextView
-                                android:text="กรอกข้อมูลส่วนตัว"
+                                android:text="เเก้ไขข้อมูลส่วนตัว"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView84"
@@ -357,9 +356,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="@string/action_sign_in"
+                            android:text="บันทึก"
                             android:background="@drawable/mybutton"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:textColor="?android:attr/textColorPrimaryDisableOnly" />
 
                     </LinearLayout>
                 </LinearLayout>

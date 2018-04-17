@@ -161,9 +161,10 @@
                             android:layout_width="63dp"
                             android:layout_height="61dp"
                             app:srcCompat="@drawable/editt"
-                            android:id="@+id/imageButton5"
+                            android:id="@+id/editprofile"
                             android:background="@android:color/transparent"
-                            android:layout_gravity="right" />
+                            android:layout_gravity="right"
+                            android:onClick="onClick (HomeFood)" />
 
                     </FrameLayout>
 
