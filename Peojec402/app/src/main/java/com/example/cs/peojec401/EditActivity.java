@@ -38,7 +38,8 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class EditActivity extends AppCompatActivity {
 
     private Button email_edit_button;
-
+    private EditText e_name,e_age,e_height,e_weight;
+    private RadioGroup gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,13 @@ public class EditActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+         e_name = (EditText) findViewById(R.id.email_edit);
+         e_age = (EditText)findViewById(R.id.Age_edit);
+         e_height = (EditText)findViewById(R.id.Height_edit);
+         e_weight = (EditText)findViewById(R.id.weight_edit);
+         gender = (RadioGroup) findViewById(R.id.radio_gender_edit);
+
 
         email_edit_button = (Button)findViewById(R.id. email_edit_button);
         email_edit_button.setOnClickListener(new View.OnClickListener() {
@@ -70,14 +78,31 @@ public class EditActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+    public void onStart(){
+
+        super.onStart();
+        Intent intent = getIntent();
+
+        String name = intent.getStringExtra("name");
+        String weight = intent.getStringExtra("weight");
+        String height = intent.getStringExtra("height");
+        String age2 = intent.getStringExtra("age2");
+
+        //  String gender = intent.getStringExtra("gender");
+
+
+
+        e_name.setText(name);
+        e_age.setText(age2);
+        e_height.setText(height);
+        e_weight.setText(weight);
+
+
+    }
+
 
     public boolean SaveData(){
 
-        final EditText e_name = (EditText) findViewById(R.id.email_edit);
-        final EditText e_age = (EditText)findViewById(R.id.Age_edit);
-        final EditText e_height = (EditText)findViewById(R.id.Height_edit);
-        final EditText e_weight = (EditText)findViewById(R.id.weight_edit);
-        final RadioGroup gender = (RadioGroup) findViewById(R.id.radio_gender_edit);
 
         int checkedRadioButtonID = gender.getCheckedRadioButtonId ( );
         RadioButton checkedRadioButton = ( RadioButton )findViewById ( checkedRadioButtonID );

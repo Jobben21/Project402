@@ -35,7 +35,7 @@ public class Fragment_P extends Fragment{
     private ImageButton editprofile;
     private CardView cardView;
     private JSONArray result;
-
+    private String name, gender,weight,height,age2;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -77,6 +77,18 @@ public class Fragment_P extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getBaseContext(),EditActivity.class);
+                name = name_profile.getText().toString();
+                age2 = age_profile.getText().toString();
+                gender = gender_profile.getText().toString();
+                height = height_profile.getText().toString();
+                weight = weight_profile.getText().toString();
+
+                intent.putExtra("name",name);
+                intent.putExtra("age2",age2);
+                intent.putExtra("gender",gender);
+                intent.putExtra("height",height);
+                intent.putExtra("weight",weight);
+
                 startActivity(intent);
 
             }
@@ -89,6 +101,8 @@ public class Fragment_P extends Fragment{
 
 
     }
+
+
 
     private void getData(){
         //Creating a string request
@@ -134,9 +148,6 @@ public class Fragment_P extends Fragment{
         //Adding request to the queue
         requestQueue.add(stringRequest);
     }
-
-
-
     //Method to get student name of a particular position
     private String getName(int position){
         String name="";
@@ -190,7 +201,6 @@ public class Fragment_P extends Fragment{
         //Returning the name
         return weight;
     }
-
     private String getGender(int position){
         String gender="";
         try {
@@ -205,7 +215,6 @@ public class Fragment_P extends Fragment{
         //Returning the name
         return gender;
     }
-
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         getActivity().setTitle("ประวัติส่วนตัว");
