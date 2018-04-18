@@ -9,7 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.cs.peojec401.ConnectData.Con_regis;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
+
+import static android.R.attr.password;
 
 public class Register_LoginActivity extends AppCompatActivity {
 
@@ -27,11 +31,15 @@ public class Register_LoginActivity extends AppCompatActivity {
         login = (Button)findViewById(R.id.login2);
         register = (Button)findViewById(R.id.register);
 
-
+        final Con_regis  con_regis = new Con_regis(this);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String username1 = username.getText().toString();
 
+                String type = "login";
+
+                con_regis.execute(type, username1,null);
                 SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.PROGRESS_TYPE);
                 pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
                 pDialog.setTitleText("รอสักครู่");
@@ -54,6 +62,8 @@ public class Register_LoginActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
 

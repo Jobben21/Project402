@@ -101,7 +101,7 @@ public class Fragment_B extends Fragment {
 
 
 
-                String url = "http://192.168.1.40/android/add_bt.php?status=0";
+                String url = "http://172.25.74.140/android/add_bt.php?status=0";
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
 

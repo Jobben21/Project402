@@ -41,7 +41,7 @@ public class Fragment_F4 extends Fragment{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity().getBaseContext(),SuagrFoods.class);
+                Intent intent = new Intent(getActivity().getBaseContext(),DisplayList.class);
                 startActivity(intent);
             }});
        food_sugar1.setOnClickListener(new View.OnClickListener() {
