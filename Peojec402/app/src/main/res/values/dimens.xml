@@ -35,6 +35,7 @@
 
     <dimen name="picture">10dp</dimen>
     <dimen name="energy">5dp</dimen>
+    <dimen name="text_sizefood">10sp</dimen>
 
 
 </resources>
