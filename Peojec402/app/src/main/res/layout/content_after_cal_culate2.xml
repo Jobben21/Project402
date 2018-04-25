@@ -19,11 +19,322 @@
             android:orientation="vertical" >
 
             <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:text="กินอาหารให้ครบ 5 หมู่"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView4"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="normal|bold"
+                            android:textColor="?attr/colorAccent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.16">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                app:srcCompat="@drawable/steak"
+                                android:id="@+id/imageView30"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="โปรตีน"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView93"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.36"
+                            android:paddingRight="10dp">
+
+                            <ImageView
+                                app:srcCompat="@drawable/rice"
+                                android:id="@+id/imageView32"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="คาร์โบไฮเดรต"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView102"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.21">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                app:srcCompat="@drawable/diet"
+                                android:id="@+id/imageView30"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="พืชเเละผัก"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView93"
+                                android:layout_marginTop="@dimen/energy"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                app:srcCompat="@drawable/orange"
+                                android:id="@+id/imageView33"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="ผลไม้"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView103"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical|center"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                app:srcCompat="@drawable/milk"
+                                android:id="@+id/imageView32"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp" />
+
+                            <TextView
+                                android:text="ไขมัน"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView102"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ligthGray"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:text="ออกกำลังกาย"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView141"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="normal|bold" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:paddingRight="10dp">
+
+                            <ImageView
+                                app:srcCompat="@drawable/bicycle"
+                                android:id="@+id/imageView32"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="ปั่นจักรยาน"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView102"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.21">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                app:srcCompat="@drawable/dancer"
+                                android:id="@+id/imageView30"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="เต้นลีลาส"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView93"
+                                android:layout_marginTop="@dimen/energy"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.16">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                app:srcCompat="@drawable/boxing"
+                                android:id="@+id/imageView30"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="ต่อยมวย"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView93"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.23">
+
+                            <ImageView
+                                app:srcCompat="@drawable/runer"
+                                android:id="@+id/imageView33"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="วิ่ง 30 นาที"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView103"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="69dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                app:srcCompat="@drawable/mancutting"
+                                android:id="@+id/imageView32"
+                                android:layout_width="48dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:text="ทำสวน"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView102"
+                                android:layout_marginLeft="@dimen/picture"
+                                android:layout_marginTop="@dimen/energy" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/cardview_shapefood"
             android:layout_margin="10dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -227,7 +538,8 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:id="@+id/BMI5"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="10dp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -342,7 +654,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView95"
                 android:layout_marginTop="10dp"
-                android:layout_margin="10dp"
                 android:textAlignment="viewEnd"
                 android:textStyle="normal|italic"
                 android:textColor="@color/colorNavigation"
