@@ -320,7 +320,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_margin="20dp"
                 android:background="@drawable/mybutton"
-                android:textColor="?android:attr/textColorTertiary" />
+                android:textColor="?android:attr/textColorPrimaryDisableOnly" />
         </LinearLayout>
     </ScrollView>
 

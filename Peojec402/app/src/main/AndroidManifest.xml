@@ -79,7 +79,15 @@
             android:name=".ProfileOfBloodsActivity"
             android:label="@string/title_activity_profile_of_bloods"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
         <activity android:name=".DisplayList"></activity>
+=======
+        <activity
+            android:name=".AfterCalCulate2"
+            android:label="@string/title_activity_after_cal_culate2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditActivity"></activity>
+>>>>>>> bd77fc963247ea375cac1b5beff98f7db18f634f
     </application>
 
 </manifest>

@@ -36,10 +36,6 @@ public class Fragment_C extends Fragment {
     private Integer woman;
     private Integer man;
 
-
-
-
-
     public Fragment_C() {
 
     }
@@ -66,26 +62,29 @@ public class Fragment_C extends Fragment {
             @Override
             public void onClick(View v) {
 
-                      if (age_cal.getText().length() == 0 && weight_cal.getText().length() == 0 &&
-                                height_cal.getText().length() == 0 ){
+                if(age_cal.getText().toString().isEmpty() ||  weight_cal.getText().toString().isEmpty()
+                        ||  height_cal.getText().toString().isEmpty()  ){
 
-                            age_cal.setError("กรอกข้อมูลให้ครบถ้วน");
-                            weight_cal.setError("กรอกข้อมูลให้ครบถ้วน");
-                            height_cal.setError("กรอกข้อมูลให้ครบถ้วน");
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("คำนวนพลังงาน")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+                    checking();
+                }
 
+                else if(age_cal.getText().equals("101")){
+                   // checking2(age,weight,height);
 
-                      }
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                             .setTitleText("คำนวนพลังงาน")
+                             .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                           .setConfirmText("ตกลง")
+                         .show();
 
-                     else if(age_cal.getText().length() > 3 && weight_cal.getText().length() >4 &&
-                              height_cal.getText().length() > 4 ){
-
-                          age_cal.setError("กรอกข้อมูลให้ถูกต้อง 1- 100 ปี");
-                          weight_cal.setError("กรอกข้อมูลให้ถูกต้อง");
-                          height_cal.setError("กรอกข้อมูลให้ถูกต้อง");
-
-                      }
-
-                else {new SweetAlertDialog(getActivity(),SweetAlertDialog.SUCCESS_TYPE).setTitleText("คำนวณผล")
+                }
+                else{
+                new SweetAlertDialog(getActivity(),SweetAlertDialog.SUCCESS_TYPE).setTitleText("คำนวณผล")
                         .setConfirmText("ใช่").setCancelText("ไม่")
                         .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
                     @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
@@ -116,6 +115,35 @@ public class Fragment_C extends Fragment {
 
         return view;
     }
+
+    public void checking(){
+        if(age_cal.getText().length() == 0){
+            age_cal.setError("กรอกอายุให้ถูกต้อง 1 - 100");
+        }
+        if(weight_cal.getText().length() == 0 ){
+            weight_cal.setError("กรอกข้อมูลน้ำหนัก");
+        }
+        if(height_cal.getText().length() == 0){
+            height_cal.setError("กรอกข้อมูส่วนสูง");
+        }
+
+
+    }
+    public void checking2(int age,float weight,float height){
+        if(age > 100){
+            age_cal.setError("กรอกข้อมูลให้ครบถ้วน");
+        }
+        if(weight > 300){
+            weight_cal.setError("กรอกข้อมูลให้ครบถ้วน");
+
+        }
+        if(height > 200){
+            weight_cal.setError("กรอกข้อมูลให้ครบถ้วน");
+
+        }
+    }
+
+
     private float calculateBMI (float weight, float height) {
         return (float) (weight / (height * height));
     }

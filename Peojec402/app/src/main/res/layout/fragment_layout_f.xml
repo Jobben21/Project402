@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp">
+    android:background="@drawable/bg6">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_margin="5dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -33,36 +34,40 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center"
                         android:gravity="center"
-                        android:weightSum="1">
+                        android:weightSum="1"
+                        android:layout_marginTop="20dp">
 
                         <android.support.v7.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:clickable="true"
                             android:id="@+id/firstmenu"
                             android:layout_margin="5dp"
-                            app:cardCornerRadius="10dp">
+                            app:cardCornerRadius="10dp"
+                            android:layout_width="150dp"
+                            app:cardBackgroundColor="@color/button_text_color"
+                            android:layout_height="180dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="212dp"
-                                android:weightSum="1">
+                                android:layout_width="match_parent"
+                                android:weightSum="1"
+                                android:layout_height="190dp">
 
                                 <ImageView
-                                    android:layout_width="157dp"
-                                    app:srcCompat="@drawable/shirm"
+                                    android:layout_width="72dp"
+                                    app:srcCompat="@drawable/cabbagevg"
                                     android:id="@+id/imageView"
-                                    android:layout_height="123dp" />
+                                    android:layout_height="64dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="center_horizontal" />
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_height="wrap_content"
                                     android:layout_width="match_parent"
-                                    android:layout_marginTop="20dp"
-                                    android:gravity="center_vertical|center_horizontal">
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:padding="20dp">
 
                                     <TextView
                                         android:text="@string/Menufood"
@@ -87,7 +92,7 @@
                                         android:id="@+id/sugar_t"
                                         android:layout_weight="1"
                                         android:layout_marginTop="5dp"
-                                        android:textSize="18sp" />
+                                        android:textSize="16sp" />
 
                                 </LinearLayout>
 
@@ -145,8 +150,8 @@
                         </android.support.v7.widget.CardView>
 
                         <android.support.v7.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="180dp"
                             android:layout_marginTop="5dp"
                             android:layout_margin="5dp"
                             android:foreground="?android:attr/selectableItemBackground"
@@ -156,32 +161,35 @@
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                android:weightSum="1">
 
                                 <ImageView
-                                    android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/fish"
+                                    app:srcCompat="@drawable/fishvg"
                                     android:id="@+id/imageView"
-                                    android:layout_weight="0.63"
-                                    android:layout_height="130dp" />
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_height="64dp"
+                                    android:layout_width="72dp" />
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_height="wrap_content"
-                                    android:padding="20dp"
                                     android:layout_width="155dp"
-                                    android:id="@+id/secondmenu">
+                                    android:id="@+id/secondmenu"
+                                    android:padding="20dp">
 
 
 
                                     <TextView
                                         android:text="@string/Menufood"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView88"
                                         android:textStyle="normal|bold"
-                                        android:layout_marginLeft="25dp" />
+                                        android:layout_marginTop="10dp"
+                                        android:textAlignment="center" />
 
                                     <View
                                         android:layout_width="match_parent"
@@ -190,13 +198,12 @@
 
                                     <TextView
                                         android:text="@string/kidney"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/sugar_t"
-                                        android:layout_weight="1"
-                                        android:layout_marginLeft="30dp"
                                         android:layout_marginTop="5dp"
-                                        android:textSize="18sp" />
+                                        android:textSize="16sp"
+                                        android:textAlignment="center" />
 
                                 </LinearLayout>
 
@@ -263,8 +270,8 @@
                         android:gravity="center">
 
                         <android.support.v7.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="180dp"
                             android:layout_marginTop="5dp"
                             android:layout_margin="5dp"
                             android:foreground="?android:attr/selectableItemBackground"
@@ -274,21 +281,23 @@
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp">
 
                                 <ImageView
-                                    android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/spagetty"
+                                    android:layout_width="67dp"
+                                    app:srcCompat="@drawable/sugar_d"
                                     android:id="@+id/imageView"
-                                    android:layout_weight="0.63"
-                                    android:layout_height="130dp" />
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_height="59dp" />
 
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_height="wrap_content"
                                     android:padding="20dp"
-                                    android:layout_width="155dp">
+                                    android:layout_width="155dp"
+                                    android:layout_marginTop="5dp">
 
 
 
@@ -313,7 +322,7 @@
                                         android:layout_weight="1"
                                         android:layout_marginLeft="10dp"
                                         android:layout_marginTop="5dp"
-                                        android:textSize="18sp" />
+                                        android:textSize="16sp" />
 
                                 </LinearLayout>
 
@@ -370,26 +379,27 @@
 
                         </android.support.v7.widget.CardView>
                         <android.support.v7.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="180dp"
                             android:layout_marginTop="5dp"
                             android:layout_margin="5dp"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:clickable="true"
                             app:cardCornerRadius="@dimen/cardview_shapefood"
-                            android:id="@+id/thridmenu">
+                            android:id="@+id/fouremenu">
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp">
 
                                 <ImageView
-                                    android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/tofuu"
+                                    app:srcCompat="@drawable/saladvg"
                                     android:id="@+id/imageView"
-                                    android:layout_weight="0.63"
-                                    android:layout_height="130dp" />
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="72dp"
+                                    android:layout_height="64dp" />
 
                                 <LinearLayout
                                     android:orientation="vertical"

@@ -1883,7 +1883,7 @@
                         android:id="@+id/home"
                         style="@style/Widget.AppCompat.Button.Colored"
                         android:background="@drawable/mybutton"
-                        android:textColor="?android:attr/textColorTertiary"
+                        android:textColor="?android:attr/textColorPrimaryDisableOnly"
                         android:layout_marginRight="10dp"
                         android:layout_weight="0.35" />
 
@@ -1895,7 +1895,7 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         style="@style/Widget.AppCompat.Button.Colored"
-                        android:textColor="?android:attr/textColorTertiary"
+                        android:textColor="?android:attr/textColorPrimaryDisableOnly"
                         android:background="@drawable/mybutton2"
                         android:layout_weight="0.30" />
                 </LinearLayout>

@@ -83,40 +83,59 @@
                             android:layout_weight="1" />
 
                         <LinearLayout
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:padding="20dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:layout_marginRight="7dp">
+                            android:layout_weight="1">
 
-                            <TextView
-                                android:text="@string/Age"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/textView13"
-                                android:textSize="18sp"
-                                android:textStyle="normal|bold"
-                                android:layout_marginLeft="30dp" />
-
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:ems="3"
-                                android:id="@+id/age_cal"
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:padding="15dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
-                                android:inputType="number" />
+                                android:layout_marginRight="7dp">
 
-                            <TextView
-                                android:text="ปี"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/textView14"
-                                android:textStyle="normal|bold"
-                                android:textSize="18sp" />
+                                <TextView
+                                    android:text="@string/Age"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView13"
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold"
+                                    android:layout_marginLeft="30dp" />
 
+                                <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ems="3"
+                                    android:id="@+id/age_cal"
+                                    android:gravity="center"
+                                    android:inputType="number" />
+
+                                <TextView
+                                    android:text="ปี"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView14"
+                                    android:textStyle="normal|bold"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:text="( อายุ 1-100 )"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/age_error"
+                                    android:textAlignment="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal|bold"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
                         <View
@@ -129,7 +148,7 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="20dp"
+                            android:padding="15dp"
                             android:weightSum="1"
                             android:gravity="center">
 
@@ -169,7 +188,7 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="20dp"
+                            android:padding="15dp"
                             android:layout_weight="1"
                             android:gravity="center">
 
@@ -209,7 +228,7 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="20dp"
+                            android:padding="15dp"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:layout_gravity="center">
@@ -271,7 +290,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_margin="20dp"
                     android:background="@drawable/mybutton"
-                    android:textColor="?android:attr/textColorTertiary" />
+                    android:textColor="?android:attr/textColorPrimaryDisableOnly" />
             </LinearLayout>
 
         </LinearLayout>

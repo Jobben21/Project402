@@ -40,6 +40,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 /**
  * A login screen that offers login via email/password.
  */
@@ -77,8 +79,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.bloods);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.loginn);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         // Set up the login form.
@@ -160,7 +165,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
 
-
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 
     //// "SAVE DATA"
@@ -179,7 +188,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         String checkedLabel = checkedRadioButton.getText ( ).toString ( );
 
 
-
         final AlertDialog.Builder ad= new AlertDialog.Builder(this);
 
         ad.setTitle("Error!");
@@ -187,9 +195,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         ad.setPositiveButton("Close",null);
 
         if(e_name.getText().length()==0){
-            ad.setMessage("กรุณาใส่ชื่อ");
-            ad.show();
-            e_name.requestFocus();
+
+            new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("ลงทะเบียน")
+                    .setContentText("กรอกข้อมูลส่วนตัวให้ครบถ้วน")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+
             return false;
 
         }

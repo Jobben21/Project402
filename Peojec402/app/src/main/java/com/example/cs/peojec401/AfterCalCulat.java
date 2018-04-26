@@ -1,6 +1,5 @@
 package com.example.cs.peojec401;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +41,9 @@ public class AfterCalCulat extends AppCompatActivity{
     final Context context = this;
     private Button button_dialog2;
     private TextView bmi,bmr;
+
+    float bmiValue;
+    float bmrValue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +84,6 @@ public class AfterCalCulat extends AppCompatActivity{
 
                                         Intent intent = new Intent(AfterCalCulat.this,NavigationActivity.class);
                                         startActivity(intent);
-
                                     }
                                 }
                         ).show();
@@ -97,30 +96,7 @@ public class AfterCalCulat extends AppCompatActivity{
 
 
 
-    public void popUp(){
 
-        information = (ImageButton)findViewById(R.id.BMIinformation);
-        information.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                final Dialog dialog = new Dialog(context);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.content_after_calcult_dialog);
-                dialog.show();
-
-                button_dialog2 = (Button)dialog.findViewById(R.id.close_dialog_bmi);
-                button_dialog2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        dialog.dismiss();
-                    }
-                });
-
-            }
-        });
-    }
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -131,11 +107,12 @@ public class AfterCalCulat extends AppCompatActivity{
         super.onStart();
         Intent intent = getIntent();
         String message = intent.getStringExtra("bmi");
+
         float weight = intent.getFloatExtra("WEIGHT",0);
         float height = intent.getFloatExtra("HEIGHT",0);
 
-        float bmiValue = intent.getFloatExtra("bmiValue",0);
-        float bmrValue = intent.getFloatExtra("bmrValue",0);
+        bmiValue = intent.getFloatExtra("bmiValue",0);
+        bmrValue = intent.getFloatExtra("bmrValue",0);
 
         TextView bmi =(TextView)findViewById(R.id.bmi);
         bmi.setText(String.format("%.1f",bmiValue));
@@ -147,7 +124,35 @@ public class AfterCalCulat extends AppCompatActivity{
         description.setText(message);
 
 
-        SaveData();
+      //  SaveData();
+    }
+
+    public void popUp(){
+
+        information = (ImageButton)findViewById(R.id.BMIinformation);
+        information.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+              /*  final Dialog dialog = new Dialog(context);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.content_after_calcult_dialog);
+                dialog.show();
+
+                button_dialog2 = (Button)dialog.findViewById(R.id.close_dialog_bmi);
+                button_dialog2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        dialog.dismiss();
+            }
+                });*/
+                Intent intent = new Intent(AfterCalCulat.this,AfterCalCulate2.class);
+                intent.putExtra("bmiValue",bmiValue);
+                startActivity(intent);
+
+            }
+        });
     }
 
 
@@ -223,6 +228,7 @@ public class AfterCalCulat extends AppCompatActivity{
 
         return str.toString();
     }
+
 
 
 
