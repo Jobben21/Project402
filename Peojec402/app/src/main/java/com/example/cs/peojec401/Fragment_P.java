@@ -123,6 +123,7 @@ public class Fragment_P extends Fragment{
                             //Storing the Array of JSON String to our JSON Array
                             result = j.getJSONArray(Config.JSON_ARRAY);
 
+
                             name_profile.setText(getName(0));
                             age_profile.setText(getAge(0));
                             height_profile.setText(getHeight(0));
