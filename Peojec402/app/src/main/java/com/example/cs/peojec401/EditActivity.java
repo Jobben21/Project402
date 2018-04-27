@@ -63,11 +63,11 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (SaveData()) {
+//                if (SaveData()) {
                     Intent intent = new Intent(EditActivity.this,NavigationActivity.class);
                     startActivity(intent);
 
-                }
+  //              }
             }
         });
 
