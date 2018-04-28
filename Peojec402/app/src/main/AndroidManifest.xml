@@ -57,10 +57,15 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
+<<<<<<< HEAD
 
 
+=======
+     <!--   <activity
+            android:name=".Profile.MainProfileActivity"
+>>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
             android:label="@string/title_activity_main_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" /> -->
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
@@ -79,15 +84,20 @@
             android:name=".ProfileOfBloodsActivity"
             android:label="@string/title_activity_profile_of_bloods"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
 
         <activity android:name=".FoodCon.DisplayList"></activity>
 =======
+=======
+        <activity android:name=".DisplayList"></activity>
+
+>>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
         <activity
             android:name=".AfterCalCulate2"
             android:label="@string/title_activity_after_cal_culate2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EditActivity"></activity>
->>>>>>> bd77fc963247ea375cac1b5beff98f7db18f634f
+
     </application>
 
 </manifest>

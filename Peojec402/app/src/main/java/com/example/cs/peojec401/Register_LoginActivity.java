@@ -13,8 +13,6 @@ import com.example.cs.peojec401.ConnectData.Con_regis;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-import static android.R.attr.password;
-
 public class Register_LoginActivity extends AppCompatActivity {
 
     private EditText username;
@@ -59,7 +57,11 @@ public class Register_LoginActivity extends AppCompatActivity {
                 }
 
                 else {
+<<<<<<< HEAD
                     pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+=======
+                    new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+>>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
                     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
                     pDialog.setTitleText("รอสักครู่");
                     pDialog.setCancelable(false);
