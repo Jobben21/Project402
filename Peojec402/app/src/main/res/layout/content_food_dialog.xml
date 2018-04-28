@@ -100,11 +100,21 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:id="@+id/textView86"
+                                    android:textStyle="normal|bold"
+                                    android:text="เต้าหูปลาทรงเครื่อง "
+                                    android:textSize="18sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:id="@+id/food_name"
                                     android:textSize="18sp"
                                     android:layout_marginTop="5dp"
                                     tools:text="แกงเหลือง"
-                                    android:textStyle="normal|bold" />
+                                    android:textStyle="normal|bold"
+                                    android:visibility="visible" />
                                 <!--<TextView-->
 
                                 <!--android:layout_width="match_parent"-->
@@ -150,7 +160,7 @@
                                     android:textColor="@color/colorNavigation" />
 
                                 <TextView
-                                    android:text="ปลากะพงขอดเกล็ดล้างน้ําแล่เอาแต่เนื้อ 200 กรัม  "
+                                    android:text="เต้าหูปลา 4 ชิ้น"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/Option_foods"
@@ -160,7 +170,71 @@
                                     android:visibility="visible" />
 
                                 <TextView
-                                    android:text="มะละกอดิบ (1 ลูก) ปอกเปลือกนั่นแฉลบ 300 กรัม "
+                                    android:text="หมูสับ 2 ช้อนโต๊ะ "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView159"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text=" ขิงสับ 2 ช้อนชา "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView162"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text=" กระเทียมสับ 1 ช้อนชา "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView161"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text="ต้นหอมซอย 1 ต้น"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView160"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text="น้ําต้มกระดูก ¾  ถ้วยตวง "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView158"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text="แป้งข้าวโพด 1 ช้อนชา "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView157"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text="พริกป่น ¼ ช้อนชา"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView156"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text=" ซีอิ้วดํา  ½ ช้อนชา "
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView155"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:text="ซีอิ้วขาว 1 ช้อนชา "
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView43"
@@ -168,7 +242,7 @@
                                     android:visibility="gone" />
 
                                 <TextView
-                                    android:text="ส้มแขกชิ้นบาง ๆ 10 ชิ้น"
+                                    android:text="น้ํามันงา 1 ช้อนชา "
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView85"
@@ -213,7 +287,7 @@
                                     android:textColor="@color/colorNavigation" />
 
                                 <TextView
-                                    android:text="1. ทาน้ํามะนาวให้ทั่วชิ้นปลา นั่นเนื้อปลากะพงเป็นชิ้นขนาด 12 นิ้ว"
+                                    android:text="ผัดกระเทียม ขิง และพริกป่นกับน้ํามันงาให้หอม จากนั้นใส่หมูสับและเต้าหูปลาผัดให้พอสุก ใส่น้ําต้มกระดูกตั้งไฟให้เดือด จากนั้นปรุงรสด้วย ซีอิ้วดําและซีอิ้วขาว ใส่แป้งข้าวโพดที่ผสมน้ําแล้วให้พอข้น 4 ตักใส่จานเสิร์ฟ โรยหน้าด้วยต้นหอมซอย "
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView69"
@@ -322,7 +396,7 @@
                                         android:paddingRight="5dp" />
 
                                     <TextView
-                                        android:text="150"
+                                        android:text=" 200 "
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/energy_food"
@@ -356,7 +430,7 @@
                                         android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="30"
+                                        android:text="8.8"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/carbo_food"
@@ -394,7 +468,7 @@
                                         android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="2.6"
+                                        android:text="12.5"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/fat_food"
@@ -426,7 +500,7 @@
                                         android:textStyle="normal|bold" />
 
                                     <TextView
-                                        android:text="10"
+                                        android:text="13.2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/protein_food"

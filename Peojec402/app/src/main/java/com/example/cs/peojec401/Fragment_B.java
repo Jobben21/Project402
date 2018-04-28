@@ -9,8 +9,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -53,6 +55,11 @@ public class Fragment_B extends Fragment {
     private ArrayList<EditText> BloodList;
     private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri;
     private  float sugar,sodium,potassium,choles,hdl,ldl,tri;
+    private ListView listv;
+    private ArrayList<String> list;
+    private ArrayAdapter<String> adapter;
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_layout_b, container, false);
@@ -65,9 +72,14 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
+        listv = (ListView)view.findViewById(R.id.listview_v);
+        list = new ArrayList<String>();
+        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,list);
+        listv.setAdapter(adapter);
+
+        
+
         // hospitalSpinner = (Spinner)view.findViewById(R.id.spinnerblood);
-
-
         if (Build.VERSION.SDK_INT > 9) {
 
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -269,7 +281,7 @@ public class Fragment_B extends Fragment {
 
             public void Blood() {
 
-                ArrayList<String> FirstList = new ArrayList<>();
+                final ArrayList<String> FirstList = new ArrayList<>();
                 FirstList.add(Sugar);
                 FirstList.add(Sodium);
                 FirstList.add(Potassium);
@@ -308,6 +320,14 @@ public class Fragment_B extends Fragment {
 
                                 }
                             }).show();
+
+                button_b.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                    }
+                });
 
                         }
 

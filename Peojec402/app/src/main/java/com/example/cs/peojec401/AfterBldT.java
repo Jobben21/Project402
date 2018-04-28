@@ -331,6 +331,7 @@ public class AfterBldT extends AppCompatActivity {
         seekBar6.setProgress((int) hdl_ab1);
         seekBar7.setProgress((int) tri_ab1);
 
+
         updatePercentValue(seekBar.getProgress());
         updatePercentValue2(seekBar2.getProgress());
         updatePercentValue3(seekBar3.getProgress());

@@ -22,7 +22,7 @@ public class DataNoteImformation {
             R.drawable.menufoodt,
             R.drawable.menufood,
             R.drawable.menufoodt,*/};
-    public static String[] textArray = {"บะหมี่หมูตุ๋น น้ำซุปโชยุต้นตำรับ","截圖工具","ปลาจะละเม็ดนึ่งเห็ดหอม"};
+    public static String[] textArray = {"เต้าหูปลาทรงเครื่อง", "น้ำซุปโชยุต้นตำรับ","截圖工具","ปลาจะละเม็ดนึ่งเห็ดหอม"};
     public static String[] dateArray = {"ส่วนผสมประกอบไปด้วย","dddddddddddd","นึ่งปลาด้วยไฟแรง ป้องกัน ปลาไม่ให้เหม็นคาวได้\n" +
             "ปลาจะละเม็ดมีสองชนิด \n"};
     public static String[] id = {"1","2"};

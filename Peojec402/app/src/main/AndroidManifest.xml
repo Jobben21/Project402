@@ -57,10 +57,12 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-     <!--   <activity
+        <!--
+            <activity
             android:name=".Profile.MainProfileActivity"
             android:label="@string/title_activity_main_profile"
-            android:theme="@style/AppTheme.NoActionBar" /> -->
+            android:theme="@style/AppTheme.NoActionBar" />
+        -->
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
@@ -79,14 +81,16 @@
             android:name=".ProfileOfBloodsActivity"
             android:label="@string/title_activity_profile_of_bloods"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DisplayList"></activity>
-
+        <activity android:name=".DisplayList" />
         <activity
             android:name=".AfterCalCulate2"
             android:label="@string/title_activity_after_cal_culate2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditActivity"></activity>
-
+        <activity android:name=".EditActivity" />
+        <activity
+            android:name=".CompareData"
+            android:label="@string/title_activity_compare_data"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

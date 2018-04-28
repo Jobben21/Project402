@@ -10,4 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.cs.seekbar.CustomSeekBar">
 
+    <CustomSeekBar
+    android:id="@+id/customSeekBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="100"
+    android:progress="0"
+    android:progressDrawable="@android:color/transparent"
+    android:thumb="@drawable/seek_thumb_normal"
+    android:thumbOffset="12dp" />
+
 </RelativeLayout>

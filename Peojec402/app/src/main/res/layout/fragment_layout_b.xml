@@ -172,7 +172,8 @@
                             android:gravity="center"
                             android:hint="70 - 120"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -256,7 +257,9 @@
                             android:gravity="center"
                             android:hint="135 - 145"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -270,7 +273,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="@string/ml"
+                            android:text="@string/ml2"
                             android:textStyle="normal|bold" />
                     </LinearLayout>
 
@@ -340,7 +343,8 @@
                             android:gravity="center"
                             android:hint="3.5 - 5.0"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -423,7 +427,8 @@
                             android:gravity="center"
                             android:hint="200"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 
@@ -507,7 +512,8 @@
                             android:gravity="center"
                             android:hint="100"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -590,7 +596,8 @@
                             android:gravity="center"
                             android:hint="40 - 50"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -674,7 +681,9 @@
                             android:gravity="center"
                             android:hint="40 - 149"
                             android:inputType="number|numberSigned|numberDecimal"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:textSize="18sp"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
