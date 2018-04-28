@@ -1,4 +1,4 @@
-package com.example.cs.peojec401;
+package com.example.cs.peojec401.FoodCon;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import com.example.cs.peojec401.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,30 +26,30 @@ import java.util.ArrayList;
  * Created by นครินทร์ on 4/18/2018.
  */
 
-public class BackgroundTask extends AsyncTask<Void,Food_recyc,Void>
+public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
 {
-    Context ctx;
+    Context c;
     Activity activity;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    ArrayList<Food_recyc> arrayList = new ArrayList<>();
-    public BackgroundTask(Context ctx){
+    ArrayList<FoodList> arrayList = new ArrayList<>();
+    public BackgroundTask(Context c){
 
 
-        this.ctx =ctx;
-        activity = (Activity)ctx;
+        this.c =c;
+        activity = (Activity)c;
     }
 
-String json_string = "http://172.25.74.140/android/get_food1.php?status=0";
+String json_string = "http://192.168.1.6/android/get_food1.php?status=0";
     @Override
     protected void onPreExecute() {
         recyclerView = (RecyclerView)activity.findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(ctx);
+        layoutManager = new LinearLayoutManager(c);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        adapter = new RecyclerAdapter(ctx,arrayList);
-        recyclerView.setAdapter(adapter)    ;
+        adapter = new RecyclerAdapter(c,arrayList);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -77,12 +79,18 @@ String json_string = "http://172.25.74.140/android/get_food1.php?status=0";
 
                     JSONObject jo = jsonArray.getJSONObject(count);
                     count++;
-                    Food_recyc  food_recyc = new Food_recyc(jo.getString("name"),jo.getString("foodpic"),jo.getDouble("energy"));
+                    FoodList food_recyc = new FoodList(jo.getString("name")
+                            ,jo.getString("img")
+                            ,jo.getInt("energy")
+                            ,jo.getInt("fat")
+                            ,jo.getInt("carbohydrate")
+                            ,jo.getInt("protein")
+                            ,jo.getInt("sugar"));
 
                     publishProgress(food_recyc);
                 }
 
-                Log  .d("JSON STRING",json_string);
+                Log.d("JSON STRING",json_string);
 
             } catch (MalformedURLException e){
                 e.printStackTrace();
@@ -97,7 +105,7 @@ String json_string = "http://172.25.74.140/android/get_food1.php?status=0";
 
 
     @Override
-    protected void onProgressUpdate(Food_recyc... values) {
+    protected void onProgressUpdate(FoodList... values) {
         arrayList.add(values[0]);
         adapter.notifyDataSetChanged();
     }

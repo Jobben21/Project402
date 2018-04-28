@@ -1,7 +1,10 @@
-package com.example.cs.peojec401;
+package com.example.cs.peojec401.FoodCon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+
+import com.example.cs.peojec401.R;
 
 public class DisplayList extends AppCompatActivity {
 
@@ -10,7 +13,7 @@ public class DisplayList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_list);
 
-        BackgroundTask backgroundTask = new BackgroundTask(DisplayList.this);
+       BackgroundTask backgroundTask = new BackgroundTask(DisplayList.this);
         backgroundTask.execute();
     }
 }

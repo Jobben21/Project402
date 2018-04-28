@@ -37,7 +37,7 @@ public class Register_LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username1 = username.getText().toString();
 
-<<<<<<< HEAD
+
                 String type = "login";
 
                 con_regis.execute(type, username1,null);
@@ -46,7 +46,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                 pDialog.setTitleText("รอสักครู่");
                 pDialog.setCancelable(false);
                 pDialog.show();
-=======
+
                 if(username.getText().toString().isEmpty()){
 
                     new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
@@ -59,7 +59,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                 }
 
                 else {
-                    SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+                    pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
                     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
                     pDialog.setTitleText("รอสักครู่");
                     pDialog.setCancelable(false);
@@ -69,7 +69,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
->>>>>>> bd77fc963247ea375cac1b5beff98f7db18f634f
+
 
 
 

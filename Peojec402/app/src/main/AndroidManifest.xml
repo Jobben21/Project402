@@ -57,8 +57,8 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity
-            android:name=".Profile.MainProfileActivity"
+
+
             android:label="@string/title_activity_main_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -79,8 +79,8 @@
             android:name=".ProfileOfBloodsActivity"
             android:label="@string/title_activity_profile_of_bloods"
             android:theme="@style/AppTheme.NoActionBar" />
-<<<<<<< HEAD
-        <activity android:name=".DisplayList"></activity>
+
+        <activity android:name=".FoodCon.DisplayList"></activity>
 =======
         <activity
             android:name=".AfterCalCulate2"
