@@ -72,12 +72,9 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
-        listv = (ListView)view.findViewById(R.id.listview_v);
-        list = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,list);
-        listv.setAdapter(adapter);
+     
 
-        
+
 
         // hospitalSpinner = (Spinner)view.findViewById(R.id.spinnerblood);
         if (Build.VERSION.SDK_INT > 9) {
@@ -321,13 +318,6 @@ public class Fragment_B extends Fragment {
                                 }
                             }).show();
 
-                button_b.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-
-                    }
-                });
 
                         }
 
