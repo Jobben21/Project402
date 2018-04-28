@@ -72,7 +72,7 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
-     
+
 
 
 
