@@ -14,12 +14,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.cs.peojec401.food_Pressurel.F_food_pressure;
+import com.example.cs.peojec401.food_heartl.F2_food_heart;
+import com.example.cs.peojec401.food_heartl.F_food_heart;
+import com.example.cs.peojec401.food_kidney.F2_food_kidney;
+import com.example.cs.peojec401.food_kidney.F_food_kidney;
+
 public class FoodActivity extends AppCompatActivity {
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-
+    Toolbar toolbar;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -32,8 +39,9 @@ public class FoodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.bloods);
-        setSupportActionBar(toolbar);
+         toolbar = (Toolbar) findViewById(R.id.bloods);
+
+       setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -124,25 +132,72 @@ public class FoodActivity extends AppCompatActivity {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
+        int num =getIntent().getExtras().getInt("num");
+        //TextView  head = (TextView) findViewById(R.id.bloods) ;
         @Override
         public Fragment getItem(int position) {
 
             Fragment fragment = null;
+    if(num==1) {
 
+        toolbar.setTitle("เมนนูอาหารโรคหัวใจ");
+        switch (position) {
+            case 0:
+                fragment = new MainDishFragment();
+                break;
+            case 1:
+                fragment = new F_food_heart();
+                break;
+            case 2:
+                fragment = new F2_food_heart();
+                break;
+        }
+
+    }else if (num ==2){
+        toolbar.setTitle("เมนนูอาหารโรคไต");
+        switch (position) {
+            case 0:
+                fragment = new MainDishFragment();
+                break;
+            case 1:
+                fragment = new F_food_kidney();
+                break;
+            case 2:
+                fragment = new F2_food_kidney();
+                break;
+        }
+
+    }else  if (num==3) {
+        toolbar.setTitle("เมนนูอาหารโรคเบาหวาน");
+        switch (position) {
+            case 0:
+                fragment = new MainDishFragment();
+                break;
+            case 1:
+                fragment = new AppetizerFragment1();
+                break;
+            case 2:
+                fragment = new AppetizerFragment2();
+                break;
+        }
+    }else  if(num==4) {
+        toolbar.setTitle("เมนนูอาหารโรคความดัน");
             switch (position) {
                 case 0:
                     fragment = new MainDishFragment();
                     break;
                 case 1:
-                    fragment = new AppetizerFragment1();
+                    fragment = new F_food_pressure();
                     break;
                 case 2:
-                    fragment = new AppetizerFragment2();
+                    fragment = new F_food_pressure();
                     break;
             }
-            return fragment;
+    }
+        return fragment;
+
         }
+
 
         @Override
         public int getCount() {

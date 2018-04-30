@@ -165,6 +165,7 @@ public class AfterBldT extends AppCompatActivity {
 
 
     }
+
         public void showImage(String message1,String message2 ,String message3,String message4,String message5,String message6,String message7){
 
         int resource_id = this.getResources().getIdentifier("drawable/"+message1, null, this.getPackageName());
@@ -347,6 +348,8 @@ public class AfterBldT extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar,int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
+
+
 
             }
 

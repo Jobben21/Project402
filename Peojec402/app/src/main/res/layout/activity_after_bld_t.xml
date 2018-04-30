@@ -20,7 +20,7 @@
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             android:layout_gravity="center"
             app:titleMarginStart="60dp"
-            app:title="แปรผลตรวจเลือด" />
+            app:title="อ่านผลตรวจเลือด" />
 
     </android.support.design.widget.AppBarLayout>
 

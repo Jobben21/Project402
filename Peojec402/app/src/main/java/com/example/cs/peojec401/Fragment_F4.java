@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.cs.peojec401.FoodCon.DisplayList;
+
 /**
  * Created by hp on 9/1/2561.
  */
@@ -34,6 +36,8 @@ public class Fragment_F4 extends Fragment{
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+                intent.putExtra("num",1);
+
                 startActivity(intent);
             }});
 
@@ -41,7 +45,8 @@ public class Fragment_F4 extends Fragment{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity().getBaseContext(),DisplayList.class);
+                Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+                intent.putExtra("num",2);
                 startActivity(intent);
             }});
        food_sugar1.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +54,7 @@ public class Fragment_F4 extends Fragment{
            public void onClick(View v) {
 
                Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+               intent.putExtra("num",3);
                startActivity(intent);
            }});
        food_pressure1.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +62,7 @@ public class Fragment_F4 extends Fragment{
            public void onClick(View v) {
 
                Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+               intent.putExtra("num",4);
                startActivity(intent);
            }});
         food_for_you1.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +70,7 @@ public class Fragment_F4 extends Fragment{
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity().getBaseContext(),FoodRecod_F4.class);
+                intent.putExtra("num",5);
                 startActivity(intent);
             }});
 

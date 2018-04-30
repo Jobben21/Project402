@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ public class AfterCalCulat extends AppCompatActivity{
     final Context context = this;
     private Button button_dialog2;
     private TextView bmi,bmr;
+    private ImageView imageViewFood;
 
     float bmiValue;
     float bmrValue;
@@ -106,7 +108,9 @@ public class AfterCalCulat extends AppCompatActivity{
 
         super.onStart();
         Intent intent = getIntent();
+
         String message = intent.getStringExtra("bmi");
+        String message2 = intent.getStringExtra("bmi2");
 
         float weight = intent.getFloatExtra("WEIGHT",0);
         float height = intent.getFloatExtra("HEIGHT",0);
@@ -123,7 +127,9 @@ public class AfterCalCulat extends AppCompatActivity{
         TextView description =(TextView)findViewById(R.id.explanation_BMI);
         description.setText(message);
 
+        imageViewFood =(ImageView)findViewById(R.id.imageViewFood);
 
+        showImage(message2);
       //  SaveData();
     }
 
@@ -231,5 +237,13 @@ public class AfterCalCulat extends AppCompatActivity{
 
 
 
+
+    public void showImage(String message2){
+
+        int resource_id = this.getResources().getIdentifier("drawable/" + message2, null, this.getPackageName());
+        imageViewFood =(ImageView)findViewById(R.id.imageViewFood);
+        imageViewFood.setImageResource(resource_id);
+
+    }
 
 }

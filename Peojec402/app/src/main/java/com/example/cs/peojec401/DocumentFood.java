@@ -14,12 +14,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cs.peojec401.ConnectData.Config_food;
+import com.example.cs.peojec401.FoodCon.FoodList;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -33,6 +35,9 @@ public class DocumentFood extends AppCompatActivity {
     private TextView food_name,energy,carbo,fat,protein,sugar;
     private ImageView foodpic;
     private Random ran;
+    int num;
+    ArrayList<FoodList> arrayList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,11 +51,16 @@ public class DocumentFood extends AppCompatActivity {
         energy = (TextView) findViewById(R.id.energy_food);
         carbo = (TextView) findViewById(R.id.carbo_food);
         fat = (TextView) findViewById(R.id.fat_food);
-       protein= (TextView) findViewById(R.id.protein_food);
+        protein= (TextView) findViewById(R.id.protein_food);
         sugar = (TextView) findViewById(R.id.sugar_food);
-
         foodpic = (ImageView)  findViewById(R.id.foodpic);
+
+
+
+        int num =getIntent().getExtras().getInt("num");
+
         getData();
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -84,6 +94,11 @@ public class DocumentFood extends AppCompatActivity {
 //       // ImageView imageView = (ImageView)findViewById(R.id.MainDish_image);
 //       // imageView.setImageDrawable(maindish_url);
 //    }
+
+
+
+
+
 
 
     private void getData(){

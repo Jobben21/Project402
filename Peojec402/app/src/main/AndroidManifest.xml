@@ -57,9 +57,18 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
+<<<<<<< HEAD
         <!--
             <activity
+=======
+<<<<<<< HEAD
+
+
+=======
+     <!--   <activity
+>>>>>>> dc45b347c1ca249054b1c0528d72fc8b5844db6c
             android:name=".Profile.MainProfileActivity"
+>>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
             android:label="@string/title_activity_main_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         -->
@@ -81,7 +90,18 @@
             android:name=".ProfileOfBloodsActivity"
             android:label="@string/title_activity_profile_of_bloods"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
         <activity android:name=".DisplayList" />
+=======
+<<<<<<< HEAD
+
+        <activity android:name=".FoodCon.DisplayList"></activity>
+=======
+=======
+        <activity android:name=".DisplayList"></activity>
+
+>>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
+>>>>>>> dc45b347c1ca249054b1c0528d72fc8b5844db6c
         <activity
             android:name=".AfterCalCulate2"
             android:label="@string/title_activity_after_cal_culate2"

@@ -100,9 +100,11 @@ public class Fragment_C extends Fragment {
                         float bmrValue = calculateBMR(age,weight,height2,gender);
 
                         String bmiInterpretation = interpretBMI(bmiValue);
+                        String bmiInterpretation2 = Imagebmi(bmiValue);
 
                         Intent intent = new Intent(getActivity().getBaseContext(), AfterCalCulat.class);
                         intent.putExtra("bmi",bmiInterpretation);
+                        intent.putExtra("bmi2",bmiInterpretation2);
                         intent.putExtra("bmiValue",bmiValue);
                         intent.putExtra("bmrValue",bmrValue);
 
@@ -193,6 +195,31 @@ public class Fragment_C extends Fragment {
         return message;
     }
 
+    private String Imagebmi(float bmiValue) {
+
+        String message1 = "";
+        if (bmiValue <= 18.5) {
+            message1 = "vsad";
+        }
+        else if(bmiValue >= 18.5 && bmiValue <= 24.9){
+            message1 = "vhappy";
+        }
+        else if(bmiValue >= 25 && bmiValue <= 29.9){
+            message1 = "vconfused";
+        }
+        else if(bmiValue >= 30 && bmiValue <= 34.9){
+            message1 = "vconfused";
+        }
+        else if(bmiValue >= 35 && bmiValue <= 39.9){
+            message1 = "vsad";
+        }
+        else{
+            message1 = "vsad";
+        }
+
+        return message1;
+
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

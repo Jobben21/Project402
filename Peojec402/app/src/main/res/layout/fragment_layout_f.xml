@@ -386,7 +386,7 @@
                             android:foreground="?android:attr/selectableItemBackground"
                             android:clickable="true"
                             app:cardCornerRadius="@dimen/cardview_shapefood"
-                            android:id="@+id/fouremenu">
+                            android:id="@+id/fourtmenu">
 
                             <LinearLayout
                                 android:orientation="vertical"
@@ -478,126 +478,18 @@
                                         android:text="เมนูอาหาร"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/food_sugar"
-                                        android:layout_weight="1"
-                                        style="@style/Widget.AppCompat.Button.Colored" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_margin="5dp"
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            app:cardCornerRadius="@dimen/cardview_shapefood"
-                            android:id="@+id/fourtmenu"
-                            android:visibility="gone">
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    app:srcCompat="@drawable/menufood"
-                                    android:id="@+id/imageView"
-                                    android:layout_weight="0.63"
-                                    android:layout_height="130dp" />
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_height="wrap_content"
-                                    android:padding="20dp"
-                                    android:layout_width="155dp">
-
-
-
-                                    <TextView
-                                        android:text="@string/Menufood"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView89"
-                                        android:textStyle="normal|bold"
-                                        android:layout_marginLeft="25dp" />
-
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:background="@color/ligthGray" />
-
-                                    <TextView
-                                        android:text="@string/pressure"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/pressure_t"
-                                        android:layout_marginTop="5dp"
-                                        android:textSize="18sp"
-                                        android:textAlignment="textStart" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_weight="1"
-                                    android:visibility="gone">
-
-                                    <TextView
-                                        android:text="@string/recommend"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/recomend_p"
-                                        android:textStyle="normal|bold"
-                                        android:textSize="14sp"
-                                        android:padding="10dp" />
-
-                                    <LinearLayout
-                                        android:orientation="vertical"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent">
-
-                                        <TextView
-                                            android:text="ควรับประทานอาหาร"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/description_p"
-                                            android:layout_weight="1"
-                                            android:padding="10dp" />
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:visibility="gone">
-
-                                    <Button
-                                        android:text="เมนูอาหาร"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
                                         android:id="@+id/food_pressure"
                                         android:layout_weight="1"
                                         style="@style/Widget.AppCompat.Button.Colored" />
+
                                 </LinearLayout>
 
                             </LinearLayout>
 
                         </android.support.v7.widget.CardView>
+
+
+
                     </LinearLayout>
 
                     <android.support.v7.widget.CardView
