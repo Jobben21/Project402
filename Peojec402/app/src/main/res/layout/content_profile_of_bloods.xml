@@ -54,12 +54,15 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp">
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp">
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -73,22 +76,12 @@
                                 android:layout_marginLeft="10dp"
                                 android:padding="5dp">
 
-                                <HorizontalScrollView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:orientation="vertical" />
-                                </HorizontalScrollView>
-
                                 <TextView
                                     android:text="@string/sugar"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView136"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="30dp"
                                     android:textStyle="normal|bold"
                                     android:textSize="16sp" />
 
@@ -196,152 +189,259 @@
                                     android:id="@+id/textView123" />
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:orientation="horizontal"
+                            <HorizontalScrollView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="20dp">
+                                android:layout_height="match_parent">
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="5dp"
-                                    android:orientation="vertical"
-                                    android:paddingLeft="15dp"
-                                    android:paddingRight="30dp">
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp">
 
-                                    <TextView
-                                        android:id="@+id/profile_sugar"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="15dp"
-                                        android:text="0"
-                                        android:textAlignment="center"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="30dp">
 
-                                    <TextView
-                                        android:id="@+id/profile_sodium"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="30dp"
-                                        android:text="0"
-                                        android:textAlignment="center"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        <TextView
+                                            android:text="ครั้งที่ 1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView89"
+                                            android:textStyle="normal|bold"
+                                            android:textColor="@color/blood_primary" />
 
-                                    <TextView
-                                        android:id="@+id/profile_potassium"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="20dp"
-                                        android:text="0"
-                                        android:textAlignment="center"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        <TextView
+                                            android:id="@+id/profile_sugar"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
 
-                                    <TextView
-                                        android:id="@+id/Profile_choles"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="25dp"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        <TextView
+                                            android:id="@+id/profile_sodium"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
 
-                                    <TextView
-                                        android:id="@+id/Profile_ldl"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="25dp"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        <TextView
+                                            android:id="@+id/profile_potassium"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
 
-                                    <TextView
-                                        android:id="@+id/profile_hdl"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="30dp"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        <TextView
+                                            android:id="@+id/Profile_choles"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
 
-                                    <TextView
-                                        android:id="@+id/profile_tri"
+                                        <TextView
+                                            android:id="@+id/Profile_ldl"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/profile_hdl"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/profile_tri"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="30dp">
+
+                                        <TextView
+                                            android:text="ครั้งที่ 2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView163"
+                                            android:textStyle="normal|bold"
+                                            android:textColor="@color/blood_primary" />
+
+                                        <TextView
+                                            android:id="@+id/profile_sugar2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/profile_sodium2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/profile_potassium2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:text="0"
+                                            android:textAlignment="center"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/Profile_choles2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/Profile_ldl2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/profile_hdl2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/profile_tri2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="25dp"
+                                            android:text="0"
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold"
+                                            android:textAlignment="center" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="25dp"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="normal|bold" />
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="10dp">
+
+                                        <TextView
+                                            android:text="( 70 -120 )"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView151"
+                                            android:layout_marginTop="40dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="( 135 - 145 )"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView150"
+                                            android:layout_marginTop="35dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="( 3.5 - 5.0 ) "
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView149"
+                                            android:layout_marginTop="35dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="น้อยกว่า 200"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView148"
+                                            android:layout_marginTop="30dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="น้อยกว่า 100"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView147"
+                                            android:layout_marginTop="30dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="( 40 - 50 )"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView146"
+                                            android:layout_marginTop="30dp"
+                                            android:textColor="@color/colorOrg" />
+
+                                        <TextView
+                                            android:text="( 40 - 149 )"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/textView145"
+                                            android:layout_marginTop="30dp"
+                                            android:textColor="@color/colorOrg" />
+                                    </LinearLayout>
 
                                 </LinearLayout>
+                            </HorizontalScrollView>
 
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="40dp">
-
-                                    <TextView
-                                        android:text="( 70 -120 )"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView151"
-                                        android:layout_marginTop="15dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="( 135 - 145 )"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView150"
-                                        android:layout_marginTop="35dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="( 3.5 - 5.0 ) "
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView149"
-                                        android:layout_marginTop="35dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="น้อยกว่า 200"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView148"
-                                        android:layout_marginTop="30dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="น้อยกว่า 100"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView147"
-                                        android:layout_marginTop="30dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="( 40 - 50 )"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView146"
-                                        android:layout_marginTop="30dp"
-                                        android:textColor="@color/colorOrg" />
-
-                                    <TextView
-                                        android:text="( 40 - 149 )"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView145"
-                                        android:layout_marginTop="30dp"
-                                        android:textColor="@color/colorOrg" />
-                                </LinearLayout>
-
-                            </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -360,7 +460,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/comparedata"
                         android:background="@drawable/mybutton"
-                        android:layout_gravity="center_vertical|center_horizontal|center" />
+                        android:layout_gravity="center_vertical|center_horizontal|center"
+                        android:visibility="gone" />
                 </LinearLayout>
 
             </LinearLayout>
