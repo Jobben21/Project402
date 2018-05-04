@@ -64,9 +64,18 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 //                if (SaveData()) {
-                    Intent intent = new Intent(EditActivity.this,NavigationActivity.class);
-                    startActivity(intent);
 
+
+                new SweetAlertDialog(EditActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("เเก้ไขข้อมูลส่วนตัว")
+                        .setConfirmText("ใช่").setCancelText("ไม่")
+                        .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog){
+                        Intent intent = new Intent(EditActivity.this,NavigationActivity.class);
+                        startActivity(intent);
+
+                    }
+                }).show();
   //              }
             }
         });

@@ -140,7 +140,7 @@ public class FoodActivity extends AppCompatActivity {
             Fragment fragment = null;
     if(num==1) {
 
-        toolbar.setTitle("เมนนูอาหารโรคหัวใจ");
+        toolbar.setTitle("เมนูอาหารโรคหัวใจ");
         switch (position) {
             case 0:
                 fragment = new MainDishFragment();
@@ -154,7 +154,7 @@ public class FoodActivity extends AppCompatActivity {
         }
 
     }else if (num ==2){
-        toolbar.setTitle("เมนนูอาหารโรคไต");
+        toolbar.setTitle("เมนูอาหารโรคไต");
         switch (position) {
             case 0:
                 fragment = new MainDishFragment();
@@ -168,7 +168,7 @@ public class FoodActivity extends AppCompatActivity {
         }
 
     }else  if (num==3) {
-        toolbar.setTitle("เมนนูอาหารโรคเบาหวาน");
+        toolbar.setTitle("เมนูอาหารโรคเบาหวาน");
         switch (position) {
             case 0:
                 fragment = new MainDishFragment();
@@ -181,7 +181,7 @@ public class FoodActivity extends AppCompatActivity {
                 break;
         }
     }else  if(num==4) {
-        toolbar.setTitle("เมนนูอาหารโรคความดัน");
+        toolbar.setTitle("เมนูอาหารโรคความดัน");
             switch (position) {
                 case 0:
                     fragment = new MainDishFragment();
