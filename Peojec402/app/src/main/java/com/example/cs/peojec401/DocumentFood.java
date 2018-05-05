@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -58,6 +59,9 @@ public class DocumentFood extends AppCompatActivity {
 
 
         int num =getIntent().getExtras().getInt("num");
+
+
+        Toast.makeText(getApplicationContext(),num+"",Toast.LENGTH_LONG).show();
 
         getData();
 

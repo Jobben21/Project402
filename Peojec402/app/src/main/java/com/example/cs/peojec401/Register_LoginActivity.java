@@ -57,15 +57,13 @@ public class Register_LoginActivity extends AppCompatActivity {
                 }
 
                 else {
-<<<<<<< HEAD
+
                     SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
-=======
-<<<<<<< HEAD
+
                     pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
-=======
+
                     new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
->>>>>>> 450371e68d49880ef3e03d8998dbcfd12b5c387b
->>>>>>> dc45b347c1ca249054b1c0528d72fc8b5844db6c
+
                     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
                     pDialog.setTitleText("รอสักครู่");
                     pDialog.setCancelable(false);

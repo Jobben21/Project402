@@ -45,7 +45,7 @@ public class Fragment_F4 extends Fragment{
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+                Intent intent = new Intent(getActivity().getBaseContext(),DisplayList.class);
                 intent.putExtra("num",2);
                 startActivity(intent);
             }});

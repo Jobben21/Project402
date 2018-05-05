@@ -25,7 +25,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     ArrayList<FoodList> arrayList ;
     Context c;
-    String url="";
+
 
     public RecyclerAdapter(Context c,ArrayList<FoodList> foodList){
 
@@ -45,12 +45,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
-    FoodList foodList = arrayList.get(position);
+        FoodList foodList = arrayList.get(position);
         holder.name.setText(foodList.getName());
         holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
 
-        Picasso.with(c).load(foodList.getFoodpic()).into(holder.imgfood);
+        PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

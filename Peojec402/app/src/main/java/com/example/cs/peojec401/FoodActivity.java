@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.cs.peojec401.FoodCon.DisplayList;
 import com.example.cs.peojec401.food_Pressurel.F_food_pressure;
 import com.example.cs.peojec401.food_heartl.F2_food_heart;
 import com.example.cs.peojec401.food_heartl.F_food_heart;
@@ -174,7 +175,7 @@ public class FoodActivity extends AppCompatActivity {
                 fragment = new MainDishFragment();
                 break;
             case 1:
-                fragment = new AppetizerFragment1();
+                fragment = new DisplayList();
                 break;
             case 2:
                 fragment = new AppetizerFragment2();

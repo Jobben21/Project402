@@ -41,7 +41,9 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         activity = (Activity)c;
     }
 
-String json_string = "http://192.168.1.6/android/get_food1.php?status=0";
+String json_string = "http://192.168.1.8/android/get_food1.php?status=0";
+
+
     @Override
     protected void onPreExecute() {
         recyclerView = (RecyclerView)activity.findViewById(R.id.recyclerView);
