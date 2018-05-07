@@ -18,9 +18,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
-            app:title="แปรผลตรวจเลือด"
+            app:title="ผลตรวจเลือด"
             app:titleTextColor="@color/backGround"
-            app:titleMarginStart="60dp" />
+            app:titleMarginStart="75dp" />
 
     </android.support.design.widget.AppBarLayout>
 

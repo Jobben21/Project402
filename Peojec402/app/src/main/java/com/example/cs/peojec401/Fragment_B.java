@@ -72,11 +72,8 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
-
-
-
-
         // hospitalSpinner = (Spinner)view.findViewById(R.id.spinnerblood);
+
         if (Build.VERSION.SDK_INT > 9) {
 
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -87,35 +84,12 @@ public class Fragment_B extends Fragment {
         button_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             /*   if(sugar_t.getText().length() == 0 ||
-                        sodium_t.getText().length() == 0 ||
-                        potassium_t.getText().length() == 0 ||
-                         ldl_t.getText().length() == 0 || hdl_t.getText().length() == 0 || choles_t.getText().length() == 0
-                || tri_t.getText().length() == 0 )
-                {
-
-                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                            .setTitleText("แปรผลตรวจเลือด")
-                            .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
-                            .setConfirmText("ตกลง")
-                            .show();
-                }
-
-              /*  else if(sugar_t.getText().length() == 0 &&
-                        sodium_t.getText().length() == 0 &&
-                        potassium_t.getText().length() == 0 &&
-                        ldl_t.getText().length() == 0 && hdl_t.getText().length() == 0 && choles_t.getText().length() == 0
-                        && tri_t.getText().length() == 0 ){
 
 
-                        inputBloodTest();
-                        Blood();
-
-                }
-                else {*/
              //     if(SaveData()) {
-                        inputBloodTest();
-                        Blood();
+                    // else{
+                   inputBloodTest();
+                       // Blood(); //}
                //     }
                 //}
             }
@@ -272,6 +246,29 @@ public class Fragment_B extends Fragment {
                 }else{
                     tri = Float.parseFloat(tri_t.getText().toString());
                     Tri = triInBlood(tri);
+                }
+
+                int i = 0;
+
+
+                Log.e("hu",tri_t.getText().toString());
+
+                if("0".equals(sugar_t.getText().toString())&& "0".equals( sodium_t.getText().toString())
+                        && "0".equals(  potassium_t.getText().toString())&& "0".equals(  choles_t.getText().toString())
+                        && "0".equals( hdl_t.getText().toString())&& "0".equals(  ldl_t.getText().toString())
+                        && "0".equals( tri_t.getText().toString())){
+
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("แปรผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                }
+
+                else{
+                  //  inputBloodTest();
+                    Blood();
                 }
 
             }

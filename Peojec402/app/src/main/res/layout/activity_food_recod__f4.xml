@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             app:titleMarginStart="60dp"
             app:title="เลือกเมนูอาหาร"
-            android:layout_weight="1"></android.support.v7.widget.Toolbar>
+            android:layout_weight="1"
+            app:titleTextAppearance="@style/Toolbar.TitleText"></android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 

@@ -23,7 +23,8 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:title="เมนูอาหารโรคเบาหวาน"
-            app:titleMarginStart="40dp">
+            app:titleMarginStart="40dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
 
         </android.support.v7.widget.Toolbar>
 

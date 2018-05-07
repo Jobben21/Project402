@@ -3,18 +3,22 @@ package com.example.cs.peojec401.FoodCon;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cs.peojec401.DocumentFood;
 import com.example.cs.peojec401.R;
 import com.squareup.picasso.Picasso;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     ArrayList<FoodList> arrayList ;
     Context c;
-
+    int sum=0;
 
     public RecyclerAdapter(Context c,ArrayList<FoodList> foodList){
 
@@ -45,7 +49,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
-        FoodList foodList = arrayList.get(position);
+        final FoodList foodList = arrayList.get(position);
         holder.name.setText(foodList.getName());
         holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
@@ -55,8 +59,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sum = position;
                 Intent i = new Intent(c,DocumentFood.class);
-                i.putExtra("num",position);
+                Bundle bundle = new Bundle();
+                i.putExtra("num",sum);
+
                 c.startActivity(i);
             }
         });

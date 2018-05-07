@@ -1,5 +1,6 @@
 package com.example.cs.peojec401;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cs.peojec401.ConnectData.Config_food;
 import com.example.cs.peojec401.FoodCon.FoodList;
+import com.example.cs.peojec401.FoodCon.PicassoDown;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -37,8 +39,8 @@ public class DocumentFood extends AppCompatActivity {
     private ImageView foodpic;
     private Random ran;
     int num;
-    ArrayList<FoodList> arrayList = new ArrayList<>();
-
+    ArrayList<FoodList> arrayList ;
+    FoodList foodList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,12 +58,11 @@ public class DocumentFood extends AppCompatActivity {
         sugar = (TextView) findViewById(R.id.sugar_food);
         foodpic = (ImageView)  findViewById(R.id.foodpic);
 
+        Bundle bundle = getIntent().getExtras();
+         num =bundle.getInt("num");
 
 
-        int num =getIntent().getExtras().getInt("num");
 
-
-        Toast.makeText(getApplicationContext(),num+"",Toast.LENGTH_LONG).show();
 
         getData();
 
@@ -75,6 +76,20 @@ public class DocumentFood extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
+
+
+
+    public  void getData1(int position){
+
+        foodList = arrayList.get(position);
+        food_name.setText(foodList.getName());
+        PicassoDown.downloadImage(getApplicationContext(),foodList.getFoodpic(),foodpic);
+        energy.setText(foodList.getEnergy());
+
+
+    }
+
 //    private void getIncomingintent(){
 //        Log.d(TAG,"getIntent : checking for coming extra");
 //
@@ -125,17 +140,17 @@ public class DocumentFood extends AppCompatActivity {
                             result = j.getJSONArray(Config_food.JSON_ARRAY);
 
 
-
+                            int n = num;
 
                             Picasso.with(getApplicationContext())
-                                    .load(getFoodpic(0))
+                                    .load(getFoodpic(n))
                                     .into(foodpic);
-                            food_name.setText(getName(0));
-                            energy.setText(getEnergy(0));
-                            carbo.setText(getCarbohydrate(0));
-                            fat.setText(getFat(0));
-                            protein.setText(getProtein(0));
-                            sugar.setText(getSugar(0));
+                            food_name.setText(getName(n));
+                            energy.setText(getEnergy(n));
+                            carbo.setText(getCarbohydrate(n));
+                            fat.setText(getFat(n));
+                            protein.setText(getProtein(n));
+                            sugar.setText(getSugar(n));
 
 //                            name_profile.setText(getName(0));
 //                            age_profile.setText(getAge(0));

@@ -1,10 +1,14 @@
 package com.example.cs.peojec401.FoodCon;
 
+import android.os.Parcelable;
+
+import java.util.ArrayList;
+
 /**
  * Created by นครินทร์ on 4/18/2018.
  */
 
-public class FoodList {
+public class FoodList  {
 
     private  String name;
     private  String food_img;
