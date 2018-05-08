@@ -44,8 +44,8 @@ public class AfterCalCulat extends AppCompatActivity{
     private TextView bmi,bmr;
     private ImageView imageViewFood;
 
-    float bmiValue;
-    float bmrValue;
+   public static float bmiValue;
+    public static float bmrValue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

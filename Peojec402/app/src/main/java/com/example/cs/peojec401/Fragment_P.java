@@ -22,6 +22,10 @@ import com.example.cs.peojec401.ConnectData.Config;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
+
+import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
+import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
 
 /**
  * Created by hp on 9/1/2561.
@@ -53,6 +57,8 @@ public class Fragment_P extends Fragment{
         cardView = (CardView)view.findViewById(R.id.bloodProfile);
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
         editprofile = (ImageButton)view.findViewById(R.id.editprofile);
+        BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
+        BMR_profile = (TextView)view.findViewById(R.id.BMR_Profile);
 
 
         cardView.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +135,10 @@ public class Fragment_P extends Fragment{
                             height_profile.setText(getHeight(0));
                             weight_profile.setText(getWeight(0));
                             gender_profile.setText(getGender(0));
+                            String bmr = String.valueOf(bmrValue);
+                            String bmi = String.valueOf(bmiValue);
+                            BMR_profile.setText(String.format("%.1f",bmr));
+                            BMI_profile.setText(String.format("%.1f",bmi));
                             //Calling method getStudents to get the students from the JSON Array
                             //getStudents(result);
                         } catch (JSONException e) {
