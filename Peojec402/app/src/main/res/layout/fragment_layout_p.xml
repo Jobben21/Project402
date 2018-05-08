@@ -226,138 +226,137 @@
                                         android:layout_height="wrap_content">
 
                                         <LinearLayout
-                                            android:orientation="vertical"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
+                                            android:layout_height="wrap_content"
                                             android:layout_marginLeft="15dp"
-                                            android:padding="20dp"
-                                            android:layout_marginRight="20dp">
+                                            android:orientation="vertical"
+                                            android:padding="20dp">
 
                                             <TextView
-                                                android:text="@string/Age"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
                                                 android:id="@+id/textView36"
-                                                android:textStyle="normal|bold"
-                                                android:textSize="18sp" />
-
-                                            <TextView
-                                                android:text="Age"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/textView35" />
+                                                android:text="@string/Age"
+                                                android:textSize="18sp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView35"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Age" />
 
                                             <LinearLayout
-                                                android:orientation="horizontal"
                                                 android:layout_width="match_parent"
-                                                android:layout_height="match_parent">
+                                                android:layout_height="match_parent"
+                                                android:orientation="horizontal">
 
                                                 <TextView
-                                                    android:text="0"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
                                                     android:id="@+id/age_Profile"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
                                                     android:layout_marginTop="15dp"
-                                                    android:textStyle="normal|bold"
+                                                    android:layout_weight="1"
+                                                    android:text="0"
                                                     android:textSize="30sp"
-                                                    android:layout_weight="1" />
+                                                    android:textStyle="normal|bold" />
 
                                                 <TextView
-                                                    android:text="ปี"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
                                                     android:id="@+id/textView39"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
                                                     android:layout_marginLeft="5dp"
-                                                    android:layout_marginTop="15dp" />
+                                                    android:layout_marginTop="15dp"
+                                                    android:text="ปี" />
                                             </LinearLayout>
 
                                         </LinearLayout>
 
                                         <LinearLayout
-                                            android:orientation="vertical"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
                                             android:padding="20dp">
 
                                             <TextView
-                                                android:text="@string/Height"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
                                                 android:id="@+id/textView32"
-                                                android:textStyle="normal|bold"
-                                                android:textSize="18sp" />
-
-                                            <TextView
-                                                android:text="@string/Height2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/textView31" />
+                                                android:text="@string/Height"
+                                                android:textSize="18sp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView31"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/Height2" />
 
                                             <LinearLayout
-                                                android:orientation="horizontal"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:layout_marginTop="15dp">
+                                                android:layout_marginTop="15dp"
+                                                android:orientation="horizontal">
 
                                                 <TextView
-                                                    android:text="0"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
                                                     android:id="@+id/height_profile"
-                                                    android:layout_weight="1"
-                                                    android:textStyle="normal|bold"
-                                                    android:textSize="30sp" />
-
-                                                <TextView
-                                                    android:text="ซ.ม"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="0"
+                                                    android:textSize="30sp"
+                                                    android:textStyle="normal|bold" />
+
+                                                <TextView
                                                     android:id="@+id/textView40"
-                                                    android:layout_marginLeft="5dp" />
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:text="ซ.ม" />
                                             </LinearLayout>
                                         </LinearLayout>
 
                                         <LinearLayout
-                                            android:orientation="vertical"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
                                             android:padding="20dp">
 
                                             <TextView
-                                                android:text="@string/weight"
+                                                android:id="@+id/textView34"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/textView34"
-                                                android:textStyle="normal|bold"
-                                                android:textSize="18sp" />
+                                                android:text="@string/weight"
+                                                android:textSize="18sp"
+                                                android:textStyle="normal|bold" />
 
                                             <TextView
-                                                android:text="@string/weight2"
+                                                android:id="@+id/textView33"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/textView33" />
+                                                android:text="@string/weight2" />
 
                                             <LinearLayout
-                                                android:orientation="horizontal"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:layout_marginTop="15dp">
+                                                android:layout_marginTop="15dp"
+                                                android:orientation="horizontal">
 
                                                 <TextView
-                                                    android:text="0"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
                                                     android:id="@+id/weight_profile"
-                                                    android:textStyle="normal|bold"
-                                                    android:textSize="30sp" />
-
-                                                <TextView
-                                                    android:text="ก.ก"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:text="0"
+                                                    android:textSize="30sp"
+                                                    android:textStyle="normal|bold" />
+
+                                                <TextView
                                                     android:id="@+id/textView42"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
-                                                    android:layout_marginLeft="5dp" />
+                                                    android:text="ก.ก" />
                                             </LinearLayout>
                                         </LinearLayout>
                                     </LinearLayout>
@@ -460,10 +459,10 @@
                                                 </LinearLayout>
 
                                                 <TextView
-                                                    android:text="@string/BMI2"
+                                                    android:id="@+id/textView25"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:id="@+id/textView25" />
+                                                    android:text="@string/BMI2" />
 
                                                 <LinearLayout
                                                     android:orientation="horizontal"
