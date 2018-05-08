@@ -3,6 +3,7 @@ package com.example.cs.peojec401;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.util.CircularArray;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.cs.peojec401.ConnectData.Config;
 import com.example.cs.peojec401.ConnectData.Config_food;
 import com.example.cs.peojec401.FoodCon.FoodList;
 import com.example.cs.peojec401.FoodCon.PicassoDown;
@@ -27,6 +29,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static com.example.cs.peojec401.Fragment_F4.i;
+
 /**
  * Created by hp on 12/3/2561.
  */
@@ -35,10 +39,11 @@ public class DocumentFood extends AppCompatActivity {
 
     private static final String TAG = "DocumentFood";
     private JSONArray result;
-    private TextView food_name,energy,carbo,fat,protein,sugar;
+    private TextView food_name,energy,carbo,fat,protein,sugar,ingred,method;
     private ImageView foodpic;
     private Random ran;
     int num;
+    String url="";
     ArrayList<FoodList> arrayList ;
     FoodList foodList;
 
@@ -56,6 +61,8 @@ public class DocumentFood extends AppCompatActivity {
         fat = (TextView) findViewById(R.id.fat_food);
         protein= (TextView) findViewById(R.id.protein_food);
         sugar = (TextView) findViewById(R.id.sugar_food);
+        ingred = (TextView)findViewById(R.id.Option_foods);
+        method = (TextView)findViewById(R.id.method_f);
         foodpic = (ImageView)  findViewById(R.id.foodpic);
 
         Bundle bundle = getIntent().getExtras();
@@ -80,15 +87,6 @@ public class DocumentFood extends AppCompatActivity {
 
 
 
-    public  void getData1(int position){
-
-        foodList = arrayList.get(position);
-        food_name.setText(foodList.getName());
-        PicassoDown.downloadImage(getApplicationContext(),foodList.getFoodpic(),foodpic);
-        energy.setText(foodList.getEnergy());
-
-
-    }
 
 //    private void getIncomingintent(){
 //        Log.d(TAG,"getIntent : checking for coming extra");
@@ -120,62 +118,73 @@ public class DocumentFood extends AppCompatActivity {
 
 
 
-    private void getData(){
+    private void getData() {
         //Creating a string request
 
-        StringRequest stringRequest = new StringRequest(Config_food.DATA_URL,
-                new Response.Listener<String>() {
 
-                    @Override
-                    public void onResponse(String response) {
-                        JSONObject j = null;
+        if(i==2){
+            url = Config_food.DATA_URL1;
+        } if(i==3){
 
-
-
-                        try {
-                            //Parsing the fetched Json String to JSON Object
-                            j = new JSONObject(response);
-
-                            //Storing the Array of JSON String to our JSON Array
-                            result = j.getJSONArray(Config_food.JSON_ARRAY);
+            url=Config_food.DATA_URL;
+        }
 
 
-                            int n = num;
+         StringRequest stringRequest = new StringRequest(url,
+                 new Response.Listener<String>() {
 
-                            Picasso.with(getApplicationContext())
-                                    .load(getFoodpic(n))
-                                    .into(foodpic);
-                            food_name.setText(getName(n));
-                            energy.setText(getEnergy(n));
-                            carbo.setText(getCarbohydrate(n));
-                            fat.setText(getFat(n));
-                            protein.setText(getProtein(n));
-                            sugar.setText(getSugar(n));
+                     @Override
+                     public void onResponse(String response) {
+                         JSONObject j = null;
+
+
+                         try {
+                             //Parsing the fetched Json String to JSON Object
+                             j = new JSONObject(response);
+
+                             //Storing the Array of JSON String to our JSON Array
+                             result = j.getJSONArray(Config_food.JSON_ARRAY);
+
+
+                             int n = num;
+
+                             Picasso.with(getApplicationContext())
+                                     .load(getFoodpic(n))
+                                     .into(foodpic);
+                             food_name.setText(getName(n));
+                             energy.setText(getEnergy(n));
+                             carbo.setText(getCarbohydrate(n));
+                             fat.setText(getFat(n));
+                             method.setText(getMethodF(n));
+                             ingred.setText(getINGRED(n));
+                             protein.setText(getProtein(n));
+                             sugar.setText(getSugar(n));
 
 //                            name_profile.setText(getName(0));
 //                            age_profile.setText(getAge(0));
 //                            height_profile.setText(getHeight(0));
 //                            weight_profile.setText(getWeight(0));
 //                            gender_profile.setText(getGender(0));
-                            //Calling method getStudents to get the students from the JSON Array
-                            //getStudents(result);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
+                             //Calling method getStudents to get the students from the JSON Array
+                             //getStudents(result);
+                         } catch (JSONException e) {
+                             e.printStackTrace();
+                         }
+                     }
+                 },
+                 new Response.ErrorListener() {
+                     @Override
+                     public void onErrorResponse(VolleyError error) {
 
-                    }
-                });
+                     }
+                 });
 
-        //Creating a request queue
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+         //Creating a request queue
+         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        //Adding request to the queue
-        requestQueue.add(stringRequest);
+         //Adding request to the queue
+         requestQueue.add(stringRequest);
+
     }
 
     //Method to get student name of a particular position
@@ -279,11 +288,36 @@ public class DocumentFood extends AppCompatActivity {
 
     }
 
-    private Integer getRan(){
-            ran = new Random();
-        int num= ran.nextInt(5);
+    private String getMethodF(int position) {
+        String method = "";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
 
-        return num;
+            //Fetching name from that object
+            method = json.getString(Config_food.FOODMEDTHOD);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return method;
+
     }
+    private String getINGRED(int position) {
+        String ingred = "";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+             ingred= json.getString(Config_food.FOODINGRED);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return ingred;
+
+    }
+
 }
 

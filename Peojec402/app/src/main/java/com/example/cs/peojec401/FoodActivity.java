@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.cs.peojec401.FoodCon.DisplayList;
+import com.example.cs.peojec401.food_Pressurel.F2_food_pressure;
 import com.example.cs.peojec401.food_Pressurel.F_food_pressure;
 import com.example.cs.peojec401.food_heartl.F2_food_heart;
 import com.example.cs.peojec401.food_heartl.F_food_heart;
@@ -133,7 +134,7 @@ public class FoodActivity extends AppCompatActivity {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-        int num =getIntent().getExtras().getInt("num");
+        int num =getIntent().getExtras().getInt("n");
         //TextView  head = (TextView) findViewById(R.id.bloods) ;
         @Override
         public Fragment getItem(int position) {
