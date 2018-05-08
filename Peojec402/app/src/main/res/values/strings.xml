@@ -53,10 +53,10 @@
     <string name="Profile">ประวัติของฉัน</string>
     <string name="energy">พลังงานของฉัน</string>
     <string name="BMI">พลังงานที่ร่างกายต้องการ</string>
-    <string name="BMI4">พลังงานต่อวัน</string>
+    <string name="BMI4">ดัชนีมวยกาย</string>
     <string name="BMI2">BMI</string>
     <string name="BMI3">ปริมาณพลังงานที่ร่างกายต้องใช้ในชีวิตประจำวัน </string>
-    <string name="BMR">ดัชนีมวลกาย</string>
+    <string name="BMR">พลังงานต่อวัน</string>
     <string name="BMR2">BMR</string>
     <string name="BMR3"> เครื่องมือวัดปริมาณไขมันในร่างกาย</string>
     <string name="explanation">คำอธิบาย :</string>

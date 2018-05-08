@@ -135,10 +135,10 @@ public class Fragment_P extends Fragment{
                             height_profile.setText(getHeight(0));
                             weight_profile.setText(getWeight(0));
                             gender_profile.setText(getGender(0));
-                            String bmr = String.valueOf(bmrValue);
-                            String bmi = String.valueOf(bmiValue);
-                            BMR_profile.setText(String.format("%.1f",bmr));
-                            BMI_profile.setText(String.format("%.1f",bmi));
+                            String bmr = String.valueOf(String.format("%.1f",bmrValue));
+                            String bmi = String.valueOf(String.format("%.1f",bmiValue));
+                            BMR_profile.setText(bmr);
+                            BMI_profile.setText(bmi);
                             //Calling method getStudents to get the students from the JSON Array
                             //getStudents(result);
                         } catch (JSONException e) {
