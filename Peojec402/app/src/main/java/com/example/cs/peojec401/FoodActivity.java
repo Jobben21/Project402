@@ -148,7 +148,7 @@ public class FoodActivity extends AppCompatActivity {
                 fragment = new MainDishFragment();
                 break;
             case 1:
-                fragment = new F_food_heart();
+                fragment = new DisplayList();
                 break;
             case 2:
                 fragment = new F2_food_heart();

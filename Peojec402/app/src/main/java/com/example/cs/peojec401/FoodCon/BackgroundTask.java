@@ -7,7 +7,9 @@ import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.example.cs.peojec401.ProfileOfBloodsActivity;
 import com.example.cs.peojec401.R;
 
 import org.json.JSONArray;
@@ -15,15 +17,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import static com.example.cs.peojec401.Fragment_F4.i;
+import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 
 /**
  * Created by นครินทร์ on 4/18/2018.
@@ -45,8 +52,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
 
     }
 
-    String json_string = "http://172.25.74.81/android/get_food1.php?status=0";
-    String json_string1 = "http://172.25.74.81/android/get_food2.php?status=0";
+    String json_string = "http://192.168.1.8/android/get_food1.php?status=0";
+    String json_string1 = "http://192.168.1.8/android/get_food2.php?status=0";
 
     @Override
     protected void onPreExecute() {

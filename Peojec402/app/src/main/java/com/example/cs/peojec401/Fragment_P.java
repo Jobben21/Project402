@@ -1,7 +1,9 @@
 package com.example.cs.peojec401;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -26,6 +28,13 @@ import org.w3c.dom.Text;
 
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
+import static com.example.cs.peojec401.Register_LoginActivity.ageLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.genderLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.heightLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.nameLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.weightLogin;
+
 
 /**
  * Created by hp on 9/1/2561.
@@ -60,6 +69,12 @@ public class Fragment_P extends Fragment{
         BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
         BMR_profile = (TextView)view.findViewById(R.id.BMR_Profile);
 
+        if (Build.VERSION.SDK_INT > 9) {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+        }
 
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +116,21 @@ public class Fragment_P extends Fragment{
         });
 
 
-        getData();
-
+        name_profile.setText(nameLogin);
+        age_profile.setText(ageLogin);
+        weight_profile.setText(weightLogin);
+        height_profile.setText(heightLogin);
+        gender_profile.setText(genderLogin);
+        String bmr = String.valueOf(String.format("%.1f",bmrValue));
+        String bmi = String.valueOf(String.format("%.1f",bmiValue));
+        BMR_profile.setText(bmr);
+        BMI_profile.setText(bmi);
         return view;
 
 
     }
+
+
 
 
 
@@ -135,10 +159,8 @@ public class Fragment_P extends Fragment{
                             height_profile.setText(getHeight(0));
                             weight_profile.setText(getWeight(0));
                             gender_profile.setText(getGender(0));
-                            String bmr = String.valueOf(String.format("%.1f",bmrValue));
-                            String bmi = String.valueOf(String.format("%.1f",bmiValue));
-                            BMR_profile.setText(bmr);
-                            BMI_profile.setText(bmi);
+
+
                             //Calling method getStudents to get the students from the JSON Array
                             //getStudents(result);
                         } catch (JSONException e) {

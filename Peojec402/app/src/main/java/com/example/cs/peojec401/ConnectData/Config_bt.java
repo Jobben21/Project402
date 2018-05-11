@@ -6,7 +6,7 @@ package com.example.cs.peojec401.ConnectData;
 
 public class Config_bt {
 
-    public static final String DATA_URL = "http://172.25.74.81/android/get_bt.php?status=0";
+    public static final String DATA_URL = "http://192.168.1.8/android/get_bt.php?status=0";
 
     //Tags used in the JSON String
     public static final String SUGAR= "sugar";

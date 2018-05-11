@@ -167,7 +167,7 @@ public class AfterCalCulat extends AppCompatActivity{
 
 
 
-        String url = "http://192.168.1.40/android/add_bmr.php?status=0";
+        String url = "http://192.168.1.8/android/add_bmr.php?status=0";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 

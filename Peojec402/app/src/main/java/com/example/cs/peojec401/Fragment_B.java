@@ -38,6 +38,8 @@ import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
+
 /**
  * Created by hp on 9/1/2561.
  */
@@ -86,11 +88,11 @@ public class Fragment_B extends Fragment {
             public void onClick(View v) {
 
 
-             //     if(SaveData()) {
-                    // else{
+                 if(SaveData()) {
+
                    inputBloodTest();
-                       // Blood(); //}
-               //     }
+
+                   }
                 //}
             }
         });
@@ -100,12 +102,12 @@ public class Fragment_B extends Fragment {
             public boolean SaveData() {
 
 
+                Toast.makeText(getContext(),idLogin,Toast.LENGTH_LONG).show();
 
-
-                String url = "http://172.25.74.81/android/add_bt.php?status=0";
+                String url = "http://192.168.1.8/android/add_bt.php?status=0";
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
-
+                para.add(new BasicNameValuePair("user_id", idLogin));
                 para.add(new BasicNameValuePair("sugar", sugar_t.getText().toString()));
                 para.add(new BasicNameValuePair("choles", choles_t.getText().toString()));
                 para.add(new BasicNameValuePair("hdl", hdl_t.getText().toString()));
@@ -113,6 +115,7 @@ public class Fragment_B extends Fragment {
                 para.add(new BasicNameValuePair("potassium", potassium_t.getText().toString()));
                 para.add(new BasicNameValuePair("trigly", tri_t.getText().toString()));
                 para.add(new BasicNameValuePair("sodium", sodium_t.getText().toString()));
+
 
                 String resultServer = gettHttpPost(url, para);
 
@@ -131,8 +134,8 @@ public class Fragment_B extends Fragment {
                     e.printStackTrace();
                 }
 
-                Toast.makeText(getContext(), StatusId,
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), StatusId,
+//                        Toast.LENGTH_SHORT).show();
 //        sugar_t.setText("");
 //        sodium_t.setText("");
 //        potassium_t.setText("");
