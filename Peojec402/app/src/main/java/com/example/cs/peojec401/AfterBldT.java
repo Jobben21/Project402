@@ -106,6 +106,15 @@ public class AfterBldT extends AppCompatActivity {
 
             }
         });
+        home= (Button)findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),NavigationActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

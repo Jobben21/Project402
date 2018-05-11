@@ -132,20 +132,26 @@ public class Register_LoginActivity extends AppCompatActivity {
 
                 {
 
-                    Toast.makeText(Register_LoginActivity.this,"1", Toast.LENGTH_SHORT).show();
-// Dialog
-//
-//                    ad.setTitle("Error! ");
-//
-//                    ad.setIcon(android.R.drawable.btn_star_big_on);
-//
-//                    ad.setPositiveButton("Close", null);
-//
-//                    ad.setMessage(strError);
-//
-//                    ad.show();
-//
-//                    username.setText("");
+                    if(username.getText().toString().equals("")){
+                        new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                                .setTitleText("เข้าสู่ระบบ")
+                                .setContentText("กรุณาใส่ชื่อของท่าน")
+                                .setConfirmText("ตกลง")
+                                .show();
+
+                        username.setError("กรอกข้อมูลให้ครบถ้วน");
+
+                    }else{
+
+                        new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                                .setTitleText("เข้าสู่ระบบ")
+                                .setContentText("ชื่อผู้ใช้งานไม่ถูกต้อง")
+                                .setConfirmText("ตกลง")
+                                .show();
+
+                        username.setError("ชื่อผู้ใช้งานไม่ถูกต้อง");
+                    }
+
 
 
 
@@ -155,6 +161,26 @@ public class Register_LoginActivity extends AppCompatActivity {
 
                 {
 
+                    nameLogin = name;
+                    ageLogin = age;
+                    idLogin=id;
+                    heightLogin=height;
+                    weightLogin=weight;
+                    genderLogin=gender;
+                    SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+
+                    //  pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+
+                    new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+
+                    pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                    pDialog.setTitleText("รอสักครู่");
+                    pDialog.setCancelable(false);
+                    pDialog.show();
+
+                    Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
+
+                    startActivity(intent);
                     Toast.makeText(Register_LoginActivity.this, name, Toast.LENGTH_SHORT).show();
 
 //            Intent newActivity = new Intent(MainActivity.this,DetailActivity.class);
@@ -200,15 +226,7 @@ public class Register_LoginActivity extends AppCompatActivity {
 
 
 
-                nameLogin = name;
-                ageLogin = age;
-                idLogin=id;
-                heightLogin=height;
-                weightLogin=weight;
-                genderLogin=gender;
-                Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
 
-              startActivity(intent);
             }
 
 

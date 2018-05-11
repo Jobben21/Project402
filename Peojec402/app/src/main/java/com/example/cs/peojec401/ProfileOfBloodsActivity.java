@@ -55,8 +55,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
     private TextView p_sugar,p_choles,p_hdl,p_ldl,p_potas,p_tri,p_so;
     private TextView p_sugar2,p_choles2,p_hdl2,p_ldl2,p_potas2,p_tri2,p_so2;
     private JSONArray result;
-    ArrayList<BloodList> arrayList = new ArrayList<>();
-    BloodList food_recyc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
