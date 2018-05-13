@@ -34,7 +34,8 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:weightSum="1">
+                    android:weightSum="1"
+                        android:visibility="visible">
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -232,7 +233,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -384,7 +385,7 @@
 
                                 <LinearLayout
                                     android:orientation="vertical"
-                                    android:layout_width="70dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="10dp">
 
@@ -412,7 +413,7 @@
                                 android:orientation="vertical"
                                 android:layout_width="89dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="10dp"
+                                android:paddingLeft="15dp"
                                 android:id="@+id/beans">
 
                                 <ImageView
@@ -750,7 +751,7 @@
                                     android:layout_weight="1" />
 
                                 <ImageView
-                                    android:layout_width="53dp"
+                                    android:layout_width="38dp"
                                     android:layout_height="match_parent"
                                     app:srcCompat="@drawable/add"
                                     android:id="@+id/imageView35"
@@ -778,8 +779,8 @@
                                     android:layout_width="150dp">
 
                                     <TextView
-                                        android:text="ลดพลังงาอาหาร 400 กิโลแคลอรี "
-                                        android:layout_width="wrap_content"
+                                        android:text="ลดพลังงาน 400 กิโลแคลอรี "
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView144"
                                         android:layout_marginRight="5dp"
@@ -793,8 +794,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:text="ออกกำลังกาย 200 กิโลแคลอรี"
-                                        android:layout_width="wrap_content"
+                                        android:text="ออกกำลัง 200 กิโลแคลอรี"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView142"
                                         android:layout_marginLeft="5dp"
@@ -807,32 +808,27 @@
 
                             <LinearLayout
                                 android:orientation="vertical"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_margin="10dp">
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center">
 
                                 <TextView
-                                    android:text="คุณมีพลังงาพร่องลงไปวันละ 600 กิโลแคลอรี "
-                                    android:layout_width="wrap_content"
+                                    android:text="ออกกำลังกาย 6 วัน X 600 = 3600 กิโลแคลอรี"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView152"
-                                    android:layout_weight="1" />
-
-                                <TextView
-                                    android:text="ออกกำลังกายประมาณ 6 วัน = 3600 กิโลแคลอรี"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView153"
                                     android:layout_weight="1"
-                                    android:layout_marginTop="5dp" />
+                                    android:textColor="@color/dark_dark" />
 
                                 <TextView
-                                    android:text="คุณจะลดไขมันลงได้ประมาณครึ่งกิโลกรัมต่อสัปดาห์"
+                                    android:text="ลดไขมันลงได้ประมาณครึ่งกิโลกรัมต่อสัปดาห์"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView154"
                                     android:layout_weight="1"
-                                    android:layout_marginTop="5dp" />
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/dark_dark" />
 
                             </LinearLayout>
 

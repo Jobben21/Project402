@@ -2,12 +2,7 @@ package com.example.cs.peojec401;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.TextView;
 
 
 public class Example  extends AppCompatActivity {
@@ -15,9 +10,6 @@ public class Example  extends AppCompatActivity {
     private int age;
     private  int weight;
     private  int height;
-
-
-
     private  float BMI;
     private float BMR;
     private int man;

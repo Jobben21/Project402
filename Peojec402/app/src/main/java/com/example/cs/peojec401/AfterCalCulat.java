@@ -140,19 +140,7 @@ public class AfterCalCulat extends AppCompatActivity{
 
             @Override
             public void onClick(View v) {
-              /*  final Dialog dialog = new Dialog(context);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.content_after_calcult_dialog);
-                dialog.show();
 
-                button_dialog2 = (Button)dialog.findViewById(R.id.close_dialog_bmi);
-                button_dialog2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        dialog.dismiss();
-            }
-                });*/
                 Intent intent = new Intent(AfterCalCulat.this,AfterCalCulate2.class);
                 intent.putExtra("bmiValue",bmiValue);
                 startActivity(intent);
