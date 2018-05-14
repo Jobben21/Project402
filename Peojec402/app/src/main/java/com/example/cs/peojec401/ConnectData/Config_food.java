@@ -21,6 +21,7 @@ public class Config_food {
     public static final String PROTEIN="protein";
     public static final String SUGAR="sugar";
 
+
     //JSON array name
     public static final String JSON_ARRAY = "result";
 }

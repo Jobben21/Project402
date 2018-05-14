@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.cs.peojec401.ConnectData.Con_regis;
-import com.example.cs.peojec401.FoodCon.FoodList;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -27,7 +26,6 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -61,6 +59,7 @@ public class Register_LoginActivity extends AppCompatActivity {
         username = (EditText)findViewById(R.id.username2);
         login = (Button)findViewById(R.id.login2);
         register = (Button)findViewById(R.id.register);
+
         final AlertDialog.Builder ad = new AlertDialog.Builder(this);
         final Con_regis  con_regis = new Con_regis(this);
 
@@ -139,7 +138,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                                 .setConfirmText("ตกลง")
                                 .show();
 
-                        username.setError("กรอกข้อมูลให้ครบถ้วน");
+                        username.setError("กรุณาใส่ชื่อของท่าน");
 
                     }else{
 
