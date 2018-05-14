@@ -104,7 +104,7 @@ public class Fragment_B extends Fragment {
 
                 Toast.makeText(getContext(),idLogin,Toast.LENGTH_LONG).show();
 
-                String url = "http://172.25.74.81/android/add_bt.php?status=0";
+                String url = "http://172.20.10.2/android/add_bt.php?status=0";
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
                 para.add(new BasicNameValuePair("user_id", idLogin));

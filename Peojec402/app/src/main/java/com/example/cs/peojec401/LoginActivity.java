@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 //attemptLogin();
                 if (SaveData()) {
-                    Intent intent = new Intent(LoginActivity.this,NavigationActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,Register_LoginActivity.class);
                     startActivity(intent);
 
                 }

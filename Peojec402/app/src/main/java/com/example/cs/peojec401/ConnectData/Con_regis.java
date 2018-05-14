@@ -30,12 +30,12 @@ public class Con_regis extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-<<<<<<< HEAD
-        String login_url = "http://172.20.10.2/login.php";
-=======
-        String login_url = "http://192.168.1.8/login.php";
 
->>>>>>> 89a4ecde1f2461e8b2eb366056e2de84c0d2e83e
+        String login_url = "http://172.20.10.2/login.php";
+
+
+
+
         if(type.equals("login")) {
             try {
                 String user_name = params[1];
