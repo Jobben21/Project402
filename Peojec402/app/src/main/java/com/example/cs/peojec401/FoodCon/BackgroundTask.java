@@ -52,8 +52,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
 
     }
 
-    String json_string = "http://192.168.1.8/android/get_food1.php?status=0";
-    String json_string1 = "http://192.168.1.8/android/get_food2.php?status=0";
+    String json_string = "http://172.20.10.2/android/get_food1.php?status=0";
+    String json_string1 = "http://172.20.10.2/android/get_food2.php?status=0";
 
     @Override
     protected void onPreExecute() {

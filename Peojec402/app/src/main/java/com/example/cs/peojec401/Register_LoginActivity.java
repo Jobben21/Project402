@@ -83,7 +83,7 @@ public class Register_LoginActivity extends AppCompatActivity {
 
 
 
-                String url = "http://192.168.1.8/android/login.php?status=0";
+                String url = "http://172.20.10.2/android/login.php?status=0";
 
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
 
