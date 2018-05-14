@@ -107,7 +107,7 @@
     <string name="CarbohydrateFood">คาร์โบไฮเดรต(กรัม)</string>
     <string name="Fat">ไขมัน(กรัม)</string>
     <string name="Protein">โปรตีน(กรัม)</string>
-    <string name="SugarFood">น้ำตาทราย(กรัม)</string>
+    <string name="SugarFood">น้ำตาลทราย(กรัม)</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

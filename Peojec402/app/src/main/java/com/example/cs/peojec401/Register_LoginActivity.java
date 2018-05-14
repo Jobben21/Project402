@@ -144,11 +144,11 @@ public class Register_LoginActivity extends AppCompatActivity {
 
                         new SweetAlertDialog(Register_LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
                                 .setTitleText("เข้าสู่ระบบ")
-                                .setContentText("ชื่อผู้ใช้งานไม่ถูกต้อง")
+                                .setContentText("กรุณาลงทะเบียนเข้าใช้งาน")
                                 .setConfirmText("ตกลง")
                                 .show();
 
-                        username.setError("ชื่อผู้ใช้งานไม่ถูกต้อง");
+                        username.setError("กรุณาใส่ชื่อของท่าน");
                     }
 
 

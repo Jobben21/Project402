@@ -20,6 +20,7 @@ public class Config_food {
     public static final String FAT="fat";
     public static final String PROTEIN="protein";
     public static final String SUGAR="sugar";
+    public static final String SODIUM="sodium";
 
 
     //JSON array name

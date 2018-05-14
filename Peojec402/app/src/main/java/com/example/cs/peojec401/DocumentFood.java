@@ -40,7 +40,7 @@ public class DocumentFood extends AppCompatActivity {
 
     private static final String TAG = "DocumentFood";
     private JSONArray result;
-    private TextView food_name,energy,carbo,fat,protein,sugar,ingred,method,type;
+    private TextView food_name,energy,carbo,fat,protein,sugar,ingred,method,type,sodium;
     private ImageView foodpic;
     private Random ran;
     int num;
@@ -63,6 +63,7 @@ public class DocumentFood extends AppCompatActivity {
         protein= (TextView) findViewById(R.id.protein_food);
         sugar = (TextView) findViewById(R.id.sugar_food);
         ingred = (TextView)findViewById(R.id.Option_foods);
+        sodium = (TextView)findViewById(R.id.sodium_food);
         method = (TextView)findViewById(R.id.method_f);
         foodpic = (ImageView)  findViewById(R.id.foodpic);
         type = (TextView) findViewById(R.id.option2);
@@ -161,6 +162,7 @@ public class DocumentFood extends AppCompatActivity {
                              ingred.setText(getINGRED(n));
                              protein.setText(getProtein(n));
                              sugar.setText(getSugar(n));
+                             sodium.setText(getSodium(n));
                              type.setText(getType(n));
 
 //                            name_profile.setText(getName(0));
@@ -335,6 +337,22 @@ public class DocumentFood extends AppCompatActivity {
         }
         //Returning the name
         return type;
+
+    }
+
+    private String getSodium(int position) {
+        String sodium = "";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            sodium= json.getString(Config_food.SODIUM);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return sodium;
 
     }
 

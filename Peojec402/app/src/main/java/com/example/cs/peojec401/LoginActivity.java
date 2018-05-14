@@ -66,10 +66,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     // UI references.
     private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-    private EditText Age_login;
-    private EditText weight_login;
-    private EditText height_login;
+    private EditText e_name,e_height,e_weight,e_age;
+    private RadioGroup gender;
+
 
     private View mProgressView;
     private View mLoginFormView;
@@ -81,6 +80,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.loginn);
         setSupportActionBar(toolbar);
+
+
+        e_name = (EditText) findViewById(R.id.email);
+        e_age = (EditText)findViewById(R.id.Age_login);
+        e_height = (EditText)findViewById(R.id.Height_login);
+        e_weight = (EditText)findViewById(R.id.weight_login);
+        gender = (RadioGroup) findViewById(R.id.radio_gender);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -150,8 +156,50 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             public void onClick(View view) {
 
 
+                if(e_name.getText().length()==0 ){
+
+
+
+                    e_name.setError("กรุณาใส่ชื่อของท่าน");
+
+
+                }
+                 if(e_height.getText().length()==0){
+
+
+
+                    e_height.setError("กรอกสข้อมูส่วนสูง");
+
+                }
+                 if(e_weight.getText().length()==0){
+
+
+                    e_weight.setError("กรอกข้อมูลน้ำหนัก");
+                }
+                 if(e_age.getText().length()==0){
+
+
+                    e_age.setError("กรุณากรอกอายุ");
+                } if(e_name.getText().length()==0 && e_height.getText().length()==0 && e_weight.getText().length()==0
+                        && e_age.getText().length()==0){
+
+                    new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("ลงทะเบียน")
+                            .setContentText("กรุณากรอกข้อมูลให้ครบถ้วน")
+                            .setConfirmText("ตกลง")
+                            .show();
+                    e_name.setError("กรุณากรอกชื่อ");
+                    e_weight.setError("กรุณากรอกน้ำหนัก");
+                    e_height.setError("กรุณากรอกส่วนสูง");
+                    e_age.setError("กรุณากรอกอายุ");
+
+
+                }
+
                 //attemptLogin();
-                if (SaveData()) {
+                if (e_name.getText().length()!=0 && e_height.getText().length()!=0 && e_weight.getText().length()!=0
+                        && e_age.getText().length()!=0) {
+                    SaveData();
                     Intent intent = new Intent(LoginActivity.this,Register_LoginActivity.class);
                     startActivity(intent);
 
@@ -176,11 +224,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     public boolean SaveData(){
 
-        final EditText e_name = (EditText) findViewById(R.id.email);
-        final EditText e_age = (EditText)findViewById(R.id.Age_login);
-        final EditText e_height = (EditText)findViewById(R.id.Height_login);
-        final EditText e_weight = (EditText)findViewById(R.id.weight_login);
-        final RadioGroup gender = (RadioGroup) findViewById(R.id.radio_gender);
 
         int checkedRadioButtonID = gender.getCheckedRadioButtonId ( );
         RadioButton checkedRadioButton = ( RadioButton )findViewById ( checkedRadioButtonID );
@@ -194,18 +237,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         ad.setIcon(android.R.drawable.btn_star_big_on);
         ad.setPositiveButton("Close",null);
 
-        if(e_name.getText().length()==0){
-
-            new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
-                    .setTitleText("ลงทะเบียน")
-                    .setContentText("กรอกข้อมูลส่วนตัวให้ครบถ้วน")
-                    .setConfirmText("ตกลง")
-                    .show();
 
 
-            return false;
-
-        }
 
 
         String url = "http://172.20.10.2/android/addData.php?status=0";
