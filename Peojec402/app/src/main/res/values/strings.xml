@@ -3,7 +3,8 @@
     <string name="txtCredits">Support: <a href="https://drive.google.com/open?id=1qUAEul5oQ3zRdPk4jPCTqvNBRY0n6_nZ">click here</a></string>
 
 
-    <string name="app_name"></string>
+
+    <string name="app_name">MEALDER</string>
     <string name="sugar">น้ำตาล</string>
     <string name="colesteral">Cholesterol</string>
     <string name="colesteral2">ไขมันในเส้นเลือด</string>
