@@ -22,7 +22,7 @@ public class SlideAdapter extends PagerAdapter {
 
 
         public int[] lst_images = {
-                R.drawable.slidet,
+                R.drawable.logo,
                 R.drawable.slideo,
                 R.drawable.slidet,
                 R.drawable.slideo
