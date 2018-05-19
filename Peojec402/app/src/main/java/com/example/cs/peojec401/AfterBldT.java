@@ -4,10 +4,15 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +25,28 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cs.peojec401.FoodCon.DisplayList;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
+
 public class AfterBldT extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
@@ -33,6 +59,13 @@ public class AfterBldT extends AppCompatActivity {
     LinearLayout HeaderLayout,HeaderLayout2,HeaderLayout3,HeaderLayout4,HeaderLayout5,HeaderLayout6,HeaderLayout7;
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
     CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
+     public static String Resultone;
+   public static String Resulttwo;
+    String Resultthree;
+    String Resultfour;
+    String Resultfive;
+    String Resultsix;
+    String Resultseven;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +77,159 @@ public class AfterBldT extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+
+
+        if (Build.VERSION.SDK_INT > 9) {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+        }
+        if("a"=="b") {
+            String url = "http://172.20.10.2/android/login.php?status=0";
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+            params.add(new BasicNameValuePair("resugar", Resultone));
+            params.add(new BasicNameValuePair("resodium", Resulttwo));
+            params.add(new BasicNameValuePair("repotassium", Resultthree));
+            params.add(new BasicNameValuePair("recholes", Resultfour));
+            params.add(new BasicNameValuePair("reldl", Resultfive));
+            params.add(new BasicNameValuePair("rehdl", Resultsix));
+            params.add(new BasicNameValuePair("retrigly", Resultseven));
+
+
+            String resultServer = getHttpPost(url, params);
+            String sugar = "";
+
+            String id = "";
+
+            String age = "";
+
+            String height = "";
+
+            String weight = "";
+
+            String gender = "";
+
+
+            JSONObject c;
+
+            try {
+
+                c = new JSONObject(resultServer);
+
+                sugar = c.getString("name");
+
+                age = c.getString("age");
+
+                height = c.getString("height");
+                weight = c.getString("weight");
+                gender = c.getString("gender");
+                id = c.getString("id");
+            } catch (JSONException e) {
+
+// TODO Auto-generated catch block
+
+                e.printStackTrace();
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+    public String getHttpPost(String url,List<NameValuePair> params) {
+
+        StringBuilder str = new StringBuilder();
+
+        HttpClient client = new DefaultHttpClient();
+
+        HttpPost httpPost = new HttpPost(url);
+
+        try {
+
+            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
+
+            HttpResponse response = client.execute(httpPost);
+
+            StatusLine statusLine = response.getStatusLine();
+
+            int statusCode = statusLine.getStatusCode();
+
+            if (statusCode == 200) { // Status OK
+
+                HttpEntity entity = response.getEntity();
+
+                InputStream content = entity.getContent();
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+
+                String line;
+
+
+                while ((line = reader.readLine()) != null) {
+
+                    str.append(line);
+
+                }
+
+
+            } else {
+
+                Log.e("Log", "Failed to download result..");
+
+            }
+
+        } catch (ClientProtocolException e) {
+
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+        return str.toString();
+
+    }
+
+
+
+
+
+
+
+
+
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -78,13 +263,13 @@ public class AfterBldT extends AppCompatActivity {
 
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
-        String Resultone = recommendFood(message1);
-        String Resulttwo = recommendFood2(message2);
-        String Resultthree = recommendFood3(message3);
-        String Resultfour =  recommendFood4(message4);
-        String Resultfive =  recommendFood5(message5);
-        String Resultsix =  recommendFood6(message6);
-        String Resultseven =  recommendFood7(message7);
+        Resultone = recommendFood(message1);
+         Resulttwo = recommendFood2(message2);
+         Resultthree = recommendFood3(message3);
+         Resultfour =  recommendFood4(message4);
+         Resultfive =  recommendFood5(message5);
+         Resultsix =  recommendFood6(message6);
+         Resultseven =  recommendFood7(message7);
 
         final ArrayList<String> listResult2 = new ArrayList<>();
         listResult2.add(Resultone);
@@ -101,8 +286,11 @@ public class AfterBldT extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText (AfterBldT.this, "Selected " +listResult2.toString(), Toast.LENGTH_LONG );
-                toast.show ( );
+//                Toast toast = Toast.makeText (AfterBldT.this, "Selected " +listResult2.toString(), Toast.LENGTH_LONG );
+//                toast.show ( );
+
+                DisplayList displayList = new DisplayList();
+                //displayList.getFragmentManager().findFragmentById(R.id.fragmentContainer);
 
             }
         });

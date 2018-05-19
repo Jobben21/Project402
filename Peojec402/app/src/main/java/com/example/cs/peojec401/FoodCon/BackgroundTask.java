@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -29,6 +30,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
+import static com.example.cs.peojec401.AfterBldT.Resultone;
+import static com.example.cs.peojec401.AfterBldT.Resulttwo;
 import static com.example.cs.peojec401.Fragment_F4.i;
 import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 
@@ -54,11 +57,13 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
 
     String json_string = "http://172.20.10.2/android/get_food1.php?status=0";
     String json_string1 = "http://172.20.10.2/android/get_food2.php?status=0";
+    String json_string2 = "http://172.20.10.2/android/get_foodbt.php?status=0";
 
     @Override
     protected void onPreExecute() {
-        recyclerView = (RecyclerView)activity.findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(c);
+
+        recyclerView = (RecyclerView) activity.findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(activity);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         adapter = new RecyclerAdapter(c,arrayList);
@@ -73,7 +78,23 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
             try {
                 if(i==2){
                    json_string=json_string1;
-                }
+//                }else if(i==3){
+//                    json_string=json_string2;
+//                    URL url = new URL(json_string);
+//                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+//                    httpURLConnection.setRequestMethod("POST");
+//                    httpURLConnection.setDoOutput(true);
+//                    httpURLConnection.setDoInput(true);
+//                    OutputStream outputStream = httpURLConnection.getOutputStream();
+//                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+//                    String post_data = URLEncoder.encode("resodium", "UTF-8") + "=" + URLEncoder.encode(Resulttwo, "UTF-8");
+//
+//                    bufferedWriter.write(post_data);
+//                    bufferedWriter.flush();
+//                    bufferedWriter.close();
+//                    outputStream.close();
+//
+               }
                 URL url = new URL(json_string);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
