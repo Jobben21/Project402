@@ -5,9 +5,9 @@ package com.example.cs.peojec401.ConnectData;
  */
 
 public class Config_food {
-    public static final String DATA_URL = "http://172.20.10.2/android/get_food.php?status=0";
-    public static final String DATA_URL1 = "http://172.20.10.2/android/get_food2.php?status=0";
-
+    public static final String DATA_URLSugar = "http://172.20.10.2/android/get_foodsugar1.php?status=0";
+    public static final String DATA_URLKidney = "http://172.20.10.2/android/get_foodkidney.php?status=0";
+    public static final String DATA_URLBT= "http://172.20.10.2/android/get_foodsugar1.php?status=0";
     //Tags used in the JSON String
     public static final String ID= "id";
     public static final String FOOD_NAME = "name";

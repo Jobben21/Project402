@@ -53,7 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.name.setText(foodList.getName());
         holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
-
+        Toast.makeText(c,arrayList.get(position).getName(),Toast.LENGTH_LONG).show();
         PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
                 Intent i = new Intent(c,DocumentFood.class);
                 Bundle bundle = new Bundle();
                 i.putExtra("num",sum);
-
+                i.putExtra("name",foodList.getName());
+                i.putExtra("energy",foodList.getEnergy());
+                i.putExtra("carbo",foodList.getCarbo());
+                i.putExtra("fat",foodList.getFat());
+                i.putExtra("foodpic",foodList.getFoodpic());
+                i.putExtra("protein",foodList.getProtein());
+                i.putExtra("method",foodList.getMethod());
+                i.putExtra("ingred",foodList.getIngred());
                 c.startActivity(i);
             }
         });

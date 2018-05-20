@@ -93,7 +93,7 @@ public class SuagrFoods extends AppCompatActivity {
     private void getData(){
         //Creating a string request
 
-        StringRequest stringRequest = new StringRequest(Config_food.DATA_URL,
+        StringRequest stringRequest = new StringRequest(Config_food.DATA_URLSugar,
                 new Response.Listener<String>() {
 
                     @Override

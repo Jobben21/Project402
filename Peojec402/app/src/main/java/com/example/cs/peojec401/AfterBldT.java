@@ -60,12 +60,13 @@ public class AfterBldT extends AppCompatActivity {
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
     CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
      public static String Resultone;
-   public static String Resulttwo;
-    String Resultthree;
-    String Resultfour;
-    String Resultfive;
-    String Resultsix;
-    String Resultseven;
+     public static String Resulttwo;
+     public static   String Resultthree;
+    public static String Resultfour;
+    public static String Resultfive;
+    public static String Resultsix;
+    public  static String Resultseven;
+    public static int bt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,148 +86,8 @@ public class AfterBldT extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
 
         }
-        if("a"=="b") {
-            String url = "http://172.20.10.2/android/login.php?status=0";
-
-            List<NameValuePair> params = new ArrayList<NameValuePair>();
-
-            params.add(new BasicNameValuePair("resugar", Resultone));
-            params.add(new BasicNameValuePair("resodium", Resulttwo));
-            params.add(new BasicNameValuePair("repotassium", Resultthree));
-            params.add(new BasicNameValuePair("recholes", Resultfour));
-            params.add(new BasicNameValuePair("reldl", Resultfive));
-            params.add(new BasicNameValuePair("rehdl", Resultsix));
-            params.add(new BasicNameValuePair("retrigly", Resultseven));
-
-
-            String resultServer = getHttpPost(url, params);
-            String sugar = "";
-
-            String id = "";
-
-            String age = "";
-
-            String height = "";
-
-            String weight = "";
-
-            String gender = "";
-
-
-            JSONObject c;
-
-            try {
-
-                c = new JSONObject(resultServer);
-
-                sugar = c.getString("name");
-
-                age = c.getString("age");
-
-                height = c.getString("height");
-                weight = c.getString("weight");
-                gender = c.getString("gender");
-                id = c.getString("id");
-            } catch (JSONException e) {
-
-// TODO Auto-generated catch block
-
-                e.printStackTrace();
-
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
-
-
-
-    public String getHttpPost(String url,List<NameValuePair> params) {
-
-        StringBuilder str = new StringBuilder();
-
-        HttpClient client = new DefaultHttpClient();
-
-        HttpPost httpPost = new HttpPost(url);
-
-        try {
-
-            httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));
-
-            HttpResponse response = client.execute(httpPost);
-
-            StatusLine statusLine = response.getStatusLine();
-
-            int statusCode = statusLine.getStatusCode();
-
-            if (statusCode == 200) { // Status OK
-
-                HttpEntity entity = response.getEntity();
-
-                InputStream content = entity.getContent();
-
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
-
-                String line;
-
-
-                while ((line = reader.readLine()) != null) {
-
-                    str.append(line);
-
-                }
-
-
-            } else {
-
-                Log.e("Log", "Failed to download result..");
-
-            }
-
-        } catch (ClientProtocolException e) {
-
-            e.printStackTrace();
-
-        } catch (IOException e) {
-
-            e.printStackTrace();
-
-        }
-
-        return str.toString();
-
-    }
-
-
-
-
-
-
-
 
 
 
@@ -286,11 +147,15 @@ public class AfterBldT extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast toast = Toast.makeText (AfterBldT.this, "Selected " +listResult2.toString(), Toast.LENGTH_LONG );
+//                Toast toast = Toast.makeText (AfterBldT.this, Resultone, Toast.LENGTH_LONG );
 //                toast.show ( );
 
-                DisplayList displayList = new DisplayList();
-                //displayList.getFragmentManager().findFragmentById(R.id.fragmentContainer);
+
+            bt =6;
+                Toast.makeText(AfterBldT.this,bt+" ",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),DisplayList1.class);
+                startActivity(intent);
+
 
             }
         });
@@ -401,11 +266,11 @@ public class AfterBldT extends AppCompatActivity {
 
      if(message1.equals("cancell")) {
 
-         result = "Suagr_0";
+         result = "0";
 
      }
         else{
-         result = "Suagar_1";
+         result = "1";
      }
         return result;
     }
@@ -415,11 +280,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message2.equals("cancell")) {
 
-            result2 = "Sodium_0";
+            result2 = "0";
 
         }
         else{
-            result2 = "Sodium_1";
+            result2 = "1";
         }
         return result2;
     }
@@ -429,11 +294,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message3.equals("cancell")) {
 
-            result3 = "Potassium_0";
+            result3 = "0";
 
         }
         else{
-            result3 = "Potassium_1";
+            result3 = "1";
         }
         return result3;
     }
@@ -443,11 +308,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message6.equals("cancell")) {
 
-            result4 = "CH_0";
+            result4 = "0";
 
         }
         else{
-            result4 = "CH_1";
+            result4 = "1";
         }
         return result4;
     }
@@ -457,11 +322,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message4.equals("cancell")) {
 
-            result5 = "LDL_0";
+            result5 = "0";
 
         }
         else{
-            result5 = "LDL_1";
+            result5 = "1";
         }
         return result5;
     }
@@ -471,11 +336,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message5.equals("cancell")){
 
-            result6 = "HDL_0";
+            result6 = "0";
 
         }
         else{
-            result6 = "HDL_1";
+            result6 = "1";
         }
         return result6;
     }
@@ -485,11 +350,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message7.equals("cancell")){
 
-            result7 = "TRI_0";
+            result7 = "0";
 
         }
         else{
-            result7 = "TRI_1";
+            result7 = "1";
         }
         return result7;
     }

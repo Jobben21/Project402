@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 public class FoodList  {
 
-    private  String name;
+    private  String name,method,ingred;
     private  String food_img;
     private  int energy,fat,carbo,protein,sugar;
 
-    public FoodList(String name, String img, int energy,int fat,int carbo,int protein,int sugar){
+    public FoodList(String name, String img, int energy,int fat,int carbo,int protein,int sugar,String method,String ingred){
 
         this.setName(name);
         this.setFoodpic(img);
@@ -23,7 +23,26 @@ public class FoodList  {
         this.setProtein(protein);
         this.setCarbo(carbo);
         this.setSugar(sugar);
+        this.setMethod(method);
+        this.setIngred(ingred);
 
+
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+    public String getIngred() {
+        return ingred;
+    }
+
+    public void setIngred(String ingred) {
+        this.ingred = ingred;
     }
 
     public String getName() {

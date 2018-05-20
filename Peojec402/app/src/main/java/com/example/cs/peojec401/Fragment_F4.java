@@ -65,7 +65,7 @@ public class Fragment_F4 extends Fragment{
 
                 Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
                 intent.putExtra("n",1);
-               // startActivity(intent);
+                startActivity(intent);
             }});
 
         food_kidney1.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +104,7 @@ public class Fragment_F4 extends Fragment{
 
                 Intent intent = new Intent(getActivity().getBaseContext(),FoodRecod_F4.class);
                 intent.putExtra("num",5);
-               // startActivity(intent);
+                startActivity(intent);
             }});
 
         return v;
