@@ -17,22 +17,12 @@
 		
 		
 		
-		//$strSql="SELECT * FROM user WHERE name ='".$strUsername."'";
-		//$Query = mysqli_query($con,$strSql);
-		//$Result = mysqli_fetch_array($Query);
-		//if($Result){
-			
-			//$arr['StatusID'] = "0";
-			//$arr['Error']="Username Exists ! ";
-			//echo json_encode($arr);
-			//exit();
-			
-		//}
+		
 		
 		$strSql= "INSERT INTO blood_test";
-		$strSql.="(sugar,choles,hdl,ldl,potassium,trigly,sodium)";
+		$strSql.="(user_id,sugar,choles,hdl,ldl,potassium,trigly,sodium)";
 		$strSql.="VALUES";
-		$strSql .="('".$_POST["sugar"]."','".$_POST["choles"]."','".$_POST["hdl"]."' ";
+		$strSql .="('".$_POST["user_id"]."','".$_POST["sugar"]."','".$_POST["choles"]."','".$_POST["hdl"]."' ";
 		$strSql .=",'".$_POST["ldl"]."','".$_POST["potassium"]."'";	
 		$strSql .=",'".$_POST["trigly"]."','".$_POST["sodium"]."')";
 			

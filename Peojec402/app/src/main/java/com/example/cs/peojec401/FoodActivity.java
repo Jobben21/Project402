@@ -1,5 +1,6 @@
 package com.example.cs.peojec401;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -148,7 +149,7 @@ public class FoodActivity extends AppCompatActivity {
                 fragment = new MainDishFragment();
                 break;
             case 1:
-                fragment = new DisplayList();
+                fragment = new MainDishFragment();
                 break;
             case 2:
                 fragment = new F2_food_heart();
@@ -162,7 +163,7 @@ public class FoodActivity extends AppCompatActivity {
                 fragment = new MainDishFragment();
                 break;
             case 1:
-                fragment = new F_food_kidney();
+                fragment = new  F_food_kidney();
                 break;
             case 2:
                 fragment = new F2_food_kidney();
@@ -176,7 +177,7 @@ public class FoodActivity extends AppCompatActivity {
                 fragment = new MainDishFragment();
                 break;
             case 1:
-                fragment = new DisplayList();
+                fragment = new MainDishFragment();
                 break;
             case 2:
                 fragment = new AppetizerFragment2();

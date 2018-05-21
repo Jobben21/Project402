@@ -30,6 +30,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static com.example.cs.peojec401.AfterBldT.bt;
 import static com.example.cs.peojec401.Fragment_F4.i;
 
 /**
@@ -71,10 +72,20 @@ public class DocumentFood extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
          num =bundle.getInt("num");
 
+        food_name.setText(bundle.getString("name"));
+        energy.setText(bundle.getString("energy"));
+        carbo.setText(bundle.getString("carbo"));
+        fat.setText(bundle.getString("fat"));
+        protein.setText(bundle.getString("protein"));
+        sugar.setText(bundle.getString("sugar"));
+        ingred.setText(bundle.getString("ingred"));
+        sodium.setText(bundle.getString("sodium"));
+        method.setText(bundle.getString("method"));
+        Picasso.with(getApplicationContext())
+                .load(bundle.getString("foodpic"))
+                .into(foodpic);
 
-
-
-        getData();
+//        getData();
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -126,10 +137,15 @@ public class DocumentFood extends AppCompatActivity {
 
 
         if(i==2){
-            url = Config_food.DATA_URL1;
+            url = Config_food.DATA_URLKidney;
         } if(i==3){
 
-            url=Config_food.DATA_URL;
+            url=Config_food.DATA_URLSugar;
+        }
+        if(bt==6){
+
+            url=Config_food.DATA_URLBT;
+            Log.d("btttt","asdasd");
         }
 
 

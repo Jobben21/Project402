@@ -100,7 +100,7 @@ public class Fragment_B extends Fragment {
             public boolean SaveData() {
 
 
-                Toast.makeText(getContext(),idLogin,Toast.LENGTH_LONG).show();
+
 
                 String url = "http://172.20.10.2/android/add_bt.php?status=0";
 

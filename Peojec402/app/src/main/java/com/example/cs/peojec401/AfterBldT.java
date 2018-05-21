@@ -4,10 +4,15 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +25,28 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cs.peojec401.FoodCon.DisplayList;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
+
 public class AfterBldT extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
@@ -44,6 +70,18 @@ public class AfterBldT extends AppCompatActivity {
     LinearLayout HeaderLayout,HeaderLayout2,HeaderLayout3,HeaderLayout4,HeaderLayout5,HeaderLayout6,HeaderLayout7;
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
     CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
+<<<<<<< HEAD
+=======
+     public static String Resultone;
+     public static String Resulttwo;
+     public static   String Resultthree;
+    public static String Resultfour;
+    public static String Resultfive;
+    public static String Resultsix;
+    public  static String Resultseven;
+    public static int bt = 0;
+
+>>>>>>> a0ce2322c13c2e88f79ae068430beb3da299d525
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +92,19 @@ public class AfterBldT extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+
+
+        if (Build.VERSION.SDK_INT > 9) {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+        }
+
     }
+
+
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -89,6 +139,7 @@ public class AfterBldT extends AppCompatActivity {
 
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
+<<<<<<< HEAD
         String Resultone = recommendFood(message1);
         String Resulttwo = recommendFood2(message2);
         String Resultthree = recommendFood3(message3);
@@ -99,6 +150,15 @@ public class AfterBldT extends AppCompatActivity {
         String Resulteight =  message8;
 
         layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab,Resulteight);
+=======
+        Resultone = recommendFood(message1);
+         Resulttwo = recommendFood2(message2);
+         Resultthree = recommendFood3(message3);
+         Resultfour =  recommendFood4(message4);
+         Resultfive =  recommendFood5(message5);
+         Resultsix =  recommendFood6(message6);
+         Resultseven =  recommendFood7(message7);
+>>>>>>> a0ce2322c13c2e88f79ae068430beb3da299d525
 
         final ArrayList<String> listResult2 = new ArrayList<>();
         listResult2.add(Resultone);
@@ -119,8 +179,15 @@ public class AfterBldT extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText (AfterBldT.this, "Selected " +listResult2.toString(), Toast.LENGTH_LONG );
-                toast.show ( );
+//                Toast toast = Toast.makeText (AfterBldT.this, Resultone, Toast.LENGTH_LONG );
+//                toast.show ( );
+
+
+            bt =6;
+                Toast.makeText(AfterBldT.this,bt+" ",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),DisplayList1.class);
+                startActivity(intent);
+
 
             }
         });
@@ -382,11 +449,11 @@ public class AfterBldT extends AppCompatActivity {
 
      if(message1.equals("cancell")) {
 
-         result = "Suagr_0";
+         result = "0";
 
      }
         else{
-         result = "Suagar_1";
+         result = "1";
      }
         return result;
     }
@@ -396,11 +463,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message2.equals("cancell")) {
 
-            result2 = "Sodium_0";
+            result2 = "0";
 
         }
         else{
-            result2 = "Sodium_1";
+            result2 = "1";
         }
         return result2;
     }
@@ -410,11 +477,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message3.equals("cancell")) {
 
-            result3 = "Potassium_0";
+            result3 = "0";
 
         }
         else{
-            result3 = "Potassium_1";
+            result3 = "1";
         }
         return result3;
     }
@@ -424,11 +491,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message6.equals("cancell")) {
 
-            result4 = "CH_0";
+            result4 = "0";
 
         }
         else{
-            result4 = "CH_1";
+            result4 = "1";
         }
         return result4;
     }
@@ -438,11 +505,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message4.equals("cancell")) {
 
-            result5 = "LDL_0";
+            result5 = "0";
 
         }
         else{
-            result5 = "LDL_1";
+            result5 = "1";
         }
         return result5;
     }
@@ -452,11 +519,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message5.equals("cancell")){
 
-            result6 = "HDL_0";
+            result6 = "0";
 
         }
         else{
-            result6 = "HDL_1";
+            result6 = "1";
         }
         return result6;
     }
@@ -466,11 +533,11 @@ public class AfterBldT extends AppCompatActivity {
 
         if(message7.equals("cancell")){
 
-            result7 = "TRI_0";
+            result7 = "0";
 
         }
         else{
-            result7 = "TRI_1";
+            result7 = "1";
         }
         return result7;
     }

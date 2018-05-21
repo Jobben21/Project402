@@ -180,7 +180,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
 
                     startActivity(intent);
-                    Toast.makeText(Register_LoginActivity.this, name, Toast.LENGTH_SHORT).show();
+
 
 //            Intent newActivity = new Intent(MainActivity.this,DetailActivity.class);
 //

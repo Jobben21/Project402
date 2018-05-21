@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private AutoCompleteTextView mEmailView;
     private EditText e_name,e_height,e_weight,e_age;
     private RadioGroup gender;
-
+    String StatusId="";
 
     private View mProgressView;
     private View mLoginFormView;
@@ -200,8 +200,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 if (e_name.getText().length()!=0 && e_height.getText().length()!=0 && e_weight.getText().length()!=0
                         && e_age.getText().length()!=0) {
                     SaveData();
-                    Intent intent = new Intent(LoginActivity.this,Register_LoginActivity.class);
-                    startActivity(intent);
+                    if(!StatusId.equals("2")) {
+                        Intent intent = new Intent(LoginActivity.this, Register_LoginActivity.class);
+                        startActivity(intent);
+                    }else{
+
+                        new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
+                                .setTitleText("ลงทะเบียน")
+                                .setContentText("มีชื่อนี้แล้วในระบบ")
+                                .setConfirmText("ตกลง")
+                                .show();
+                    }
+
 
                 }
 
@@ -255,7 +265,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         String resultServer = gettHttpPost(url,para);
 
-        String StatusId = "";
+        StatusId = "";
         String Error = "Unknow Status!";
         String a="";
         JSONObject c;
@@ -274,18 +284,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             ad.setMessage(Error);
             ad.show();
 
-        }else
-        {
-            Toast.makeText(LoginActivity.this,StatusId,
-                    Toast.LENGTH_SHORT).show();
-            e_name.setText("");
-            e_age.setText("");
-            e_height.setText("");
-            e_weight.setText("");
+        }else if (StatusId.equals("2")){
 
-
+            ad.setMessage(Error);
+            ad.show();
+            Toast.makeText(this,"assdasd",Toast.LENGTH_LONG).show();
 
         }
+
+
+
+
 
         return  true;
     }
