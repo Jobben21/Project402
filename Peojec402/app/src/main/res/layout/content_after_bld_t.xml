@@ -255,7 +255,8 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/bloood_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/blood_abnormal2"
@@ -263,7 +264,8 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/blood_abnormal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/blood_abnormal"
@@ -272,7 +274,36 @@
                                 android:id="@+id/blood_abnormal2"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/bloodt_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/blooodt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/bloodt_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloodt_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/bloodt_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/bloodt_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -494,32 +525,63 @@
                                 android:text="@string/sodium_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/sodium_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/sodium_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
+                                android:id="@+id/sodium_abnormal2"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/sodium_abnormal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/sodium_abnormal"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/sodiumt_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sodiumt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/sodiumt_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sodiumt_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/sodiumt_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/sodiumt_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/textView722"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -730,26 +792,59 @@
                                 android:text="@string/potassium_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/potassium_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/potassium_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
+                                android:id="@+id/potassium_abnormal2"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/potassium_abnormal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/potassium_abnormal"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/potassium_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/potassiumt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/potassium_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/potassiumt_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/potassium_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/potassiumt_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -817,7 +912,7 @@
                                         android:text="@string/colesteral2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/textView53"
+                                        android:id="@+id/textView533"
                                         android:textStyle="normal|bold"
                                         android:textSize="14sp"
                                         android:layout_weight="1" />
@@ -826,7 +921,7 @@
                                         android:text="@string/colesteral"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/textView50"
+                                        android:id="@+id/textView500"
                                         android:textSize="16sp"
                                         android:layout_weight="1" />
                                 </LinearLayout>
@@ -932,12 +1027,6 @@
                             android:padding="15dp"
                             android:visibility="visible">
 
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.13"></LinearLayout>
-
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -977,26 +1066,58 @@
                                 android:text="@string/chl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/chl_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/chl_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
+                                android:id="@+id/chl_abnormal2"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/chl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/chl_abnormal3"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+
+                            <TextView
+                                android:text="@string/chlt_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chlt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/chlt_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chlt_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/chlt_abnormal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chlt_abnormal3"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1062,7 +1183,6 @@
                                         android:text="@string/hdl2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/textView53"
                                         android:textStyle="normal|bold"
                                         android:textSize="14sp" />
 
@@ -1070,7 +1190,6 @@
                                         android:text="@string/ldl"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/textView50"
                                         android:textSize="16sp" />
                                 </LinearLayout>
 
@@ -1212,42 +1331,93 @@
                                 android:text="@string/ldl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/ldl_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/ldl_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
+                                android:id="@+id/ldl_abnormal2"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/ldl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/ldl_abnormal3"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/ldl_abnormal4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView106"
+                                android:id="@+id/ldl_abnormal4"
                                 android:layout_weight="0.13"
-                                android:layout_marginTop="10dp" />
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/ldl_abnormal5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView109"
+                                android:id="@+id/ldl_abnormal5"
                                 android:layout_weight="0.13"
-                                android:layout_marginTop="10dp" />
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/ldlt_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ldlt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/ldl_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ldlt_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13" />
+
+                            <TextView
+                                android:text="@string/ldlt_abnormal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ldlt_abnormal3"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/ldlt_abnormal4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ldlt_abnormal4"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/ldlt_abnormal5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ldlt_abnormal5"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1467,34 +1637,57 @@
                                 android:text="@string/hdl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/hdl_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
-
-                            <TextView
-                                android:text="@string/hdl_abnormal2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
-                                android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/hdl_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/hdl_abnormal3"
+                                android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
-                                android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:visibility="gone" />
+
 
                             <TextView
                                 android:text="@string/hdl_abnormal4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView112"
+                                android:id="@+id/hdl_abnormal4"
                                 android:layout_weight="0.13"
-                                android:layout_marginTop="10dp" />
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/hdlt_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/hdlt_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/hdlt_abnormal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/hdlt_abnormal3"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/hdlt_abnormal4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/hdlt_abnormal4"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
@@ -1637,7 +1830,7 @@
                                     android:weightSum="1">
 
                                     <TextView
-                                        android:text="ระดับต่ำ 30"
+                                        android:text="ต่ำ 30"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView119"
@@ -1716,34 +1909,78 @@
                                 android:text="@string/tri_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/bloood_normal"
+                                android:id="@+id/tri_normal"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/tri_abnormal2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal"
+                                android:id="@+id/tri_abnormal2"
                                 android:layout_marginTop="10dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/tri_abnormal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/blood_abnormal2"
+                                android:id="@+id/tri_abnormal"
                                 android:layout_marginTop="10dp"
                                 android:paddingRight="40dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/tri_abnormal3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView99"
+                                android:id="@+id/tri_abnormal3"
                                 android:layout_weight="0.13"
-                                android:layout_marginTop="10dp" />
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+
+                            <TextView
+                                android:text="@string/tri_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/trit_normal"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/trit_abnormal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/trit_abnormal"
+                                android:layout_marginTop="10dp"
+                                android:paddingRight="40dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:text="@string/tri_abnormal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/trit_abnormal3"
+                                android:layout_weight="0.13"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
+
+
 
                             <TextView
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "

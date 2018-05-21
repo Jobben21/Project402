@@ -20,9 +20,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="10dp"
                 app:cardElevation="3dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,18 +68,25 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/ligthGray"
+                        android:layout_weight="0.13"
+                        android:layout_marginTop="5dp" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="112dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:orientation="horizontal">
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginLeft="60dp"
-                            android:orientation="vertical">
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioButton4"
@@ -87,28 +94,33 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="true"
-                                android:text="@string/hospital2" />
+                                android:text="@string/hospital2"
+                                android:visibility="gone" />
 
                             <RadioButton
                                 android:id="@+id/radioButton3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/hospital1" />
+                                android:text="@string/hospital1"
+                                android:checked="true" />
 
                             <RadioButton
                                 android:id="@+id/radioButton2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/hospital3" />
+                                android:text="@string/hospital3"
+                                android:visibility="gone" />
 
                             <RadioButton
-                                android:id="@+id/radioButton"
+                                android:id="@+id/radioButton4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/hospital4" />
+                                android:text="@string/hospital4"
+                                android:layout_marginLeft="10dp"
+                                android:checked="false" />
 
                         </RadioGroup>
 

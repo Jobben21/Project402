@@ -157,19 +157,17 @@ public class Fragment_C extends Fragment {
         if(woman_radio.isChecked()){
 
             gender = true;
-            BMRMAN = (float) (665+ (9.6 *weight )+ (1.8 * height2 )- (4.7 * age));
+            BMRMAN = (float) (66.5+ (9.6 *weight )+ (1.8 * height2 )- (4.7 * age));
 
 
 
         }
-        else if(man_radio.isChecked()){
+        else{
             gender = false;
             BMRMAN = (float) (66+ (13.7 *weight )+ (5 * height2 )- (6.8 * age));
 
         }
-        else{
 
-        }
 
         return BMRMAN;
     }

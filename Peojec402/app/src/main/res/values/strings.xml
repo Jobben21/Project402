@@ -138,22 +138,21 @@
     <string name="max6">สูง 100</string>
     <string name="max7">สูง 700</string>
 
-    <string name="blood_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  70-120 mg/dl</string>
-    <string name="blood_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 60 mg/dl</string>
-    <string name="blood_abnormal">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 126 mg/dl</string>
+    <string name="blood_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  70-110 mg/dl</string>
+    <string name="blood_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 69 mg/dl</string>
+    <string name="blood_abnormal">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 111 mg/dl</string>
 
-    <string name="sodium_normal">่ค่าปกติ \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020 135 - 145 mmol/dl</string>
-    <string name="sodium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า  125 mmol/dl</string>
+    <string name="sodium_normal">่ค่าปกติ \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020 136 - 145 mmol/dl</string>
+    <string name="sodium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า  135 mmol/dl</string>
     <string name="sodium_abnormal">ค่าสูง \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 146 มmmol/dl</string>
 
-    <string name="potassium_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  3.5–5.0 mmol/dl</string>
-    <string name="potassium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020  น้อยกวา่า  3.5 mmol/dl</string>
-    <string name="potassium_abnormal">ค่าสูง\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  มากกว่า 5.0 mmol/dl</string>
+    <string name="potassium_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  3.5–4.5 mmol/dl</string>
+    <string name="potassium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020  น้อยกวา่า  3.4 mmol/dl</string>
+    <string name="potassium_abnormal">ค่าสูง\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  มากกว่า 4.6 mmol/dl</string>
 
-    <string name="hdl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020  40-50 mg/dl (ชาย)</string>
-    <string name="hdl_abnormal2">ค่าปกติ  \u0020\u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 50-59 mg/dl (หญิง)</string>
-    <string name="hdl_abnormal3">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 50-59 มmg/dl</string>
-    <string name="hdl_abnormal4">ค่าสูงมาก  \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 60 mg/dl</string>
+    <string name="hdl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 35-60 mg/dl (ชาย)</string>
+    <string name="hdl_abnormal3">คค่าน้อยกว่าปกติ\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 34 mg/dl</string>
+    <string name="hdl_abnormal4">ค่าสูง  \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 60 mg/dl</string>
 
     <string name="ldl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020\u0020 \u0020 \u0020 \u0020 \u0020    น้อยกว่า 100 mg/dl</string>
     <string name="ldl_abnormal2">ค่าเกินมาตราฐานเล็กน้อย  \u0020\u0020\u0020\u0020  100-129 mg/dl</string>
@@ -162,14 +161,49 @@
     <string name="ldl_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
 
 
-    <string name="chl_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  น้อยกวา่า 200 มิลลิกรัมต่อเดซิลิตร</string>
-    <string name="chl_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 มิลลิกรัมต่อเดซิลิตร</string>
-    <string name="chl_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 มากกว่า 240 มิลลิกรัมต่อเดซิลิตร</string>
+    <string name="chl_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50 - 200 mg/dl</string>
+    <string name="chl_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 mg/dl</string>
+    <string name="chl_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 มากกว่า 240 mg/dl</string>
 
-    <string name="tri_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  40-149 mg/dl</string>
+    <string name="tri_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50-150 mg/dl</string>
     <string name="tri_abnormal2">ค่่าเกือบสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  150-199 mg/dl</string>
     <string name="tri_abnormal">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 200-499 mg/dl</string>
     <string name="tri_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 500 mg/dl</string>
+
+    <!--                            -->
+
+    <string name="bloodt_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  70-100 mg/dl</string>
+    <string name="bloodt_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 69 mg/dl</string>
+    <string name="bloodt_abnormal">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 101 mg/dl</string>
+
+    <string name="sodiumt_normal">่ค่าปกติ \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020 136 - 145 mmol/dl</string>
+    <string name="sodiumt_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า  135 mmol/dl</string>
+    <string name="sodiumt_abnormal">ค่าสูง \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 146 มmmol/dl</string>
+
+    <string name="potassiumt_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  3.5–5.1 mmol/dl</string>
+    <string name="potassiumt_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020  น้อยกวา่า  3.4 mmol/dl</string>
+    <string name="potassiumt_abnormal">ค่าสูง\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  มากกว่า 5.2 mmol/dl</string>
+
+    <string name="hdlt_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020  35-60 mg/dl (ชาย)</string>
+    <string name="hdlt_abnormal3">คค่าน้อยกว่าปกติ\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 34 mg/dl</string>
+    <string name="hdlt_abnormal4">ค่าสูง  \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 60 mg/dl</string>
+
+    <string name="ldlt_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020\u0020 \u0020 \u0020 \u0020 \u0020    น้อยกว่า 100 mg/dl</string>
+    <string name="ldlt_abnormal2">ค่าเกินมาตราฐานเล็กน้อย  \u0020\u0020\u0020\u0020  100-129 mg/dl</string>
+    <string name="ldlt_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 130-159  mg/dl</string>
+    <string name="ldlt_abnormal4">ค่าสูง \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020   160-189 มmg/dl</string>
+    <string name="ldlt_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
+
+
+    <string name="chlt_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50 - 200 mg/dl</string>
+    <string name="chlt_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 mg/dl</string>
+    <string name="chlt_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 มากกว่า 240 mg/dl</string>
+
+    <string name="trit_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  30-150 mg/dl</string>
+    <string name="trit_abnormal2">ค่่าเกือบสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  150-199 mg/dl</string>
+    <string name="trit_abnormal">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 200-499 mg/dl</string>
+    <string name="trit_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 500 mg/dl</string>
+
     <string name="title_activity_main_profile">MainProfileActivity</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_register__login">Register_LoginActivity</string>

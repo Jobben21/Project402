@@ -9,11 +9,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Spinner;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -53,13 +51,11 @@ public class Fragment_B extends Fragment {
     private Button button_b;
     private AfterBldT afterBldT;
     private EditText sugar_t,sodium_t,potassium_t,choles_t,ldl_t,hdl_t,tri_t;
-    private Spinner hospitalSpinner;
+    private RadioButton hospital1, hospital2;
     private ArrayList<EditText> BloodList;
-    private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri;
+    private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri,hospital;
     private  float sugar,sodium,potassium,choles,hdl,ldl,tri;
-    private ListView listv;
-    private ArrayList<String> list;
-    private ArrayAdapter<String> adapter;
+
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -74,7 +70,9 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
-        // hospitalSpinner = (Spinner)view.findViewById(R.id.spinnerblood);
+        hospital1 = (RadioButton) view.findViewById(R.id.radioButton3);
+                hospital2 = (RadioButton) view.findViewById(R.id.radioButton4);
+
 
         if (Build.VERSION.SDK_INT > 9) {
 
@@ -194,61 +192,61 @@ public class Fragment_B extends Fragment {
                 if(sugar_t.getText().length() == 0) {
                      sugar_t.setText("0");
                      sugar = Float.parseFloat(sugar_t.getText().toString());
-                     sugarInBlood(sugar);
-                     Sugar = sugarInBlood(sugar);
+                     sugarInBlood(sugar,hospital1);
+                     Sugar = sugarInBlood(sugar,hospital1);
                 }else{
                     sugar = Float.parseFloat(sugar_t.getText().toString());
-                    Sugar = sugarInBlood(sugar);
+                    Sugar = sugarInBlood(sugar,hospital1);
                 }
                 if(sodium_t.getText().length() == 0) {
                     sodium_t.setText("0");
                     sodium = Float.parseFloat(sodium_t.getText().toString());
-                    Sodium = sodiumInBlood(sodium);
+                    Sodium = sodiumInBlood(sodium,hospital1);
                 }else{
                     sodium = Float.parseFloat(sodium_t.getText().toString());
-                    Sodium = sodiumInBlood(sodium);
+                    Sodium = sodiumInBlood(sodium,hospital1);
                 }
                 if( potassium_t.getText().length() == 0) {
                     potassium_t.setText("0");
                     potassium = Float.parseFloat(potassium_t.getText().toString());
-                    Potassium = potassiumInBlood(potassium);
+                    Potassium = potassiumInBlood(potassium,hospital1);
                 }else{
                     potassium = Float.parseFloat(potassium_t.getText().toString());
-                    Potassium = potassiumInBlood(potassium);
+                    Potassium = potassiumInBlood(potassium,hospital1);
                 }
                 if( choles_t.getText().length() == 0) {
                     choles_t.setText("0");
                     choles = Float.parseFloat(choles_t.getText().toString());
-                    Choles = cholesInBlood(choles);
+                    Choles = cholesInBlood(choles,hospital1);
                 }else{
                     choles = Float.parseFloat(choles_t.getText().toString());
-                    Choles = cholesInBlood(choles);
+                    Choles = cholesInBlood(choles,hospital1);
                 }
                 if( hdl_t.getText().length() == 0) {
                     hdl_t.setText("0");
                     hdl = Float.parseFloat(hdl_t.getText().toString());
-                    Hdl = hdlInBlood(hdl);
+                    Hdl = hdlInBlood(hdl,hospital1);
                 }
                 else{
                     hdl = Float.parseFloat(hdl_t.getText().toString());
-                    Hdl = hdlInBlood(hdl);
+                    Hdl = hdlInBlood(hdl,hospital1);
                 }
                 if( ldl_t.getText().length() == 0) {
                     ldl_t.setText("0");
                     ldl = Float.parseFloat(ldl_t.getText().toString());
-                    Ldl = ldlInBlood(ldl);
+                    Ldl = ldlInBlood(ldl,hospital1);
                 }
                 else{
                     ldl = Float.parseFloat(ldl_t.getText().toString());
-                    Ldl = ldlInBlood(ldl);
+                    Ldl = ldlInBlood(ldl,hospital1);
                 }
                 if( tri_t.getText().length() == 0) {
                     tri_t.setText("0");
                     tri = Float.parseFloat(tri_t.getText().toString());
-                    Tri = triInBlood(tri);
+                    Tri = triInBlood(tri,hospital1);
                 }else{
                     tri = Float.parseFloat(tri_t.getText().toString());
-                    Tri = triInBlood(tri);
+                    Tri = triInBlood(tri,hospital1);
                 }
 
                 int i = 0;
@@ -257,7 +255,7 @@ public class Fragment_B extends Fragment {
                 Log.e("hu",tri_t.getText().toString());
 
                 if("0".equals(sugar_t.getText().toString())&& "0".equals( sodium_t.getText().toString())
-                        && "0".equals(  potassium_t.getText().toString())&& "0".equals(  choles_t.getText().toString())
+                        && "0".equals( potassium_t.getText().toString())&& "0".equals(  choles_t.getText().toString())
                         && "0".equals( hdl_t.getText().toString())&& "0".equals(  ldl_t.getText().toString())
                         && "0".equals( tri_t.getText().toString())){
 
@@ -269,6 +267,8 @@ public class Fragment_B extends Fragment {
 
                 }
 
+
+
                 else{
                   //  inputBloodTest();
                     Blood();
@@ -278,22 +278,22 @@ public class Fragment_B extends Fragment {
 
             public void Blood() {
 
-                final ArrayList<String> FirstList = new ArrayList<>();
-                FirstList.add(Sugar);
-                FirstList.add(Sodium);
-                FirstList.add(Potassium);
-                FirstList.add(Choles);
-                FirstList.add(Ldl);
-                FirstList.add(Hdl);
-                FirstList.add(Tri);
-
-
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
+                                    .setContentText("น้ำตาล        "+sugar+"\n"+
+                                                    "โซเดียม       "+sodium+"\n"+
+                                                    "โพเเทสเซียม     "+potassium+"\n"+
+                                                    "คอลเลสเตอรอล   "+choles+"\n"+
+                                                    "เเอลดีเเอล      "+ldl+"\n"+
+                                                    "เอชดีเเอล       "+hdl+"\n"+
+                                                    "ไตรกลีเซอร์ไรด์    "+tri)
                                     .setConfirmText("ใช่").setCancelText("ไม่")
                                     .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                 @Override
                                 public void onClick(SweetAlertDialog sweetAlertDialog) {
 
+
+
+                                    hospital = checkHospital(hospital1,hospital2);
                                     afterBldT = new AfterBldT();
                                     Intent intent = new Intent(getActivity().getBaseContext(), AfterBldT.class);
                                     intent.putExtra("sugar", sugar);
@@ -304,6 +304,7 @@ public class Fragment_B extends Fragment {
                                     intent.putExtra("hdl", hdl);
                                     intent.putExtra("tri", tri);
 
+
                                     intent.putExtra("message1", Sugar);
                                     intent.putExtra("message2", Sodium);
                                     intent.putExtra("message3", Potassium);
@@ -311,6 +312,7 @@ public class Fragment_B extends Fragment {
                                     intent.putExtra("message5", Ldl);
                                     intent.putExtra("message6", Hdl);
                                     intent.putExtra("message7", Tri);
+                                    intent.putExtra("message8", hospital);
 
                                     startActivity(intent);
 
@@ -321,132 +323,258 @@ public class Fragment_B extends Fragment {
 
                         }
 
-            private String sugarInBlood(float sugar) {
+            private String sugarInBlood(float sugar,RadioButton hospital1) {
 
                 String message1 = "";
 
-                if (sugar >= 70 && sugar <= 120) {
-                    message1 = "ok";
-                }
-                else if(sugar == 0){
-                    message1 = "minus";
-                }
-                else {
-                    if (sugar < 70) {
+                if(hospital1.isChecked()) {
+                    if (sugar >= 70 && sugar <= 110) {
+                        message1 = "ok";
+                    } else if (sugar == 0) {
+                        message1 = "minus";
+                    } else if (sugar < 70) {
+
                         message1 = "cancell";
-                    } else if (sugar > 130) {
+                    }
+                         else if (sugar > 110) {
+                            message1 = "cancell";
+                        } else {
+                            message1 = "normall";
+                        }
+
+                }
+
+                else {
+                    if (sugar >= 70 && sugar <= 100) {
+                        message1 = "ok";
+                    } else if (sugar == 0) {
+                        message1 = "minus";
+                    } else if (sugar < 70) {
+
+                        message1 = "cancell";
+                    }
+                    else if (sugar > 100) {
                         message1 = "cancell";
                     } else {
                         message1 = "normall";
                     }
+
                 }
                 return message1;
             }
 
-            private String sodiumInBlood(float sodium) {
+            private String sodiumInBlood(float sodium,RadioButton hospital1) {
 
                 String message2 = "";
 
-                if (136 <= sodium && sodium <= 145) {
-                    message2 = "ok";
-                }   else if(sodium == 0){
-                    message2 = "minus";
-                } else if (sodium < 136) {
-                    message2 = "cancell";
-                } else if (sodium > 146) {
-                    message2 = "cancell";
-                } else {
-                    message2 = "normal";
+                if(hospital1.isChecked()) {
+
+
+                    if (136 <= sodium && sodium <= 145) {
+                        message2 = "ok";
+                    } else if (sodium == 0) {
+                        message2 = "minus";
+                    } else if (sodium < 136) {
+                        message2 = "cancell";
+                    } else if (sodium > 146) {
+                        message2 = "cancell";
+                    } else {
+                        message2 = "normal";
+                    }
+                }
+
+                else{
+                    if (136 <= sodium && sodium <= 145) {
+                        message2 = "ok";
+                    } else if (sodium == 0) {
+                        message2 = "minus";
+                    } else if (sodium < 136) {
+                        message2 = "cancell";
+                    } else if (sodium > 146) {
+                        message2 = "cancell";
+                    } else {
+                        message2 = "normal";
+                    }
                 }
                 return message2;
             }
 
-            private String potassiumInBlood(float potassium) {
+            private String potassiumInBlood(float potassium,RadioButton hospital1) {
 
                 String message3 = "";
 
-                if (3.5 <= potassium && potassium <= 5.1) {
-                    message3 = "ok";
-                }    else if(potassium == 0){
-                    message3 = "minus";
-                }else if (potassium < 3.5) {
-                    message3 = "cancell";
-                } else if (potassium > 5.1) {
-                    message3 = "cancell";
-                } else {
-                    message3 = "ok";
+                if(hospital1.isChecked()) {
+                    if (3.5 <= potassium && potassium <= 4.5) {
+                        message3 = "ok";
+                    } else if (potassium == 0) {
+                        message3 = "minus";
+                    } else if (potassium < 3.5) {
+                        message3 = "cancell";
+                    } else if (potassium > 4.5) {
+                        message3 = "cancell";
+                    } else {
+                        message3 = "ok";
+                    }
+                }
+                else {
+
+                    if (3.5 <= potassium && potassium <= 5.1) {
+                        message3 = "ok";
+                    } else if (potassium == 0) {
+                        message3 = "minus";
+                    } else if (potassium < 3.5) {
+                        message3 = "cancell";
+                    } else if (potassium > 5.1) {
+                        message3 = "cancell";
+                    } else {
+                        message3 = "ok";
+                    }
                 }
                 return message3;
 
             }
 
-            private String cholesInBlood(float choles) {
+            private String cholesInBlood(float choles,RadioButton hospital1) {
 
                 String message4 = "";
 
-                if (50 <= choles && choles <= 200) {
-                    message4 = "ok";
-                }    else if(choles == 0){
-                    message4 = "minus";
-                }else if (choles < 40) {
-                    message4 = "cancell";
-                } else if (choles > 100) {
-                    message4 = "cancell";
-                } else {
-                    message4 = "ok";
+
+                if(hospital1.isChecked()) {
+                    if (50 <= choles && choles <= 200) {
+                        message4 = "ok";
+                    } else if (choles == 0) {
+                        message4 = "minus";
+                    } else if (choles < 40) {
+                        message4 = "cancell";
+                    } else if (choles > 100) {
+                        message4 = "cancell";
+                    } else {
+                        message4 = "ok";
+                    }
+                }
+                else{
+
+                    if (50 <= choles && choles <= 200) {
+                        message4 = "ok";
+                    } else if (choles == 0) {
+                        message4 = "minus";
+                    } else if (choles < 40) {
+                        message4 = "cancell";
+                    } else if (choles > 100) {
+                        message4 = "cancell";
+                    } else {
+                        message4 = "ok";
+                    }
                 }
                 return message4;
             }
 
-            private String ldlInBlood(float ldl) {
+            private String ldlInBlood(float ldl,RadioButton hospital12) {
 
                 String message5 = "";
 
-                if (30< ldl && ldl <= 100) {
-                    message5 = "ok";
-                } else if(ldl == 0){
-                    message5 = "minus";
-                }else if (ldl > 100) {
-                    message5 = "cancell";
+                if(hospital1.isChecked()){
+                    if (0 < ldl && ldl <= 100) {
+                        message5 = "ok";
+                    } else if (ldl == -1) {
+                        message5 = "minus";
+                    } else if (ldl > 100) {
+                        message5 = "cancell";
+                    }
                 }
-
+                else {
+                    if (0 < ldl && ldl <= 130) {
+                        message5 = "ok";
+                    } else if (ldl == -1) {
+                        message5 = "minus";
+                    } else if (ldl > 130) {
+                        message5 = "cancell";
+                    }
+                }
                 return message5;
             }
 
-            private String hdlInBlood(float hdl) {
+            private String hdlInBlood(float hdl,RadioButton hospital1) {
 
                 String message6 = "";
 
-                if (35 <= hdl && hdl <= 60) {
-                    message6 = "ok";
-                }    else if(hdl == 0){
-                    message6 = "minus";
-                }else if (hdl < 35) {
-                    message6 = "cancell";
-                } else if (hdl > 60) {
-                    message6 = "ok";
-                } else {
-                    message6 = "ok";
+                if(hospital1.isChecked()) {
+                    if (35 <= hdl && hdl <= 60) {
+                        message6 = "ok";
+                    } else if (hdl == 0) {
+                        message6 = "minus";
+                    } else if (hdl < 35) {
+                        message6 = "cancell";
+                    } else if (hdl > 60) {
+                        message6 = "ok";
+                    } else {
+                        message6 = "ok";
+                    }
+                }
+                else {
+                    if (35 <= hdl && hdl <= 60) {
+                        message6 = "ok";
+                    } else if (hdl == 0) {
+                        message6 = "minus";
+                    } else if (hdl < 35) {
+                        message6 = "cancell";
+                    } else if (hdl > 60) {
+                        message6 = "ok";
+                    } else {
+                        message6 = "ok";
+                    }
                 }
                 return message6;
             }
 
-            private String triInBlood(float tri) {
+            private String triInBlood(float tri,RadioButton hospital1) {
 
                 String message7 = "";
 
-                if (50 <= tri && tri <= 200) {
-                    message7 = "ok";
-                }   else if(tri == 0){
-                    message7 = "minus";
-                } else if (tri < 50) {
-                    message7 = "cancell";
-                } else if (tri > 200) {
-                    message7 = "cancell";
-                } else {
-                    message7 = "ok";
+                if(hospital1.isChecked()) {
+                    if (50 <= tri && tri <= 150) {
+                        message7 = "ok";
+                    } else if (tri == 0) {
+                        message7 = "minus";
+                    } else if (tri < 50) {
+                        message7 = "cancell";
+                    } else if (tri > 150) {
+                        message7 = "cancell";
+                    } else {
+                        message7 = "ok";
+                    }
+                }
+                else {
+
+                    if (30 <= tri && tri <= 150) {
+                        message7 = "ok";
+                    } else if (tri == 0) {
+                        message7 = "minus";
+                    } else if (tri < 30) {
+                        message7 = "cancell";
+                    } else if (tri > 150) {
+                        message7 = "cancell";
+                    } else {
+                        message7 = "ok";
+                    }
                 }
                 return message7;
+            }
+
+
+            private String checkHospital(RadioButton hospital1,RadioButton hospital2){
+
+                String message8 = "";
+
+                if(hospital1.isChecked()){
+                    message8 = "Sirihospital";
+                }
+                else {
+                    message8 = "TUhospital";
+                }
+
+
+                return message8;
             }
 
 
