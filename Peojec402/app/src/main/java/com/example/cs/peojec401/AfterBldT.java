@@ -56,9 +56,21 @@ public class AfterBldT extends AppCompatActivity {
     private Button next ,home;
     private SeekBar seekBar,seekBar2,seekBar3,seekBar4,seekBar5,seekBar6,seekBar7;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
+    private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
+            sodium_abnormal2,sodium_abnormal,potassium_normal, potassium_abnormal2,potassium_abnormal,hdl_normal,hdl_abnormal3,hdl_abnormal4,
+            ldl_normal,ldl_abnormal2,ldl_abnormal3,ldl_abnormal4,ldl_abnormal5,chl_normal,chl_abnormal2,chl_abnormal3,
+            tri_normal,tri_abnormal2,tri_abnormal,tri_abnormal3;
+
+    private TextView bloodt_normal, bloodt_abnormal2,bloodt_abnormal,sodiumt_normal,sodiumt_abnormal2,sodiumt_abnormal,
+            potassiumt_normal,potassiumt_abnormal2,potassiumt_abnormal,hdlt_normal,hdlt_abnormal3,hdlt_abnormal4,ldlt_normal,ldlt_abnormal2,
+            ldlt_abnormal3,ldlt_abnormal4,ldlt_abnormal5,chlt_normal,chlt_abnormal2,chlt_abnormal3,
+            trit_normal,trit_abnormal2, trit_abnormal,trit_abnormal3;
+
+
     LinearLayout HeaderLayout,HeaderLayout2,HeaderLayout3,HeaderLayout4,HeaderLayout5,HeaderLayout6,HeaderLayout7;
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
     CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
+
      public static String Resultone;
      public static String Resulttwo;
      public static   String Resultthree;
@@ -67,6 +79,7 @@ public class AfterBldT extends AppCompatActivity {
     public static String Resultsix;
     public  static String Resultseven;
     public static int bt = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +125,7 @@ public class AfterBldT extends AppCompatActivity {
 
         seekBar(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
         inputData(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
-        layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab);
+
 
         String message1 = intent.getStringExtra("message1");
         String message2 = intent.getStringExtra("message2");
@@ -121,8 +134,21 @@ public class AfterBldT extends AppCompatActivity {
         String message5 = intent.getStringExtra("message5");
         String message6 = intent.getStringExtra("message6");
         String message7 = intent.getStringExtra("message7");
+        String message8 = intent.getStringExtra("message8");
 
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
+
+
+        String Resultone = recommendFood(message1);
+        String Resulttwo = recommendFood2(message2);
+        String Resultthree = recommendFood3(message3);
+        String Resultfour =  recommendFood4(message4);
+        String Resultfive =  recommendFood5(message5);
+        String Resultsix =  recommendFood6(message6);
+        String Resultseven =  recommendFood7(message7);
+        String Resulteight =  message8;
+
+        layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab,Resulteight);
 
         Resultone = recommendFood(message1);
          Resulttwo = recommendFood2(message2);
@@ -132,6 +158,7 @@ public class AfterBldT extends AppCompatActivity {
          Resultsix =  recommendFood6(message6);
          Resultseven =  recommendFood7(message7);
 
+
         final ArrayList<String> listResult2 = new ArrayList<>();
         listResult2.add(Resultone);
         listResult2.add(Resulttwo);
@@ -140,6 +167,10 @@ public class AfterBldT extends AppCompatActivity {
         listResult2.add(Resultfive);
         listResult2.add(Resultsix);
         listResult2.add(Resultseven);
+        listResult2.add(Resulteight);
+
+
+
 
         layOutDescription();
 
@@ -196,7 +227,7 @@ public class AfterBldT extends AppCompatActivity {
 
     }
 
-    public void  layoutgone(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1 ) {
+    public void  layoutgone(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1,String Resulteight ) {
 
         Main = (CardView) findViewById(R.id.sugar_bd);
         Main2 = (CardView) findViewById(R.id.sodium_bd);
@@ -220,6 +251,157 @@ public class AfterBldT extends AppCompatActivity {
             Main6.setVisibility(View.GONE);
         } if( tri_ab1 == 0.0){
             Main7.setVisibility(View.GONE);
+        }
+
+         blood_normal = (TextView) findViewById(R.id.bloood_normal);
+         blood_abnormal2 = (TextView) findViewById(R.id.blood_abnormal2);
+         blood_abnormal = (TextView) findViewById(R.id.blood_abnormal);
+
+         sodium_normal = (TextView) findViewById(R.id.sodium_normal);
+         sodium_abnormal2 = (TextView) findViewById(R.id.sodium_abnormal2);
+         sodium_abnormal = (TextView) findViewById(R.id.sodium_abnormal);
+
+         potassium_normal = (TextView) findViewById(R.id.potassium_normal);
+         potassium_abnormal2 = (TextView) findViewById(R.id.potassium_abnormal2);
+         potassium_abnormal = (TextView) findViewById(R.id.potassium_abnormal );
+
+
+         hdl_normal = (TextView) findViewById(R.id.hdl_normal);
+         hdl_abnormal3 = (TextView) findViewById(R.id.hdl_abnormal3);
+         hdl_abnormal4 = (TextView) findViewById(R.id.hdl_abnormal4 );
+
+
+
+        ldl_normal = (TextView) findViewById(R.id.ldl_normal);
+        ldl_abnormal2 = (TextView) findViewById(R.id.ldl_abnormal2);
+        ldl_abnormal3 = (TextView) findViewById(R.id.ldl_abnormal3);
+        ldl_abnormal4 = (TextView) findViewById(R.id.ldl_abnormal4);
+        ldl_abnormal5 = (TextView) findViewById(R.id.ldl_abnormal5);
+
+        chl_normal = (TextView) findViewById(R.id.chl_normal);
+        chl_abnormal2 = (TextView) findViewById(R.id.chl_abnormal2);
+        chl_abnormal3 = (TextView) findViewById(R.id.chl_abnormal3);
+
+
+         tri_normal = (TextView) findViewById(R.id.tri_normal);
+         tri_abnormal2 = (TextView) findViewById(R.id.tri_abnormal2);
+         tri_abnormal = (TextView) findViewById(R.id.tri_abnormal);
+         tri_abnormal3 = (TextView) findViewById(R.id.tri_abnormal3);
+
+        bloodt_normal = (TextView) findViewById(R.id.blooodt_normal);
+        bloodt_abnormal2 = (TextView) findViewById(R.id.bloodt_abnormal2);
+        bloodt_abnormal = (TextView) findViewById(R.id.bloodt_abnormal);
+
+        sodiumt_normal = (TextView) findViewById(R.id.sodiumt_normal);
+        sodiumt_abnormal2 = (TextView) findViewById(R.id.sodiumt_abnormal2);
+        sodiumt_abnormal = (TextView) findViewById(R.id.sodiumt_abnormal);
+
+        potassiumt_normal = (TextView) findViewById(R.id.potassiumt_normal);
+        potassiumt_abnormal2 = (TextView) findViewById(R.id.potassiumt_abnormal2);
+        potassiumt_abnormal = (TextView) findViewById(R.id.potassiumt_abnormal );
+
+
+        hdlt_normal = (TextView) findViewById(R.id.hdlt_normal);
+        hdlt_abnormal3 = (TextView) findViewById(R.id.hdlt_abnormal3 );
+        hdlt_abnormal4 = (TextView) findViewById(R.id.hdlt_abnormal4 );
+
+
+
+        ldlt_normal = (TextView) findViewById(R.id.ldlt_normal);
+        ldlt_abnormal2 = (TextView) findViewById(R.id.ldlt_abnormal2);
+        ldlt_abnormal3 = (TextView) findViewById(R.id.ldlt_abnormal3);
+        ldlt_abnormal4 = (TextView) findViewById(R.id.ldlt_abnormal4);
+        ldlt_abnormal5 = (TextView) findViewById(R.id.ldlt_abnormal5);
+
+        chlt_normal = (TextView) findViewById(R.id.chlt_normal);
+        chlt_abnormal2 = (TextView) findViewById(R.id.chlt_abnormal2);
+        chlt_abnormal3 = (TextView) findViewById(R.id.chlt_abnormal3);
+
+
+        trit_normal = (TextView) findViewById(R.id.trit_normal);
+        trit_abnormal2 = (TextView) findViewById(R.id.trit_abnormal2);
+        trit_abnormal = (TextView) findViewById(R.id.trit_abnormal);
+        trit_abnormal3 = (TextView) findViewById(R.id.trit_abnormal3);
+
+
+
+
+
+        if(Resulteight.toString().equalsIgnoreCase("Sirihospital")){
+
+            blood_normal.setVisibility(View.VISIBLE);
+            blood_abnormal2.setVisibility(View.VISIBLE);
+            blood_abnormal.setVisibility(View.VISIBLE);
+
+            sodium_normal.setVisibility(View.VISIBLE);
+            sodium_abnormal2.setVisibility(View.VISIBLE);
+            sodium_abnormal.setVisibility(View.VISIBLE);
+
+            potassium_normal.setVisibility(View.VISIBLE);
+            potassium_abnormal2.setVisibility(View.VISIBLE);
+            potassium_abnormal.setVisibility(View.VISIBLE);
+
+
+            hdl_normal.setVisibility(View.VISIBLE);
+            hdl_abnormal3.setVisibility(View.VISIBLE);
+            hdl_abnormal4.setVisibility(View.VISIBLE);
+
+
+
+            ldl_normal.setVisibility(View.VISIBLE);
+            ldl_abnormal2.setVisibility(View.VISIBLE);
+            ldl_abnormal3.setVisibility(View.VISIBLE);
+            ldl_abnormal4.setVisibility(View.VISIBLE);
+            ldl_abnormal5.setVisibility(View.VISIBLE);
+
+            chl_normal.setVisibility(View.VISIBLE);
+            chl_abnormal2.setVisibility(View.VISIBLE);
+            chl_abnormal3.setVisibility(View.VISIBLE);
+
+
+            tri_normal.setVisibility(View.VISIBLE);
+            tri_abnormal2.setVisibility(View.VISIBLE);
+            tri_abnormal.setVisibility(View.VISIBLE);
+            tri_abnormal3.setVisibility(View.VISIBLE);
+
+        }
+        else{
+
+            bloodt_normal.setVisibility(View.VISIBLE);
+            bloodt_abnormal2.setVisibility(View.VISIBLE);
+            bloodt_abnormal.setVisibility(View.VISIBLE);
+
+            sodiumt_normal.setVisibility(View.VISIBLE);
+            sodiumt_abnormal2.setVisibility(View.VISIBLE);
+            sodiumt_abnormal.setVisibility(View.VISIBLE);
+
+            potassiumt_normal.setVisibility(View.VISIBLE);
+            potassiumt_abnormal2.setVisibility(View.VISIBLE);
+            potassiumt_abnormal.setVisibility(View.VISIBLE);
+
+
+            hdlt_normal.setVisibility(View.VISIBLE);
+            hdlt_abnormal3.setVisibility(View.VISIBLE);
+            hdlt_abnormal4.setVisibility(View.VISIBLE);
+
+
+
+            ldlt_normal.setVisibility(View.VISIBLE);
+            ldlt_abnormal2.setVisibility(View.VISIBLE);
+            ldlt_abnormal3.setVisibility(View.VISIBLE);
+            ldlt_abnormal4.setVisibility(View.VISIBLE);
+            ldlt_abnormal5.setVisibility(View.VISIBLE);
+
+            chlt_normal.setVisibility(View.VISIBLE);
+            chlt_abnormal2.setVisibility(View.VISIBLE);
+            chlt_abnormal3.setVisibility(View.VISIBLE);
+
+
+            trit_normal.setVisibility(View.VISIBLE);
+            trit_abnormal2.setVisibility(View.VISIBLE);
+            trit_abnormal.setVisibility(View.VISIBLE);
+            trit_abnormal3.setVisibility(View.VISIBLE);
+
         }
 
 
