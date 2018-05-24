@@ -90,7 +90,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView135"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/sodium2"
@@ -99,7 +100,7 @@
                                     android:id="@+id/textView134"
                                     android:textStyle="normal|bold"
                                     android:textSize="16sp"
-                                    android:textColor="@color/sea_darker" />
+                                    android:textColor="?android:attr/textColorTertiary" />
 
                                 <TextView
                                     android:text="@string/sodium"
@@ -123,7 +124,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView133"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/colesteral2"
@@ -132,7 +134,7 @@
                                     android:id="@+id/textView132"
                                     android:textStyle="normal|bold"
                                     android:textSize="16sp"
-                                    android:textColor="@color/sea_darker" />
+                                    android:textColor="?android:attr/textColorTertiary" />
 
                                 <TextView
                                     android:text="@string/colesteral"
@@ -155,7 +157,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView129"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/colesteral2"
@@ -164,7 +167,7 @@
                                     android:id="@+id/textView128"
                                     android:textStyle="normal|bold"
                                     android:textSize="16sp"
-                                    android:textColor="@color/sea_darker" />
+                                    android:textColor="?android:attr/textColorTertiary" />
 
                                 <TextView
                                     android:text="@string/hdl"
@@ -187,7 +190,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView125"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:layout_width="match_parent"

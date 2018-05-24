@@ -10,13 +10,12 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.SeekBar;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,13 +27,8 @@ public class AfterBldT extends AppCompatActivity {
     private TextView sugar_ab2,sodium_ab2,potass_ab2,chole_ab2,ldl_ab2,hdl_ab2,tri_ab2;
     final Context context = this;
     private Button next ,home;
-    private SeekBar seekBar;
-    private SeekBar seekBar2;
-    private SeekBar seekBar3;
-    private SeekBar seekBar4;
-    private SeekBar seekBar5;
-    private SeekBar seekBar6;
-    private SeekBar seekBar7;
+    private ProgressBar progressBar,progressBar2,progressBar3,progressBar4,progressBar5,progressBar6,progressBar7;
+
     private TextView INFO2,INFO3,INFO4,INFO5,INFO6,INFO7,INFO8;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
@@ -75,6 +69,10 @@ public class AfterBldT extends AppCompatActivity {
         INFO2 = (TextView)findViewById(R.id.INFO2);
         INFO3 = (TextView)findViewById(R.id.INFO3);
         INFO4 = (TextView)findViewById(R.id.INFO4);
+        INFO5 = (TextView)findViewById(R.id.INFO5);
+        INFO6 = (TextView)findViewById(R.id.INFO6);
+        INFO7 = (TextView)findViewById(R.id.INFO7);
+        INFO8 = (TextView)findViewById(R.id.INFO8);
 
         information();
 
@@ -520,13 +518,14 @@ public class AfterBldT extends AppCompatActivity {
 
     public void seekBar(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1){
 
-        seekBar = (SeekBar)findViewById(R.id.seekBar);
-        seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
-        seekBar3 = (SeekBar)findViewById(R.id.seekBar3);
-        seekBar4 = (SeekBar)findViewById(R.id.seekBar4);
-        seekBar5 = (SeekBar)findViewById(R.id.seekBar5);
-        seekBar6 = (SeekBar)findViewById(R.id.seekBar6);
-        seekBar7 = (SeekBar)findViewById(R.id.seekBar7);
+        progressBar = (ProgressBar)findViewById(R.id.seekBar);
+        progressBar2 = (ProgressBar)findViewById(R.id.seekBar2);
+        progressBar3 = (ProgressBar)findViewById(R.id.seekBar3);
+        progressBar4 = (ProgressBar)findViewById(R.id.seekBar4);
+        progressBar5 = (ProgressBar)findViewById(R.id.seekBar5);
+        progressBar6 = (ProgressBar)findViewById(R.id.seekBar6);
+        progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
+
 
         seekBarMin = (TextView)findViewById(R.id.seekbarmin);
         seekBarvalue2 = (TextView)findViewById(R.id.seekbarvalue2);
@@ -537,232 +536,34 @@ public class AfterBldT extends AppCompatActivity {
         seekBarvalue7 = (TextView)findViewById(R.id.seekbarvalue7);
 
 
-        seekBar.setMax(200);
-        seekBar2.setMax(200);
-        seekBar3.setMax(10);
-        seekBar4.setMax(300);
-        seekBar5.setMax(300);
-        seekBar6.setMax(100);
-        seekBar7.setMax(700);
+        progressBar.setMax(200);
+        progressBar2.setMax(200);
+        progressBar3.setMax(10);
+        progressBar4.setMax(300);
+        progressBar5.setMax(300);
+        progressBar6.setMax(100);
+        progressBar7.setMax(700);
 
-        seekBar.setProgress((int) sugar_ab1);
-        seekBar2.setProgress((int) sodium_ab1);
-        seekBar3.setProgress((int) potass_ab1);
-        seekBar4.setProgress((int) chole_ab1);
-        seekBar5.setProgress((int) ldl_ab1);
-        seekBar6.setProgress((int) hdl_ab1);
-        seekBar7.setProgress((int) tri_ab1);
-
-
-        updatePercentValue(seekBar.getProgress());
-        updatePercentValue2(seekBar2.getProgress());
-        updatePercentValue3(seekBar3.getProgress());
-        updatePercentValue4(seekBar4.getProgress());
-        updatePercentValue5(seekBar5.getProgress());
-        updatePercentValue6(seekBar6.getProgress());
-        updatePercentValue7(seekBar7.getProgress());
+        progressBar.setProgress((int) sugar_ab1);
+        progressBar2.setProgress((int) sodium_ab1);
+        progressBar3.setProgress((int) potass_ab1);
+        progressBar4.setProgress((int) chole_ab1);
+        progressBar5.setProgress((int) ldl_ab1);
+        progressBar6.setProgress((int) hdl_ab1);
+        progressBar7.setProgress((int) tri_ab1);
 
 
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
+        updatePercentValue(  progressBar.getProgress());
+        updatePercentValue2(  progressBar2.getProgress());
+        updatePercentValue3(  progressBar3.getProgress());
+        updatePercentValue4(  progressBar4.getProgress());
+        updatePercentValue5(  progressBar5.getProgress());
+        updatePercentValue6(  progressBar6.getProgress());
+        updatePercentValue7(  progressBar7.getProgress());
 
 
 
-            }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-             updatePercentValue(seekBar.getProgress());
-
-
-            }
-
-        });
-        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar2,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar2) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar2) {
-                // TODO Auto-generated method stub
-                updatePercentValue2(seekBar2.getProgress());
-
-
-            }
-
-        });
-        seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar3,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar3) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar3) {
-                // TODO Auto-generated method stub
-                updatePercentValue3(seekBar3.getProgress());
-
-
-            }
-
-        });
-        seekBar4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar4,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar4) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar4) {
-                // TODO Auto-generated method stub
-                updatePercentValue4(seekBar4.getProgress());
-
-
-            }
-
-        });
-        seekBar5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar5,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar5) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar5) {
-                // TODO Auto-generated method stub
-                updatePercentValue5(seekBar5.getProgress());
-
-
-            }
-
-        });
-        seekBar6.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar6,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar6) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar6) {
-                // TODO Auto-generated method stub
-                updatePercentValue6(seekBar.getProgress());
-
-
-            }
-
-        });
-        seekBar7.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-            @Override
-            public void onProgressChanged(SeekBar seekBar7,int progress,
-                                          boolean fromUser) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar7) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar7) {
-                // TODO Auto-generated method stub
-                updatePercentValue7(seekBar7.getProgress());
-
-
-            }
-
-        });
-
-        seekBar.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar2.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar3.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar4.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar5.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar6.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
-        seekBar7.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return true;
-            }
-        });
 
     }
 
@@ -777,7 +578,7 @@ public class AfterBldT extends AppCompatActivity {
 
     }
     private void updatePercentValue3(int progressValue) {
-    seekBarvalue3.setText("ระดับโพเเทสเซียม " + progressValue);
+        seekBarvalue3.setText("ระดับโพเเทสเซียม " + progressValue);
 
     }
     private void updatePercentValue4(int progressValue) {
@@ -1271,6 +1072,46 @@ public class AfterBldT extends AppCompatActivity {
                 i = 3;
                 Intent intent =  new Intent(AfterBldT.this,Webview.class);
                 intent.putExtra("n",3);
+                startActivity(intent);
+            }
+        });
+        INFO5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                i = 4;
+                Intent intent =  new Intent(AfterBldT.this,Webview.class);
+                intent.putExtra("n",4);
+                startActivity(intent);
+            }
+        });
+        INFO6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                i = 5;
+                Intent intent =  new Intent(AfterBldT.this,Webview.class);
+                intent.putExtra("n",5);
+                startActivity(intent);
+            }
+        });
+        INFO7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                i = 6;
+                Intent intent =  new Intent(AfterBldT.this,Webview.class);
+                intent.putExtra("n",6);
+                startActivity(intent);
+            }
+        });
+        INFO8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                i = 7;
+                Intent intent =  new Intent(AfterBldT.this,Webview.class);
+                intent.putExtra("n",7);
                 startActivity(intent);
             }
         });

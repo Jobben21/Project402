@@ -130,12 +130,12 @@
     <!-- Description blood-->
 
     <string name="min">ต่ำ 0</string>
-    <string name="max2">สูง 200</string>
-    <string name="max3">สูง 10</string>
-    <string name="max4">สูง 300</string>
-    <string name="max5">สูง 300</string>
-    <string name="max6">สูง 100</string>
-    <string name="max7">สูง 700</string>
+    <string name="max2">/ 200</string>
+    <string name="max3">/ 10</string>
+    <string name="max4">/ 300</string>
+    <string name="max5">/ 300</string>
+    <string name="max6">/ 100</string>
+    <string name="max7">/ 700</string>
 
     <string name="blood_normal">ค่าปกติ  \u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  70-110 mg/dl</string>
     <string name="blood_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020\u0020  น้อยกวา่า 69 mg/dl</string>

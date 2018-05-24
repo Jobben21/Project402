@@ -30,14 +30,26 @@ public class Webview extends AppCompatActivity {
 
         int num =getIntent().getExtras().getInt("n");
 
-        if(num == 1){
+        if(num == 1){ //sugar
             mWebView.loadUrl("https://medthai.com/การตรวจน้ำตาลในเลือด");
         }
-        else if(num == 2){
+        else if(num == 2){ //sodium
+            mWebView.loadUrl("https://www.thairath.co.th/home");
+        }
+        else if(num == 3){ //potassium
+            mWebView.loadUrl("https://www.thairath.co.th/home");
+        }
+        else if(num == 4){ //ldl
             mWebView.loadUrl("https://medthai.com/การตรวจไขมันในเลือด");
         }
-        else{
-            mWebView.loadUrl("https://www.thairath.co.th/home");
+        else if(num == 5){ //hdl
+            mWebView.loadUrl("https://medthai.com/การตรวจไขมันในเลือด");
+        }
+        else if(num == 6){ //chl
+            mWebView.loadUrl("https://medthai.com/การตรวจไขมันในเลือด");
+        }
+        else if(num == 7){ //tri
+            mWebView.loadUrl("https://medthai.com/การตรวจไขมันในเลือด");
         }
 
         WebSettings sett  = mWebView.getSettings();
