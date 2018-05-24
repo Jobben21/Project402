@@ -211,4 +211,7 @@
     <string name="title_activity_compare_data">CompareData</string>
 
 
+    <string name="INFO"><a href="https://medthai.com">อ่านข้อมูลเพิ่มเติม</a>  </string>
+    <string name="title_activity_webview">Webview</string>
+
 </resources>

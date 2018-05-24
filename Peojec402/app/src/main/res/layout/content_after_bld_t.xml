@@ -306,15 +306,16 @@
                                 android:visibility="gone" />
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO2"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
                                 android:layout_weight="0.13"
-                                android:autoLink="web" />
+                                android:autoLink="web|all"
+                                android:linksClickable="true" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -578,14 +579,18 @@
                                 android:visibility="gone" />
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView722"
+                                android:id="@+id/INFO3"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:autoText="false"
+                                android:autoLink="web"
+                                android:clickable="true"
+                                android:linksClickable="true" />
 
                         </LinearLayout>
 
@@ -850,7 +855,7 @@
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO4"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1123,7 +1128,7 @@
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO5"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1423,7 +1428,7 @@
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO6"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1693,7 +1698,7 @@
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO7"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1986,7 +1991,7 @@
                                 android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO8"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"

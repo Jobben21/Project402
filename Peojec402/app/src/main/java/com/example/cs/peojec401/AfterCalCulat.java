@@ -61,6 +61,8 @@ public class AfterCalCulat extends AppCompatActivity{
 
         popUp();
 
+
+
         button_cal = (Button)findViewById(R.id.button_cal);
         button_cal.setOnClickListener(new View.OnClickListener() {
             @Override

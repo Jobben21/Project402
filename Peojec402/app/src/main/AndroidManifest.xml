@@ -15,11 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:replace="android:icon">
-
-
-
-        <activity android:name=".MainMenu"
-
+        <activity
+            android:name=".MainMenu"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -106,15 +103,18 @@
             android:name=".CompareData"
             android:label="@string/title_activity_compare_data"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FoodAct" />
-        <activity android:name=".DisplayList1"></activity>
-
-
-
-
-
+        <activity android:name=".DisplayList1" />
+        <activity
+            android:name=".Webview"
+            android:label="@string/title_activity_webview"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

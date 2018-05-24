@@ -9,29 +9,18 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.cs.peojec401.ConnectData.Config;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
 import static com.example.cs.peojec401.Register_LoginActivity.ageLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.genderLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.heightLogin;
-import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.nameLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.weightLogin;
 
@@ -48,6 +37,7 @@ public class Fragment_P extends Fragment{
     private ImageButton editprofile;
     private CardView cardView;
     private JSONArray result;
+    private WebView webView;
     private String name, gender,weight,height,age2;
 
 
@@ -69,12 +59,22 @@ public class Fragment_P extends Fragment{
         BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
         BMR_profile = (TextView)view.findViewById(R.id.BMR_Profile);
 
+//        webView = (WebView)view.findViewById(R.id.pdf);
+//        String myPdfUrl = "https://drive.google.com/open?id=0Bwjc-xrXV84UNURoTnVCSzVQWVJwdUk2SUtpNzRicTl2Wi1z";
+//        String url = "http://docs.google.com/gview?embedded=true&url=" + myPdfUrl;
+//
+//      //  Log.i(TAG, "Opening PDF: " + url);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webView.loadUrl(url);
+
         if (Build.VERSION.SDK_INT > 9) {
 
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
 
         }
+
+
 
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override

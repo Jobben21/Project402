@@ -98,14 +98,16 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView134"
                                     android:textStyle="normal|bold"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/sodium"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView138"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -129,14 +131,16 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView132"
                                     android:textStyle="normal|bold"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/colesteral"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView131"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/colesteral2"
@@ -159,14 +163,16 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView128"
                                     android:textStyle="normal|bold"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/hdl"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView127"
-                                    android:layout_marginBottom="10dp" />
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/sea_darker" />
 
                                 <TextView
                                     android:text="@string/colesteral2"
@@ -223,7 +229,8 @@
                                             android:text="0"
                                             android:textAlignment="center"
                                             android:textSize="18sp"
-                                            android:textStyle="normal|bold" />
+                                            android:textStyle="normal|bold"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/profile_sodium"
@@ -233,7 +240,8 @@
                                             android:text="0"
                                             android:textAlignment="center"
                                             android:textSize="18sp"
-                                            android:textStyle="normal|bold" />
+                                            android:textStyle="normal|bold"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/profile_potassium"
@@ -243,7 +251,8 @@
                                             android:text="0"
                                             android:textAlignment="center"
                                             android:textSize="18sp"
-                                            android:textStyle="normal|bold" />
+                                            android:textStyle="normal|bold"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/Profile_choles"
@@ -253,7 +262,8 @@
                                             android:text="0"
                                             android:textSize="18sp"
                                             android:textStyle="normal|bold"
-                                            android:textAlignment="center" />
+                                            android:textAlignment="center"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/Profile_ldl"
@@ -263,7 +273,8 @@
                                             android:text="0"
                                             android:textSize="18sp"
                                             android:textStyle="normal|bold"
-                                            android:textAlignment="center" />
+                                            android:textAlignment="center"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/profile_hdl"
@@ -273,7 +284,8 @@
                                             android:text="0"
                                             android:textSize="18sp"
                                             android:textStyle="normal|bold"
-                                            android:textAlignment="center" />
+                                            android:textAlignment="center"
+                                            android:textColor="@color/deep_dark" />
 
                                         <TextView
                                             android:id="@+id/profile_tri"
@@ -283,7 +295,8 @@
                                             android:text="0"
                                             android:textSize="18sp"
                                             android:textStyle="normal|bold"
-                                            android:textAlignment="center" />
+                                            android:textAlignment="center"
+                                            android:textColor="@color/deep_dark" />
 
                                     </LinearLayout>
 
@@ -388,7 +401,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView151"
                                             android:layout_marginTop="40dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="( 135 - 145 )"
@@ -396,7 +410,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView150"
                                             android:layout_marginTop="35dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="( 3.5 - 5.0 ) "
@@ -404,7 +419,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView149"
                                             android:layout_marginTop="35dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="น้อยกว่า 200"
@@ -412,7 +428,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView148"
                                             android:layout_marginTop="30dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="น้อยกว่า 100"
@@ -420,7 +437,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView147"
                                             android:layout_marginTop="30dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="( 40 - 50 )"
@@ -428,7 +446,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView146"
                                             android:layout_marginTop="30dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
 
                                         <TextView
                                             android:text="( 40 - 149 )"
@@ -436,7 +455,8 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView145"
                                             android:layout_marginTop="30dp"
-                                            android:textColor="@color/colorOrg" />
+                                            android:textColor="@color/colorOrg"
+                                            android:textStyle="normal|bold" />
                                     </LinearLayout>
 
                                 </LinearLayout>

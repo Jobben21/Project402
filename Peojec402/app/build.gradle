@@ -6,7 +6,7 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.example.cs.peojec401"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -43,5 +43,7 @@ dependencies {
     compile 'com.github.aakira:expandable-layout:1.4.2@aar'
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:customtabs:25.1.1'
+
     testCompile 'junit:junit:4.12'
 }

@@ -1,6 +1,5 @@
 package com.example.cs.peojec401;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -16,11 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.cs.peojec401.FoodCon.DisplayList;
-import com.example.cs.peojec401.food_Pressurel.F2_food_pressure;
 import com.example.cs.peojec401.food_Pressurel.F_food_pressure;
 import com.example.cs.peojec401.food_heartl.F2_food_heart;
-import com.example.cs.peojec401.food_heartl.F_food_heart;
 import com.example.cs.peojec401.food_kidney.F2_food_kidney;
 import com.example.cs.peojec401.food_kidney.F_food_kidney;
 
@@ -212,7 +208,7 @@ public class FoodActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "เอาหารหลัก";
+                    return "อาหารหลัก";
                 case 1:
                     return "อาหารจานเดียว";
                 case 2:
