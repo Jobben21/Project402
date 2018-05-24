@@ -21,18 +21,19 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/appbar_padding_top"
             android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/bloods"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
-            app:title="เมนูอาหารโรคเบาหวาน"
-            app:titleMarginStart="40dp"
-            app:titleTextAppearance="@style/Toolbar.TitleText">
 
-        </android.support.v7.widget.Toolbar>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/bloods"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+                app:title="เมนูอาหารโรคเบาหวาน"
+                app:titleMarginStart="40dp"
+                app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
 
@@ -40,6 +41,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp"></android.support.v7.widget.RecyclerView>
     </LinearLayout>

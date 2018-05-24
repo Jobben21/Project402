@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     // UI references.
     private AutoCompleteTextView mEmailView;
-    private EditText e_name,e_height,e_weight,e_age;
+    private EditText e_name,e_height,e_weight,e_age,e_pass;
     private RadioGroup gender;
     String StatusId="";
 
@@ -81,8 +81,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Toolbar toolbar = (Toolbar) findViewById(R.id.loginn);
         setSupportActionBar(toolbar);
 
-
-        e_name = (EditText) findViewById(R.id.email);
+        e_name = (EditText) findViewById(R.id.e_name);
+        e_pass = (EditText) findViewById(R.id.e_pass);
         e_age = (EditText)findViewById(R.id.Age_login);
         e_height = (EditText)findViewById(R.id.Height_login);
         e_weight = (EditText)findViewById(R.id.weight_login);
@@ -256,6 +256,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 
         para.add(new BasicNameValuePair("name",e_name.getText().toString()));
+        para.add(new BasicNameValuePair("pass",e_pass.getText().toString()));
         para.add(new BasicNameValuePair("age",e_age.getText().toString()));
         para.add(new BasicNameValuePair("height",e_height.getText().toString()));
         para.add(new BasicNameValuePair("weight",e_weight.getText().toString()));

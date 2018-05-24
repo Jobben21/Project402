@@ -124,24 +124,16 @@ public class AfterBldT extends AppCompatActivity {
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
 
-//        String Resultone = recommendFood(message1);
-//        String Resulttwo = recommendFood2(message2);
-//        String Resultthree = recommendFood3(message3);
-//        String Resultfour =  recommendFood4(message4);
-//        String Resultfive =  recommendFood5(message5);
-//        String Resultsix =  recommendFood6(message6);
-//        String Resultseven =  recommendFood7(message7);
+        String Resultone = recommendFood(message1);
+        String Resulttwo = recommendFood2(message2);
+        String Resultthree = recommendFood3(message3);
+        String Resultfour =  recommendFood4(message4);
+        String Resultfive =  recommendFood5(message5);
+        String Resultsix =  recommendFood6(message6);
+        String Resultseven =  recommendFood7(message7);
         String Resulteight =  message8;
 
         layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab,Resulteight);
-
-         Resultone = recommendFood(message1);
-         Resulttwo = recommendFood2(message2);
-         Resultthree = recommendFood3(message3);
-         Resultfour =  recommendFood4(message4);
-         Resultfive =  recommendFood5(message5);
-         Resultsix =  recommendFood6(message6);
-         Resultseven =  recommendFood7(message7);
 
 
         final ArrayList<String> listResult2 = new ArrayList<>();

@@ -40,7 +40,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class Register_LoginActivity extends AppCompatActivity {
 
-    private EditText username;
+    private EditText username,pass;
     private Button login,register;
 
     public static String nameLogin;
@@ -57,6 +57,7 @@ public class Register_LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         username = (EditText)findViewById(R.id.username2);
+        pass = (EditText) findViewById(R.id.pass);
         login = (Button)findViewById(R.id.login2);
         register = (Button)findViewById(R.id.register);
 
@@ -87,7 +88,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
 
                 params.add(new BasicNameValuePair("struser", username.getText().toString()));
-
+                params.add(new BasicNameValuePair("strpass", pass.getText().toString()));
 
 
 
@@ -173,9 +174,9 @@ public class Register_LoginActivity extends AppCompatActivity {
                     new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
 
                     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-                    pDialog.setTitleText("รอสักครู่");
-                    pDialog.setCancelable(false);
-                    pDialog.show();
+//                    pDialog.setTitleText("รอสักครู่");
+//                    pDialog.setCancelable(false);
+//                    pDialog.show();
 
                     Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
 
