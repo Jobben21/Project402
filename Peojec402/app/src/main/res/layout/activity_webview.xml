@@ -5,29 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.cs.peojec401.NavigationActivity">
-
-    <include layout="@layout/content_navigation" />
+    tools:context="com.example.cs.peojec401.Webview">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:gravity="center">
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textAlignment="center"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:titleMarginStart="70dp"
-            app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:title="MEALDER" />
+            app:title="รายละเอียด"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_webview" />
 
 </android.support.design.widget.CoordinatorLayout>

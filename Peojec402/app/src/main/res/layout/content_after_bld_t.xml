@@ -147,23 +147,15 @@
                                 android:id="@+id/discrete_interval_multiple_range"
                                 android:animateLayoutChanges="true">
 
-                                <SeekBar
-                                    style="@android:style/Widget.DeviceDefault.SeekBar"
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar"
-                                    android:layout_weight="1"
-                                    android:paddingRight="5dp"
-                                    android:paddingLeft="5dp"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:progressTint="@color/sugar"
-                                    android:progressBackgroundTint="@color/cardview_shadow_start_color"
-                                    android:clickable="false"
-                                    android:contextClickable="true"
-                                    android:contentDescription="good"
-                                    android:tickMark="@drawable/tickmark" />
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -179,25 +171,27 @@
                                         android:id="@+id/seekbarminn"
                                         android:layout_weight="1"
                                         android:textStyle="normal|bold"
-                                        android:paddingLeft="10dp" />
+                                        android:paddingLeft="10dp"
+                                        android:visibility="gone" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarmin"
-                                        android:layout_weight="1"
-                                        android:textAlignment="center"
-                                        android:textStyle="normal|bold" />
+                                        android:layout_weight="1.91"
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold"
+                                        android:textColor="?android:attr/textColorTertiary" />
 
                                     <TextView
-                                        android:text="สูง 200"
+                                        android:text="/ 200"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarmax"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold"
-                                        android:paddingRight="10dp" />
+                                        android:paddingRight="10dp"
+                                        android:textColor="?android:attr/textColorTertiary" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -306,15 +300,17 @@
                                 android:visibility="gone" />
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO2"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
                                 android:layout_weight="0.13"
-                                android:autoLink="web" />
+                                android:autoLink="web|all"
+                                android:linksClickable="true"
+                                android:textColor="@color/blood_primary" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -342,7 +338,6 @@
                             android:layout_height="match_parent"
                             android:background="@android:drawable/screen_background_light_transparent"
                             android:padding="@dimen/shape_size"
-                            android:layout_marginLeft="5dp"
                             android:id="@+id/HeaderLayout2">
 
                             <LinearLayout
@@ -427,16 +422,16 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
-                                    style="@android:style/Widget.Material.SeekBar"
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
                                     android:id="@+id/seekBar2"
-                                    android:progressTint="@color/sodium"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -445,28 +440,19 @@
                                     android:layout_marginTop="5dp">
 
                                     <TextView
-                                        android:text="@string/min"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView104"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue2"
                                         android:layout_weight="1"
-                                        android:textAlignment="center"
+                                        android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
 
                                     <TextView
                                         android:text="@string/max2"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView98"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
@@ -578,14 +564,18 @@
                                 android:visibility="gone" />
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView722"
+                                android:id="@+id/INFO3"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
-                                android:layout_weight="0.13" />
+                                android:layout_weight="0.13"
+                                android:autoText="false"
+                                android:autoLink="web"
+                                android:clickable="true"
+                                android:linksClickable="true" />
 
                         </LinearLayout>
 
@@ -698,14 +688,17 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/seekBar3"
-                                    android:progressTint="@color/potassium"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
+
+
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -715,28 +708,20 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="@string/min"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView107"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue3"
                                         android:layout_weight="1"
-                                        android:textAlignment="center"
-                                        android:textStyle="normal|bold" />
+                                        android:textAlignment="textEnd"
+                                        android:textStyle="normal|bold"
+                                        android:layout_marginRight="5dp" />
 
                                     <TextView
                                         android:text="@string/max3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView105"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
@@ -847,10 +832,10 @@
 
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO4"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -968,17 +953,19 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
-                                    style="@style/Widget.AppCompat.SeekBar"
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar4"
-                                    android:progressTint="@color/choles"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
+
+
+
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -988,20 +975,12 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="@string/min"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView110"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue4"
                                         android:layout_weight="1"
-                                        android:textAlignment="center"
+                                        android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
 
                                     <TextView
@@ -1009,7 +988,6 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView108"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
@@ -1120,10 +1098,10 @@
                                 android:visibility="gone" />
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO5"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1234,17 +1212,17 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
-                                    style="@style/Widget.AppCompat.SeekBar"
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar5"
-                                    android:progressTint="@color/ldl"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
+
+
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1254,20 +1232,12 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="@string/min"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView113"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue5"
-                                        android:layout_weight="1"
-                                        android:textAlignment="center"
+                                        android:layout_weight="0.98"
+                                        android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
 
                                     <TextView
@@ -1275,7 +1245,6 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView111"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
@@ -1420,10 +1389,10 @@
 
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO6"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1540,17 +1509,18 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
-                                    style="@style/Widget.AppCompat.SeekBar"
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar6"
-                                    android:progressTint="@color/hdl"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
+
+
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1560,20 +1530,12 @@
                                     android:layout_margin="10dp">
 
                                     <TextView
-                                        android:text="@string/min"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView116"
-                                        android:layout_weight="1"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue6"
-                                        android:layout_weight="1"
-                                        android:textAlignment="center"
+                                        android:layout_weight="0.97"
+                                        android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
 
                                     <TextView
@@ -1581,7 +1543,6 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView114"
-                                        android:layout_weight="1"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
@@ -1690,10 +1651,10 @@
 
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO7"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"
@@ -1808,17 +1769,20 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
-                                <SeekBar
-                                    style="@style/Widget.AppCompat.SeekBar"
+
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:max="10"
-                                    android:progress="3"
                                     android:id="@+id/seekBar7"
-                                    android:progressTint="@color/tri"
-                                    android:thumbTint="?android:attr/textColorTertiary"
-                                    android:clickable="true"
-                                    android:contextClickable="true" />
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:progressDrawable="@drawable/custom_progressbar"
+                                    android:progressTint="@color/cardview_shadow_start_color" />
+
+
+
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -1830,23 +1794,14 @@
                                     android:weightSum="1">
 
                                     <TextView
-                                        android:text="ต่ำ 30"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/textView119"
-                                        android:textAlignment="textStart"
-                                        android:layout_weight="0.39"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
                                         android:text="TextView"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarvalue7"
-                                        android:textAlignment="center"
-                                        android:layout_width="wrap_content"
+                                        android:textAlignment="textEnd"
                                         android:gravity="center"
-                                        android:layout_weight="0.35"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:layout_weight="0.48"
+                                        android:layout_width="277dp" />
 
                                     <TextView
                                         android:text="@string/max7"
@@ -1854,7 +1809,6 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView117"
                                         android:textAlignment="textEnd"
-                                        android:layout_weight="0.21"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>
 
@@ -1983,10 +1937,10 @@
 
 
                             <TextView
-                                android:text="อ่านข้อมูลเพิ่มเติมได้ที่ : "
+                                android:text="@string/INFO"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/textView72"
+                                android:id="@+id/INFO8"
                                 android:textStyle="normal|bold"
                                 android:textSize="16sp"
                                 android:layout_marginTop="15dp"

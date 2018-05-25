@@ -48,7 +48,8 @@
                                 android:visibility="visible"
                                 app:cardElevation="3dp"
                                 app:cardPreventCornerOverlap="false"
-                                android:layout_margin="10dp">
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp">
 
                                 <LinearLayout
                                     android:orientation="vertical"

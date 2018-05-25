@@ -90,13 +90,13 @@ public class Fragment_C extends Fragment {
                     @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
 
                         float weight = Float.parseFloat(weight_cal.getText().toString());
-                        float height = Float.parseFloat( height_cal.getText().toString())/100;
-                        float height2 = Float.parseFloat( height_cal.getText().toString());
+                        float height = Float.parseFloat(height_cal.getText().toString());
+                        float height2 = Float.parseFloat(height_cal.getText().toString());
 
                         int age = Integer.parseInt(age_cal.getText().toString());
                         boolean gender = true;
 
-                        float bmiValue = calculateBMI(weight, height);
+                        float bmiValue = calculateBMI(weight,height);
                         float bmrValue = calculateBMR(age,weight,height2,gender);
 
                         String bmiInterpretation = interpretBMI(bmiValue);
@@ -147,7 +147,9 @@ public class Fragment_C extends Fragment {
 
 
     private float calculateBMI (float weight, float height) {
-        return (float) (weight / (height * height));
+
+
+        return (float) (weight / (height/100) * (height/100));
     }
 
     private float calculateBMR(int age,float weight,float height2,boolean gender){

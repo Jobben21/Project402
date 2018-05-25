@@ -123,7 +123,7 @@ public class MainMenu extends AppCompatActivity{
                     @Override
                     public void onClick(View v) {
 
-                        Intent intent = new Intent(MainMenu.this,Register_LoginActivity.class);
+                        Intent intent = new Intent(MainMenu.this,NavigationActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -135,7 +135,7 @@ public class MainMenu extends AppCompatActivity{
                 nBackBtn.setEnabled(false);
                 nBackBtn.setVisibility(View.VISIBLE);
 
-                nNextBtn.setText("ถัดไป");
+               // nNextBtn.setText("ถัดไป");
              //   nBackBtn.setText("ย้อนกลับ");
             }
 

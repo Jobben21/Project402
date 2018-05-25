@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -86,11 +85,11 @@ public class Fragment_B extends Fragment {
             public void onClick(View v) {
 
 
-                 if(SaveData()) {
+               //  if(SaveData()) {
 
                    inputBloodTest();
 
-                   }
+                //   }
                 //}
             }
         });
@@ -271,13 +270,13 @@ public class Fragment_B extends Fragment {
             public void Blood() {
 
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
-                                    .setContentText("น้ำตาล        "+sugar+"\n"+
-                                                    "โซเดียม       "+sodium+"\n"+
-                                                    "โพเเทสเซียม     "+potassium+"\n"+
-                                                    "คอลเลสเตอรอล   "+choles+"\n"+
-                                                    "เเอลดีเเอล      "+ldl+"\n"+
-                                                    "เอชดีเเอล       "+hdl+"\n"+
-                                                    "ไตรกลีเซอร์ไรด์    "+tri)
+                                    .setContentText("น้ำตาล                  "+sugar+" mg/dl"+"\n"+
+                                                    "โซเดียม                "+sodium+" mmol/dl"+"\n"+
+                                                    "โพเเทสเซียม        "+potassium+" mg/dl"+"\n"+
+                                                    "คอลเลสเตอรอล   "+choles+" mg/dl"+"\n"+
+                                                    "เเอลดีเเอล            "+ldl+" mg/dl"+"\n"+
+                                                    "เอชดีเเอล             "+hdl+" mg/dl"+"\n"+
+                                                    "ไตรกลีเซอร์ไรด์     "+tri+" mg/dl")
                                     .setConfirmText("ใช่").setCancelText("ไม่")
                                     .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                 @Override
