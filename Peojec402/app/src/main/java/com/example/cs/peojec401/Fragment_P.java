@@ -28,6 +28,10 @@ import org.w3c.dom.Text;
 
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
+import static com.example.cs.peojec401.EditActivity.age_edit;
+import static com.example.cs.peojec401.EditActivity.height_edit;
+import static com.example.cs.peojec401.EditActivity.seti;
+import static com.example.cs.peojec401.EditActivity.weight_edit;
 import static com.example.cs.peojec401.Register_LoginActivity.ageLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.genderLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.heightLogin;
@@ -49,7 +53,7 @@ public class Fragment_P extends Fragment{
     private CardView cardView;
     private JSONArray result;
     private String name, gender,weight,height,age2;
-
+    Intent intent;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_layout_p,container,false);
@@ -112,19 +116,32 @@ public class Fragment_P extends Fragment{
 
                 startActivity(intent);
 
+
             }
         });
 
+        if(seti==0) {
+            name_profile.setText(nameLogin);
+            age_profile.setText(ageLogin);
+            weight_profile.setText(weightLogin);
+            height_profile.setText(heightLogin);
+            gender_profile.setText(genderLogin);
+            String bmr = String.valueOf(String.format("%.1f", bmrValue));
+            String bmi = String.valueOf(String.format("%.1f", bmiValue));
+            BMR_profile.setText(bmr);
+            BMI_profile.setText(bmi);
+        }else if(seti==1){
 
-        name_profile.setText(nameLogin);
-        age_profile.setText(ageLogin);
-        weight_profile.setText(weightLogin);
-        height_profile.setText(heightLogin);
-        gender_profile.setText(genderLogin);
-        String bmr = String.valueOf(String.format("%.1f",bmrValue));
-        String bmi = String.valueOf(String.format("%.1f",bmiValue));
-        BMR_profile.setText(bmr);
-        BMI_profile.setText(bmi);
+            name_profile.setText(nameLogin);
+            age_profile.setText(age_edit);
+            weight_profile.setText(weight_edit);
+            height_profile.setText(height_edit);
+            gender_profile.setText(genderLogin);
+            String bmr = String.valueOf(String.format("%.1f", bmrValue));
+            String bmi = String.valueOf(String.format("%.1f", bmiValue));
+            BMR_profile.setText(bmr);
+            BMI_profile.setText(bmi);
+        }
         return view;
 
 

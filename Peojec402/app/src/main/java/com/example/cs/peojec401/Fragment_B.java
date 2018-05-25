@@ -132,15 +132,7 @@ public class Fragment_B extends Fragment {
                     e.printStackTrace();
                 }
 
-//                Toast.makeText(getContext(), StatusId,
-//                        Toast.LENGTH_SHORT).show();
-//        sugar_t.setText("");
-//        sodium_t.setText("");
-//        potassium_t.setText("");
-//        choles_t.setText("");
-//        ldl_t.setText("");
-//        hdl_t.setText("");
-//        tri_t.setText("");
+
 
 
                 return true;
