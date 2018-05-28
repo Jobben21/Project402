@@ -40,7 +40,7 @@ public class Fragment_F4 extends Fragment{
                 i = 1;
 
 
-                Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+                Intent intent = new Intent(getActivity().getBaseContext(),DisplayList1.class);
                 intent.putExtra("n",1);
                 startActivity(intent);
             }});
@@ -70,9 +70,9 @@ public class Fragment_F4 extends Fragment{
            @Override
            public void onClick(View v) {
                i = 4;
-               Intent intent = new Intent(getActivity().getBaseContext(),FoodActivity.class);
+               Intent intent = new Intent(getActivity().getBaseContext(),DisplayList1.class);
                intent.putExtra("n",4);
-              // startActivity(intent);
+               startActivity(intent);
            }});
         food_for_you1.setOnClickListener(new View.OnClickListener() {
             @Override

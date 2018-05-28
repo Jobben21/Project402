@@ -1,6 +1,7 @@
 package com.example.cs.peojec401.FoodCon;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cs.peojec401.AfterBldT;
 import com.example.cs.peojec401.DocumentFood;
 import com.example.cs.peojec401.R;
 import com.squareup.picasso.Picasso;
@@ -20,6 +22,8 @@ import com.squareup.picasso.Picasso;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+
+
 
 /**
  * Created by นครินทร์ on 4/18/2018.
@@ -29,13 +33,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     ArrayList<FoodList> arrayList ;
     Context c;
+    Activity activity;
+    String ww="";
+     FoodList foodList;
     int sum=0;
 
     public RecyclerAdapter(Context c,ArrayList<FoodList> foodList){
 
         this.arrayList=foodList;
         this.c=c;
-
+//        Bundle bundle = activity.getIntent().getExtras();
+//       ww = bundle.getString("ww");
+//        Toast.makeText(c,ww+" ",Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -49,36 +58,46 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
-        final FoodList foodList = arrayList.get(position);
-        holder.name.setText(foodList.getName());
-        holder.energy.setText(Integer.toString(foodList.getEnergy()));
+                 foodList = arrayList.get(position);
+                holder.name.setText(foodList.getName());
+                holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
-        
-        PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sum = position;
-                Intent i = new Intent(c,DocumentFood.class);
-                Bundle bundle = new Bundle();
-                i.putExtra("num",sum);
-                i.putExtra("name",foodList.getName());
-                i.putExtra("energy",foodList.getEnergy());
-                i.putExtra("carbo",foodList.getCarbo());
-                i.putExtra("fat",foodList.getFat());
-                i.putExtra("foodpic",foodList.getFoodpic());
-                i.putExtra("protein",foodList.getProtein());
-                i.putExtra("method",foodList.getMethod());
-                i.putExtra("ingred",foodList.getIngred());
-                c.startActivity(i);
-            }
-        });
+                PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        sum = position;
+                        Intent i = new Intent(c,DocumentFood.class);
+                        Bundle bundle = new Bundle();
+                        i.putExtra("num",sum);
+                        i.putExtra("name",foodList.getName());
+                        i.putExtra("energy",foodList.getEnergy());
+                        i.putExtra("carbo",foodList.getCarbo());
+                        i.putExtra("fat",foodList.getFat());
+                        i.putExtra("foodpic",foodList.getFoodpic());
+                        i.putExtra("protein",foodList.getProtein());
+                        i.putExtra("method",foodList.getMethod());
+                        i.putExtra("ingred",foodList.getIngred());
+                        c.startActivity(i);
+                    }
+                });
+
+
+
+
+
+
+
+
 
     }
 
     @Override
     public int getItemCount() {
+
+
         return arrayList.size();
     }
 
