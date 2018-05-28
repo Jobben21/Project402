@@ -24,6 +24,7 @@ public class MainMenu extends AppCompatActivity{
     public LinearLayout mDotLayout;
     private Button nNextBtn;
     private Button nBackBtn;
+    //private Button mainpage;
 
 
     private int mCurrentPage;
@@ -48,7 +49,7 @@ public class MainMenu extends AppCompatActivity{
 
         nNextBtn = (Button) findViewById(R.id.nNextBtn);
         nBackBtn = (Button) findViewById(R.id.nBackBtn);
-
+      //  mainpage = (Button) findViewById(R.id.mainpage);
 
         viewPager.addOnPageChangeListener(viewListener);
 
@@ -64,9 +65,13 @@ public class MainMenu extends AppCompatActivity{
         nBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewPager.setCurrentItem(mCurrentPage -1);
+
+                Intent intent = new Intent(MainMenu.this,NavigationActivity.class);
+                startActivity(intent);
             }
         });
+
+
     }
 
     public void addDotIndicator(int position) {
@@ -105,18 +110,18 @@ public class MainMenu extends AppCompatActivity{
 
             {
                 nNextBtn.setEnabled(true);
-                nBackBtn.setEnabled(false);
+                nBackBtn.setEnabled(true);
                 nBackBtn.setVisibility(View.INVISIBLE);
-               // nNextBtn.setText("ถัดไป");
-                nBackBtn.setText("");
+                nNextBtn.setText("ถัดไป");
+                nBackBtn.setText("ข้าม");
             } else if (i == mDots.length-1)
 
             {
                 nNextBtn.setEnabled(true);
-                nBackBtn.setEnabled(false);
+                nBackBtn.setEnabled(true);
                 nBackBtn.setVisibility(View.VISIBLE);
                 nNextBtn.setText("เข้าสู่หน้าหลัก");
-              //  nBackBtn.setText("ย้อนกลับ");
+                nBackBtn.setText("ข้าม");
 
 
                 nNextBtn.setOnClickListener(new View.OnClickListener() {
@@ -132,11 +137,11 @@ public class MainMenu extends AppCompatActivity{
 
             {
                 nNextBtn.setEnabled(true);
-                nBackBtn.setEnabled(false);
+                nBackBtn.setEnabled(true);
                 nBackBtn.setVisibility(View.VISIBLE);
 
-               // nNextBtn.setText("ถัดไป");
-             //   nBackBtn.setText("ย้อนกลับ");
+                nNextBtn.setText("ถัดไป");
+                nBackBtn.setText("ย้อนกลับ");
             }
 
         }

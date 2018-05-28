@@ -29,6 +29,9 @@
     <color name="hdl">#8bc34a</color>
     <color name="tri">#66bb6a</color>
 
+    <color name="blue_btn_bg_color">#1FB850</color>
+    <color name="blue_btn_bg_pressed_color">#2ecc71</color>
 
+    <color name="gray_btn_bg_color">#F15E36</color>
 
 </resources>

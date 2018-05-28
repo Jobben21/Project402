@@ -54,6 +54,7 @@ public class Fragment_B extends Fragment {
     private ArrayList<EditText> BloodList;
     private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri,hospital;
     private  float sugar,sodium,potassium,choles,hdl,ldl,tri;
+    private boolean checking = true;
 
 
 
@@ -279,7 +280,7 @@ public class Fragment_B extends Fragment {
 
                             new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
                                     .setContentText("น้ำตาล                  "+sugar+" mg/dl"+"\n"+
-                                                    "โซเดียม                "+sodium+" mmol/dl"+"\n"+
+                                                    "โซเดียม               "+sodium+" mmol/dl"+"\n"+
                                                     "โพเเทสเซียม        "+potassium+" mg/dl"+"\n"+
                                                     "คอลเลสเตอรอล   "+choles+" mg/dl"+"\n"+
                                                     "เเอลดีเเอล            "+ldl+" mg/dl"+"\n"+
@@ -290,9 +291,8 @@ public class Fragment_B extends Fragment {
                                 @Override
                                 public void onClick(SweetAlertDialog sweetAlertDialog) {
 
+                                    String check = checkHospital(checking);
 
-
-                                    hospital = checkHospital(hospital1,hospital2);
                                     afterBldT = new AfterBldT();
                                     Intent intent = new Intent(getActivity().getBaseContext(), AfterBldT.class);
                                     intent.putExtra("sugar", sugar);
@@ -311,7 +311,7 @@ public class Fragment_B extends Fragment {
                                     intent.putExtra("message5", Ldl);
                                     intent.putExtra("message6", Hdl);
                                     intent.putExtra("message7", Tri);
-                                    intent.putExtra("message8", hospital);
+                                    intent.putExtra("check", check);
 
                                     startActivity(intent);
 
@@ -561,17 +561,16 @@ public class Fragment_B extends Fragment {
             }
 
 
-            private String checkHospital(RadioButton hospital1,RadioButton hospital2){
+            public String checkHospital(boolean checking){
 
                 String message8 = "";
 
-                if(hospital1.isChecked()){
+                if(hospital1.isChecked() == checking){
                     message8 = "Sirihospital";
                 }
-                else {
+                else if (hospital2.isChecked() == checking){
                     message8 = "TUhospital";
                 }
-
 
                 return message8;
             }

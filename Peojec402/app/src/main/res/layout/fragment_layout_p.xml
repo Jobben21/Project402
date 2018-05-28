@@ -216,7 +216,7 @@
                                             android:layout_marginTop="25dp"
                                             android:layout_weight="1"
                                             android:text="@string/Profile2"
-                                            android:textSize="14sp"
+                                            android:textSize="16sp"
                                             android:textStyle="normal|bold" />
                                     </LinearLayout>
 
@@ -424,7 +424,8 @@
                                     android:layout_height="match_parent"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
-                                    app:cardElevation="3dp">
+                                    app:cardElevation="3dp"
+                                    android:visibility="visible">
 
                                     <LinearLayout
                                         android:orientation="vertical"
@@ -452,7 +453,7 @@
                                                 android:layout_marginTop="25dp"
                                                 android:layout_weight="1"
                                                 android:text="@string/energy"
-                                                android:textSize="14sp"
+                                                android:textSize="16sp"
                                                 android:textStyle="normal|bold" />
                                         </LinearLayout>
 
@@ -488,14 +489,6 @@
                                                         android:text="@string/BMI4"
                                                         android:textSize="18sp"
                                                         android:textStyle="normal|bold" />
-
-                                                    <ImageButton
-                                                        android:id="@+id/imageButton"
-                                                        android:layout_width="wrap_content"
-                                                        android:layout_height="wrap_content"
-                                                        android:layout_gravity="right"
-                                                        android:background="@android:drawable/screen_background_light_transparent"
-                                                        app:srcCompat="@android:drawable/presence_online" />
 
                                                 </LinearLayout>
 
@@ -557,12 +550,6 @@
                                                         android:textSize="18sp"
                                                         android:textStyle="normal|bold" />
 
-                                                    <ImageButton
-                                                        android:id="@+id/imageButton3"
-                                                        android:layout_width="wrap_content"
-                                                        android:layout_height="wrap_content"
-                                                        android:background="@android:drawable/screen_background_light_transparent"
-                                                        app:srcCompat="@android:drawable/presence_online" />
                                                 </LinearLayout>
 
                                                 <TextView
@@ -633,14 +620,15 @@
                                         android:layout_width="44dp"
                                         android:layout_height="36dp"
                                         app:srcCompat="@drawable/bloodt"
-                                        android:id="@+id/imageView22" />
+                                        android:id="@+id/imageView22"
+                                        android:layout_marginTop="5dp" />
 
                                     <TextView
                                         android:text="ประวัติผลตรวจเลือด"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView124"
-                                        android:paddingLeft="10dp"
+                                        android:paddingLeft="5dp"
                                         android:layout_marginTop="15dp"
                                         android:textSize="16sp"
                                         android:textStyle="normal|bold"
@@ -652,18 +640,6 @@
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp">
 
-                                        <ImageButton
-                                            android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            app:srcCompat="@drawable/ic_chevron_right"
-                                            android:id="@+id/imageButton2"
-                                            android:background="@android:drawable/screen_background_light_transparent"
-                                            android:scaleType="fitXY"
-                                            android:layout_gravity="right"
-                                            android:textAlignment="textEnd"
-                                            android:foregroundGravity="right"
-                                            android:layout_marginLeft="50dp"
-                                            android:layout_weight="1" />
                                     </LinearLayout>
 
                                 </LinearLayout>
