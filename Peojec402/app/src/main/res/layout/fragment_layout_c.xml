@@ -96,7 +96,7 @@
                                 android:padding="15dp"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:layout_marginRight="7dp">
+                                android:weightSum="1">
 
                                 <TextView
                                     android:text="@string/Age"
@@ -105,15 +105,17 @@
                                     android:id="@+id/textView13"
                                     android:textSize="18sp"
                                     android:textStyle="normal|bold"
-                                    android:layout_marginLeft="30dp" />
+                                    android:layout_marginLeft="10dp" />
 
                                 <EditText
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:ems="3"
+                                    android:ems="4"
                                     android:id="@+id/age_cal"
                                     android:gravity="center"
-                                    android:inputType="number" />
+                                    android:inputType="number|numberSigned|numberDecimal"
+                                    style="@style/Widget.AppCompat.EditText"
+                                    android:layout_weight="0.09" />
 
                                 <TextView
                                     android:text="ปี"
@@ -164,8 +166,8 @@
                             <EditText
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:ems="3"
+                                android:inputType="number|numberSigned|numberDecimal"
+                                android:ems="5"
                                 android:id="@+id/weight_cal"
                                 android:gravity="center" />
 
@@ -199,13 +201,13 @@
                                 android:id="@+id/textView18"
                                 android:textStyle="normal|bold"
                                 android:textSize="18sp"
-                                android:layout_marginLeft="7dp" />
+                                android:layout_marginLeft="9dp" />
 
                             <EditText
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:inputType="number"
-                                android:ems="3"
+                                android:inputType="number|numberDecimal"
+                                android:ems="5"
                                 android:id="@+id/height_cal"
                                 android:gravity="center" />
 

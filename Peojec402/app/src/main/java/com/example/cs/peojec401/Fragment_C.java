@@ -3,6 +3,7 @@ package com.example.cs.peojec401;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,6 +92,10 @@ public class Fragment_C extends Fragment {
 
                         float weight = Float.parseFloat(weight_cal.getText().toString());
                         float height = Float.parseFloat(height_cal.getText().toString());
+
+                        Log.i("weight",weight_cal.getText().toString());
+                        Log.i("weight",height_cal.getText().toString());
+
                         float height2 = Float.parseFloat(height_cal.getText().toString());
 
                         int age = Integer.parseInt(age_cal.getText().toString());
@@ -148,8 +153,14 @@ public class Fragment_C extends Fragment {
 
     private float calculateBMI (float weight, float height) {
 
-
-        return (float) (weight / (height/100) * (height/100));
+//        float a = (float) ((float) (height/100.0)*1.0);
+        height = height/100;
+//        System.out.println(height);
+        double x = Math.pow(height,2);
+//        System.out.println(x);
+        double a = weight / x;
+//        System.out.print(a);
+        return (float) a;
     }
 
     private float calculateBMR(int age,float weight,float height2,boolean gender){
@@ -159,7 +170,7 @@ public class Fragment_C extends Fragment {
         if(woman_radio.isChecked()){
 
             gender = true;
-            BMRMAN = (float) (66.5+ (9.6 *weight )+ (1.8 * height2 )- (4.7 * age));
+            BMRMAN = (float) (665+ (9.6 *weight )+ (1.8 * height2 )- (4.7 * age));
 
 
 

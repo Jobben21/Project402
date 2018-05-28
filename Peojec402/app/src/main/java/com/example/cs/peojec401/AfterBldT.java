@@ -117,7 +117,7 @@ public class AfterBldT extends AppCompatActivity {
         String message5 = intent.getStringExtra("message5");
         String message6 = intent.getStringExtra("message6");
         String message7 = intent.getStringExtra("message7");
-        String message8 = intent.getStringExtra("message8");
+        String check = intent.getStringExtra("check");
 
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
@@ -129,7 +129,7 @@ public class AfterBldT extends AppCompatActivity {
         String Resultfive =  recommendFood5(message5);
         String Resultsix =  recommendFood6(message6);
         String Resultseven =  recommendFood7(message7);
-        String Resulteight =  message8;
+        String Resulteight =  check;
 
         layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab,Resulteight);
 

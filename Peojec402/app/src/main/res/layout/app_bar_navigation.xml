@@ -25,8 +25,7 @@
             android:gravity="center"
             android:textAlignment="center"
             app:titleMarginStart="70dp"
-            app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:title="MEALDER" />
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
 
     </android.support.design.widget.AppBarLayout>
 
