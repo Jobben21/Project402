@@ -53,7 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.name.setText(foodList.getName());
         holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
-        Toast.makeText(c,arrayList.get(position).getName(),Toast.LENGTH_LONG).show();
+        
         PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

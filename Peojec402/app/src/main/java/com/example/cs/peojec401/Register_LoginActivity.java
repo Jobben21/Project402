@@ -8,10 +8,12 @@ import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cs.peojec401.ConnectData.Con_regis;
@@ -42,13 +44,16 @@ public class Register_LoginActivity extends AppCompatActivity {
 
     private EditText username,pass;
     private Button login,register;
+    private TextView eyeview;
 
     public static String nameLogin;
     public static String ageLogin;
+    public static String passLogin;
     public static String heightLogin;
     public static String weightLogin;
     public static String genderLogin;
     public static String idLogin;
+    private int setPtype;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +65,7 @@ public class Register_LoginActivity extends AppCompatActivity {
         pass = (EditText) findViewById(R.id.pass);
         login = (Button)findViewById(R.id.login2);
         register = (Button)findViewById(R.id.register);
+        eyeview = (TextView)findViewById(R.id.eyeview);
 
         final AlertDialog.Builder ad = new AlertDialog.Builder(this);
         final Con_regis  con_regis = new Con_regis(this);
@@ -74,6 +80,28 @@ public class Register_LoginActivity extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
 
         }
+        eyeview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(setPtype==1){
+                    setPtype=0;
+                    pass.setTransformationMethod(null);
+                    if(pass.getText().length()>0){
+                        pass.setSelection(pass.getText().length());
+                        eyeview.setBackgroundResource(R.drawable.eyeoff);
+                    }
+
+                }else {
+                    setPtype=1;
+                    pass.setTransformationMethod(new PasswordTransformationMethod());
+                    if(pass.getText().length()>0){
+                        pass.setSelection(pass.getText().length());
+                        eyeview.setBackgroundResource(R.drawable.eye);
+                    }
+                }
+
+            }
+        });
 
 
 
@@ -95,6 +123,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                 String resultServer  = getHttpPost(url,params);
                 String name= "0";
 
+                String pass ="";
                 String id= "";
 
                 String age = "";
@@ -113,7 +142,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                     c = new JSONObject(resultServer);
 
                     name = c.getString("name");
-
+                    pass = c.getString("pass");
                     age = c.getString("age");
 
                     height = c.getString("height");
@@ -163,6 +192,7 @@ public class Register_LoginActivity extends AppCompatActivity {
 
                     nameLogin = name;
                     ageLogin = age;
+                    passLogin=pass;
                     idLogin=id;
                     heightLogin=height;
                     weightLogin=weight;

@@ -10,6 +10,7 @@ import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -67,7 +69,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText e_name,e_height,e_weight,e_age,e_pass;
+    private TextView eyeview;
     private RadioGroup gender;
+    private  int setPtype;
     String StatusId="";
 
     private View mProgressView;
@@ -87,61 +91,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         e_height = (EditText)findViewById(R.id.Height_login);
         e_weight = (EditText)findViewById(R.id.weight_login);
         gender = (RadioGroup) findViewById(R.id.radio_gender);
+        eyeview = (TextView) findViewById(R.id.eyeview1);
+        setPtype=1;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-        // Set up the login form.
-//        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-//        populateAutoComplete();
 
-
-//        Age_login = (EditText)findViewById(R.id.Age_login);
-//        Age_login.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-//        weight_login = (EditText)findViewById(R.id.weight_login);
-//        weight_login.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-//        height_login  = (EditText)findViewById(R.id.Height_login);
-//        height_login.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-
-//        mPasswordView = (EditText) findViewById(R.id.password);
-//        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
 
         if (Build.VERSION.SDK_INT > 9) {
 
@@ -149,6 +106,28 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             StrictMode.setThreadPolicy(policy);
 
         }
+        eyeview.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(setPtype==1){
+                    setPtype=0;
+                    e_pass.setTransformationMethod(null);
+                    if(e_pass.getText().length()>0){
+                        e_pass.setSelection(e_pass.getText().length());
+                        eyeview.setBackgroundResource(R.drawable.eyeoff);
+                    }
+
+                }else {
+                    setPtype=1;
+                    e_pass.setTransformationMethod(new PasswordTransformationMethod());
+                    if(e_pass.getText().length()>0){
+                        e_pass.setSelection(e_pass.getText().length());
+                        eyeview.setBackgroundResource(R.drawable.eye);
+                    }
+                }
+
+            }
+        });
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
