@@ -128,142 +128,70 @@
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="51dp"
-                                app:srcCompat="@drawable/spoon"
-                                android:id="@+id/imageView13"
-                                android:scaleType="fitXY"
-                                android:layout_height="53dp"
-                                android:visibility="gone" />
-
-                            <TextView
-                                android:text="มื้ออาหาร"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/textView62"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="15dp"
-                                android:textStyle="normal|bold"
-                                android:textSize="18sp" />
-
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/ligthGray" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:layout_margin="5dp">
-
-                            <RadioButton
-                                android:text="จานเดียว"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:id="@+id/singleplate" />
-
-                            <RadioButton
-                                android:text="3 มื้อ "
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/threemeals"
-                                android:layout_weight="1"
-                                android:checked="true" />
-
-                            <RadioButton
-                                android:text="7 วัน"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/sevendaysmeal"
-                                android:layout_weight="1" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    app:cardCornerRadius="@dimen/cardview_shapefood"
-                    app:cardElevation="3dp"
-                    android:layout_margin="5dp">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:layout_marginTop="5dp">
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
 
                             <LinearLayout
-                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_width="match_parent">
+                                android:orientation="horizontal">
 
                                 <ImageView
+                                    android:id="@+id/imageView11"
                                     android:layout_width="51dp"
                                     android:layout_height="53dp"
-                                    app:srcCompat="@drawable/standard"
-                                    android:id="@+id/imageView11"
-                                    android:visibility="gone" />
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/standard" />
 
                                 <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:paddingBottom="10dp"
                                     android:text="คอลเลสเตอรอล"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView3"
-                                    android:layout_marginLeft="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:textStyle="normal|bold"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="15dp" />
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
+
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
                                 android:background="@color/ligthGray" />
+
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="10dp">
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
 
                                 <RadioGroup
+                                    android:id="@+id/radio_choles"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
                                     <RadioButton
-                                        android:text="ควบคุม"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
                                         android:id="@+id/choles_1"
-                                        android:layout_weight="1"
-                                        android:checked="true" />
-
-                                    <RadioButton
-                                        android:text="ไม่ควบคุม"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:checked="true"
+                                        android:text="ควบคุม" />
+
+                                    <RadioButton
                                         android:id="@+id/choles_2"
-                                        android:layout_weight="1" />
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="ไม่ควบคุม" />
 
                                 </RadioGroup>
 
@@ -272,152 +200,67 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:orientation="vertical"
                             android:padding="10dp">
 
                             <LinearLayout
-                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_width="match_parent">
+                                android:orientation="horizontal">
 
                                 <ImageView
+                                    android:id="@+id/imageView11"
                                     android:layout_width="51dp"
                                     android:layout_height="53dp"
-                                    app:srcCompat="@drawable/standard"
-                                    android:id="@+id/imageView11"
-                                    android:visibility="gone" />
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/standard" />
 
                                 <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:paddingBottom="10dp"
                                     android:text="ไตรกลีเซอไรด์"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView3"
-                                    android:layout_marginLeft="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:textStyle="normal|bold"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="15dp" />
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
+
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
                                 android:background="@color/ligthGray" />
+
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="10dp">
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
 
                                 <RadioGroup
+                                    android:id="@+id/radio_trigly"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
                                     <RadioButton
-                                        android:text="ควบคุม"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
                                         android:id="@+id/trigry_1"
-                                        android:layout_weight="1"
-                                        android:checked="true" />
-
-                                    <RadioButton
-                                        android:text="ไม่ควบคุม"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:checked="true"
+                                        android:text="ควบคุม" />
+
+                                    <RadioButton
                                         android:id="@+id/trigry_2"
-                                        android:layout_weight="1" />
-
-                                </RadioGroup>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    app:cardCornerRadius="@dimen/cardview_shapefood"
-                    app:cardElevation="3dp"
-                    android:layout_margin="5dp">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:padding="10dp"
-                            android:layout_marginTop="5dp">
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_height="wrap_content"
-                                android:layout_width="match_parent">
-
-                                <ImageView
-                                    android:layout_width="51dp"
-                                    android:layout_height="53dp"
-                                    app:srcCompat="@drawable/measure"
-                                    android:id="@+id/imageView11"
-                                    android:visibility="gone" />
-
-                                <TextView
-                                    android:text="ระดับน้ำตาล"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView3"
-                                    android:layout_marginLeft="10dp"
-                                    android:paddingBottom="10dp"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="15dp" />
-                            </LinearLayout>
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="@color/ligthGray" />
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginTop="10dp">
-
-                                <RadioGroup
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <RadioButton
-                                        android:text="ไม่ใส่"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/sugar_l1"
-                                        android:layout_weight="1" />
-
-                                    <RadioButton
-                                        android:text="น้อย"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/sugar_l2"
                                         android:layout_weight="1"
-                                        android:checked="true" />
+                                        android:text="ไม่ควบคุม" />
 
-                                    <RadioButton
-                                        android:text="ปกติ"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/sugar_l3"
-                                        android:layout_weight="1" />
                                 </RadioGroup>
 
                             </LinearLayout>
@@ -425,75 +268,146 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
                             android:padding="10dp">
 
                             <LinearLayout
-                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_width="match_parent">
+                                android:orientation="horizontal">
 
                                 <ImageView
+                                    android:id="@+id/imageView11"
                                     android:layout_width="51dp"
                                     android:layout_height="53dp"
-                                    app:srcCompat="@drawable/standard"
-                                    android:id="@+id/imageView11"
-                                    android:visibility="gone" />
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/measure" />
 
                                 <TextView
-                                    android:text="ระดับความเค็ม"
+                                    android:id="@+id/textView3"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView3"
                                     android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="15dp"
                                     android:paddingBottom="10dp"
-                                    android:textStyle="normal|bold"
+                                    android:text="น้ำตาล"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="15dp" />
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
+
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
                                 android:background="@color/ligthGray" />
+
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="10dp">
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
 
                                 <RadioGroup
+                                    android:id="@+id/radio_sugar"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
                                     <RadioButton
-                                        android:text="ไม่ใส่"
+                                        android:id="@+id/sugar_l1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/sodium_l1"
-                                        android:layout_weight="1" />
-
-                                    <RadioButton
-                                        android:text="น้อย"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/sodium_l2"
-                                        android:layout_weight="1" />
-
-                                    <RadioButton
-                                        android:text="ปกติ"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/sodium_l3"
                                         android:layout_weight="1"
-                                        android:checked="true" />
+                                        android:checked="true"
+                                        android:text="ควบคุม" />
+
+                                    <RadioButton
+                                        android:id="@+id/sugar_l3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="ไม่ควบคุม" />
                                 </RadioGroup>
 
                             </LinearLayout>
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView11"
+                                        android:layout_width="51dp"
+                                        android:layout_height="53dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/standard" />
+
+                                    <TextView
+                                        android:id="@+id/textView3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="15dp"
+                                        android:paddingBottom="10dp"
+                                        android:text="โซเเดียม"
+                                        android:textSize="18sp"
+                                        android:textStyle="normal|bold" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/ligthGray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <RadioGroup
+                                        android:id="@+id/radio_sodium"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/sodium_l1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="ควบคุม" />
+
+                                        <RadioButton
+                                            android:id="@+id/sodium_l3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:checked="true"
+                                            android:text="ไม่ควบคุม" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>

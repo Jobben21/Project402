@@ -28,16 +28,16 @@ public class DisplayList1 extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.bloods);
 
 
-
+        if(i==1){toolbar.setTitle("เมนูอาหารโรคหัวใจ");}
+        else if (i==2){toolbar.setTitle("เมนูอาหารโรคไต");}
+        else if (i==3){toolbar.setTitle("เมนูอาหารโรคเบาหวาน");}
+        else if (i==4){toolbar.setTitle("เมนูอาหารโรคความดันสูง");}
+        else if (i==5){toolbar.setTitle("เมนูอาหารแนะนำ");}
+        else if (i==6){toolbar.setTitle("เมนูอาหารจากผลตรวจเลือด");}
        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i==1){toolbar.setTitle("เมนูอาหารโรคหัวใจ");}
-                else if (i==2){toolbar.setTitle("เมนูอาหารโรคไต");}
-                else if (i==3){toolbar.setTitle("เมนูอาหารโรคเบาหวาน");}
-                else if (i==4){toolbar.setTitle("เมนูอาหารโรคความดันสูง");}
-                else if (i==5){}
-                else if (i==6){}
+
              selectedText=spinner.getSelectedItem().toString();
                callBlack();
 

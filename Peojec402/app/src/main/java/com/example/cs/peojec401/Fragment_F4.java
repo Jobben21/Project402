@@ -77,7 +77,7 @@ public class Fragment_F4 extends Fragment{
         food_for_you1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                i = 5;
                 Intent intent = new Intent(getActivity().getBaseContext(),FoodRecod_F4.class);
                 intent.putExtra("num",5);
                 startActivity(intent);
