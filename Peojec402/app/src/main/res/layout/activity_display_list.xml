@@ -37,9 +37,17 @@
 
             <Spinner
                 android:id="@+id/spinner2"
-                android:layout_width="348dp"
+                android:layout_width="336dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/spinner_list" />
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:entries="@array/spinner_list"
+                android:paddingLeft="105dp" />
+
         </android.support.design.widget.AppBarLayout>
 
 

@@ -43,7 +43,7 @@ public class DisplayList extends Fragment {
 
         View rootView = inflater.inflate(R.layout.activity_display_list, container, false);
 
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
+        BackgroundTask backgroundTask = new BackgroundTask(getContext(),"");
         backgroundTask.execute();
 
         return rootView;

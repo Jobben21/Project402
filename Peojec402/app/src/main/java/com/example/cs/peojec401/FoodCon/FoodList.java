@@ -13,6 +13,11 @@ public class FoodList  {
     private  String name,method,ingred;
     private  String food_img,foodtype,typeingred;
     private  int energy,fat,carbo,protein,sugar;
+    public static   int m=0;
+    public static   int m1=0;
+    public static   int m2=0;
+    public static   int m3=0;
+
 
     public FoodList(String name, String img, int energy,int fat,int carbo,int protein,int sugar,String method,String ingred,String typeingred,String foodtype){
 
@@ -36,6 +41,22 @@ public class FoodList  {
     }
 
     public void setFoodtype(String foodtype) {
+
+
+            if(foodtype.equals("อาหารจานหลัก")){
+                m++;
+
+            }else if(foodtype.equals("อาหารจานเดียว")){
+                m1++;
+
+            }else if(foodtype.equals("อาหารว่าง")){
+                m2++;
+
+            }else if(foodtype.equals("ของหวาน")){
+                m3++;
+            }
+
+
         this.foodtype = foodtype;
     }
 

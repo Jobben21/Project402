@@ -57,18 +57,22 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<FoodList> arrayList = new ArrayList<>();
-    public BackgroundTask(Context c){
+    FoodList foodList;
+    String typefood="";
+
+
+    public BackgroundTask(Context c,String type){
 
 
         this.c =c;
         activity = (Activity)c;
-
+        this.typefood=type;
     }
     String json_string="";
     String json_string1 = "http://172.20.10.2/android/get_foodheart.php?status=0";
     String json_string2 = "http://172.20.10.2/android/get_foodkidney.php?status=0";
     String json_string3 = "http://172.20.10.2/android/get_foodsugar.php?status=0";
-    String json_string4 = "http://172.20.10.2/android/get_foodpressure.php?status=0";
+    String json_string4 = "http://192.168.1.10/android/get_foodpressure.php?status=0";
     String json_string6 = "http://172.20.10.2/android/get_food_by_blood.php";
 
     @Override
@@ -80,6 +84,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         recyclerView.setHasFixedSize(true);
         adapter = new RecyclerAdapter(c,arrayList);
         recyclerView.setAdapter(adapter);
+
+
 
     }
 
@@ -252,8 +258,11 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                             ,jo.getString("ingred")
                             ,jo.getString("typeingred")
                             ,jo.getString("foodtype"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
 
-                    publishProgress(food_recyc);
                 }
             }
             if (bt == 6) {
@@ -337,50 +346,6 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                 }
 
             }
-//                URL url = new URL(json_string);
-//                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-//                InputStream inputStream = httpURLConnection.getInputStream();
-//                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//                StringBuilder stringBuilder = new StringBuilder();
-//                String line;
-//
-//
-//                while ((line=bufferedReader.readLine())!=null)
-//                {
-//                    stringBuilder.append(line+"\n");
-//                }
-//
-//                httpURLConnection.disconnect();
-//                String json_string = stringBuilder.toString().trim();
-//
-//                JSONObject jsonObject = new JSONObject(json_string);
-//                JSONArray jsonArray = jsonObject.getJSONArray("result");
-//
-//                int count=0;
-//                while (count<jsonArray.length()){
-//
-//                    JSONObject jo = jsonArray.getJSONObject(count);
-//                    count++;
-//                    FoodList food_recyc = new FoodList(jo.getString("name")
-//                            ,jo.getString("foodpic")
-//                            ,jo.getInt("energy")
-//                            ,jo.getInt("fat")
-//                            ,jo.getInt("carbohydrate")
-//                            ,jo.getInt("protein")
-//                            ,jo.getInt("sugar"));
-//
-//                    publishProgress(food_recyc);
-//                }
-//
-//                Log.d("JSON STRING",json_string);
-//
-//            } catch (MalformedURLException e){
-//                e.printStackTrace();
-//            } catch (IOException e){
-//                e.printStackTrace();
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
 
 
         } catch (ProtocolException e) {
@@ -398,6 +363,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         @Override
     protected void onProgressUpdate(FoodList... values) {
         arrayList.add(values[0]);
+
+
         adapter.notifyDataSetChanged();
     }
 
