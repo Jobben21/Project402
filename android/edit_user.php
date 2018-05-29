@@ -13,20 +13,25 @@
 		mysqli_set_charset($con, "utf8");
 		mysqli_query($con,"SET NAMES UTF8");
 		
-		$isExistUserSql = "SELECT 1 FROM user WHERE name = '" . $_POST["name"] . "'";
-		$isExistUserResult = mysqli_query($con,$isExistUserSql);
 		
-		if(mysqli_fetch_array($isExistUserResult)) {
-			$arr['StatusID'] = "2";
-			$arr['Error'] = "Name already exist";
-			echo ($isExistUserResult);
-		}else{
+		$strUserid=$_POST["userid"];
+		$strpass=$_POST["pass"];
+		$strage=$_POST["age"];
+		$strheight=$_POST["height"];
+		$strweight=$_POST["weight"];
+	
 			
-			$strSql= "INSERT INTO user";
-			$strSql.="(name,pass,age,height,weight,gender)";
-			$strSql.="VALUES";
-			$strSql .="('".$_POST["name"]."','".$_POST["pass"]."','".$_POST["age"]."','".$_POST["height"]."' ";
-			$strSql .=",'".$_POST["weight"]."','".$_POST["gender"]."')";	
+			//$strSql= "INSERT INTO user SELECT 1 WHERE user_id = '$struserid' ";
+			//$strSql.="(pass,age,height,weight)";
+			//$strSql.="VALUES";
+			//$strSql .="('".$_POST["pass"]."','".$_POST["age"]."','".$_POST["height"]."' ";
+			//$strSql .=",'".$_POST["weight"]."')";	
+				
+				$strSql="UPDATE user SET pass='$strpass' ,
+				age='$strage',
+				height='$strheight',
+				weight='$strweight'
+				WHERE user_id = '$strUserid'";
 				
 				
 			$Query = mysqli_query($con,$strSql);
@@ -38,7 +43,7 @@
 				$arr['StatusID']="1";
 				$arr['Error']="";
 			}
-		}
+		
 		mysqli_close($con);
 		echo json_encode($arr);
 	

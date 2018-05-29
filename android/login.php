@@ -15,7 +15,9 @@ header("user-type:text/javascript;charset=utf-8");
 		
 		
 		$strUsername = $_POST["struser"];
-		$strSQL = "SELECT * FROM user where name like '$strUsername' ";
+		$strPass=$_POST["strpass"];
+		
+		$strSQL = "SELECT * FROM user where name like '$strUsername' AND pass like '$strPass'";
 		
 
 $objQuery = mysqli_query($con,$strSQL);
@@ -41,6 +43,7 @@ else
 
 
 			$arr['name']= $objResult["name"];
+			$arr['pass']= $objResult["pass"];
 			$arr['age']= $objResult["age"];
 			$arr['height']= $objResult["height"];
 			$arr['weight']= $objResult["weight"];

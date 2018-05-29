@@ -11,7 +11,7 @@ header("user-type:text/javascript;charset=utf-8");
 
 		mysqli_set_charset($con, "utf8");
 
-		$sql = "SELECT * FROM foodmenu WHERE (food_disease='เบาหวาน')";
+		$sql = "SELECT * FROM foodmenu WHERE (food_disease='ความดันโลหิต')";
 		
 		$r = mysqli_query($con,$sql);
 
