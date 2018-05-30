@@ -97,6 +97,7 @@ public class Fragment_B extends Fragment {
         return view;
     }
 
+
             public boolean SaveData() {
 
 
@@ -252,12 +253,33 @@ public class Fragment_B extends Fragment {
                         && "0".equals( tri_t.getText().toString())){
 
                     new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                            .setTitleText("แปรผลตรวจเลือด")
+                            .setTitleText("อ่านผลตรวจเลือด")
                             .setContentText("กรุณากรอกข้อมูลอย่างน้อย 1 ค่า")
                             .setConfirmText("ตกลง")
                             .show();
 
                 }
+
+                else if (sugar_t.getText().length() > 3 || sodium_t.getText().length() > 3
+                        || choles_t.getText().length() > 3 ||ldl_t.getText().length() > 3
+                        ||  tri_t.getText().length() > 3){
+
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+                }
+                else if (potassium_t.getText().length() >= 3 || hdl_t.getText().length() > 3){
+
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+                }
+
+
 
 
 
@@ -324,12 +346,11 @@ public class Fragment_B extends Fragment {
                     } else if (sugar == 0) {
                         message1 = "minus";
                     } else if (sugar < 70) {
-
-                        message1 = "cancell";
+                        message1 = "cancell2";
                     }
-                         else if (sugar > 110) {
+                         else if (sugar > 110 && sugar <500) {
                             message1 = "cancell";
-                        } else {
+                        } else if(sugar > 500){
                             message1 = "normall";
                         }
 
@@ -342,7 +363,7 @@ public class Fragment_B extends Fragment {
                         message1 = "minus";
                     } else if (sugar < 70) {
 
-                        message1 = "cancell";
+                        message1 = "cancell2";
                     }
                     else if (sugar > 100) {
                         message1 = "cancell";
@@ -366,7 +387,7 @@ public class Fragment_B extends Fragment {
                     } else if (sodium == 0) {
                         message2 = "minus";
                     } else if (sodium < 136) {
-                        message2 = "cancell";
+                        message2 = "cancell2";
                     } else if (sodium > 146) {
                         message2 = "cancell";
                     } else {
@@ -380,7 +401,7 @@ public class Fragment_B extends Fragment {
                     } else if (sodium == 0) {
                         message2 = "minus";
                     } else if (sodium < 136) {
-                        message2 = "cancell";
+                        message2 = "cancell2";
                     } else if (sodium > 146) {
                         message2 = "cancell";
                     } else {
@@ -400,7 +421,7 @@ public class Fragment_B extends Fragment {
                     } else if (potassium == 0) {
                         message3 = "minus";
                     } else if (potassium < 3.5) {
-                        message3 = "cancell";
+                        message3 = "cancell2";
                     } else if (potassium > 4.5) {
                         message3 = "cancell";
                     } else {
@@ -414,7 +435,7 @@ public class Fragment_B extends Fragment {
                     } else if (potassium == 0) {
                         message3 = "minus";
                     } else if (potassium < 3.5) {
-                        message3 = "cancell";
+                        message3 = "cancell2";
                     } else if (potassium > 5.1) {
                         message3 = "cancell";
                     } else {
@@ -436,7 +457,7 @@ public class Fragment_B extends Fragment {
                     } else if (choles == 0) {
                         message4 = "minus";
                     } else if (choles < 40) {
-                        message4 = "cancell";
+                        message4 = "cancell2";
                     } else if (choles > 100) {
                         message4 = "cancell";
                     } else {
@@ -450,7 +471,7 @@ public class Fragment_B extends Fragment {
                     } else if (choles == 0) {
                         message4 = "minus";
                     } else if (choles < 40) {
-                        message4 = "cancell";
+                        message4 = "cancell2";
                     } else if (choles > 100) {
                         message4 = "cancell";
                     } else {
@@ -460,26 +481,34 @@ public class Fragment_B extends Fragment {
                 return message4;
             }
 
-            private String ldlInBlood(float ldl,RadioButton hospital12) {
+            private String ldlInBlood(float ldl,RadioButton hospital1) {
 
                 String message5 = "";
 
                 if(hospital1.isChecked()){
-                    if (0 < ldl && ldl <= 100) {
-                        message5 = "ok";
-                    } else if (ldl == -1) {
-                        message5 = "minus";
-                    } else if (ldl > 100) {
-                        message5 = "cancell";
-                    }
-                }
-                else {
                     if (0 < ldl && ldl <= 130) {
                         message5 = "ok";
                     } else if (ldl == -1) {
                         message5 = "minus";
-                    } else if (ldl > 130) {
+                    } else if (130 < ldl && ldl <= 159) {
                         message5 = "cancell";
+                    } else if (159 < ldl && ldl <= 189) {
+                        message5 = "cancell3";
+                    } else if (ldl > 190) {
+                        message5 = "cancell5";
+                    }
+                }
+                else {
+                    if (0 < ldl && ldl <= 100) {
+                        message5 = "ok";
+                    } else if (ldl == -1) {
+                        message5 = "minus";
+                    } else if (100 < ldl && ldl <= 129) {
+                        message5 = "cancell";
+                    } else if (130 < ldl && ldl <= 159) {
+                        message5 = "cancell3";
+                    } else if (ldl > 190) {
+                        message5 = "cancell5";
                     }
                 }
                 return message5;
@@ -490,16 +519,16 @@ public class Fragment_B extends Fragment {
                 String message6 = "";
 
                 if(hospital1.isChecked()) {
-                    if (35 <= hdl && hdl <= 60) {
+                    if (40 <= hdl && hdl <= 60) {
                         message6 = "ok";
                     } else if (hdl == 0) {
-                        message6 = "minus";
-                    } else if (hdl < 35) {
                         message6 = "cancell";
+                    } else if (hdl < 35) {
+                        message6 = "cancell2";
                     } else if (hdl > 60) {
-                        message6 = "ok";
+                        message6 = "cancell";
                     } else {
-                        message6 = "ok";
+                        message6 = "cancell";
                     }
                 }
                 else {
@@ -508,11 +537,11 @@ public class Fragment_B extends Fragment {
                     } else if (hdl == 0) {
                         message6 = "minus";
                     } else if (hdl < 35) {
-                        message6 = "cancell";
+                        message6 = "cancell2";
                     } else if (hdl > 60) {
-                        message6 = "ok";
+                        message6 = "cancell";
                     } else {
-                        message6 = "ok";
+                        message6 = "cancell";
                     }
                 }
                 return message6;
@@ -528,30 +557,37 @@ public class Fragment_B extends Fragment {
                     } else if (tri == 0) {
                         message7 = "minus";
                     } else if (tri < 50) {
+                        message7 = "cancell2";
+                    } else if (tri > 151 && tri < 199) {
                         message7 = "cancell";
-                    } else if (tri > 150) {
-                        message7 = "cancell";
+                    }else if (tri > 200 && tri < 499) {
+                        message7 = "cancell3";
+                    } else if (tri > 500) {
+                        message7 = "cancell4";
                     } else {
-                        message7 = "ok";
+                        message7 = "cancell4";
                     }
                 }
-                else {
+               else {
 
                     if (30 <= tri && tri <= 150) {
                         message7 = "ok";
                     } else if (tri == 0) {
                         message7 = "minus";
                     } else if (tri < 30) {
+                        message7 = "cancell2";
+                    } else if (tri > 151 && tri < 199) {
                         message7 = "cancell";
-                    } else if (tri > 150) {
-                        message7 = "cancell";
+                    }else if (tri > 200 && tri < 499) {
+                        message7 = "cancell3";
+                    } else if (tri > 500) {
+                        message7 = "cancell4";
                     } else {
-                        message7 = "ok";
+                        message7 = "minus";
                     }
                 }
                 return message7;
             }
-
 
             public String checkHospital(boolean checking){
 

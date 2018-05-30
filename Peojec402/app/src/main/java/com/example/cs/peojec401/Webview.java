@@ -34,10 +34,10 @@ public class Webview extends AppCompatActivity {
             mWebView.loadUrl("https://medthai.com/การตรวจน้ำตาลในเลือด");
         }
         else if(num == 2){ //sodium
-            mWebView.loadUrl("https://www.thairath.co.th/home");
+            mWebView.loadUrl("https://medthai.com/ธาตุโซเดียม");
         }
         else if(num == 3){ //potassium
-            mWebView.loadUrl("https://www.thairath.co.th/home");
+            mWebView.loadUrl("https://medthai.com/ธาตุโพแทสเซียม");
         }
         else if(num == 4){ //ldl
             mWebView.loadUrl("https://medthai.com/การตรวจไขมันในเลือด");

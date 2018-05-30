@@ -141,7 +141,7 @@ public class MainMenu extends AppCompatActivity{
                 nBackBtn.setVisibility(View.VISIBLE);
 
                 nNextBtn.setText("ถัดไป");
-                nBackBtn.setText("ย้อนกลับ");
+                nBackBtn.setText("ข้าม");
             }
 
         }

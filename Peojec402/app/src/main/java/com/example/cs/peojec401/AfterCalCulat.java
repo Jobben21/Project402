@@ -68,31 +68,17 @@ public class AfterCalCulat extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                new SweetAlertDialog(AfterCalCulat.this,SweetAlertDialog.WARNING_TYPE).setTitleText("คุณต้องการ")
-                        .setContentText("กลับสู่หน้าหลัก").setConfirmText("หน้าเมนูหลัก").setCancelText("ไม่ต้องการ")
-                        .showCancelButton(true).setCancelClickListener(
-                        new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                sweetAlertDialog.cancel();
+                new SweetAlertDialog(AfterCalCulat.this,SweetAlertDialog.SUCCESS_TYPE).setTitleText("กลับสู่หน้าหลัก")
+                        .setConfirmText("ใช่").setCancelText("ไม่")
+                        .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
+                    @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
 
-                            }
-                        }).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                    @Override
-                    public void onClick(SweetAlertDialog dialog) {
-
-                        new SweetAlertDialog(AfterCalCulat.this,SweetAlertDialog.SUCCESS_TYPE).setTitleText("เรียบร้อย").setConfirmClickListener(
-                                new SweetAlertDialog.OnSweetClickListener(){
-                                    @Override
-                                    public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                                        Intent intent = new Intent(AfterCalCulat.this,NavigationActivity.class);
+                        Intent intent = new Intent(AfterCalCulat.this,NavigationActivity.class);
                                         startActivity(intent);
                                     }
                                 }
                         ).show();
-                    }
-                }).show();
+
 
             }
         });

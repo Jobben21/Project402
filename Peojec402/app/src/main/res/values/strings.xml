@@ -149,14 +149,14 @@
     <string name="potassium_abnormal2">ค่าน้อยกว่าปกติ  \u0020\u0020\u0020  น้อยกวา่า  3.4 mmol/dl</string>
     <string name="potassium_abnormal">ค่าสูง\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020  มากกว่า 4.6 mmol/dl</string>
 
-    <string name="hdl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 35-60 mg/dl (ชาย)</string>
-    <string name="hdl_abnormal3">ค่าน้อยกว่าปกติ\u0020\u0020\u0020\u0020 34 mg/dl</string>
+    <string name="hdl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 40-60 mg/dl (ชาย)</string>
+    <string name="hdl_abnormal3">ค่าน้อยกว่าปกติ\u0020\u0020\u0020\u0020 39 mg/dl</string>
     <string name="hdl_abnormal4">ค่าสูง  \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 มากกว่า 60 mg/dl</string>
 
-    <string name="ldl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020\u0020 \u0020 \u0020 \u0020 \u0020    น้อยกว่า 100 mg/dl</string>
-    <string name="ldl_abnormal2">ค่าเกินมาตราฐานเล็กน้อย  \u0020\u0020\u0020\u0020  100-129 mg/dl</string>
-    <string name="ldl_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 130-159  mg/dl</string>
-    <string name="ldl_abnormal4">ค่าสูง \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020   160-189 มmg/dl</string>
+
+    <string name="ldl_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020\u0020 \u0020 \u0020 \u0020 \u0020    น้อยกว่า 130 mg/dl</string>
+    <string name="ldl_abnormal2">ค่าเกินมาตราฐานเล็กน้อย  \u0020\u0020\u0020\u0020  130-159 mg/dl</string>
+    <string name="ldl_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 159-189  mg/dl</string>
     <string name="ldl_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
 
 
@@ -190,9 +190,7 @@
     <string name="ldlt_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020\u0020 \u0020 \u0020 \u0020 \u0020    น้อยกว่า 100 mg/dl</string>
     <string name="ldlt_abnormal2">ค่าเกินมาตราฐานเล็กน้อย  \u0020\u0020\u0020\u0020  100-129 mg/dl</string>
     <string name="ldlt_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 130-159  mg/dl</string>
-    <string name="ldlt_abnormal4">ค่าสูง \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020   160-189 มmg/dl</string>
     <string name="ldlt_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
-
 
     <string name="chlt_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50 - 200 mg/dl</string>
     <string name="chlt_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 mg/dl</string>

@@ -30,13 +30,12 @@ public class Fragment_C extends Fragment {
     private LinearLayout profile_layout;
 
 
-    private Example example;
-    private Integer age;
-    private Integer height;
-    private Integer weight;
-    private Integer woman;
-    private Integer man;
+    float weight;
+    float height;
+    float height2;
+    int age;
 
+    boolean gender = true;
     public Fragment_C() {
 
     }
@@ -56,12 +55,18 @@ public class Fragment_C extends Fragment {
         woman_radio = (RadioButton) view.findViewById(R.id.woman_cal);
         man_radio = (RadioButton) view.findViewById(R.id.man_cal);
 
+
+
         button_cal = (Button) view.findViewById(R.id.button_cal);
+
+
         button_cal.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
+
+
 
                 if(age_cal.getText().toString().isEmpty() ||  weight_cal.getText().toString().isEmpty()
                         ||  height_cal.getText().toString().isEmpty()  ){
@@ -72,34 +77,58 @@ public class Fragment_C extends Fragment {
                             .setConfirmText("ตกลง")
                             .show();
                     checking();
+                   // checking2();
+               }  else if(age_cal.getText().toString().length() >= 4 ){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+                    age_cal.setError("กรอกอายุให้ภูกต้อง 1-110");
+
+
+                }else if (weight_cal.getText().toString().length() >= 4 ){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+                    weight_cal.setError("กรอกน้ำหนักห้ภูกต้อง 30-200");
+
+                }else if ( height_cal.getText().toString().length() >= 4){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                   .setConfirmText("ตกลง")
+                   .show();
+
+
+                    height_cal.setError("กรอกส่วนสูงห้ภูกต้อง 110-200");
+
                 }
 
-                else if(age_cal.getText().equals("101")){
-                   // checking2(age,weight,height);
 
-                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                             .setTitleText("คำนวนพลังงาน")
-                             .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-                           .setConfirmText("ตกลง")
-                         .show();
-
-                }
                 else{
                 new SweetAlertDialog(getActivity(),SweetAlertDialog.SUCCESS_TYPE).setTitleText("คำนวณผล")
                         .setConfirmText("ใช่").setCancelText("ไม่")
                         .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
                     @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
 
-                        float weight = Float.parseFloat(weight_cal.getText().toString());
-                        float height = Float.parseFloat(height_cal.getText().toString());
 
                         Log.i("weight",weight_cal.getText().toString());
                         Log.i("weight",height_cal.getText().toString());
 
-                        float height2 = Float.parseFloat(height_cal.getText().toString());
+                        weight = Float.parseFloat(weight_cal.getText().toString());
+                        height = Float.parseFloat(height_cal.getText().toString());
+                        age = Integer.parseInt(age_cal.getText().toString());
+                        height2 = Float.parseFloat(height_cal.getText().toString());
 
-                        int age = Integer.parseInt(age_cal.getText().toString());
-                        boolean gender = true;
+
 
                         float bmiValue = calculateBMI(weight,height);
                         float bmrValue = calculateBMR(age,weight,height2,gender);
@@ -124,6 +153,7 @@ public class Fragment_C extends Fragment {
     }
 
     public void checking(){
+
         if(age_cal.getText().length() == 0){
             age_cal.setError("กรอกอายุให้ถูกต้อง 1 - 100");
         }
@@ -135,17 +165,43 @@ public class Fragment_C extends Fragment {
         }
 
 
-    }
-    public void checking2(int age,float weight,float height){
-        if(age > 100){
-            age_cal.setError("กรอกข้อมูลให้ครบถ้วน");
-        }
-        if(weight > 300){
-            weight_cal.setError("กรอกข้อมูลให้ครบถ้วน");
 
-        }
-        if(height > 200){
-            weight_cal.setError("กรอกข้อมูลให้ครบถ้วน");
+    }
+
+    public void checking2(){
+
+
+        if(age > 110.0 ){
+
+//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+//                    .setTitleText("คำนวนพลังงาน")
+//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+//                    .setConfirmText("ตกลง")
+//                    .show();
+
+            age_cal.setError("กรอกอายุให้ภูกต้อง 1-110");
+
+
+        }else if (weight > 250.0){
+
+//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+//                    .setTitleText("คำนวนพลังงาน")
+//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+//                    .setConfirmText("ตกลง")
+//                    .show();
+//
+            weight_cal.setError("กรอกน้ำหนักห้ภูกต้อง 30-200");
+
+        }else if ( height > 220.0){
+
+//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+//                    .setTitleText("คำนวนพลังงาน")
+//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+//                    .setConfirmText("ตกลง")
+//                    .show();
+
+
+            height_cal.setError("กรอกส่วนสูงห้ภูกต้อง 110-200");
 
         }
     }

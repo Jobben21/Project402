@@ -95,7 +95,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView52"
                                 android:textStyle="normal|bold"
-                                android:textSize="14sp" />
+                                android:textSize="18sp" />
 
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -172,7 +172,8 @@
                                 android:id="@+id/textView101"
                                 android:layout_marginTop="5dp"
                                 android:textStyle="normal|bold"
-                                android:textColor="@color/red_btn_bg_color" />
+                                android:textColor="@color/red_btn_bg_color"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -206,7 +207,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/BMIvalue3"
-                                android:layout_marginTop="5dp" />
+                                android:layout_marginTop="5dp"
+                                android:visibility="gone" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -233,7 +235,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -249,7 +251,8 @@
                                 android:layout_margin="5dp"
                                 android:layout_marginBottom="10dp"
                                 android:textStyle="normal|bold"
-                                android:textColor="?attr/colorAccent" />
+                                android:textColor="?attr/colorAccent"
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -259,7 +262,8 @@
                                 android:text="textview"
                                 android:autoLink="none|all"
                                 android:linksClickable="true"
-                                android:textColor="@color/colorPrimaryDark" />
+                                android:textColor="?android:attr/textColorTertiary"
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -291,7 +295,8 @@
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
                                     android:gravity="center"
-                                    android:textSize="@dimen/text_sizefood" />
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -315,8 +320,9 @@
                                     android:id="@+id/textView102"
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
 
                             </LinearLayout>
 
@@ -340,7 +346,8 @@
                                     android:id="@+id/textView93"
                                     android:layout_marginTop="@dimen/energy"
                                     android:textAlignment="center"
-                                    android:textSize="@dimen/text_sizefood" />
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -363,7 +370,8 @@
                                     android:id="@+id/textView103"
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood" />
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorPrimaryDark" />
 
                             </LinearLayout>
 
@@ -385,7 +393,7 @@
 
                                 <LinearLayout
                                     android:orientation="vertical"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="10dp">
 
@@ -401,8 +409,9 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView102"
                                         android:layout_marginTop="@dimen/energy"
-                                        android:textSize="@dimen/text_sizefood"
-                                        android:textAlignment="center" />
+                                        android:textSize="12sp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimaryDark" />
                                 </LinearLayout>
 
 
@@ -421,7 +430,8 @@
                                     android:id="@+id/imageView32"
                                     android:layout_width="48dp"
                                     android:layout_height="50dp"
-                                    android:layout_gravity="center" />
+                                    android:layout_gravity="center"
+                                    android:visibility="visible" />
 
                                 <TextView
                                     android:text="ถั้ว"
@@ -429,8 +439,10 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:visibility="visible"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -445,7 +457,8 @@
                                     app:srcCompat="@drawable/ladle"
                                     android:id="@+id/rice"
                                     android:layout_width="48dp"
-                                    android:layout_height="50dp" />
+                                    android:layout_height="50dp"
+                                    android:visibility="visible" />
 
                                 <TextView
                                     android:text="ข้าว x 6 ทัพพีต่อวัน"
@@ -453,8 +466,10 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:visibility="visible"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
 
@@ -482,7 +497,8 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="normal|bold"
-                            android:textColor="?attr/colorAccent" />
+                            android:textColor="?attr/colorAccent"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:text="TextView"
@@ -490,7 +506,8 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/bmi5_description2"
                             android:layout_margin="10dp"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:textColor="?android:attr/textColorTertiary"
+                            android:textSize="16sp" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -521,8 +538,9 @@
                                     android:id="@+id/textView102"
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -545,7 +563,8 @@
                                     android:id="@+id/textView93"
                                     android:layout_marginTop="@dimen/energy"
                                     android:gravity="center"
-                                    android:textSize="@dimen/text_sizefood" />
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -569,7 +588,8 @@
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
                                     android:gravity="center"
-                                    android:textSize="@dimen/text_sizefood" />
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -593,8 +613,9 @@
                                     android:id="@+id/textView103"
                                     android:layout_marginLeft="@dimen/picture"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
 
                             </LinearLayout>
 
@@ -627,8 +648,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -650,8 +672,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -673,8 +696,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -695,8 +719,9 @@
                                     android:layout_height="wrap_content"
                                     android:id="@+id/textView102"
                                     android:layout_marginTop="@dimen/energy"
-                                    android:textSize="@dimen/text_sizefood"
-                                    android:textAlignment="center" />
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimaryDark" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -706,7 +731,8 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/gain">
+                        android:id="@+id/gain"
+                        android:visibility="gone">
 
                         <View
                             android:layout_width="match_parent"
@@ -733,7 +759,8 @@
                                     android:id="@+id/bmi5_description4"
                                     android:layout_margin="5dp"
                                     android:textColor="?attr/colorAccent"
-                                    android:textStyle="normal|bold" />
+                                    android:textStyle="normal|bold"
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
 
@@ -785,7 +812,7 @@
                                         android:id="@+id/textView144"
                                         android:layout_marginRight="5dp"
                                         android:textAlignment="center"
-                                        android:textSize="10sp" />
+                                        android:textSize="12sp" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -801,7 +828,7 @@
                                         android:layout_marginLeft="5dp"
                                         android:paddingLeft="20dp"
                                         android:textAlignment="center"
-                                        android:textSize="10sp" />
+                                        android:textSize="12sp" />
                                 </LinearLayout>
 
                             </LinearLayout>

@@ -4,6 +4,8 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -20,6 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static com.example.cs.peojec401.R.id.blooodt_normal;
 
 public class AfterBldT extends AppCompatActivity {
 
@@ -65,6 +69,87 @@ public class AfterBldT extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+
+        blood_normal = (TextView) findViewById(R.id.bloood_normal);
+        blood_abnormal2 = (TextView) findViewById(R.id.blood_abnormal2);
+        blood_abnormal = (TextView) findViewById(R.id.blood_abnormal);
+
+        sodium_normal = (TextView) findViewById(R.id.sodium_normal);
+        sodium_abnormal2 = (TextView) findViewById(R.id.sodium_abnormal2);
+        sodium_abnormal = (TextView) findViewById(R.id.sodium_abnormal);
+
+        potassium_normal = (TextView) findViewById(R.id.potassium_normal);
+        potassium_abnormal2 = (TextView) findViewById(R.id.potassium_abnormal2);
+        potassium_abnormal = (TextView) findViewById(R.id.potassium_abnormal );
+
+
+        hdl_normal = (TextView) findViewById(R.id.hdl_normal);
+        hdl_abnormal3 = (TextView) findViewById(R.id.hdl_abnormal3);
+        hdl_abnormal4 = (TextView) findViewById(R.id.hdl_abnormal4 );
+
+
+
+        ldl_normal = (TextView) findViewById(R.id.ldl_normal);
+        ldl_abnormal2 = (TextView) findViewById(R.id.ldl_abnormal2);
+        ldl_abnormal3 = (TextView) findViewById(R.id.ldl_abnormal3);
+        ldl_abnormal5 = (TextView) findViewById(R.id.ldl_abnormal5);
+
+        chl_normal = (TextView) findViewById(R.id.chl_normal);
+        chl_abnormal2 = (TextView) findViewById(R.id.chl_abnormal2);
+        chl_abnormal3 = (TextView) findViewById(R.id.chl_abnormal3);
+
+
+        tri_normal = (TextView) findViewById(R.id.tri_normal);
+        tri_abnormal2 = (TextView) findViewById(R.id.tri_abnormal2);
+        tri_abnormal = (TextView) findViewById(R.id.tri_abnormal);
+        tri_abnormal3 = (TextView) findViewById(R.id.tri_abnormal3);
+
+        bloodt_normal = (TextView) findViewById(blooodt_normal);
+        bloodt_abnormal2 = (TextView) findViewById(R.id.bloodt_abnormal2);
+        bloodt_abnormal = (TextView) findViewById(R.id.bloodt_abnormal);
+
+        sodiumt_normal = (TextView) findViewById(R.id.sodiumt_normal);
+        sodiumt_abnormal2 = (TextView) findViewById(R.id.sodiumt_abnormal2);
+        sodiumt_abnormal = (TextView) findViewById(R.id.sodiumt_abnormal);
+
+        potassiumt_normal = (TextView) findViewById(R.id.potassiumt_normal);
+        potassiumt_abnormal2 = (TextView) findViewById(R.id.potassiumt_abnormal2);
+        potassiumt_abnormal = (TextView) findViewById(R.id.potassiumt_abnormal );
+
+
+        hdlt_normal = (TextView) findViewById(R.id.hdlt_normal);
+        hdlt_abnormal3 = (TextView) findViewById(R.id.hdlt_abnormal3 );
+        hdlt_abnormal4 = (TextView) findViewById(R.id.hdlt_abnormal4 );
+
+
+
+        ldlt_normal = (TextView) findViewById(R.id.ldlt_normal);
+        ldlt_abnormal2 = (TextView) findViewById(R.id.ldlt_abnormal2);
+        ldlt_abnormal3 = (TextView) findViewById(R.id.ldlt_abnormal3);
+        ldlt_abnormal5 = (TextView) findViewById(R.id.ldlt_abnormal5);
+
+        chlt_normal = (TextView) findViewById(R.id.chlt_normal);
+        chlt_abnormal2 = (TextView) findViewById(R.id.chlt_abnormal2);
+        chlt_abnormal3 = (TextView) findViewById(R.id.chlt_abnormal3);
+
+
+        trit_normal = (TextView) findViewById(R.id.trit_normal);
+        trit_abnormal2 = (TextView) findViewById(R.id.trit_abnormal2);
+        trit_abnormal = (TextView) findViewById(R.id.trit_abnormal);
+        trit_abnormal3 = (TextView) findViewById(R.id.trit_abnormal3);
+
+
+        progressBar = (ProgressBar)findViewById(R.id.seekBar);
+        progressBar2 = (ProgressBar)findViewById(R.id.seekBar2);
+        progressBar3 = (ProgressBar)findViewById(R.id.seekBar3);
+        progressBar4 = (ProgressBar)findViewById(R.id.seekBar4);
+        progressBar5 = (ProgressBar)findViewById(R.id.seekBar5);
+        progressBar6 = (ProgressBar)findViewById(R.id.seekBar6);
+        progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
+
+
 
         INFO2 = (TextView)findViewById(R.id.INFO2);
         INFO3 = (TextView)findViewById(R.id.INFO3);
@@ -121,14 +206,18 @@ public class AfterBldT extends AppCompatActivity {
 
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
+        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
+        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
 
-        String Resultone = recommendFood(message1);
-        String Resulttwo = recommendFood2(message2);
-        String Resultthree = recommendFood3(message3);
-        String Resultfour =  recommendFood4(message4);
-        String Resultfive =  recommendFood5(message5);
-        String Resultsix =  recommendFood6(message6);
-        String Resultseven =  recommendFood7(message7);
+        String Resultone = recommendFood(message1,drawable,drawable2,drawable3);
+        String Resulttwo = recommendFood2(message2,drawable,drawable2,drawable3);
+        String Resultthree = recommendFood3(message3,drawable,drawable2,drawable3);
+        String Resultfour =  recommendFood4(message4,drawable,drawable2,drawable3);
+        String Resultfive =  recommendFood5(message5,drawable,drawable2,drawable3);
+        String Resultsix =  recommendFood6(message6,drawable,drawable2,drawable3);
+        String Resultseven =  recommendFood7(message7,drawable,drawable2,drawable3);
         String Resulteight =  check;
 
         layoutgone(sugar_ab,sodium_ab,potass_ab,chole_ab,ldl_ab,hdl_ab,tri_ab,Resulteight);
@@ -182,6 +271,7 @@ public class AfterBldT extends AppCompatActivity {
         sugar_ab2 =(TextView)findViewById(R.id.sugar_ab2);
         sugar_ab2.setText(String.format("%.1f",sugar_ab1));
 
+
         sodium_ab2 =(TextView)findViewById(R.id.sodium_ab2);
         sodium_ab2.setText(String.format("%.1f",sodium_ab1));
 
@@ -228,78 +318,6 @@ public class AfterBldT extends AppCompatActivity {
             Main7.setVisibility(View.GONE);
         }
 
-         blood_normal = (TextView) findViewById(R.id.bloood_normal);
-         blood_abnormal2 = (TextView) findViewById(R.id.blood_abnormal2);
-         blood_abnormal = (TextView) findViewById(R.id.blood_abnormal);
-
-         sodium_normal = (TextView) findViewById(R.id.sodium_normal);
-         sodium_abnormal2 = (TextView) findViewById(R.id.sodium_abnormal2);
-         sodium_abnormal = (TextView) findViewById(R.id.sodium_abnormal);
-
-         potassium_normal = (TextView) findViewById(R.id.potassium_normal);
-         potassium_abnormal2 = (TextView) findViewById(R.id.potassium_abnormal2);
-         potassium_abnormal = (TextView) findViewById(R.id.potassium_abnormal );
-
-
-         hdl_normal = (TextView) findViewById(R.id.hdl_normal);
-         hdl_abnormal3 = (TextView) findViewById(R.id.hdl_abnormal3);
-         hdl_abnormal4 = (TextView) findViewById(R.id.hdl_abnormal4 );
-
-
-
-        ldl_normal = (TextView) findViewById(R.id.ldl_normal);
-        ldl_abnormal2 = (TextView) findViewById(R.id.ldl_abnormal2);
-        ldl_abnormal3 = (TextView) findViewById(R.id.ldl_abnormal3);
-        ldl_abnormal4 = (TextView) findViewById(R.id.ldl_abnormal4);
-        ldl_abnormal5 = (TextView) findViewById(R.id.ldl_abnormal5);
-
-        chl_normal = (TextView) findViewById(R.id.chl_normal);
-        chl_abnormal2 = (TextView) findViewById(R.id.chl_abnormal2);
-        chl_abnormal3 = (TextView) findViewById(R.id.chl_abnormal3);
-
-
-         tri_normal = (TextView) findViewById(R.id.tri_normal);
-         tri_abnormal2 = (TextView) findViewById(R.id.tri_abnormal2);
-         tri_abnormal = (TextView) findViewById(R.id.tri_abnormal);
-         tri_abnormal3 = (TextView) findViewById(R.id.tri_abnormal3);
-
-        bloodt_normal = (TextView) findViewById(R.id.blooodt_normal);
-        bloodt_abnormal2 = (TextView) findViewById(R.id.bloodt_abnormal2);
-        bloodt_abnormal = (TextView) findViewById(R.id.bloodt_abnormal);
-
-        sodiumt_normal = (TextView) findViewById(R.id.sodiumt_normal);
-        sodiumt_abnormal2 = (TextView) findViewById(R.id.sodiumt_abnormal2);
-        sodiumt_abnormal = (TextView) findViewById(R.id.sodiumt_abnormal);
-
-        potassiumt_normal = (TextView) findViewById(R.id.potassiumt_normal);
-        potassiumt_abnormal2 = (TextView) findViewById(R.id.potassiumt_abnormal2);
-        potassiumt_abnormal = (TextView) findViewById(R.id.potassiumt_abnormal );
-
-
-        hdlt_normal = (TextView) findViewById(R.id.hdlt_normal);
-        hdlt_abnormal3 = (TextView) findViewById(R.id.hdlt_abnormal3 );
-        hdlt_abnormal4 = (TextView) findViewById(R.id.hdlt_abnormal4 );
-
-
-
-        ldlt_normal = (TextView) findViewById(R.id.ldlt_normal);
-        ldlt_abnormal2 = (TextView) findViewById(R.id.ldlt_abnormal2);
-        ldlt_abnormal3 = (TextView) findViewById(R.id.ldlt_abnormal3);
-        ldlt_abnormal4 = (TextView) findViewById(R.id.ldlt_abnormal4);
-        ldlt_abnormal5 = (TextView) findViewById(R.id.ldlt_abnormal5);
-
-        chlt_normal = (TextView) findViewById(R.id.chlt_normal);
-        chlt_abnormal2 = (TextView) findViewById(R.id.chlt_abnormal2);
-        chlt_abnormal3 = (TextView) findViewById(R.id.chlt_abnormal3);
-
-
-        trit_normal = (TextView) findViewById(R.id.trit_normal);
-        trit_abnormal2 = (TextView) findViewById(R.id.trit_abnormal2);
-        trit_abnormal = (TextView) findViewById(R.id.trit_abnormal);
-        trit_abnormal3 = (TextView) findViewById(R.id.trit_abnormal3);
-
-
-
 
 
         if(Resulteight.toString().equalsIgnoreCase("Sirihospital")){
@@ -326,7 +344,7 @@ public class AfterBldT extends AppCompatActivity {
             ldl_normal.setVisibility(View.VISIBLE);
             ldl_abnormal2.setVisibility(View.VISIBLE);
             ldl_abnormal3.setVisibility(View.VISIBLE);
-            ldl_abnormal4.setVisibility(View.VISIBLE);
+         //   ldl_abnormal4.setVisibility(View.VISIBLE);
             ldl_abnormal5.setVisibility(View.VISIBLE);
 
             chl_normal.setVisibility(View.VISIBLE);
@@ -340,7 +358,7 @@ public class AfterBldT extends AppCompatActivity {
             tri_abnormal3.setVisibility(View.VISIBLE);
 
         }
-        else{
+        else {
 
             bloodt_normal.setVisibility(View.VISIBLE);
             bloodt_abnormal2.setVisibility(View.VISIBLE);
@@ -364,7 +382,6 @@ public class AfterBldT extends AppCompatActivity {
             ldlt_normal.setVisibility(View.VISIBLE);
             ldlt_abnormal2.setVisibility(View.VISIBLE);
             ldlt_abnormal3.setVisibility(View.VISIBLE);
-            ldlt_abnormal4.setVisibility(View.VISIBLE);
             ldlt_abnormal5.setVisibility(View.VISIBLE);
 
             chlt_normal.setVisibility(View.VISIBLE);
@@ -385,7 +402,7 @@ public class AfterBldT extends AppCompatActivity {
 
     }
 
-        public void showImage(String message1,String message2 ,String message3,String message4,String message5,String message6,String message7){
+    public void showImage(String message1,String message2 ,String message3,String message4,String message5,String message6,String message7){
 
         int resource_id = this.getResources().getIdentifier("drawable/"+message1, null, this.getPackageName());
         ImageView imageView = (ImageView)findViewById(R.id.image);
@@ -417,114 +434,8 @@ public class AfterBldT extends AppCompatActivity {
 
     }
 
-    public String recommendFood(String message1){
-
-    String result = "";
-
-     if(message1.equals("cancell")) {
-
-         result = "0";
-
-     }
-        else{
-         result = "1";
-     }
-        return result;
-    }
-    public String recommendFood2(String message2){
-
-        String result2 = "";
-
-        if(message2.equals("cancell")) {
-
-            result2 = "0";
-
-        }
-        else{
-            result2 = "1";
-        }
-        return result2;
-    }
-    public String recommendFood3(String message3){
-
-        String result3 = "";
-
-        if(message3.equals("cancell")) {
-
-            result3 = "0";
-
-        }
-        else{
-            result3 = "1";
-        }
-        return result3;
-    }
-    public String recommendFood4(String message6){
-
-        String result4 = "";
-
-        if(message6.equals("cancell")) {
-
-            result4 = "0";
-
-        }
-        else{
-            result4 = "1";
-        }
-        return result4;
-    }
-    public String recommendFood5(String message4){
-
-        String result5 = "";
-
-        if(message4.equals("cancell")) {
-
-            result5 = "0";
-
-        }
-        else{
-            result5 = "1";
-        }
-        return result5;
-    }
-    public String recommendFood6(String message5){
-
-        String result6 = "";
-
-        if(message5.equals("cancell")){
-
-            result6 = "0";
-
-        }
-        else{
-            result6 = "1";
-        }
-        return result6;
-    }
-    public String recommendFood7(String message7){
-
-        String result7 = "";
-
-        if(message7.equals("cancell")){
-
-            result7 = "0";
-
-        }
-        else{
-            result7 = "1";
-        }
-        return result7;
-    }
-
     public void seekBar(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1){
 
-        progressBar = (ProgressBar)findViewById(R.id.seekBar);
-        progressBar2 = (ProgressBar)findViewById(R.id.seekBar2);
-        progressBar3 = (ProgressBar)findViewById(R.id.seekBar3);
-        progressBar4 = (ProgressBar)findViewById(R.id.seekBar4);
-        progressBar5 = (ProgressBar)findViewById(R.id.seekBar5);
-        progressBar6 = (ProgressBar)findViewById(R.id.seekBar6);
-        progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
 
 
         seekBarMin = (TextView)findViewById(R.id.seekbarmin);
@@ -536,7 +447,7 @@ public class AfterBldT extends AppCompatActivity {
         seekBarvalue7 = (TextView)findViewById(R.id.seekbarvalue7);
 
 
-        progressBar.setMax(200);
+        progressBar.setMax(500);
         progressBar2.setMax(200);
         progressBar3.setMax(10);
         progressBar4.setMax(300);
@@ -553,60 +464,318 @@ public class AfterBldT extends AppCompatActivity {
         progressBar7.setProgress((int) tri_ab1);
 
 
-        updatePercentValue(  progressBar.getProgress());
-        updatePercentValue2(  progressBar2.getProgress());
-        updatePercentValue3(  progressBar3.getProgress());
-        updatePercentValue4(  progressBar4.getProgress());
-        updatePercentValue5(  progressBar5.getProgress());
-        updatePercentValue6(  progressBar6.getProgress());
-        updatePercentValue7(  progressBar7.getProgress());
 
-
-
-
-
-    }
-
-    private void updatePercentValue(int progressValue) {
-
-        seekBarMin.setText("ระดับน้ำตาล "+progressValue);
-
-    }
-    private void updatePercentValue2(int progressValue) {
-
-        seekBarvalue2.setText("ระดับโซเดียม " + progressValue);
-
-    }
-    private void updatePercentValue3(int progressValue) {
-        seekBarvalue3.setText("ระดับโพเเทสเซียม " + progressValue);
-
-    }
-    private void updatePercentValue4(int progressValue) {
-        seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+progressValue);
-
-    }
-    private void updatePercentValue5(int progressValue) {
-
-
-        seekBarvalue5.setText("ระดับเเอลดีเอล "+progressValue);
-
-
+        seekBarMin.setText("ระดับน้ำตาล "+sugar_ab1);
+        seekBarvalue2.setText("ระดับโซเดียม " +sodium_ab1);
+        seekBarvalue3.setText("ระดับโพเเทสเซียม " +potass_ab1);
+        seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+chole_ab1);
+        seekBarvalue5.setText("ระดับเเอลดีเอล "+ldl_ab1);
+        seekBarvalue6.setText("ระดับเอซดีเเอล "+hdl_ab1);
+        seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ " +tri_ab1);
 
 
     }
-    private void updatePercentValue6(int progressValue) {
+
+    public String recommendFood(String message1,Drawable draw,Drawable draw2,Drawable draw3){
+
+    String result = "";
 
 
-        seekBarvalue6.setText("ระดับเอซดีเเอล "+progressValue);
+        if(message1.equals("cancell2")){
 
 
+            result = "-1";
+            blood_abnormal.setBackgroundResource(R.color.glass_color3);
+            bloodt_abnormal.setBackgroundResource(R.color.glass_color3);
+            progressBar.setProgressDrawable(draw3);
+
+
+        }
+
+       else  if(message1.equals("cancell")) {
+
+         result = "0";
+
+
+         blood_abnormal2.setBackgroundResource(R.color.glass_color2);
+         bloodt_abnormal2.setBackgroundResource(R.color.glass_color2);
+
+         progressBar.setProgressDrawable(draw2);
+
+
+     }
+        else   if(message1.equals("ok")) {
+         result = "1";
+
+         blood_normal.setBackgroundResource(R.color.glass_color);
+         bloodt_normal.setBackgroundResource(R.color.glass_color);
+
+         progressBar.setProgressDrawable(draw);
+
+     }
+        return result;
     }
-    private void updatePercentValue7(int progressValue) {
+    public String recommendFood2(String message2,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result2 = "";
+
+        if(message2.equals("cancell2")){
 
 
-        seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ " + progressValue);
+            result2 = "-1";
 
+            sodium_abnormal2.setBackgroundResource(R.color.glass_color3);
+            sodiumt_abnormal2.setBackgroundResource(R.color.glass_color3);
+            progressBar2.setProgressDrawable(draw3);
+
+
+        }
+
+        else   if(message2.equals("cancell")) {
+
+            result2 = "0";
+
+            sodium_abnormal.setBackgroundResource(R.color.glass_color2);
+            sodiumt_abnormal.setBackgroundResource(R.color.glass_color2);
+
+            progressBar2.setProgressDrawable(draw2);
+
+        }
+        else if (message2.equals("ok"))
+        {
+            result2 = "1";
+
+            sodium_normal.setBackgroundResource(R.color.glass_color);
+            sodiumt_normal.setBackgroundResource(R.color.glass_color);
+
+            progressBar2.setProgressDrawable(draw);
+
+
+
+        }
+        return result2;
     }
+    public String recommendFood3(String message3,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result3 = "";
+
+        if(message3.equals("cancell2")){
+
+
+            result3 = "-1";
+
+            potassium_abnormal2.setBackgroundResource(R.color.glass_color3);
+            potassiumt_abnormal2.setBackgroundResource(R.color.glass_color3);
+
+            progressBar3.setProgressDrawable(draw3);
+
+
+        }
+
+        else   if(message3.equals("cancell")) {
+
+            result3 = "0";
+
+            potassium_abnormal.setBackgroundResource(R.color.glass_color2);
+            potassiumt_abnormal.setBackgroundResource(R.color.glass_color2);
+
+            progressBar3.setProgressDrawable(draw2);
+
+        }
+        else if(message3.equals("ok")){
+            result3 = "1";
+
+            potassium_normal.setBackgroundResource(R.color.glass_color);
+            potassiumt_normal.setBackgroundResource(R.color.glass_color);
+
+            progressBar3.setProgressDrawable(draw);
+
+        }
+        return result3;
+    }
+    public String recommendFood4(String message4,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result4 = "";
+
+        if(message4.equals("cancell2")){
+
+
+            result4 = "-1";
+
+            chl_abnormal2.setBackgroundResource(R.color.glass_color3);
+            chlt_abnormal2.setBackgroundResource(R.color.glass_color3);
+
+
+            progressBar4.setProgressDrawable(draw3);
+
+        }
+
+        else  if(message4.equals("cancell")) {
+
+            result4 = "0";
+
+
+            chl_abnormal3.setBackgroundResource(R.color.glass_color2);
+            chlt_abnormal3.setBackgroundResource(R.color.glass_color2);
+
+            progressBar4.setProgressDrawable(draw2);
+
+        }
+        else if(message4.equals("ok")){
+            result4 = "1";
+
+            chl_normal.setBackgroundResource(R.color.glass_color);
+            chlt_normal.setBackgroundResource(R.color.glass_color);
+
+
+            progressBar4.setProgressDrawable(draw);
+
+        }
+        return result4;
+    }
+    public String recommendFood5(String message5,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result5 = "";
+
+        if(message5.equals("cancell3")){
+
+
+            result5 = "1";
+
+            ldl_abnormal2.setBackgroundResource(R.color.glass_color2);
+            ldlt_abnormal2.setBackgroundResource(R.color.glass_color2);
+
+            progressBar5.setProgressDrawable(draw3);
+      }
+
+        else if(message5.equals("cancell")) {
+
+            result5 = "0";
+
+
+            ldl_abnormal3.setBackgroundResource(R.color.glass_color2);
+            ldlt_abnormal3.setBackgroundResource(R.color.glass_color2);
+
+            progressBar5.setProgressDrawable(draw2);
+
+        }
+        else if(message5.equals("cancell5")) {
+
+            result5 = "1";
+
+
+            ldl_abnormal5.setBackgroundResource(R.color.glass_color2);
+            ldlt_abnormal5.setBackgroundResource(R.color.glass_color2);
+
+            progressBar5.setProgressDrawable(draw2);
+
+        }
+
+        else if(message5.equals("ok")){
+
+            result5 = "1";
+
+
+            ldl_normal.setBackgroundResource(R.color.glass_color);
+            ldlt_normal.setBackgroundResource(R.color.glass_color);
+
+
+            progressBar5.setProgressDrawable(draw);
+        }
+        return result5;
+    }
+    public String recommendFood6(String message6,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result6 = "";
+
+        if(message6.equals("cancell2")){
+
+
+            result6 = "-1";
+
+            hdl_abnormal3.setBackgroundResource(R.color.glass_color3);
+            hdlt_abnormal3.setBackgroundResource(R.color.glass_color3);
+
+            progressBar6.setProgressDrawable(draw3);
+
+
+        }
+
+        else if(message6.equals("cancell")){
+
+            result6 = "0";
+
+            hdl_abnormal4.setBackgroundResource(R.color.glass_color2);
+            hdlt_abnormal4.setBackgroundResource(R.color.glass_color2);
+
+            progressBar6.setProgressDrawable(draw2);
+
+        }
+        else if(message6.equals("ok"))
+        {
+
+            result6 = "1";
+
+
+            hdl_normal .setBackgroundResource(R.color.glass_color);
+            hdlt_normal.setBackgroundResource(R.color.glass_color);
+            progressBar6.setProgressDrawable(draw);
+
+
+        }
+        return result6;
+    }
+    public String recommendFood7(String message7,Drawable draw,Drawable draw2,Drawable draw3){
+
+        String result7 = "";
+
+        if(message7.equals("cancell2")){
+
+
+            result7 = "-1";
+
+            tri_abnormal2.setBackgroundResource(R.color.glass_color3);
+            trit_abnormal2.setBackgroundResource(R.color.glass_color3);
+
+            progressBar7.setProgressDrawable(draw3);
+
+
+        }
+
+        else  if(message7.equals("cancell")){
+
+            tri_abnormal.setBackgroundResource(R.color.glass_color2);
+            trit_abnormal.setBackgroundResource(R.color.glass_color2);
+
+            result7 = "0";
+
+            progressBar7.setProgressDrawable(draw2);
+
+
+        }else  if(message7.equals("cancell3")){
+
+            tri_abnormal3.setBackgroundResource(R.color.glass_color2);
+            trit_abnormal3.setBackgroundResource(R.color.glass_color2);
+
+            result7 = "1";
+
+            progressBar7.setProgressDrawable(draw2);
+
+
+        }
+        else if(message7.equals("ok")){
+
+            result7 = "1";
+
+            tri_normal.setBackgroundResource(R.color.glass_color);
+            trit_normal.setBackgroundResource(R.color.glass_color);
+
+            progressBar7.setProgressDrawable(draw);
+
+        }
+        return result7;
+    }
+
 
     public void layOutDescription(){
 
