@@ -26,7 +26,7 @@
 			'name'=>$row['food_name'],
 			'foodpic'=>$row['foodpic'],
 			'ingred'=>$row['food_ ingred'],
-			'method'=>$row['food_method'],
+			'method'=>$row['food_solution'],
 			'food_disease'=>$row['food_disease'],
 			'food_type'=>$row['food_type'],
 			'energy'=>$row['energy'],

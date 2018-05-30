@@ -81,9 +81,16 @@ public class DocumentFood extends AppCompatActivity {
         ingred.setText(bundle.getString("ingred"));
         sodium.setText(bundle.getString("sodium"));
         method.setText(bundle.getString("method"));
-        Picasso.with(getApplicationContext())
-                .load(bundle.getString("foodpic"))
-                .into(foodpic);
+
+
+        if(bundle.getString("foodpic").length()>0 &&bundle.getString("foodpic") != null){
+
+            Picasso.with(getApplicationContext()).load(bundle.getString("foodpic")).into(foodpic);
+        }
+        else{
+            Picasso.with(getApplicationContext()).load(R.drawable.arrow).into(foodpic);
+        }
+
 
 //        getData();
 

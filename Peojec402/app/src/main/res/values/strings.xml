@@ -212,4 +212,14 @@
     <string name="INFO"><a href="https://medthai.com">อ่านข้อมูลเพิ่มเติม</a>  </string>
     <string name="title_activity_webview">Webview</string>
 
+    <string name="app_name1">Spinner</string>
+
+    <string-array name="spinner_list">
+        <item>เมนูทั้งหมด</item>
+        <item>อาหารจานหลัก</item>
+        <item>อาหารจานเดียว</item>
+        <item>อาหารว่าง</item>
+        <item>ของหวาน</item>
+    </string-array>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.example.cs.peojec401.FoodCon;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,17 +10,24 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cs.peojec401.AfterBldT;
 import com.example.cs.peojec401.DocumentFood;
 import com.example.cs.peojec401.R;
-import com.squareup.picasso.Picasso;
 
 
-import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+
+
+import static com.example.cs.peojec401.DisplayList1.spinner;
+
+
 
 /**
  * Created by นครินทร์ on 4/18/2018.
@@ -27,20 +35,32 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder> {
 
-    ArrayList<FoodList> arrayList ;
+   ArrayList<FoodList> arrayList ;
     Context c;
+
+    public  FoodList  foodList;
+
     int sum=0;
 
     public RecyclerAdapter(Context c,ArrayList<FoodList> foodList){
 
-        this.arrayList=foodList;
+       this.arrayList=foodList;
         this.c=c;
+
+
+
+
 
     }
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_food2,parent,false);
+
+
+
+
+
 
         RecyclerViewHolder recyclerViewHolder = new RecyclerViewHolder(view);
         return recyclerViewHolder;
@@ -49,37 +69,46 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
-        final FoodList foodList = arrayList.get(position);
-        holder.name.setText(foodList.getName());
-        holder.energy.setText(Integer.toString(foodList.getEnergy()));
+            foodList = arrayList.get(position);
+       // Toast.makeText(c,"ออนบิว"+"===",Toast.LENGTH_SHORT).show();
 
-        
-        PicassoDown.downloadImage(c,foodList.getFoodpic(),holder.imgfood);
+                    holder.name.setText(foodList.getName());
+                    holder.energy.setText(Integer.toString(foodList.getEnergy()));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sum = position;
-                Intent i = new Intent(c,DocumentFood.class);
-                Bundle bundle = new Bundle();
-                i.putExtra("num",sum);
-                i.putExtra("name",foodList.getName());
-                i.putExtra("energy",foodList.getEnergy());
-                i.putExtra("carbo",foodList.getCarbo());
-                i.putExtra("fat",foodList.getFat());
-                i.putExtra("foodpic",foodList.getFoodpic());
-                i.putExtra("protein",foodList.getProtein());
-                i.putExtra("method",foodList.getMethod());
-                i.putExtra("ingred",foodList.getIngred());
-                c.startActivity(i);
-            }
-        });
+
+                    PicassoDown.downloadImage(c, foodList.getFoodpic(), holder.imgfood);
+
+                    holder.itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            sum = position;
+                            Intent i = new Intent(c, DocumentFood.class);
+                            Bundle bundle = new Bundle();
+                            i.putExtra("num", sum);
+                            i.putExtra("name", foodList.getName());
+                            i.putExtra("energy", foodList.getEnergy());
+                            i.putExtra("carbo", foodList.getCarbo());
+                            i.putExtra("fat", foodList.getFat());
+                            i.putExtra("foodpic", foodList.getFoodpic());
+                            i.putExtra("protein", foodList.getProtein());
+                            i.putExtra("method", foodList.getMethod());
+                            i.putExtra("ingred", foodList.getIngred());
+                            c.startActivity(i);
+                        }
+                    });
+
+
+
+//      Toast.makeText(c,selectedText+"="+m1+"="+m2+"===",Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public int getItemCount() {
-        return arrayList.size();
+
+       // Toast.makeText(c,"เกทเค้า"+"===",Toast.LENGTH_SHORT).show();
+
+            return arrayList.size();
     }
 
     public  static  class  RecyclerViewHolder extends RecyclerView.ViewHolder{
@@ -94,4 +123,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
         }
     }
-}
+
+
+    }
+
+

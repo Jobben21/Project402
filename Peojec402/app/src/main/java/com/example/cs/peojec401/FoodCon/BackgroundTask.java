@@ -42,6 +42,11 @@ import static com.example.cs.peojec401.AfterBldT.Resultsix;
 import static com.example.cs.peojec401.AfterBldT.Resultthree;
 import static com.example.cs.peojec401.AfterBldT.Resulttwo;
 import static com.example.cs.peojec401.AfterBldT.bt;
+import static com.example.cs.peojec401.FoodRecod_F4.checkedLabelcholes;
+import static com.example.cs.peojec401.FoodRecod_F4.checkedLabelsodium;
+import static com.example.cs.peojec401.FoodRecod_F4.checkedLabelsugar;
+import static com.example.cs.peojec401.FoodRecod_F4.checkedLabeltrigly;
+import static com.example.cs.peojec401.FoodRecod_F4.se;
 import static com.example.cs.peojec401.Fragment_F4.i;
 import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 
@@ -57,17 +62,23 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<FoodList> arrayList = new ArrayList<>();
-    public BackgroundTask(Context c){
+    FoodList foodList;
+    String typefood="";
+
+
+    public BackgroundTask(Context c,String type){
 
 
         this.c =c;
         activity = (Activity)c;
-
+        this.typefood=type;
     }
-
-    String json_string = "http://172.20.10.2/android/get_foodsugar.php?status=0";
-    String json_string1 = "http://172.20.10.2/android/get_foodkidney.php?status=0";
-
+    String json_string="";
+    String json_string1 = "http://172.20.10.2/android/get_foodheart.php?status=0";
+    String json_string2 = "http://172.20.10.2/android/get_foodkidney.php?status=0";
+    String json_string3 = "http://172.20.10.2/android/get_foodsugar.php?status=0";
+    String json_string4 = "http://192.168.1.10/android/get_foodpressure.php?status=0";
+    String json_string5 = "http://192.168.1.10/android/get_food_by_select.php";
     String json_string6 = "http://172.20.10.2/android/get_food_by_blood.php";
 
     @Override
@@ -80,6 +91,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         adapter = new RecyclerAdapter(c,arrayList);
         recyclerView.setAdapter(adapter);
 
+
+
     }
 
     @Override
@@ -87,8 +100,7 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
 
 
         try {
-
-            if (i == 2) {
+            if (i == 1) {
                 json_string = json_string1;
                 URL url = new URL(json_string);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -122,15 +134,19 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                             ,jo.getInt("protein")
                             ,jo.getInt("sugar")
                             ,jo.getString("method")
-                            ,jo.getString("ingred"));
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
 
-                    publishProgress(food_recyc);
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
                 }
 
             }
-            if (i == 3) {
-
-
+            if (i == 2) {
+                json_string = json_string2;
                 URL url = new URL(json_string);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
@@ -163,25 +179,118 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                             ,jo.getInt("protein")
                             ,jo.getInt("sugar")
                             ,jo.getString("method")
-                            ,jo.getString("ingred"));
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+                }
 
-                    publishProgress(food_recyc);
+            }
+            if (i == 3) {
+                json_string = json_string3;
+                URL url = new URL(json_string);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line;
+
+
+                while ((line=bufferedReader.readLine())!=null)
+                {
+                    stringBuilder.append(line+"\n");
+                }
+
+                httpURLConnection.disconnect();
+                String json_string = stringBuilder.toString().trim();
+
+                JSONObject jsonObject = new JSONObject(json_string);
+                JSONArray jsonArray = jsonObject.getJSONArray("result");
+
+                int count=0;
+                while (count<jsonArray.length()){
+
+                    JSONObject jo = jsonArray.getJSONObject(count);
+                    count++;
+                    FoodList food_recyc = new FoodList(jo.getString("name")
+                            ,jo.getString("foodpic")
+                            ,jo.getInt("energy")
+                            ,jo.getInt("fat")
+                            ,jo.getInt("carbohydrate")
+                            ,jo.getInt("protein")
+                            ,jo.getInt("sugar")
+                            ,jo.getString("method")
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
+
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+                }
+
+            }
+            if (i == 4) {
+
+                json_string = json_string4;
+                URL url = new URL(json_string);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line;
+
+
+                while ((line=bufferedReader.readLine())!=null)
+                {
+                    stringBuilder.append(line+"\n");
+                }
+
+                httpURLConnection.disconnect();
+                String json_string = stringBuilder.toString().trim();
+
+                JSONObject jsonObject = new JSONObject(json_string);
+                JSONArray jsonArray = jsonObject.getJSONArray("result");
+
+                int count=0;
+                while (count<jsonArray.length()){
+
+                    JSONObject jo = jsonArray.getJSONObject(count);
+                    count++;
+                    FoodList food_recyc = new FoodList(jo.getString("name")
+                            ,jo.getString("foodpic")
+                            ,jo.getInt("energy")
+                            ,jo.getInt("fat")
+                            ,jo.getInt("carbohydrate")
+                            ,jo.getInt("protein")
+                            ,jo.getInt("sugar")
+                            ,jo.getString("method")
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+
                 }
             }
-            if (bt == 6) {
-                Log.d("qqqqqqqqqqqq","asdasdasdasdasdasdasdadasdasdsa");
-                String resugar = Resultone;
-                String resodium = Resulttwo;
-                String repotassium = Resultthree;
-                String recholes = Resultfour;
-                String rehdl = Resultfive;
-                String reldl = Resultsix;
-                String retrigly = Resultseven;
+            if (se == 5) {
 
-              //  Toast.makeText(activity,resugar+" ",Toast.LENGTH_SHORT).show();
+                String se_choles = checkedLabelcholes;
+                String se_trigly = checkedLabeltrigly;
+                String se_sugar = checkedLabelsugar;
+                String se_sodium = checkedLabelsodium;
 
 
-                json_string = json_string6;
+                //  Toast.makeText(activity,resugar+" ",Toast.LENGTH_SHORT).show();
+
+
+                json_string = json_string5;
                 URL url = new URL(json_string);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -189,23 +298,12 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("resugar", "UTF-8") + "=" + URLEncoder.encode(resugar, "UTF-8")+"&"+
-               URLEncoder.encode("resodium", "UTF-8") + "=" + URLEncoder.encode(resodium, "UTF-8")+"&"+
-                        URLEncoder.encode("repotassium", "UTF-8") + "=" + URLEncoder.encode(repotassium, "UTF-8")+"&"+
-                        URLEncoder.encode("recholes", "UTF-8") + "=" + URLEncoder.encode(recholes, "UTF-8") +"&"+
-                        URLEncoder.encode("rehdl", "UTF-8") + "=" + URLEncoder.encode(rehdl, "UTF-8")+"&"+
-                        URLEncoder.encode("reldl", "UTF-8") + "=" + URLEncoder.encode(reldl, "UTF-8") +"&"+
-                        URLEncoder.encode("retrigly", "UTF-8") + "=" + URLEncoder.encode(retrigly, "UTF-8");
+                String post_data = URLEncoder.encode("se_choles", "UTF-8") + "=" + URLEncoder.encode(se_choles, "UTF-8")+"&"+
+                        URLEncoder.encode("se_trigly", "UTF-8") + "=" + URLEncoder.encode(se_trigly, "UTF-8")+"&"+
+                        URLEncoder.encode("se_sugar", "UTF-8") + "=" + URLEncoder.encode(se_sugar, "UTF-8")+"&"+
+                        URLEncoder.encode("se_sodium", "UTF-8") + "=" + URLEncoder.encode(se_sodium, "UTF-8");
 
 
-                Log.d("resugar",resugar);
-                Log.d("resodium",resodium);
-                Log.d("repotassium",repotassium);
-                Log.d("recholes",recholes);
-                Log.d("rehdl",rehdl);
-                Log.d("reldl",reldl);
-                Log.d("retrigly",retrigly);
-                Log.d("post",post_data);
 
                 bufferedWriter.write(post_data);
 
@@ -241,56 +339,91 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                             , jo.getInt("protein")
                             , jo.getInt("sugar")
                             ,jo.getString("method")
-                            ,jo.getString("ingred"));
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+                }
+            }
+            if (bt == 6) {
 
-                    publishProgress(food_recyc);
+                String resugar = Resultone;
+                String resodium = Resulttwo;
+                String repotassium = Resultthree;
+                String recholes = Resultfour;
+                String rehdl = Resultfive;
+                String reldl = Resultsix;
+                String retrigly = Resultseven;
+
+              //  Toast.makeText(activity,resugar+" ",Toast.LENGTH_SHORT).show();
+
+
+                json_string = json_string6;
+                URL url = new URL(json_string);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("resugar", "UTF-8") + "=" + URLEncoder.encode(resugar, "UTF-8")+"&"+
+               URLEncoder.encode("resodium", "UTF-8") + "=" + URLEncoder.encode(resodium, "UTF-8")+"&"+
+                        URLEncoder.encode("repotassium", "UTF-8") + "=" + URLEncoder.encode(repotassium, "UTF-8")+"&"+
+                        URLEncoder.encode("recholes", "UTF-8") + "=" + URLEncoder.encode(recholes, "UTF-8") +"&"+
+                        URLEncoder.encode("rehdl", "UTF-8") + "=" + URLEncoder.encode(rehdl, "UTF-8")+"&"+
+                        URLEncoder.encode("reldl", "UTF-8") + "=" + URLEncoder.encode(reldl, "UTF-8") +"&"+
+                        URLEncoder.encode("retrigly", "UTF-8") + "=" + URLEncoder.encode(retrigly, "UTF-8");
+
+
+
+                bufferedWriter.write(post_data);
+
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    stringBuilder.append(line + "\n");
+                }
+
+                httpURLConnection.disconnect();
+                String json_string = stringBuilder.toString().trim();
+
+                JSONObject jsonObject = new JSONObject(json_string);
+                JSONArray jsonArray = jsonObject.getJSONArray("result");
+
+
+                int count = 0;
+                while (count < jsonArray.length()) {
+
+                    JSONObject jo = jsonArray.getJSONObject(count);
+                    count++;
+                    FoodList food_recyc = new FoodList(jo.getString("name")
+                            , jo.getString("foodpic")
+                            , jo.getInt("energy")
+                            , jo.getInt("fat")
+                            , jo.getInt("carbohydrate")
+                            , jo.getInt("protein")
+                            , jo.getInt("sugar")
+                            ,jo.getString("method")
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+
                 }
 
             }
-//                URL url = new URL(json_string);
-//                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-//                InputStream inputStream = httpURLConnection.getInputStream();
-//                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//                StringBuilder stringBuilder = new StringBuilder();
-//                String line;
-//
-//
-//                while ((line=bufferedReader.readLine())!=null)
-//                {
-//                    stringBuilder.append(line+"\n");
-//                }
-//
-//                httpURLConnection.disconnect();
-//                String json_string = stringBuilder.toString().trim();
-//
-//                JSONObject jsonObject = new JSONObject(json_string);
-//                JSONArray jsonArray = jsonObject.getJSONArray("result");
-//
-//                int count=0;
-//                while (count<jsonArray.length()){
-//
-//                    JSONObject jo = jsonArray.getJSONObject(count);
-//                    count++;
-//                    FoodList food_recyc = new FoodList(jo.getString("name")
-//                            ,jo.getString("foodpic")
-//                            ,jo.getInt("energy")
-//                            ,jo.getInt("fat")
-//                            ,jo.getInt("carbohydrate")
-//                            ,jo.getInt("protein")
-//                            ,jo.getInt("sugar"));
-//
-//                    publishProgress(food_recyc);
-//                }
-//
-//                Log.d("JSON STRING",json_string);
-//
-//            } catch (MalformedURLException e){
-//                e.printStackTrace();
-//            } catch (IOException e){
-//                e.printStackTrace();
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
 
 
         } catch (ProtocolException e) {
@@ -308,6 +441,8 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         @Override
     protected void onProgressUpdate(FoodList... values) {
         arrayList.add(values[0]);
+
+
         adapter.notifyDataSetChanged();
     }
 

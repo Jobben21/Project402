@@ -295,12 +295,7 @@
                                                 android:layout_height="wrap_content"
                                                 android:text="@string/Height2" />
 
-                                            android:text="@string/weight"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/textView34"
-                                            android:textStyle="normal|bold"
-                                            android:textSize="18sp" />
+
 
 
                                             <LinearLayout
@@ -326,9 +321,7 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:text="ซ.ม" />
 
-                                                android:id="@+id/weight_profile"
-                                                android:textStyle="normal|bold"
-                                                android:textSize="30sp" />
+
 
 
                                             </LinearLayout>
@@ -355,12 +348,7 @@
                                                 android:layout_height="wrap_content"
                                                 android:text="@string/weight2" />
 
-                                            android:text="@string/Height"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:id="@+id/textView32"
-                                            android:textStyle="normal|bold"
-                                            android:textSize="18sp" />
+
 
 
                                             <LinearLayout
@@ -386,10 +374,7 @@
                                                     android:layout_weight="1"
                                                     android:text="ก.ก" />
 
-                                                android:id="@+id/height_profile"
-                                                android:layout_weight="1"
-                                                android:textStyle="normal|bold"
-                                                android:textSize="30sp" />
+
 
 
                                             </LinearLayout>

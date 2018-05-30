@@ -13,21 +13,17 @@
 		mysqli_set_charset($con, "utf8");
 		mysqli_query($con,"SET NAMES UTF8");
 		
-		$isExistUserSql = "SELECT 1 FROM user WHERE name = '" . $_POST["name"] . "'";
-		$isExistUserResult = mysqli_query($con,$isExistUserSql);
 		
-		if(mysqli_fetch_array($isExistUserResult)) {
-			$arr['StatusID'] = "2";
-			$arr['Error'] = "Name already exist";
-			echo ($isExistUserResult);
-		}else{
 			
-			$strSql= "INSERT INTO user";
-			$strSql.="(name,pass,age,height,weight,gender)";
+			$strSql= "INSERT INTO foodmenu";
+			$strSql.="(food_name,food_ingred,food_solution,food_disease,food_type,energy,carbohydrate,fat,protein,sugar,sodium)";
 			$strSql.="VALUES";
-			$strSql .="('".$_POST["name"]."','".$_POST["pass"]."','".$_POST["age"]."','".$_POST["height"]."' ";
-			$strSql .=",'".$_POST["weight"]."','".$_POST["gender"]."')";	
-				
+			$strSql .="('".$_POST["food_name"]."','".$_POST["food_ingred"]."','".$_POST["food_solution"]."','".$_POST["food_disease"]."'";
+			$strSql .=",'".$_POST["food_type"]."','".$_POST["energy"]."'";	
+			$strSql .=",'".$_POST["carbohydrate"]."','".$_POST["fat"]."'";
+			$strSql .=",'".$_POST["protein"]."','".$_POST["sugar"]."'";
+			$strSql .=",'".$_POST["sodium"]."')";
+			
 				
 			$Query = mysqli_query($con,$strSql);
 			if(!$Query){
@@ -38,7 +34,7 @@
 				$arr['StatusID']="1";
 				$arr['Error']="";
 			}
-		}
+		
 		mysqli_close($con);
 		echo json_encode($arr);
 	

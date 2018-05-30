@@ -26,7 +26,7 @@ public class F2_food_pressure extends Fragment {
 
         View rootView = inflater.inflate(R.layout.activity_display_list, container, false);
 
-        BackgroundTask backgroundTask = new BackgroundTask(getActivity());
+        BackgroundTask backgroundTask = new BackgroundTask(getActivity(),"");
         backgroundTask.execute();
 
         return rootView;
