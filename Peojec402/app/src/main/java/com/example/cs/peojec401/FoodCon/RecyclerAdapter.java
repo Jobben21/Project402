@@ -38,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
    ArrayList<FoodList> arrayList ;
     Context c;
 
-    public  FoodList  foodList;
+
 
     int sum=0;
 
@@ -69,8 +69,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
-            foodList = arrayList.get(position);
-       // Toast.makeText(c,"ออนบิว"+"===",Toast.LENGTH_SHORT).show();
+                    final  FoodList  foodList = arrayList.get(position);
 
                     holder.name.setText(foodList.getName());
                     holder.energy.setText(Integer.toString(foodList.getEnergy()));
@@ -99,14 +98,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
 
 
-//      Toast.makeText(c,selectedText+"="+m1+"="+m2+"===",Toast.LENGTH_SHORT).show();
+
 
     }
 
     @Override
     public int getItemCount() {
 
-       // Toast.makeText(c,"เกทเค้า"+"===",Toast.LENGTH_SHORT).show();
+
 
             return arrayList.size();
     }

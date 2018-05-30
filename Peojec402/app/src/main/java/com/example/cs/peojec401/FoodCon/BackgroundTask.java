@@ -74,12 +74,12 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
         this.typefood=type;
     }
     String json_string="";
-    String json_string1 = "http://172.20.10.2/android/get_foodheart.php?status=0";
-    String json_string2 = "http://172.20.10.2/android/get_foodkidney.php?status=0";
-    String json_string3 = "http://172.20.10.2/android/get_foodsugar.php?status=0";
-    String json_string4 = "http://192.168.1.10/android/get_foodpressure.php?status=0";
-    String json_string5 = "http://192.168.1.10/android/get_food_by_select.php";
-    String json_string6 = "http://172.20.10.2/android/get_food_by_blood.php";
+    String json_string1 = "http://172.25.74.91/android/get_foodheart.php?status=0";
+    String json_string2 = "http://172.25.74.91/android/get_foodkidney.php?status=0";
+    String json_string3 = "http://172.25.74.91/android/get_foodsugar.php?status=0";
+    String json_string4 = "http://172.25.74.91/android/get_foodpressure.php?status=0";
+    String json_string5 = "http://172.25.74.91/android/get_food_by_select.php";
+    String json_string6 = "http://172.25.74.91/android/get_food_by_blood.php";
 
     @Override
     protected void onPreExecute() {
