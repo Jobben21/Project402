@@ -159,9 +159,9 @@
     <string name="ldl_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 159-189  mg/dl</string>
     <string name="ldl_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
 
-
+    <string name="chl_normal2">ค่าต่ำกว่า \u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020 49 mg/dl</string>
     <string name="chl_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50 - 200 mg/dl</string>
-    <string name="chl_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 mg/dl</string>
+    <string name="chl_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 201-239 mg/dl</string>
     <string name="chl_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020 มากกว่า 240 mg/dl</string>
 
     <string name="tri_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50-150 mg/dl</string>
@@ -192,8 +192,9 @@
     <string name="ldlt_abnormal3">ค่าสูงเล็กน้อย \u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 130-159  mg/dl</string>
     <string name="ldlt_abnormal5">ค่าสูงมาก \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  \u0020 \u0020 มากกว่า 190 mg/dl</string>
 
+    <string name="chlt_normal2">ค่าต่ำกว่า \u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020 49 mg/dl</string>
     <string name="chlt_normal">ค่าปกติ \u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  50 - 200 mg/dl</string>
-    <string name="chlt_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 200-239 mg/dl</string>
+    <string name="chlt_abnormal2">ค่าสูง \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 201-239 mg/dl</string>
     <string name="chlt_abnormal3">ค่าสูงมาก \u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020มากกว่า 240 mg/dl</string>
 
     <string name="trit_normal">ค่าปกติ  \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 \u0020 \u0020\u0020\u0020\u0020\u0020  30-150 mg/dl</string>

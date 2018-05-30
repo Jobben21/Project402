@@ -456,12 +456,12 @@ public class Fragment_B extends Fragment {
                         message4 = "ok";
                     } else if (choles == 0) {
                         message4 = "minus";
-                    } else if (choles < 40) {
+                    } else if (choles < 49) {
                         message4 = "cancell2";
-                    } else if (choles > 100) {
+                    } else if (200 < choles && choles <= 239) {
                         message4 = "cancell";
-                    } else {
-                        message4 = "ok";
+                    } else if ( choles > 240) {
+                        message4 = "cancell3";
                     }
                 }
                 else{
@@ -470,12 +470,12 @@ public class Fragment_B extends Fragment {
                         message4 = "ok";
                     } else if (choles == 0) {
                         message4 = "minus";
-                    } else if (choles < 40) {
+                    } else if (choles < 49) {
                         message4 = "cancell2";
-                    } else if (choles > 100) {
+                    } else if (200 < choles && choles <= 239) {
                         message4 = "cancell";
-                    } else {
-                        message4 = "ok";
+                    } else if ( choles > 240) {
+                        message4 = "cancell3";
                     }
                 }
                 return message4;

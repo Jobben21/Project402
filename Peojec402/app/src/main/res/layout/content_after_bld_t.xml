@@ -1088,6 +1088,14 @@
                                 android:textAlignment="textStart" />
 
                             <TextView
+                                android:text="@string/chl_normal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chl_normal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
+                            <TextView
                                 android:text="@string/chl_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1115,6 +1123,15 @@
                                 android:layout_weight="0.13"
                                 android:visibility="gone" />
 
+
+                            <TextView
+                                android:text="@string/chlt_normal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chlt_normal2"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.13"
+                                android:visibility="gone" />
 
                             <TextView
                                 android:text="@string/chlt_normal"
