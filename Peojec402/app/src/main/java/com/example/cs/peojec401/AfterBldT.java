@@ -37,12 +37,12 @@ public class AfterBldT extends AppCompatActivity {
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
             sodium_abnormal2,sodium_abnormal,potassium_normal, potassium_abnormal2,potassium_abnormal,hdl_normal,hdl_abnormal3,hdl_abnormal4,
-            ldl_normal,ldl_abnormal2,ldl_abnormal3,ldl_abnormal4,ldl_abnormal5,chl_normal,chl_abnormal2,chl_abnormal3,
+            ldl_normal,ldl_abnormal2,ldl_abnormal3,ldl_abnormal4,ldl_abnormal5,chl_normal2,chl_normal,chl_abnormal2,chl_abnormal3,
             tri_normal,tri_abnormal2,tri_abnormal,tri_abnormal3;
 
     private TextView bloodt_normal, bloodt_abnormal2,bloodt_abnormal,sodiumt_normal,sodiumt_abnormal2,sodiumt_abnormal,
             potassiumt_normal,potassiumt_abnormal2,potassiumt_abnormal,hdlt_normal,hdlt_abnormal3,hdlt_abnormal4,ldlt_normal,ldlt_abnormal2,
-            ldlt_abnormal3,ldlt_abnormal4,ldlt_abnormal5,chlt_normal,chlt_abnormal2,chlt_abnormal3,
+            ldlt_abnormal3,ldlt_abnormal4,ldlt_abnormal5,chlt_normal2,chlt_normal,chlt_abnormal2,chlt_abnormal3,
             trit_normal,trit_abnormal2, trit_abnormal,trit_abnormal3;
 
     public static int i;
@@ -97,6 +97,7 @@ public class AfterBldT extends AppCompatActivity {
         ldl_abnormal5 = (TextView) findViewById(R.id.ldl_abnormal5);
 
         chl_normal = (TextView) findViewById(R.id.chl_normal);
+        chl_normal2 = (TextView) findViewById(R.id.chl_normal2);
         chl_abnormal2 = (TextView) findViewById(R.id.chl_abnormal2);
         chl_abnormal3 = (TextView) findViewById(R.id.chl_abnormal3);
 
@@ -130,6 +131,7 @@ public class AfterBldT extends AppCompatActivity {
         ldlt_abnormal3 = (TextView) findViewById(R.id.ldlt_abnormal3);
         ldlt_abnormal5 = (TextView) findViewById(R.id.ldlt_abnormal5);
 
+        chlt_normal2 = (TextView) findViewById(R.id.chlt_normal2);
         chlt_normal = (TextView) findViewById(R.id.chlt_normal);
         chlt_abnormal2 = (TextView) findViewById(R.id.chlt_abnormal2);
         chlt_abnormal3 = (TextView) findViewById(R.id.chlt_abnormal3);
@@ -348,6 +350,7 @@ public class AfterBldT extends AppCompatActivity {
             ldl_abnormal5.setVisibility(View.VISIBLE);
 
             chl_normal.setVisibility(View.VISIBLE);
+            chl_normal2.setVisibility(View.VISIBLE);
             chl_abnormal2.setVisibility(View.VISIBLE);
             chl_abnormal3.setVisibility(View.VISIBLE);
 
@@ -384,6 +387,7 @@ public class AfterBldT extends AppCompatActivity {
             ldlt_abnormal3.setVisibility(View.VISIBLE);
             ldlt_abnormal5.setVisibility(View.VISIBLE);
 
+            chlt_normal2.setVisibility(View.VISIBLE);
             chlt_normal.setVisibility(View.VISIBLE);
             chlt_abnormal2.setVisibility(View.VISIBLE);
             chlt_abnormal3.setVisibility(View.VISIBLE);
@@ -602,8 +606,8 @@ public class AfterBldT extends AppCompatActivity {
 
             result4 = "-1";
 
-            chl_abnormal2.setBackgroundResource(R.color.glass_color3);
-            chlt_abnormal2.setBackgroundResource(R.color.glass_color3);
+            chl_normal2.setBackgroundResource(R.color.glass_color3);
+            chlt_normal2.setBackgroundResource(R.color.glass_color3);
 
 
             progressBar4.setProgressDrawable(draw3);
@@ -617,6 +621,17 @@ public class AfterBldT extends AppCompatActivity {
 
             chl_abnormal3.setBackgroundResource(R.color.glass_color2);
             chlt_abnormal3.setBackgroundResource(R.color.glass_color2);
+
+            progressBar4.setProgressDrawable(draw2);
+
+        }
+        else  if(message4.equals("cancell3")) {
+
+            result4 = "0";
+
+
+            chl_abnormal2.setBackgroundResource(R.color.glass_color2);
+            chlt_abnormal2.setBackgroundResource(R.color.glass_color2);
 
             progressBar4.setProgressDrawable(draw2);
 
@@ -640,7 +655,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message5.equals("cancell3")){
 
 
-            result5 = "1";
+            result5 = "0";
 
             ldl_abnormal2.setBackgroundResource(R.color.glass_color2);
             ldlt_abnormal2.setBackgroundResource(R.color.glass_color2);
@@ -661,7 +676,7 @@ public class AfterBldT extends AppCompatActivity {
         }
         else if(message5.equals("cancell5")) {
 
-            result5 = "1";
+            result5 = "0";
 
 
             ldl_abnormal5.setBackgroundResource(R.color.glass_color2);
@@ -757,7 +772,7 @@ public class AfterBldT extends AppCompatActivity {
             tri_abnormal3.setBackgroundResource(R.color.glass_color2);
             trit_abnormal3.setBackgroundResource(R.color.glass_color2);
 
-            result7 = "1";
+            result7 = "0";
 
             progressBar7.setProgressDrawable(draw2);
 

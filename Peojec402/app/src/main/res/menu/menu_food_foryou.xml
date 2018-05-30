@@ -9,13 +9,4 @@
     </group>
 
 
-
-    <item
-        android:id="@+id/action_favorite"
-        android:icon="@drawable/profiletrr"
-        android:title="yes"
-        app:showAsAction="ifRoom"
-        android:visible="true" />
-
-
 </menu>

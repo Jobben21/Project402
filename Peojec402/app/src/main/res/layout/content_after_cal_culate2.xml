@@ -154,7 +154,8 @@
                                 android:id="@+id/textView51"
                                 android:textColor="@color/red_btn_bg_color"
                                 android:layout_width="wrap_content"
-                                android:textStyle="normal|bold" />
+                                android:textStyle="normal|bold"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:text="อยู่ในเกณฑ์ :"
@@ -163,7 +164,8 @@
                                 android:id="@+id/textView96"
                                 android:layout_marginTop="5dp"
                                 android:textStyle="normal|bold"
-                                android:textColor="@color/red_btn_bg_color" />
+                                android:textColor="@color/red_btn_bg_color"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:text="ภาวะเสี่ยงต่อโรค :"
@@ -193,14 +195,16 @@
                                 android:text="TextView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/BMIvalue" />
+                                android:id="@+id/BMIvalue"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:text="TextView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/BMIvalue2"
-                                android:layout_marginTop="5dp" />
+                                android:layout_marginTop="5dp"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:text="TextView"
