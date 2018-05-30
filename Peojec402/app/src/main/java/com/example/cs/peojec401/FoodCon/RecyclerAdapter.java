@@ -92,6 +92,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
                             i.putExtra("protein", foodList.getProtein());
                             i.putExtra("method", foodList.getMethod());
                             i.putExtra("ingred", foodList.getIngred());
+                            i.putExtra("typeingred",foodList.getTypeingred());
                             c.startActivity(i);
                         }
                     });

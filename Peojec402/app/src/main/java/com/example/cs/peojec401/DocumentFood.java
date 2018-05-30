@@ -7,6 +7,8 @@ import android.support.v4.util.CircularArray;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +46,8 @@ public class DocumentFood extends AppCompatActivity {
     private TextView food_name,energy,carbo,fat,protein,sugar,ingred,method,type,sodium;
     private ImageView foodpic;
     private Random ran;
+
+    private Button mainmenu;
     int num;
     String url="";
     ArrayList<FoodList> arrayList ;
@@ -68,20 +72,21 @@ public class DocumentFood extends AppCompatActivity {
         method = (TextView)findViewById(R.id.method_f);
         foodpic = (ImageView)  findViewById(R.id.foodpic);
         type = (TextView) findViewById(R.id.option2);
+        mainmenu=(Button)findViewById(R.id.close_dialog2);
 
         Bundle bundle = getIntent().getExtras();
          num =bundle.getInt("num");
-
+       // Toast.makeText(getApplicationContext(),bundle.getInt("energy")+" ",Toast.LENGTH_SHORT).show();
         food_name.setText(bundle.getString("name"));
-        energy.setText(bundle.getString("energy"));
-        carbo.setText(bundle.getString("carbo"));
-        fat.setText(bundle.getString("fat"));
-        protein.setText(bundle.getString("protein"));
-        sugar.setText(bundle.getString("sugar"));
+        energy.setText(String.valueOf(bundle.getInt("energy")));
+        carbo.setText(String.valueOf(bundle.getInt("carbo")));
+        fat.setText(String.valueOf(bundle.getInt("fat")));
+        protein.setText(String.valueOf(bundle.getInt("protein")));
+        sugar.setText(String.valueOf(bundle.getInt("sugar")));
         ingred.setText(bundle.getString("ingred"));
-        sodium.setText(bundle.getString("sodium"));
+        sodium.setText(String.valueOf(bundle.getInt("sodium")));
         method.setText(bundle.getString("method"));
-
+        type.setText(bundle.getString("typeingred"));
 
         if(bundle.getString("foodpic").length()>0 &&bundle.getString("foodpic") != null){
 
@@ -94,7 +99,14 @@ public class DocumentFood extends AppCompatActivity {
 
 //        getData();
 
+        mainmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(DocumentFood.this,NavigationActivity.class);
+                startActivity(intent);
+            }
+        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getIncomingintent();

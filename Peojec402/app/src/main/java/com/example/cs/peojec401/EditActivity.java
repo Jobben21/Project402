@@ -73,7 +73,7 @@ public class EditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_edit);
         Toolbar toolbar = (Toolbar) findViewById(R.id.register);
         setSupportActionBar(toolbar);
 
@@ -197,7 +197,7 @@ public class EditActivity extends AppCompatActivity {
 //        }
 
         Toast.makeText(this,user_id,Toast.LENGTH_SHORT).show();
-        String url = "http://172.20.10.2/android/edit_user.php";
+        String url = "http://172.25.74.91/android/edit_user.php";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
         para.add(new BasicNameValuePair("userid",user_id));
