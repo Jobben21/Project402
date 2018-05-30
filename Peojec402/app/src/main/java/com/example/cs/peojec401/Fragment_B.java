@@ -283,8 +283,8 @@ public class Fragment_B extends Fragment {
 
 
 
-                else{
-                  //  inputBloodTest();
+                if (SaveData()) {
+                    inputBloodTest();
                     Blood();
                 }
 
