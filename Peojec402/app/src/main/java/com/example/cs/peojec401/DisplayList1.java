@@ -1,17 +1,12 @@
 package com.example.cs.peojec401;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.example.cs.peojec401.FoodCon.*;
-import com.example.cs.peojec401.FoodCon.BackgroundTask;
 
 import static com.example.cs.peojec401.Fragment_F4.i;
 
@@ -69,7 +64,7 @@ public class DisplayList1 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_food, menu);
+       // getMenuInflater().inflate(R.menu.menu_food, menu);
         return true;
     }
 
