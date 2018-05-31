@@ -100,7 +100,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
 
     private String addID() {
 
-        String login_url = "http://172.20.10.2/android/get_bt.php?status=0";
+        String login_url = "http://172.25.74.91/android/get_bt.php?status=0";
 
       JSONObject  j = null;
 
