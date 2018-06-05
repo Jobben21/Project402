@@ -218,7 +218,7 @@
     <string-array name="spinner_list">
         <item>เมนูทั้งหมด</item>
         <item>อาหารจานหลัก</item>
-        <item>อาหารจานเดียว</item>
+        <item>อาหารจานเดี่ยว</item>
         <item>อาหารว่าง</item>
         <item>ของหวาน</item>
     </string-array>

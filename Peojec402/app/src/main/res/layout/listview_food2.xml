@@ -71,10 +71,38 @@
                         android:orientation="vertical">
 
                         <LinearLayout
+                            android:id="@+id/dis_food"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
                             android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView62"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="เมนูอาหารเกี่ยวกับ :  "
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/dis_food1"
+                                android:layout_width="82dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="false"
+                                android:layout_weight="1"
+                                android:text="date"
+                                android:textAlignment="textStart"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
 
                             <TextView
                                 android:id="@+id/textView142"
@@ -115,6 +143,7 @@
     </android.support.v7.widget.CardView>
 
     <View
+        android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="?attr/colorControlHighlight" />

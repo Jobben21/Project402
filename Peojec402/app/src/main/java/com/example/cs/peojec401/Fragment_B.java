@@ -86,11 +86,11 @@ public class Fragment_B extends Fragment {
             public void onClick(View v) {
 
 
-               //  if(SaveData()) {
+               if(SaveData()) {
 
                    inputBloodTest();
 
-                //   }
+                  }
                 //}
             }
         });
@@ -103,7 +103,7 @@ public class Fragment_B extends Fragment {
 
 
 
-                String url = "http://172.25.74.91/android/add_bt.php?status=0";
+                String url = "http://172.20.10.2/android/add_bt.php?status=0";
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
                 para.add(new BasicNameValuePair("user_id", idLogin));
@@ -283,11 +283,11 @@ public class Fragment_B extends Fragment {
 
 
 
-                if (SaveData()) {
-                    inputBloodTest();
-                    Blood();
-                }
 
+//                if (SaveData()) {
+//                    inputBloodTest();
+                    Blood();
+//                }
             }
 
             public void Blood() {

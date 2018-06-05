@@ -19,6 +19,7 @@ import org.json.JSONArray;
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
 import static com.example.cs.peojec401.EditActivity.age_edit;
+import static com.example.cs.peojec401.EditActivity.gender_edit;
 import static com.example.cs.peojec401.EditActivity.height_edit;
 import static com.example.cs.peojec401.EditActivity.seti;
 import static com.example.cs.peojec401.EditActivity.weight_edit;
@@ -37,7 +38,7 @@ public class Fragment_P extends Fragment{
 
     private TextView  name_profile,age_profile,height_profile,weight_profile,BMI_profile,BMR_profile,gender_profile;
     ArrayList<Example> calculator;
-    private Button bloodprofile;
+    private Button bloodprofile,logout;
     private ImageButton editprofile;
     private CardView cardView;
     private JSONArray result;
@@ -62,7 +63,7 @@ public class Fragment_P extends Fragment{
         editprofile = (ImageButton)view.findViewById(R.id.editprofile);
         BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
         BMR_profile = (TextView)view.findViewById(R.id.BMR_Profile);
-
+        logout = (Button)view.findViewById(R.id.logout);
 //        webView = (WebView)view.findViewById(R.id.pdf);
 //        String myPdfUrl = "https://drive.google.com/open?id=0Bwjc-xrXV84UNURoTnVCSzVQWVJwdUk2SUtpNzRicTl2Wi1z";
 //        String url = "http://docs.google.com/gview?embedded=true&url=" + myPdfUrl;
@@ -93,6 +94,15 @@ public class Fragment_P extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getBaseContext(),NavigationActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getBaseContext(),Register_LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
 
             }
@@ -136,7 +146,7 @@ public class Fragment_P extends Fragment{
             age_profile.setText(age_edit);
             weight_profile.setText(weight_edit);
             height_profile.setText(height_edit);
-            gender_profile.setText(genderLogin);
+            gender_profile.setText(gender_edit);
             String bmr = String.valueOf(String.format("%.1f", bmrValue));
             String bmi = String.valueOf(String.format("%.1f", bmiValue));
             BMR_profile.setText(bmr);

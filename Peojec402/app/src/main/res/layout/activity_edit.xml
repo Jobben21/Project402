@@ -365,19 +365,19 @@
                                                         android:orientation="horizontal">
 
                                                         <RadioButton
-                                                            android:text="@string/man"
+                                                            android:id="@+id/m_gender"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
-                                                            android:id="@+id/w_gender"
+                                                            android:layout_weight="0.79"
                                                             android:checked="true"
-                                                            android:layout_weight="0.79" />
+                                                            android:text="@string/man" />
 
                                                         <RadioButton
-                                                            android:text="@string/women"
+                                                            android:id="@+id/w_gender"
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
-                                                            android:id="@+id/m_gender"
-                                                            android:layout_weight="2.04" />
+                                                            android:layout_weight="2.04"
+                                                            android:text="@string/women" />
                                                     </RadioGroup>
                                                 </LinearLayout>
 

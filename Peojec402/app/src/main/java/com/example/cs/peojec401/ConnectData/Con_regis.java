@@ -31,7 +31,7 @@ public class Con_regis extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... params) {
         String type = params[0];
 
-        String login_url = "http://172.25.74.91/login.php";
+        String login_url = "http://172.20.10.2/login.php";
 
 
 

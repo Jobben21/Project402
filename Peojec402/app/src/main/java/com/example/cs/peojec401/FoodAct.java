@@ -151,8 +151,7 @@ class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                         ,jo.getString("method")
                         ,jo.getString("ingred")
                         ,jo.getString("typeingred")
-                        ,jo.getString("foodtype"));
-
+                        ,jo.getString("foodtype"),jo.getString("food_disease"));
                 publishProgress(food_recyc);
             }
 

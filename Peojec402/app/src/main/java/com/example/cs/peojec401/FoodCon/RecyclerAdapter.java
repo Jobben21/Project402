@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,7 @@ import java.util.List;
 
 
 import static com.example.cs.peojec401.DisplayList1.spinner;
-
+import static com.example.cs.peojec401.FoodCon.BackgroundTask.mm;
 
 
 /**
@@ -38,7 +39,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
    ArrayList<FoodList> arrayList ;
     Context c;
 
-
+        int size=0;
 
     int sum=0;
 
@@ -68,34 +69,39 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
-
-                    final  FoodList  foodList = arrayList.get(position);
-
-                    holder.name.setText(foodList.getName());
-                    holder.energy.setText(Integer.toString(foodList.getEnergy()));
+//        Toast.makeText(c,arrayList.size()+"1123 ", Toast.LENGTH_SHORT).show();
 
 
-                    PicassoDown.downloadImage(c, foodList.getFoodpic(), holder.imgfood);
 
-                    holder.itemView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            sum = position;
-                            Intent i = new Intent(c, DocumentFood.class);
-                            Bundle bundle = new Bundle();
-                            i.putExtra("num", sum);
-                            i.putExtra("name", foodList.getName());
-                            i.putExtra("energy", foodList.getEnergy());
-                            i.putExtra("carbo", foodList.getCarbo());
-                            i.putExtra("fat", foodList.getFat());
-                            i.putExtra("foodpic", foodList.getFoodpic());
-                            i.putExtra("protein", foodList.getProtein());
-                            i.putExtra("method", foodList.getMethod());
-                            i.putExtra("ingred", foodList.getIngred());
-                            i.putExtra("typeingred",foodList.getTypeingred());
-                            c.startActivity(i);
-                        }
-                    });
+                final FoodList foodList = arrayList.get(position);
+
+
+                holder.name.setText(foodList.getName());
+               // holder.energy.setText(Integer.toString(foodList.getEnergy()));
+                //holder.disease.setText(foodList.getFood_di());
+
+                PicassoDown.downloadImage(c, foodList.getFoodpic(), holder.imgfood);
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        sum = position;
+                        Intent i = new Intent(c, DocumentFood.class);
+                        Bundle bundle = new Bundle();
+                        i.putExtra("num", sum);
+                        i.putExtra("name", foodList.getName());
+                        i.putExtra("energy", foodList.getEnergy());
+                        i.putExtra("carbo", foodList.getCarbo());
+                        i.putExtra("fat", foodList.getFat());
+                        i.putExtra("foodpic", foodList.getFoodpic());
+                        i.putExtra("protein", foodList.getProtein());
+                        i.putExtra("method", foodList.getMethod());
+                        i.putExtra("ingred", foodList.getIngred());
+                        i.putExtra("typeingred", foodList.getTypeingred());
+                        i.putExtra("food_di",foodList.getFood_di());
+                        c.startActivity(i);
+                    }
+                });
 
 
 
@@ -114,12 +120,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     public  static  class  RecyclerViewHolder extends RecyclerView.ViewHolder{
 
         TextView name,energy;
-        ImageView imgfood;
+        TextView disease;
+        ImageView imgfood,imgno1;
         public  RecyclerViewHolder(View view){
             super(view);
             name = (TextView)view.findViewById(R.id.comment);
             energy = (TextView)view.findViewById(R.id.date);
             imgfood = (ImageView)view.findViewById(R.id.menufood);
+            disease = (TextView)view.findViewById(R.id.dis_food1);
 
         }
     }
