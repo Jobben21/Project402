@@ -58,6 +58,12 @@
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="0dp"></android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/nomenu"
+            android:layout_width="332dp"
+            android:layout_height="178dp"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

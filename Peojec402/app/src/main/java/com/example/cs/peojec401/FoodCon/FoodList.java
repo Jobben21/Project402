@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class FoodList  {
 
-    private  String name,method,ingred;
+    private  String name,method,ingred,food_di;
     private  String food_img,foodtype,typeingred;
     private  int energy,fat,carbo,protein,sugar;
     public static   int m=0;
@@ -19,7 +19,9 @@ public class FoodList  {
     public static   int m3=0;
 
 
-    public FoodList(String name, String img, int energy,int fat,int carbo,int protein,int sugar,String method,String ingred,String typeingred,String foodtype){
+
+
+    public FoodList(String name, String img, int energy, int fat, int carbo, int protein, int sugar, String method, String ingred, String typeingred, String foodtype, String food_di){
 
         this.setName(name);
         this.setFoodpic(img);
@@ -30,12 +32,18 @@ public class FoodList  {
         this.setSugar(sugar);
         this.setMethod(method);
         this.setIngred(ingred);
-
+        this.setFood_di(food_di);
         this.setTypeingred(typeingred);
         this.setFoodtype(foodtype);
 
     }
+    public String getFood_di() {
+        return food_di;
+    }
 
+    public void setFood_di(String food_di) {
+        this.food_di = food_di;
+    }
     public String getFoodtype() {
         return foodtype;
     }
@@ -43,18 +51,6 @@ public class FoodList  {
     public void setFoodtype(String foodtype) {
 
 
-            if(foodtype.equals("อาหารจานหลัก")){
-                m++;
-
-            }else if(foodtype.equals("อาหารจานเดียว")){
-                m1++;
-
-            }else if(foodtype.equals("อาหารว่าง")){
-                m2++;
-
-            }else if(foodtype.equals("ของหวาน")){
-                m3++;
-            }
 
 
         this.foodtype = foodtype;

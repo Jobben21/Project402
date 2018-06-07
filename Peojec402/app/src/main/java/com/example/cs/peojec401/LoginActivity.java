@@ -142,6 +142,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
                 }
+                if(e_pass.getText().length()==0){
+
+
+
+                    e_pass.setError("กรอกสข้อมูส่วนสูง");
+
+                }
                  if(e_height.getText().length()==0){
 
 
@@ -158,7 +165,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
                     e_age.setError("กรุณากรอกอายุ");
-                } if(e_name.getText().length()==0 && e_height.getText().length()==0 && e_weight.getText().length()==0
+                } if(e_name.getText().length()==0 &&e_pass.getText().length()==0 &&e_height.getText().length()==0 && e_weight.getText().length()==0
                         && e_age.getText().length()==0){
 
                     new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
@@ -167,6 +174,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             .setConfirmText("ตกลง")
                             .show();
                     e_name.setError("กรุณากรอกชื่อ");
+                    e_pass.setError("กรุณากรอกรหัสผู้ใช้");
                     e_weight.setError("กรุณากรอกน้ำหนัก");
                     e_height.setError("กรุณากรอกส่วนสูง");
                     e_age.setError("กรุณากรอกอายุ");
@@ -175,12 +183,32 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
 
                 //attemptLogin();
-                if (e_name.getText().length()!=0 && e_height.getText().length()!=0 && e_weight.getText().length()!=0
+                if (e_name.getText().length()!=0 && e_pass.getText().length()!=0 && e_height.getText().length()!=0 && e_weight.getText().length()!=0
                         && e_age.getText().length()!=0) {
                     SaveData();
+
                     if(!StatusId.equals("2")) {
-                        Intent intent = new Intent(LoginActivity.this, Register_LoginActivity.class);
-                        startActivity(intent);
+
+                        new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.NORMAL_TYPE)
+                                .setTitleText("ลงทะเบียน").setContentText("ยืนยันการลงทะเบียนหรือไม่").setConfirmText("ใช่")
+                                .setCancelText("ไม่")
+                                .showCancelButton(true).setCancelClickListener(new SweetAlertDialog.OnSweetClickListener(){
+
+                            @Override
+                            public  void onClick(SweetAlertDialog sweetAlertDialog){
+
+                                    sweetAlertDialog.cancel();
+                            }
+                                }).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+
+                            @Override
+                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                Intent intent = new Intent(LoginActivity.this, Register_LoginActivity.class);
+                                startActivity(intent);
+                            }
+                        }).show();
+
+
                     }else{
 
                         new SweetAlertDialog(LoginActivity.this,SweetAlertDialog.WARNING_TYPE)
@@ -191,9 +219,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     }
 
 
-                }
+            }
 
             }
+
         });
 
 //        mLoginFormView = findViewById(R.id.login_form);
@@ -229,7 +258,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-        String url = "http://172.25.74.91/android/addData.php?status=0";
+        String url = "http://172.20.10.2/android/addData.php?status=0";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 

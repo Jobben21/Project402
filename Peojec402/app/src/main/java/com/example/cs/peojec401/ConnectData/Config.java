@@ -6,7 +6,7 @@ package com.example.cs.peojec401.ConnectData;
 
 public class Config {
 
-    public static final String DATA_URL = "http://172.25.74.91/android/login.php?status=0";
+    public static final String DATA_URL = "http://172.20.10.2/android/login.php?status=0";
 
     //Tags used in the JSON String
     public static final String NAME= "name";

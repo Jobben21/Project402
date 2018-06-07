@@ -630,14 +630,34 @@
 
                         </LinearLayout>
 
-                        <Button
-                            android:text="เมนูหลัก"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/bloodprofile"
-                            android:background="@drawable/mybutton"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="20dp" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <Button
+                                android:id="@+id/bloodprofile"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/mybutton"
+                                android:text="เมนูหลัก" />
+
+                            <Button
+                                android:id="@+id/logout"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/mybutton"
+                                android:text="ออกจากระบบ" />
+
+
+
+                        </LinearLayout>
 
                     </LinearLayout>
 

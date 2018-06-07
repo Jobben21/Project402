@@ -46,6 +46,7 @@ import java.util.List;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static com.example.cs.peojec401.Register_LoginActivity.ageLogin;
+import static com.example.cs.peojec401.Register_LoginActivity.genderLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.heightLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.nameLogin;
@@ -56,7 +57,7 @@ public class EditActivity extends AppCompatActivity {
     Intent intent;
     private Button email_edit_button;
     private EditText e_age,e_height,e_weight,e_pass;
-
+    private  RadioButton man,women;
     private  TextView  e_name;
     private RadioGroup gender;
      public static    String name_edit="";
@@ -64,6 +65,7 @@ public class EditActivity extends AppCompatActivity {
      public  static String age_edit="";
     public  static String height_edit="";
     public  static String weight_edit="";
+    public  static String gender_edit="";
     String user_id = idLogin;
     String user_pass = passLogin;
     String user_age = ageLogin;
@@ -81,13 +83,14 @@ public class EditActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
          e_name = (TextView) findViewById(R.id.name_edit);
-        e_pass  = (EditText) findViewById(R.id.pass_edit);
+         e_pass  = (EditText) findViewById(R.id.pass_edit);
          e_age = (EditText)findViewById(R.id.Age_edit);
          e_height = (EditText)findViewById(R.id.Height_edit);
          e_weight = (EditText)findViewById(R.id.weight_edit);
          gender = (RadioGroup) findViewById(R.id.radio_gender_edit);
 
-
+        man = (RadioButton)findViewById(R.id.m_gender);
+        women=(RadioButton)findViewById(R.id.w_gender);
 
         //  String gender = intent.getStringExtra("gender");
 
@@ -97,40 +100,88 @@ public class EditActivity extends AppCompatActivity {
             e_pass.setText(passLogin);
             e_height.setText(heightLogin);
             e_weight.setText(weightLogin);
+
+           if(genderLogin.equals("ชาย")){
+               man.setChecked(true);
+           }else{
+               women.setChecked(true);
+           }
         }else if(seti ==1){
             e_name.setText(nameLogin);
             e_pass.setText(pass_edit);
             e_age.setText(age_edit);
             e_height.setText(height_edit);
             e_weight.setText(weight_edit);
+            if(gender_edit.equals("ชาย")){
+                man.setChecked(true);
+            }else{
+                women.setChecked(true);
+            }
         }
         email_edit_button = (Button)findViewById(R.id. email_edit_button);
         email_edit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                try {
-//                    editProfile();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
+                if(e_pass.getText().length()==0){
 
+
+
+                    e_pass.setError("กรอกสข้อมูส่วนสูง");
+
+                }
+
+                if(e_height.getText().length()==0){
+
+
+
+                    e_height.setError("กรอกสข้อมูส่วนสูง");
+
+                }
+                if(e_weight.getText().length()==0){
+
+
+                    e_weight.setError("กรอกข้อมูลน้ำหนัก");
+                }
+                if(e_age.getText().length()==0){
+
+
+                    e_age.setError("กรุณากรอกอายุ");
+                } if(e_pass.getText().length()==0 || e_height.getText().length()==0 || e_weight.getText().length()==0
+                        || e_age.getText().length()==0){
+
+                    new SweetAlertDialog(EditActivity.this,SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("แก้ไขข้อมูลส่วนตัว")
+                            .setContentText("กรุณากรอกข้อมูลให้ครบถ้วน")
+                            .setConfirmText("ตกลง")
+                            .show();
+                    e_pass.setError("กรุณากรอกรหัสผู้ใช้");
+                    e_weight.setError("กรุณากรอกน้ำหนัก");
+                    e_height.setError("กรุณากรอกส่วนสูง");
+                    e_age.setError("กรุณากรอกอายุ");
+
+
+                }
+
+
+
+
+                if (e_name.getText().length()!=0 && e_pass.getText().length()!=0 && e_height.getText().length()!=0 && e_weight.getText().length()!=0
+                        && e_age.getText().length()!=0) {
                     SaveData();
+                    seti = 1;
+                    new SweetAlertDialog(EditActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("เเก้ไขข้อมูลส่วนตัว")
+                            .setConfirmText("ใช่").setCancelText("ไม่")
+                            .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                            Intent intent = new Intent(EditActivity.this, NavigationActivity.class);
 
+                            startActivity(intent);
 
-
-                seti=1;
-                new SweetAlertDialog(EditActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("เเก้ไขข้อมูลส่วนตัว")
-                        .setConfirmText("ใช่").setCancelText("ไม่")
-                        .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                    @Override
-                    public void onClick(SweetAlertDialog sweetAlertDialog){
-                        Intent intent = new Intent(EditActivity.this,NavigationActivity.class);
-
-                        startActivity(intent);
-
-                    }
-                }).show();
+                        }
+                    }).show();
+                }
             }
         });
 
@@ -196,8 +247,8 @@ public class EditActivity extends AppCompatActivity {
 //
 //        }
 
-        Toast.makeText(this,user_id,Toast.LENGTH_SHORT).show();
-        String url = "http://172.25.74.91/android/edit_user.php";
+
+        String url = "http://172.20.10.2/android/edit_user.php";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
         para.add(new BasicNameValuePair("userid",user_id));
@@ -205,7 +256,7 @@ public class EditActivity extends AppCompatActivity {
         para.add(new BasicNameValuePair("age",e_age.getText().toString()));
         para.add(new BasicNameValuePair("height",e_height.getText().toString()));
         para.add(new BasicNameValuePair("weight",e_weight.getText().toString()));
-
+        para.add(new BasicNameValuePair("gender",checkedLabel));
 
 
 
@@ -232,12 +283,12 @@ public class EditActivity extends AppCompatActivity {
 
         }else
         {
-            Toast.makeText(EditActivity.this,user_pass,
-                    Toast.LENGTH_SHORT).show();
+
             pass_edit=e_pass.getText().toString();
             age_edit=e_age.getText().toString();
             height_edit=e_height.getText().toString();
             weight_edit=e_weight.getText().toString();
+            gender_edit=checkedLabel;
             e_name.setText("");
             e_age.setText("");
             e_height.setText("");
