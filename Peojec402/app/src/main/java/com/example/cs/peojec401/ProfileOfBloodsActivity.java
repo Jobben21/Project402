@@ -1,33 +1,25 @@
 package com.example.cs.peojec401;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.cs.peojec401.ConnectData.Config_bt;
-import com.example.cs.peojec401.FoodCon.FoodList;
+import com.example.cs.peojec401.Blood.Blood_Sugar;
+import com.example.cs.peojec401.Blood.Blood_choles;
+import com.example.cs.peojec401.Blood.Blood_hdl;
+import com.example.cs.peojec401.Blood.Blood_ldl;
+import com.example.cs.peojec401.Blood.Blood_potssium;
+import com.example.cs.peojec401.Blood.Blood_sodium;
+import com.example.cs.peojec401.Blood.Blood_tri;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+<<<<<<< HEAD
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -50,12 +42,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
+=======
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
 
 public class ProfileOfBloodsActivity extends AppCompatActivity {
 
     private TextView p_sugar,p_choles,p_hdl,p_ldl,p_potas,p_tri,p_so;
     private TextView p_sugar2,p_choles2,p_hdl2,p_ldl2,p_potas2,p_tri2,p_so2;
     private JSONArray result;
+    private CardView click_sugar,click_sodium,click_potassium,click_chol,click_ldl,click_hdl,click_tri;
 
 
 
@@ -96,12 +91,78 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
 
 
 
-            addID();
+          //  addID();
 
+        click_sugar = (CardView)findViewById(R.id.click_sugar);
+        click_sugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_Sugar.class);
+                startActivity(intent);
+            }
+        });
+
+        click_sodium = (CardView)findViewById(R.id.click_sodium);
+        click_sodium .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_sodium.class);
+                startActivity(intent);
+            }
+        });
+        click_potassium = (CardView)findViewById(R.id.click_potass);
+        click_potassium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_potssium.class);
+                startActivity(intent);
+            }
+        });
+        click_chol = (CardView)findViewById(R.id. click_choles);
+        click_chol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_choles.class);
+                startActivity(intent);
+            }
+        });
+        click_ldl = (CardView)findViewById(R.id. click_ldl);
+        click_ldl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_ldl.class);
+                startActivity(intent);
+            }
+        });
+        click_hdl = (CardView)findViewById(R.id.click_hdl);
+        click_hdl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_hdl.class);
+                startActivity(intent);
+            }
+        });
+        click_tri = (CardView)findViewById(R.id.click_tri);
+        click_tri.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ProfileOfBloodsActivity.this,Blood_tri.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
-    private String addID() {
+ /*   private String addID() {
 
         String login_url = "http://172.25.74.91/android/get_bt.php?status=0";
 
@@ -241,9 +302,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
     }
 
 
-
-
-    private void getData(){
+   /* private void getData(){
         //Creating a string request
 
         StringRequest stringRequest = new StringRequest(Config_bt.DATA_URL,
@@ -330,9 +389,9 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
 
         //Adding request to the queue
         requestQueue.add(stringRequest);
-    }
+    }*/
 
-    public String getHttpPost(String url,List<NameValuePair> params) {
+  /*  public String getHttpPost(String url,List<NameValuePair> params) {
 
         StringBuilder str = new StringBuilder();
 
@@ -387,11 +446,11 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
 
         return str.toString();
 
-    }
+    }*/
 
 
     //Method to get student name of a particular position
-    private String getSugar(int position){
+  /*  private String getSugar(int position){
         String sugar="";
         try {
             //Getting object of given index
@@ -443,7 +502,6 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
         //Returning the name
         return ldl;
     }
-
     private String getPotassium(int position){
         String potas="";
         try {
@@ -458,7 +516,6 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
         //Returning the name
         return potas;
     }
-
     private String getTri(int position){
         String tri="";
         try {
@@ -473,7 +530,6 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
         //Returning the name
         return tri;
     }
-
     private String getSodium(int position){
         String sod="";
         try {
@@ -487,7 +543,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
         }
         //Returning the name
         return sod;
-    }
+    }*/
 
 
     @Override

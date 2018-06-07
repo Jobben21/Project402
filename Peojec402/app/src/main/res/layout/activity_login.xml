@@ -87,7 +87,7 @@
                                     android:weightSum="1">
 
                                     <LinearLayout
-                                        android:layout_width="266dp"
+                                        android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical">
 
@@ -110,6 +110,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
+<<<<<<< HEAD
 
                                                 <EditText
                                                     android:id="@+id/e_name"
@@ -118,14 +119,38 @@
                                                     android:hint="ชื่อผู้ใช้งาน (สมชาย)"
                                                     android:textSize="16sp" />
 
+=======
+                                        <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <android.support.design.widget.TextInputLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <EditText
+                                                    android:id="@+id/e_name"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:hint="ชื่อผู้ใช้งาน (สมชาย)"
+                                                    android:textSize="16sp" />
+
+                                            </android.support.design.widget.TextInputLayout>
+                                        </LinearLayout>
+
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                             </android.support.design.widget.TextInputLayout>
 
                                         </LinearLayout>
 
                                         <LinearLayout
-                                            android:layout_width="305dp"
+                                            android:layout_width="match_parent"
                                             android:layout_height="match_parent"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                             android:orientation="horizontal"
                                             android:weightSum="1">
 
@@ -140,6 +165,7 @@
 
                                             <android.support.design.widget.TextInputLayout
 
+<<<<<<< HEAD
                                                 android:layout_width="163dp"
                                                 android:layout_height="wrap_content">
 
@@ -149,6 +175,11 @@
                                                 <!--android:layout_height="37dp"-->
                                                 <!--android:layout_width="164dp"-->
                                                 <!--android:layout_height="match_parent"/>-->
+=======
+                                                android:layout_width="207dp"
+                                                android:layout_height="wrap_content">
+
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
 
                                                 <EditText
                                                     android:id="@+id/e_pass"
@@ -163,6 +194,7 @@
 
                                             <TextView
                                                 android:id="@+id/eyeview1"
+<<<<<<< HEAD
                                                 android:layout_width="30dp"
                                                 android:layout_height="30dp"
                                                 android:layout_marginBottom="10dp"
@@ -175,6 +207,21 @@
                                                 android:textAlignment="viewStart" />
 
 
+=======
+                                                android:layout_width="25dp"
+                                                android:layout_height="26dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:background="@drawable/eye"
+                                                android:layout_marginTop="10dp" /><![CDATA[
+
+
+
+                                            android:textAlignment="viewStart" />
+
+
+
+                                        ]]>
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                         </LinearLayout>
 
                                     </LinearLayout>

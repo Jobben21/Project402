@@ -49,10 +49,25 @@ public class NavigationActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+  }
+// else {
+//           // super.onBackPressed();
+//
+//            new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
+//                    .setConfirmText("ใช่").setCancelText("ไม่")
+//                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                @Override
+//                public void onClick(SweetAlertDialog sweetAlertDialog) {
+//
+//                    finish();
+//                }
+//
+//
+//            }).show();}
+
+
         }
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -116,6 +131,7 @@ public class NavigationActivity extends AppCompatActivity
             display(id);
             return true;
         }
+
 
 
 

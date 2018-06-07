@@ -117,7 +117,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".Btgraph"></activity>
+=======
+        <activity
+            android:name=".Blood.Blood_Sugar"
+            android:label="@string/title_activity_blood__sugar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_sodium"
+            android:label="@string/title_activity_blood_sodium"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_potssium"
+            android:label="@string/title_activity_blood_potssium"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_choles"
+            android:label="@string/title_activity_blood_choles"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_ldl"
+            android:label="@string/title_activity_blood_ldl"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_hdl"
+            android:label="@string/title_activity_blood_hdl"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood.Blood_tri"
+            android:label="@string/title_activity_blood_tri"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
     </application>
 
 </manifest>

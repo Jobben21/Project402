@@ -6,7 +6,7 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.example.cs.peojec401"
-        minSdkVersion 17
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -46,7 +46,8 @@ dependencies {
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:customtabs:25.1.1'
-
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.1'
+    compile 'com.github.florent37:android-slidr:1.0.3'
     testCompile 'junit:junit:4.12'
 
 }

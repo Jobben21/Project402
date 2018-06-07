@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ public class AfterBldT extends AppCompatActivity {
     final Context context = this;
     private Button next ,home;
     private ProgressBar progressBar,progressBar2,progressBar3,progressBar4,progressBar5,progressBar6,progressBar7;
-
+    private SeekBar seekBarex;
     private TextView INFO2,INFO3,INFO4,INFO5,INFO6,INFO7,INFO8;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
@@ -151,7 +152,7 @@ public class AfterBldT extends AppCompatActivity {
         progressBar6 = (ProgressBar)findViewById(R.id.seekBar6);
         progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
 
-
+        seekBarex = (SeekBar)findViewById(R.id.seekBar8);
 
         INFO2 = (TextView)findViewById(R.id.INFO2);
         INFO3 = (TextView)findViewById(R.id.INFO3);
@@ -209,6 +210,17 @@ public class AfterBldT extends AppCompatActivity {
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
 
+<<<<<<< HEAD
+        String Resultone = recommendFood(message1);
+        String Resulttwo = recommendFood2(message2);
+        String Resultthree = recommendFood3(message3);
+        String Resultfour =  recommendFood4(message4);
+        String Resultfive =  recommendFood5(message5);
+        String Resultsix =  recommendFood6(message6);
+        String Resultseven =  recommendFood7(message7);
+        String Resulteight =  check;
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
 
          Resultone = recommendFood(message1);
         Resulttwo = recommendFood2(message2);
@@ -446,15 +458,17 @@ public class AfterBldT extends AppCompatActivity {
         seekBarvalue6 = (TextView)findViewById(R.id.seekbarvalue6);
         seekBarvalue7 = (TextView)findViewById(R.id.seekbarvalue7);
 
-
-        progressBar.setMax(500);
-        progressBar2.setMax(200);
+        seekBarex.setMax(150);
+        progressBar.setMax(150);
+        progressBar2.setMax(250);
         progressBar3.setMax(10);
         progressBar4.setMax(300);
         progressBar5.setMax(300);
         progressBar6.setMax(100);
         progressBar7.setMax(700);
 
+        seekBarex.setProgress((int) sugar_ab1);
+        seekBarex.setEnabled(false);
         progressBar.setProgress((int) sugar_ab1);
         progressBar2.setProgress((int) sodium_ab1);
         progressBar3.setProgress((int) potass_ab1);
@@ -479,6 +493,11 @@ public class AfterBldT extends AppCompatActivity {
     public String recommendFood(String message1){
 
     String result = "";
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
+        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
+        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
@@ -513,12 +532,25 @@ public class AfterBldT extends AppCompatActivity {
          blood_normal.setBackgroundResource(R.color.glass_color);
          bloodt_normal.setBackgroundResource(R.color.glass_color);
 
+<<<<<<< HEAD
+         progressBar.setProgressDrawable( drawable );
+=======
          progressBar.setProgressDrawable(drawable);
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
 
      }
         return result;
     }
     public String recommendFood2(String message2){
+<<<<<<< HEAD
+
+
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
+        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
+        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
 
         String result2 = "";
         Resources res = getResources();
@@ -562,6 +594,15 @@ public class AfterBldT extends AppCompatActivity {
         return result2;
     }
     public String recommendFood3(String message3){
+<<<<<<< HEAD
+
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
+        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
+        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
 
         String result3 = "";
         Resources res = getResources();
@@ -603,11 +644,20 @@ public class AfterBldT extends AppCompatActivity {
         return result3;
     }
     public String recommendFood4(String message4){
+<<<<<<< HEAD
+
+=======
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         String result4 = "";
+
+        Resources res = getResources();
+        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
+        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
+        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
 
         if(message4.equals("cancell2")){
 
@@ -657,10 +707,18 @@ public class AfterBldT extends AppCompatActivity {
         return result4;
     }
     public String recommendFood5(String message5){
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         String result5 = "";
 
         if(message5.equals("cancell3")){
@@ -671,7 +729,11 @@ public class AfterBldT extends AppCompatActivity {
             ldl_abnormal2.setBackgroundResource(R.color.glass_color2);
             ldlt_abnormal2.setBackgroundResource(R.color.glass_color2);
 
+<<<<<<< HEAD
+            progressBar5.setProgressDrawable(drawable2);
+=======
             progressBar5.setProgressDrawable(drawable3);
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
       }
 
         else if(message5.equals("cancell")) {
@@ -715,6 +777,10 @@ public class AfterBldT extends AppCompatActivity {
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         String result6 = "";
 
         if(message6.equals("cancell2")){
@@ -755,10 +821,18 @@ public class AfterBldT extends AppCompatActivity {
         return result6;
     }
     public String recommendFood7(String message7){
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
         String result7 = "";
 
         if(message7.equals("cancell2")){

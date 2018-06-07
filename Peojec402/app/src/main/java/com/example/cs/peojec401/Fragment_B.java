@@ -1,5 +1,5 @@
 package com.example.cs.peojec401;
-
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 
 import org.apache.http.HttpEntity;
@@ -31,6 +33,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -48,14 +51,18 @@ public class Fragment_B extends Fragment {
 
 
     private Button button_b;
+    private ImageButton date_blood;
+
     private AfterBldT afterBldT;
-    private EditText sugar_t,sodium_t,potassium_t,choles_t,ldl_t,hdl_t,tri_t;
+    private EditText sugar_t,sodium_t,potassium_t,choles_t,ldl_t,hdl_t,tri_t,date_B;
     private RadioButton hospital1, hospital2;
     private ArrayList<EditText> BloodList;
     private  String Sugar,Sodium,Potassium,Choles,Hdl,Ldl,Tri,hospital;
     private  float sugar,sodium,potassium,choles,hdl,ldl,tri;
-    private boolean checking = true;
+    private  String sugar2,sodium2,potassium2,choles2,hdl2,ldl2,tri2;
 
+    private boolean checking = true;
+    private int mYear,mMonth,mDay;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,9 +77,67 @@ public class Fragment_B extends Fragment {
         hdl_t = (EditText) view.findViewById(R.id.hdl_t);
         tri_t = (EditText) view.findViewById(R.id.tri_t);
 
+
         hospital1 = (RadioButton) view.findViewById(R.id.radioButton3);
                 hospital2 = (RadioButton) view.findViewById(R.id.radioButton4);
 
+
+        date_B = (EditText) view.findViewById(R.id.date_of_blood);
+        date_blood = (ImageButton) view.findViewById(R.id.date_blood);
+
+
+        date_blood.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+
+              final Calendar c = Calendar.getInstance();
+               mYear = c.get(Calendar.YEAR); // current year
+               mMonth = c.get(Calendar.MONTH); // current month
+               mDay = c.get(Calendar.DAY_OF_MONTH); // current day
+              // date picker dialog
+              DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                      new DatePickerDialog.OnDateSetListener() {
+
+                          @Override
+                          public void onDateSet(DatePicker view, int year,
+                                                int monthOfYear, int dayOfMonth) {
+                              // set day of month , month and year value in the edit text
+                              date_B.setText(dayOfMonth + "/"
+                                      + (monthOfYear + 1) + "/" + year);
+
+                          }
+                      }, mYear, mMonth, mDay);
+              datePickerDialog.show();
+
+
+          }
+      });
+        date_B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR); // current year
+                mMonth = c.get(Calendar.MONTH); // current month
+                mDay = c.get(Calendar.DAY_OF_MONTH); // current day
+                // date picker dialog
+                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+                        new DatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
+                                // set day of month , month and year value in the edit text
+                                date_B.setText(dayOfMonth + "/"
+                                        + (monthOfYear + 1) + "/" + year);
+
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
+
+
+            }
+        });
 
         if (Build.VERSION.SDK_INT > 9) {
 
@@ -96,7 +161,6 @@ public class Fragment_B extends Fragment {
         });
         return view;
     }
-
 
             public boolean SaveData() {
 
@@ -185,62 +249,146 @@ public class Fragment_B extends Fragment {
                 if(sugar_t.getText().length() == 0) {
                      sugar_t.setText("0");
                      sugar = Float.parseFloat(sugar_t.getText().toString());
+                    if(sugar == 0){
+
+                        sugar2 = "-";
+                    }
                      sugarInBlood(sugar,hospital1);
                      Sugar = sugarInBlood(sugar,hospital1);
+
                 }else{
                     sugar = Float.parseFloat(sugar_t.getText().toString());
+                    if(sugar == 0){
+
+                        sugar2 = "-";
+                    }
+                    else{
+                        sugar2 = String.valueOf(sugar);
+                    }
                     Sugar = sugarInBlood(sugar,hospital1);
                 }
                 if(sodium_t.getText().length() == 0) {
                     sodium_t.setText("0");
                     sodium = Float.parseFloat(sodium_t.getText().toString());
+                    if( sodium == 0){
+
+                        sodium2 = "-";
+                    }
                     Sodium = sodiumInBlood(sodium,hospital1);
                 }else{
                     sodium = Float.parseFloat(sodium_t.getText().toString());
+                    if( sodium == 0){
+
+                        sodium2 = "-";
+                    }
+                    else{
+                        sodium2 = String.valueOf( sodium);
+                    }
                     Sodium = sodiumInBlood(sodium,hospital1);
                 }
                 if( potassium_t.getText().length() == 0) {
                     potassium_t.setText("0");
                     potassium = Float.parseFloat(potassium_t.getText().toString());
+                    if(  potassium == 0){
+
+                        potassium2 = "-";
+                    }
                     Potassium = potassiumInBlood(potassium,hospital1);
                 }else{
                     potassium = Float.parseFloat(potassium_t.getText().toString());
+                    if(  potassium == 0){
+
+                        potassium2 = "-";
+                    }
+                    else{
+                        potassium2 = String.valueOf( potassium);
+                    }
                     Potassium = potassiumInBlood(potassium,hospital1);
                 }
                 if( choles_t.getText().length() == 0) {
                     choles_t.setText("0");
                     choles = Float.parseFloat(choles_t.getText().toString());
+                    if( choles == 0){
+
+                        choles2 = "-";
+                    }
                     Choles = cholesInBlood(choles,hospital1);
                 }else{
                     choles = Float.parseFloat(choles_t.getText().toString());
+                    if( choles == 0){
+
+                        choles2 = "-";
+                    }
+                    else{
+                        choles2 = String.valueOf(choles);
+                    }
                     Choles = cholesInBlood(choles,hospital1);
+                }
+
+                if( ldl_t.getText().length() == 0) {
+                    ldl_t.setText("0");
+                    ldl = Float.parseFloat(ldl_t.getText().toString());
+                    if( ldl == 0){
+
+                        ldl2 = "-";
+                    }
+                    Hdl = hdlInBlood(hdl,hospital1);
+                    Ldl = ldlInBlood(ldl,hospital1);
+                }
+                else{
+                    ldl = Float.parseFloat(ldl_t.getText().toString());
+                    if( ldl == 0){
+
+                        ldl2 = "-";
+                    }
+                    else{
+                        ldl2 = String.valueOf( ldl);
+                    }
+                    Ldl = ldlInBlood(ldl,hospital1);
                 }
                 if( hdl_t.getText().length() == 0) {
                     hdl_t.setText("0");
                     hdl = Float.parseFloat(hdl_t.getText().toString());
+                    if(  hdl == 0){
+
+                        hdl2 = "-";
+                    }
                     Hdl = hdlInBlood(hdl,hospital1);
                 }
                 else{
                     hdl = Float.parseFloat(hdl_t.getText().toString());
+
+                    if(  hdl == 0){
+
+                        hdl2 = "-";
+                    }
+                    else{
+                        hdl2 = String.valueOf(hdl);
+                    }
+
                     Hdl = hdlInBlood(hdl,hospital1);
-                }
-                if( ldl_t.getText().length() == 0) {
-                    ldl_t.setText("0");
-                    ldl = Float.parseFloat(ldl_t.getText().toString());
-                    Ldl = ldlInBlood(ldl,hospital1);
-                }
-                else{
-                    ldl = Float.parseFloat(ldl_t.getText().toString());
-                    Ldl = ldlInBlood(ldl,hospital1);
                 }
                 if( tri_t.getText().length() == 0) {
                     tri_t.setText("0");
                     tri = Float.parseFloat(tri_t.getText().toString());
+                    if( tri == 0){
+
+                        tri2 = "-";
+                    }
                     Tri = triInBlood(tri,hospital1);
                 }else{
                     tri = Float.parseFloat(tri_t.getText().toString());
+                    if( tri == 0){
+
+                        tri2 = "-";
+                    }
+                    else{
+                        tri2 = String.valueOf(tri);
+                    }
                     Tri = triInBlood(tri,hospital1);
                 }
+
+
 
                 int i = 0;
 
@@ -270,7 +418,7 @@ public class Fragment_B extends Fragment {
                             .setConfirmText("ตกลง")
                             .show();
                 }
-                else if (potassium_t.getText().length() >= 3 || hdl_t.getText().length() > 3){
+                else if (potassium_t.getText().length() > 3 || hdl_t.getText().length() > 3){
 
                     new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
                             .setTitleText("อ่านผลตรวจเลือด")
@@ -278,11 +426,80 @@ public class Fragment_B extends Fragment {
                             .setConfirmText("ตกลง")
                             .show();
                 }
+                else  if(sugar < 0 || sugar >=500 ) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    sugar_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                }
+                else  if(sodium < 0 || sodium >=300) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    sodium_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                }
+                else  if(potassium < 0 || potassium >=10) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    potassium_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                }
+                else  if(choles < 0 || choles >=300) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    choles_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                }  else  if(ldl < 0 || ldl >=400) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    ldl_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                } else  if(hdl <  0 || hdl >=300) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    hdl_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                } else  if(tri < 0 || tri >= 700) {
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("อ่านผลตรวจเลือด")
+                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                            .setConfirmText("ตกลง")
+                            .show();
+
+                    tri_t.setError("กรอกข้อมูลให้ถูกต้อง");
+                }
 
 
 
 
 
+<<<<<<< HEAD
+               // if (SaveData()) {
+                  else {
+                   // inputBloodTest();
+                    Blood();
+                }
+                //}
+=======
+>>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
 
 //                if (SaveData()) {
 //                    inputBloodTest();
@@ -292,14 +509,14 @@ public class Fragment_B extends Fragment {
 
             public void Blood() {
 
-                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
-                                    .setContentText("น้ำตาล                  "+sugar+" mg/dl"+"\n"+
-                                                    "โซเดียม               "+sodium+" mmol/dl"+"\n"+
-                                                    "โพเเทสเซียม        "+potassium+" mg/dl"+"\n"+
-                                                    "คอลเลสเตอรอล   "+choles+" mg/dl"+"\n"+
-                                                    "เเอลดีเเอล            "+ldl+" mg/dl"+"\n"+
-                                                    "เอชดีเเอล             "+hdl+" mg/dl"+"\n"+
-                                                    "ไตรกลีเซอร์ไรด์     "+tri+" mg/dl")
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("อ่านผลตรวจเลือด")
+                                    .setContentText("น้ำตาล                  "+sugar2+" mg/dl"+"\n"+
+                                                    "โซเดียม               "+sodium2+" mmol/dl"+"\n"+
+                                                    "โพเเทสเซียม        "+potassium2+" mg/dl"+"\n"+
+                                                    "คอลเลสเตอรอล   "+choles2+" mg/dl"+"\n"+
+                                                    "เเอลดีเเอล            "+ldl2+" mg/dl"+"\n"+
+                                                    "เอชดีเเอล             "+hdl2+" mg/dl"+"\n"+
+                                                    "ไตรกลีเซอร์ไรด์     "+tri2+" mg/dl")
                                     .setConfirmText("ใช่").setCancelText("ไม่")
                                     .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                 @Override
@@ -336,6 +553,8 @@ public class Fragment_B extends Fragment {
 
                         }
 
+
+
             private String sugarInBlood(float sugar,RadioButton hospital1) {
 
                 String message1 = "";
@@ -345,7 +564,12 @@ public class Fragment_B extends Fragment {
                         message1 = "ok";
                     } else if (sugar == 0) {
                         message1 = "minus";
-                    } else if (sugar < 70) {
+                    }
+                    else if(sugar < 0) {
+                        message1 = "minus";
+
+
+                    }else if (sugar < 70) {
                         message1 = "cancell2";
                     }
                          else if (sugar > 110 && sugar <500) {
@@ -523,7 +747,7 @@ public class Fragment_B extends Fragment {
                         message6 = "ok";
                     } else if (hdl == 0) {
                         message6 = "cancell";
-                    } else if (hdl < 35) {
+                    } else if (hdl < 39) {
                         message6 = "cancell2";
                     } else if (hdl > 60) {
                         message6 = "cancell";
@@ -536,7 +760,7 @@ public class Fragment_B extends Fragment {
                         message6 = "ok";
                     } else if (hdl == 0) {
                         message6 = "minus";
-                    } else if (hdl < 35) {
+                    } else if (hdl < 39) {
                         message6 = "cancell2";
                     } else if (hdl > 60) {
                         message6 = "cancell";
@@ -604,4 +828,23 @@ public class Fragment_B extends Fragment {
             }
 
 
-        }
+
+    public void onBackPressed() {
+        // กดปุ่ม Back แล้วจะให้โปรแกรมทำอะไรให้ใส่ในนี้
+
+        new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("แปรผลตรวจเลือด")
+                .setConfirmText("ใช่").setCancelText("ไม่")
+                .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+
+                Intent intent = new Intent(getActivity().getBaseContext(),NavigationActivity.class);
+                startActivity(intent);
+
+            }
+
+
+    }).show();}
+
+    }
+
