@@ -118,16 +118,12 @@ public class AfterCalCulat extends AppCompatActivity{
         imageViewFood =(ImageView)findViewById(R.id.imageViewFood);
 
         showImage(message2);
-<<<<<<< HEAD
+
 
       //  SaveData();
 
-//        SaveData();
 
-=======
-      //  SaveData();
 
->>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
     }
 
     public void popUp(){

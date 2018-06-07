@@ -113,8 +113,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Btgraph"></activity>
-
         <activity
             android:name=".Blood.Blood_Sugar"
             android:label="@string/title_activity_blood__sugar"

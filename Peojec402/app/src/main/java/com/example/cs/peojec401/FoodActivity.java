@@ -15,10 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
 
 public class FoodActivity extends AppCompatActivity {
 
