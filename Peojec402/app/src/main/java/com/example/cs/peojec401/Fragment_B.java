@@ -491,15 +491,14 @@ public class Fragment_B extends Fragment {
 
 
 
-<<<<<<< HEAD
+
                // if (SaveData()) {
                   else {
                    // inputBloodTest();
                     Blood();
                 }
                 //}
-=======
->>>>>>> a2a415d6238d5efe0655aaf19b19f3c09c0ef391
+
 
 //                if (SaveData()) {
 //                    inputBloodTest();
