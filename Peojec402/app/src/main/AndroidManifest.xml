@@ -117,6 +117,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".Btgraph"></activity>
+=======
         <activity
             android:name=".Blood.Blood_Sugar"
             android:label="@string/title_activity_blood__sugar"
@@ -145,6 +148,7 @@
             android:name=".Blood.Blood_tri"
             android:label="@string/title_activity_blood_tri"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
     </application>
 
 </manifest>

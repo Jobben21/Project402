@@ -19,6 +19,31 @@ import com.example.cs.peojec401.Blood.Blood_sodium;
 import com.example.cs.peojec401.Blood.Blood_tri;
 
 import org.json.JSONArray;
+<<<<<<< HEAD
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
+=======
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
 
 public class ProfileOfBloodsActivity extends AppCompatActivity {
 
@@ -26,6 +51,8 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
     private TextView p_sugar2,p_choles2,p_hdl2,p_ldl2,p_potas2,p_tri2,p_so2;
     private JSONArray result;
     private CardView click_sugar,click_sodium,click_potassium,click_chol,click_ldl,click_hdl,click_tri;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +164,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
 
  /*   private String addID() {
 
-        String login_url = "http://172.20.10.2/android/get_bt.php?status=0";
+        String login_url = "http://172.25.74.91/android/get_bt.php?status=0";
 
       JSONObject  j = null;
 
@@ -173,7 +200,7 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
                  j = new JSONObject(result);
                 this.result=j.getJSONArray("result");
 
-
+//            Toast.makeText(ProfileOfBloodsActivity.this,row1[0]+row1[1]+"",Toast.LENGTH_SHORT).show();
             if(this.result.length()==1){
                 p_sugar.setText(getSugar(0));
                 p_choles.setText(getCholes(0));
@@ -199,7 +226,47 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
                 p_potas2.setText(getPotassium(1));
                 p_tri2.setText(getTri(1));
                 p_so2.setText(getSodium(1));
-            }else if(this.result.length()>2){
+            }else if(this.result.length()==3)
+            {
+                p_sugar.setText(getSugar(0));
+                p_choles.setText(getCholes(0));
+                p_hdl.setText(getHdl(0));
+                p_ldl.setText(getLdl(0));
+                p_potas.setText(getPotassium(0));
+                p_tri.setText(getTri(0));
+                p_so.setText(getSodium(0));
+
+                p_sugar2.setText(getSugar(1));
+                p_choles2.setText(getCholes(1));
+                p_hdl2.setText(getHdl(1));
+                p_ldl2.setText(getLdl(1));
+                p_potas2.setText(getPotassium(1));
+                p_tri2.setText(getTri(1));
+                p_so2.setText(getSodium(1));
+
+                p_sugar2.setText(getSugar(2));
+                p_choles2.setText(getCholes(2));
+                p_hdl2.setText(getHdl(2));
+                p_ldl2.setText(getLdl(2));
+                p_potas2.setText(getPotassium(2));
+                p_tri2.setText(getTri(2));
+                p_so2.setText(getSodium(2));
+            }
+            else if(this.result.length()==4)
+            {
+                p_sugar.setText(getSugar(0));
+
+
+                p_sugar2.setText(getSugar(1));
+
+
+                p_sugar2.setText(getSugar(2));
+
+
+                p_sugar2.setText(getSugar(3));
+
+            }
+            else if(this.result.length()>2){
 
                 p_sugar.setText(getSugar(this.result.length()-2));
                 p_choles.setText(getCholes(this.result.length()-2));

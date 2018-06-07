@@ -110,6 +110,16 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
+<<<<<<< HEAD
+
+                                                <EditText
+                                                    android:id="@+id/e_name"
+                                                    android:layout_width="165dp"
+                                                    android:layout_height="43dp"
+                                                    android:hint="ชื่อผู้ใช้งาน (สมชาย)"
+                                                    android:textSize="16sp" />
+
+=======
                                         <LinearLayout
                                             android:orientation="vertical"
                                             android:layout_width="match_parent"
@@ -129,6 +139,7 @@
                                             </android.support.design.widget.TextInputLayout>
                                         </LinearLayout>
 
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                             </android.support.design.widget.TextInputLayout>
 
                                         </LinearLayout>
@@ -136,6 +147,10 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                             android:orientation="horizontal"
                                             android:weightSum="1">
 
@@ -150,13 +165,25 @@
 
                                             <android.support.design.widget.TextInputLayout
 
+<<<<<<< HEAD
+                                                android:layout_width="163dp"
+                                                android:layout_height="wrap_content">
+
+                                                <!--<EditText-->
+                                                <!--android:id="@+id/e_pass"-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="37dp"-->
+                                                <!--android:layout_width="164dp"-->
+                                                <!--android:layout_height="match_parent"/>-->
+=======
                                                 android:layout_width="207dp"
                                                 android:layout_height="wrap_content">
 
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
 
                                                 <EditText
                                                     android:id="@+id/e_pass"
-                                                    android:layout_width="match_parent"
+                                                    android:layout_width="191dp"
                                                     android:layout_height="match_parent"
                                                     android:ems="10"
                                                     android:hint="รหัสผู้ใช้งาน"
@@ -167,6 +194,20 @@
 
                                             <TextView
                                                 android:id="@+id/eyeview1"
+<<<<<<< HEAD
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_marginEnd="10dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginStart="20dp"
+                                                android:layout_marginTop="20dp"
+                                                android:background="@drawable/eye"
+                                                android:textAlignment="viewStart" />
+
+
+=======
                                                 android:layout_width="25dp"
                                                 android:layout_height="26dp"
                                                 android:layout_marginBottom="10dp"
@@ -180,6 +221,7 @@
 
 
                                         ]]>
+>>>>>>> 58e5d35395ce29a9396ef45ce00aa5fa07a528c8
                                         </LinearLayout>
 
                                     </LinearLayout>
@@ -289,8 +331,8 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:layout_margin="6dp">
+                                            android:layout_margin="6dp"
+                                            android:orientation="horizontal">
 
                                             <android.support.design.widget.TextInputLayout
                                                 android:layout_width="match_parent"
@@ -377,18 +419,18 @@
                                                     android:id="@+id/w_gender"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
                                                     android:layout_weight="0.79"
                                                     android:checked="true"
-                                                    android:text="@string/man"
-                                                    android:layout_marginTop="3dp" />
+                                                    android:text="@string/man" />
 
                                                 <RadioButton
                                                     android:id="@+id/m_gender"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
                                                     android:layout_weight="2.04"
-                                                    android:text="@string/women"
-                                                    android:layout_marginTop="3dp" />
+                                                    android:text="@string/women" />
                                             </RadioGroup>
                                         </LinearLayout>
 
