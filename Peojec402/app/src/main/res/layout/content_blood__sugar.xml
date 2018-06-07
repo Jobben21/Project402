@@ -39,6 +39,7 @@
                         android:id="@+id/imageView3"
                         android:scaleType="fitCenter" />
 
+
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
@@ -76,7 +77,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="157dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp">
 
@@ -100,48 +101,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp">
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp">
-
-                                <TextView
-                                    android:text="1 ."
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView110"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:text="2 ."
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView109"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
-
-                                <TextView
-                                    android:text="3 ."
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView107"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
-
-                                <TextView
-                                    android:text="4."
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView106"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
-                            </LinearLayout>
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
@@ -161,28 +122,28 @@
                                     android:text="TextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView116"
+                                    android:id="@+id/date_sugar2"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="visible" />
 
                                 <TextView
                                     android:text="TextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView113"
+                                    android:id="@+id/date_sugar3"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="visible" />
 
                                 <TextView
                                     android:text="TextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView112"
+                                    android:id="@+id/date_sugar4"
                                     android:textSize="18sp"
-                                    android:layout_marginTop="5dp"
-                                    android:visibility="gone" />
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="visible" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -207,8 +168,7 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_weight="1">
+                            android:layout_marginTop="10dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
@@ -221,7 +181,6 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/data_sugar"
-                                    android:layout_weight="1"
                                     android:textAlignment="center"
                                     android:textSize="18sp" />
 
@@ -229,34 +188,69 @@
                                     android:text="TextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView156"
-                                    android:layout_weight="1"
+                                    android:id="@+id/data_sugar2"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:visibility="gone" />
+                                    android:visibility="visible"
+                                    android:layout_marginTop="10dp" />
 
                                 <TextView
                                     android:text="TextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView155"
-                                    android:layout_weight="1"
+                                    android:id="@+id/data_sugar3"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:visibility="gone" />
+                                    android:visibility="visible"
+                                    android:layout_marginTop="10dp" />
 
                                 <TextView
-                                    android:text="TextView"
+                                    android:text="5"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/textView153"
-                                    android:layout_weight="1"
+                                    android:id="@+id/data_sugar4"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:visibility="gone" />
+                                    android:visibility="visible"
+                                    android:layout_marginTop="10dp" />
                             </LinearLayout>
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="33dp"
+                            app:srcCompat="@drawable/down"
+                            android:id="@+id/imageView14"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/down"
+                            android:id="@+id/im_sugar2"
+                            android:layout_marginTop="5dp" />
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/up"
+                            android:id="@+id/im_sugar3"
+                            android:layout_marginTop="5dp" />
+
+                        <ImageView
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/down"
+                            android:id="@+id/im_sugar4"
+                            android:layout_width="35dp"
+                            android:layout_marginTop="5dp" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -286,14 +280,14 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
 
                         <TextView
                             android:text="ค่าเฉลี่ย เท่ากับ"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView161"
-                            android:layout_weight="1"
                             android:textAlignment="center"
                             android:textSize="18sp"
                             android:layout_marginTop="5dp" />
@@ -303,9 +297,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView160"
-                            android:layout_weight="1"
                             android:textSize="18sp"
-                            android:layout_marginTop="5dp" />
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="20dp" />
                     </LinearLayout>
                 </LinearLayout>
 

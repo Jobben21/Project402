@@ -35,22 +35,22 @@ public class ProfileOfBloodsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        p_sugar = (TextView) findViewById(R.id.profile_sugar);
-        p_choles = (TextView)findViewById(R.id.Profile_choles);
-        p_hdl = (TextView) findViewById(R.id.profile_hdl);
-        p_ldl = (TextView) findViewById(R.id.Profile_ldl);
-        p_potas = (TextView) findViewById(R.id.profile_potassium);
-        p_tri = (TextView) findViewById(R.id.profile_tri);
-        p_so = (TextView) findViewById(R.id.profile_sodium);
-
-
-        p_sugar2 = (TextView) findViewById(R.id.profile_sugar2);
-        p_choles2 = (TextView)findViewById(R.id.Profile_choles2);
-        p_hdl2 = (TextView) findViewById(R.id.profile_hdl2);
-        p_ldl2 = (TextView) findViewById(R.id.Profile_ldl2);
-        p_potas2 = (TextView) findViewById(R.id.profile_potassium2);
-        p_tri2 = (TextView) findViewById(R.id.profile_tri2);
-        p_so2 = (TextView) findViewById(R.id.profile_sodium2);
+//        p_sugar = (TextView) findViewById(R.id.profile_sugar);
+//        p_choles = (TextView)findViewById(R.id.Profile_choles);
+//        p_hdl = (TextView) findViewById(R.id.profile_hdl);
+//        p_ldl = (TextView) findViewById(R.id.Profile_ldl);
+//        p_potas = (TextView) findViewById(R.id.profile_potassium);
+//        p_tri = (TextView) findViewById(R.id.profile_tri);
+//        p_so = (TextView) findViewById(R.id.profile_sodium);
+//
+//
+//        p_sugar2 = (TextView) findViewById(R.id.profile_sugar2);
+//        p_choles2 = (TextView)findViewById(R.id.Profile_choles2);
+//        p_hdl2 = (TextView) findViewById(R.id.profile_hdl2);
+//        p_ldl2 = (TextView) findViewById(R.id.Profile_ldl2);
+//        p_potas2 = (TextView) findViewById(R.id.profile_potassium2);
+//        p_tri2 = (TextView) findViewById(R.id.profile_tri2);
+//        p_so2 = (TextView) findViewById(R.id.profile_sodium2);
 
         if (Build.VERSION.SDK_INT > 9) {
 
