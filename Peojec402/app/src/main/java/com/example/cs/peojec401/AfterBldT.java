@@ -245,7 +245,7 @@ public class AfterBldT extends AppCompatActivity {
 
 
             bt =6;
-                Toast.makeText(AfterBldT.this,Resultone+" ",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AfterBldT.this,bt+" ",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),DisplayList1.class);
                 startActivity(intent);
 

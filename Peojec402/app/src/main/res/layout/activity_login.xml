@@ -110,30 +110,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_weight="1">
 
-<<<<<<< HEAD
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content">
 
-                                            <android.support.design.widget.TextInputLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content">
-
-                                                <EditText
-                                                    android:id="@+id/e_name"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:hint="ชื่อผู้ใช้งาน (สมชาย)"
-                                                    android:textSize="16sp" />
-
-                                            </android.support.design.widget.TextInputLayout>
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-=======
                                                 <EditText
                                                     android:id="@+id/e_name"
                                                     android:layout_width="165dp"
@@ -148,7 +125,7 @@
                                         <LinearLayout
                                             android:layout_width="305dp"
                                             android:layout_height="match_parent"
->>>>>>> 2a8b3586952da8da03e0474c2909ae01f3274064
+
                                             android:orientation="horizontal"
                                             android:weightSum="1">
 
@@ -162,24 +139,21 @@
                                                 app:srcCompat="@drawable/lock" />
 
                                             <android.support.design.widget.TextInputLayout
-<<<<<<< HEAD
-                                                android:layout_width="222dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="0.13">
+
+                                                android:layout_width="163dp"
+                                                android:layout_height="wrap_content">
+
+                                                <!--<EditText-->
+                                                <!--android:id="@+id/e_pass"-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="37dp"-->
+                                                <!--android:layout_width="164dp"-->
+                                                <!--android:layout_height="match_parent"/>-->
 
                                                 <EditText
                                                     android:id="@+id/e_pass"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="37dp"
-=======
-                                                android:layout_width="164dp"
-                                                android:layout_height="match_parent">
-
-                                                <EditText
-                                                    android:id="@+id/e_pass"
-                                                    android:layout_width="match_parent"
+                                                    android:layout_width="191dp"
                                                     android:layout_height="match_parent"
->>>>>>> 2a8b3586952da8da03e0474c2909ae01f3274064
                                                     android:ems="10"
                                                     android:hint="รหัสผู้ใช้งาน"
                                                     android:inputType="textPassword"
@@ -189,28 +163,18 @@
 
                                             <TextView
                                                 android:id="@+id/eyeview1"
-<<<<<<< HEAD
-                                                android:layout_width="wrap_content"
-=======
-                                                android:layout_width="23dp"
->>>>>>> 2a8b3586952da8da03e0474c2909ae01f3274064
-                                                android:layout_height="25dp"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
                                                 android:layout_marginBottom="10dp"
                                                 android:layout_marginEnd="10dp"
-                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginLeft="5dp"
                                                 android:layout_marginRight="10dp"
                                                 android:layout_marginStart="20dp"
                                                 android:layout_marginTop="20dp"
-                                                android:layout_weight="0.11"
                                                 android:background="@drawable/eye"
-<<<<<<< HEAD
-                                                android:textAlignment="viewStart"
-                                                android:layout_marginTop="10dp"
-                                                android:layout_weight="0.44" />
-=======
                                                 android:textAlignment="viewStart" />
 
->>>>>>> 2a8b3586952da8da03e0474c2909ae01f3274064
+
                                         </LinearLayout>
 
                                     </LinearLayout>
@@ -320,8 +284,8 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:layout_margin="6dp">
+                                            android:layout_margin="6dp"
+                                            android:orientation="horizontal">
 
                                             <android.support.design.widget.TextInputLayout
                                                 android:layout_width="match_parent"
@@ -408,18 +372,18 @@
                                                     android:id="@+id/w_gender"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
                                                     android:layout_weight="0.79"
                                                     android:checked="true"
-                                                    android:text="@string/man"
-                                                    android:layout_marginTop="3dp" />
+                                                    android:text="@string/man" />
 
                                                 <RadioButton
                                                     android:id="@+id/m_gender"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
                                                     android:layout_weight="2.04"
-                                                    android:text="@string/women"
-                                                    android:layout_marginTop="3dp" />
+                                                    android:text="@string/women" />
                                             </RadioGroup>
                                         </LinearLayout>
 
