@@ -33,7 +33,7 @@ public class AfterBldT extends AppCompatActivity {
     final Context context = this;
     private Button next ,home;
     private ProgressBar progressBar,progressBar2,progressBar3,progressBar4,progressBar5,progressBar6,progressBar7;
-    private SeekBar seekBarex;
+    private SeekBar seekBarex,seekBar9;
     private TextView INFO2,INFO3,INFO4,INFO5,INFO6,INFO7,INFO8;
     private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
     private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
@@ -153,7 +153,7 @@ public class AfterBldT extends AppCompatActivity {
         progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
 
         seekBarex = (SeekBar)findViewById(R.id.seekBar8);
-
+        seekBar9 = (SeekBar)findViewById(R.id.seekBar9);
         INFO2 = (TextView)findViewById(R.id.INFO2);
         INFO3 = (TextView)findViewById(R.id.INFO3);
         INFO4 = (TextView)findViewById(R.id.INFO4);
@@ -210,9 +210,13 @@ public class AfterBldT extends AppCompatActivity {
         showImage(message1,message2 ,message3,message4,message5,message6,message7);
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
 
 
-         Resultone = recommendFood(message1);
+        Resultone = recommendFood(message1);
         Resulttwo = recommendFood2(message2);
         Resultthree = recommendFood3(message3);
         Resultfour =  recommendFood4(message4);
@@ -449,6 +453,7 @@ public class AfterBldT extends AppCompatActivity {
         seekBarvalue7 = (TextView)findViewById(R.id.seekbarvalue7);
 
         seekBarex.setMax(150);
+        seekBar9.setMax(250);
         progressBar.setMax(150);
         progressBar2.setMax(250);
         progressBar3.setMax(10);
@@ -459,6 +464,8 @@ public class AfterBldT extends AppCompatActivity {
 
         seekBarex.setProgress((int) sugar_ab1);
         seekBarex.setEnabled(false);
+        seekBar9.setProgress((int) sodium_ab1);
+        seekBar9.setEnabled(false);
         progressBar.setProgress((int) sugar_ab1);
         progressBar2.setProgress((int) sodium_ab1);
         progressBar3.setProgress((int) potass_ab1);
@@ -488,6 +495,11 @@ public class AfterBldT extends AppCompatActivity {
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
         if(message1.equals("cancell2")){
 
 
@@ -517,9 +529,13 @@ public class AfterBldT extends AppCompatActivity {
          blood_normal.setBackgroundResource(R.color.glass_color);
          bloodt_normal.setBackgroundResource(R.color.glass_color);
 
+<<<<<<< HEAD
 
          progressBar.setProgressDrawable( drawable );
 
+=======
+         progressBar.setProgressDrawable( drawable );
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
          progressBar.setProgressDrawable(drawable);
 
      }
@@ -528,10 +544,14 @@ public class AfterBldT extends AppCompatActivity {
     public String recommendFood2(String message2){
 
 
+<<<<<<< HEAD
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+=======
+
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
 
         String result2 = "";
 
@@ -572,12 +592,11 @@ public class AfterBldT extends AppCompatActivity {
         return result2;
     }
     public String recommendFood3(String message3){
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
 
-        Resources res = getResources();
-        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
-        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
-        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
 
 
         String result3 = "";
@@ -618,11 +637,14 @@ public class AfterBldT extends AppCompatActivity {
     }
     public String recommendFood4(String message4){
 
+<<<<<<< HEAD
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
 
+=======
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
         String result4 = "";
 
 
@@ -691,11 +713,16 @@ public class AfterBldT extends AppCompatActivity {
             ldl_abnormal2.setBackgroundResource(R.color.glass_color2);
             ldlt_abnormal2.setBackgroundResource(R.color.glass_color2);
 
+<<<<<<< HEAD
 
             progressBar5.setProgressDrawable(drawable2);
 
             progressBar5.setProgressDrawable(drawable3);
 
+=======
+            progressBar5.setProgressDrawable(drawable2);
+            progressBar5.setProgressDrawable(drawable3);
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
       }
 
         else if(message5.equals("cancell")) {
@@ -785,6 +812,10 @@ public class AfterBldT extends AppCompatActivity {
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
         Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+<<<<<<< HEAD
+=======
+
+>>>>>>> b0bdd905b8ce6dae77a3c9ebcab1a3369fda9376
         String result7 = "";
 
         if(message7.equals("cancell2")){
