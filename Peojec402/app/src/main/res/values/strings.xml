@@ -222,5 +222,12 @@
         <item>อาหารว่าง</item>
         <item>ของหวาน</item>
     </string-array>
+    <string name="title_activity_blood__sugar">Blood_Sugar</string>
+    <string name="title_activity_blood_sodium">Blood_sodium</string>
+    <string name="title_activity_blood_potssium">Blood_potssium</string>
+    <string name="title_activity_blood_choles">Blood_choles</string>
+    <string name="title_activity_blood_ldl">Blood_ldl</string>
+    <string name="title_activity_blood_hdl">Blood_hdl</string>
+    <string name="title_activity_blood_tri">Blood_tri</string>
 
 </resources>

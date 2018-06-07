@@ -58,153 +58,115 @@ public class Fragment_C extends Fragment {
 
 
         button_cal = (Button) view.findViewById(R.id.button_cal);
-
-
         button_cal.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
 
-
-
-                if(age_cal.getText().toString().isEmpty() ||  weight_cal.getText().toString().isEmpty()
-                        ||  height_cal.getText().toString().isEmpty()  ){
-
-                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                            .setTitleText("คำนวนพลังงาน")
-                            .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-                            .setConfirmText("ตกลง")
-                            .show();
-                    checking();
-                   // checking2();
-               }  else if(age_cal.getText().toString().length() >= 4 ){
-
-            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                    .setTitleText("คำนวนพลังงาน")
-                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-                    .setConfirmText("ตกลง")
-                    .show();
-
-                    age_cal.setError("กรอกอายุให้ภูกต้อง 1-110");
-
-
-                }else if (weight_cal.getText().toString().length() >= 4 ){
-
-            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                    .setTitleText("คำนวนพลังงาน")
-                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-                    .setConfirmText("ตกลง")
-                    .show();
-
-                    weight_cal.setError("กรอกน้ำหนักห้ภูกต้อง 30-200");
-
-                }else if ( height_cal.getText().toString().length() >= 4){
-
-            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                    .setTitleText("คำนวนพลังงาน")
-                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-                   .setConfirmText("ตกลง")
-                   .show();
-
-
-                    height_cal.setError("กรอกส่วนสูงห้ภูกต้อง 110-200");
-
-                }
-
-
-                else{
-                new SweetAlertDialog(getActivity(),SweetAlertDialog.SUCCESS_TYPE).setTitleText("คำนวณผล")
-                        .setConfirmText("ใช่").setCancelText("ไม่")
-                        .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
-                    @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-
-                        Log.i("weight",weight_cal.getText().toString());
-                        Log.i("weight",height_cal.getText().toString());
-
-                        weight = Float.parseFloat(weight_cal.getText().toString());
-                        height = Float.parseFloat(height_cal.getText().toString());
-                        age = Integer.parseInt(age_cal.getText().toString());
-                        height2 = Float.parseFloat(height_cal.getText().toString());
-
-
-
-                        float bmiValue = calculateBMI(weight,height);
-                        float bmrValue = calculateBMR(age,weight,height2,gender);
-
-                        String bmiInterpretation = interpretBMI(bmiValue);
-                        String bmiInterpretation2 = Imagebmi(bmiValue);
-
-                        Intent intent = new Intent(getActivity().getBaseContext(), AfterCalCulat.class);
-                        intent.putExtra("bmi",bmiInterpretation);
-                        intent.putExtra("bmi2",bmiInterpretation2);
-                        intent.putExtra("bmiValue",bmiValue);
-                        intent.putExtra("bmrValue",bmrValue);
-
-                        startActivity(intent);
-
-                    }}).show();}
-            }});
-
-
+                checking();
+            }
+            });
 
         return view;
     }
-
     public void checking(){
 
-        if(age_cal.getText().length() == 0){
-            age_cal.setError("กรอกอายุให้ถูกต้อง 1 - 100");
+
+       if(age_cal.getText().toString().isEmpty() &&  weight_cal.getText().toString().isEmpty()
+                && height_cal.getText().toString().isEmpty()  ){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+           age_cal.setError("กรอกอายุให้ถูกต้อง 1-110");
+           weight_cal.setError("กรอกน้ำหนักห้ถูกต้อง 30-200");
+           height_cal.setError("กรอกส่วนสูงห้ถูกต้อง 110-200");
         }
-        if(weight_cal.getText().length() == 0 ){
-            weight_cal.setError("กรอกข้อมูลน้ำหนัก");
-        }
-        if(height_cal.getText().length() == 0){
-            height_cal.setError("กรอกข้อมูส่วนสูง");
+        else if(age_cal.getText().toString().length() >= 4 ){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+            age_cal.setError("กรอกอายุให้ภูกต้อง 1-110");
+
+
+        }else if (weight_cal.getText().toString().length() >= 4 ){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+            weight_cal.setError("กรอกน้ำหนักห้ถูกต้อง 30-200");
+
+        }else if ( height_cal.getText().toString().length() >= 4){
+
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText("คำนวนพลังงาน")
+                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
+                    .setConfirmText("ตกลง")
+                    .show();
+
+
+            height_cal.setError("กรอกส่วนสูงห้ถูกต้อง 110-200");
+
         }
 
+      else  if(age_cal.getText().length() == 0){
+            age_cal.setError("กรอกอายุให้ถูกต้อง 1 - 100");
+        }
+      else  if(weight_cal.getText().length() == 0 ){
+            weight_cal.setError("กรอกน้ำหนักห้ถูกต้อง 30-200");
+        }
+      else  if(height_cal.getText().length() == 0){
+            height_cal.setError("กรอกส่วนสูงห้ถูกต้อง 110-200");
+        }
+        else {
+            checking2();
+        }
 
 
     }
 
     public void checking2(){
 
-
-        if(age > 110.0 ){
-
-//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-//                    .setTitleText("คำนวนพลังงาน")
-//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-//                    .setConfirmText("ตกลง")
-//                    .show();
-
-            age_cal.setError("กรอกอายุให้ภูกต้อง 1-110");
+        new SweetAlertDialog(getActivity(),SweetAlertDialog.SUCCESS_TYPE).setTitleText("คำนวณผล")
+                .setConfirmText("ใช่").setCancelText("ไม่")
+                .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener(){
+            @Override public void onClick(SweetAlertDialog sweetAlertDialog) {
 
 
-        }else if (weight > 250.0){
+                Log.i("weight",weight_cal.getText().toString());
+                Log.i("weight",height_cal.getText().toString());
 
-//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-//                    .setTitleText("คำนวนพลังงาน")
-//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-//                    .setConfirmText("ตกลง")
-//                    .show();
-//
-            weight_cal.setError("กรอกน้ำหนักห้ภูกต้อง 30-200");
-
-        }else if ( height > 220.0){
-
-//            new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-//                    .setTitleText("คำนวนพลังงาน")
-//                    .setContentText("กรุณากรอกข้อมูลให้ถูกต้อง")
-//                    .setConfirmText("ตกลง")
-//                    .show();
+                weight = Float.parseFloat(weight_cal.getText().toString());
+                height = Float.parseFloat(height_cal.getText().toString());
+                age = Integer.parseInt(age_cal.getText().toString());
+                height2 = Float.parseFloat(height_cal.getText().toString());
 
 
-            height_cal.setError("กรอกส่วนสูงห้ภูกต้อง 110-200");
+                float bmiValue = calculateBMI(weight,height);
+                float bmrValue = calculateBMR(age,weight,height2,gender);
 
-        }
-    }
+                String bmiInterpretation = interpretBMI(bmiValue);
+                String bmiInterpretation2 = Imagebmi(bmiValue);
+
+                Intent intent = new Intent(getActivity().getBaseContext(), AfterCalCulat.class);
+                intent.putExtra("bmi",bmiInterpretation);
+                intent.putExtra("bmi2",bmiInterpretation2);
+                intent.putExtra("bmiValue",bmiValue);
+                intent.putExtra("bmrValue",bmrValue);
+
+                startActivity(intent);
+
+            }}).show();}
 
 
     private float calculateBMI (float weight, float height) {

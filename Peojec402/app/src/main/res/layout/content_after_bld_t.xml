@@ -142,9 +142,18 @@
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:paddingBottom="10dp"
                                 android:id="@+id/discrete_interval_multiple_range"
                                 android:animateLayoutChanges="true">
+
+                                <SeekBar
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar8"
+                                    android:progressTint="@color/backGround"
+                                    android:progress="50"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:thumb="@drawable/check" />
 
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -153,10 +162,18 @@
                                     android:id="@+id/seekBar"
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginRight="15dp"
-                                    android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color"
-                                    android:progressTintMode="add"
-                                    android:progress="50" />
+                                    android:progress="111"
+                                    android:max="200"
+                                    android:progressDrawable="@drawable/custom_progressbar2"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageView13"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="13dp"
+                                    app:srcCompat="@drawable/bar" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -477,7 +494,8 @@
                                     android:layout_marginLeft="5dp"
                                     android:layout_marginRight="5dp"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
+                                    android:progressTint="@color/cardview_shadow_start_color"
+                                    android:progress="150" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -920,7 +938,7 @@
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
                                 <ImageButton
@@ -962,11 +980,10 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
-                                    android:paddingLeft="13dp"
-                                    android:paddingRight="5dp">
+                                    android:layout_weight="0.19">
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/cl_ab2"
                                         android:textStyle="normal|bold"
@@ -987,8 +1004,6 @@
                                     android:background="@android:drawable/screen_background_light_transparent"
                                     style="@android:style/Widget.DeviceDefault.Light.ImageButton"
                                     android:scaleType="fitXY"
-                                    android:layout_marginLeft="43dp"
-                                    android:layout_weight="1"
                                     android:layout_marginTop="10dp"
                                     android:layout_width="21dp"
                                     android:layout_height="21dp" />
