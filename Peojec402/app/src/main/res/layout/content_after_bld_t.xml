@@ -28,7 +28,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     app:cardPreventCornerOverlap="false"
                     android:layout_margin="5dp"
                     app:cardElevation="3dp"
@@ -153,8 +153,9 @@
                                     android:progressTint="@color/backGround"
                                     android:progress="50"
                                     android:progressBackgroundTint="@color/backGround"
+                                    android:paddingEnd="16dp"
                                     android:thumb="@drawable/check"
-                                    android:paddingEnd="16dp" />
+                                    android:max="200" />
 
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -169,12 +170,12 @@
                                     android:visibility="gone" />
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:id="@+id/imageView13"
                                     android:layout_marginLeft="12dp"
-                                    android:layout_marginRight="10dp"
-                                    app:srcCompat="@drawable/bar" />
+                                    android:layout_marginRight="8dp"
+                                    app:srcCompat="@drawable/barr" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -184,33 +185,16 @@
                                     android:padding="5dp">
 
                                     <TextView
-                                        android:text="ต่ำ 0"
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/seekbarminn"
                                         android:layout_weight="1"
                                         android:textStyle="normal|bold"
                                         android:paddingLeft="10dp"
-                                        android:visibility="gone" />
+                                        android:visibility="visible"
+                                        android:text="@string/label"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarmin"
-                                        android:layout_weight="1.91"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
-                                        android:textColor="?android:attr/textColorTertiary" />
-
-                                    <TextView
-                                        android:text="/ 200"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarmax"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
-                                        android:paddingRight="10dp"
-                                        android:textColor="?android:attr/textColorTertiary" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -384,7 +368,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:id="@+id/sodium_bd"
@@ -494,15 +478,17 @@
                                     android:thumb="@drawable/check"
                                     android:paddingStart="10dp"
                                     android:paddingEnd="10dp"
-                                    android:progressBackgroundTint="@color/backGround" />
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:progressTint="@color/backGround"
+                                    android:max="200" />
 
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/bar2"
                                     android:id="@+id/imageView15"
                                     android:layout_marginRight="5dp"
-                                    android:layout_marginLeft="5dp" />
+                                    android:layout_marginLeft="5dp"
+                                    app:srcCompat="@drawable/bars2" />
 
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -511,9 +497,10 @@
                                     android:id="@+id/seekBar2"
                                     android:layout_marginLeft="5dp"
                                     android:layout_marginRight="5dp"
+                                    android:max="250"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color"
-                                    android:progress="150" />
+                                    android:progress="146"
+                                    android:visibility="gone" />
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -522,21 +509,14 @@
                                     android:layout_marginTop="5dp">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue2"
-                                        android:layout_weight="1"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
-                                        android:text="@string/max2"
+                                        android:text="@string/label2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView98"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:paddingStart="10dp"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -668,7 +648,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:visibility="visible"
@@ -770,6 +750,26 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar10"
+                                    android:thumb="@drawable/check"
+                                    android:max="7"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:progressTint="@color/backGround"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/bar3"
+                                    android:id="@+id/imageView16"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="3dp"
+                                    android:layout_marginStart="5dp" />
+
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
@@ -778,8 +778,10 @@
                                     android:layout_marginLeft="5dp"
                                     android:layout_marginRight="5dp"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
-
+                                    android:progressTint="@color/cardview_shadow_start_color"
+                                    android:progress="3"
+                                    android:max="7"
+                                    android:visibility="gone" />
 
 
                                 <LinearLayout
@@ -790,22 +792,13 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue3"
-                                        android:layout_weight="1"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
-                                        android:layout_marginRight="5dp" />
-
-                                    <TextView
-                                        android:text="@string/max3"
+                                        android:text="@string/label3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView105"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -934,7 +927,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:visibility="visible"
@@ -1024,7 +1017,8 @@
                                     android:scaleType="fitXY"
                                     android:layout_marginTop="10dp"
                                     android:layout_width="21dp"
-                                    android:layout_height="21dp" />
+                                    android:layout_height="21dp"
+                                    android:layout_marginEnd="10dp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -1034,17 +1028,22 @@
                                 android:layout_marginTop="10dp">
 
 
-                                <ProgressBar
-                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                <SeekBar
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/seekBar4"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_marginRight="5dp"
-                                    android:progressDrawable="@drawable/custom_progressbar3"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
+                                    android:id="@+id/seekBar11"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:max="300"
+                                    android:thumb="@drawable/check"
+                                    android:paddingStart="6dp"
+                                    android:progressTint="@color/backGround" />
 
-
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/bar4"
+                                    android:id="@+id/imageView17"
+                                    android:layout_marginEnd="5dp" />
 
 
                                 <LinearLayout
@@ -1055,21 +1054,13 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue4"
-                                        android:layout_weight="1"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
-                                        android:text="@string/max4"
+                                        android:text="@string/label4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView108"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -1213,7 +1204,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:visibility="visible"
@@ -1309,6 +1300,23 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="10dp">
 
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar12"
+                                    android:thumb="@drawable/check"
+                                    android:max="300"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:progressTint="@color/backGround"
+                                    android:paddingStart="10dp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/bar5"
+                                    android:id="@+id/imageView36"
+                                    android:paddingEnd="5dp" />
+
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
@@ -1317,7 +1325,10 @@
                                     android:layout_marginLeft="5dp"
                                     android:layout_marginRight="5dp"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
+                                    android:progressTint="@color/cardview_shadow_start_color"
+                                    android:max="300"
+                                    android:progress="130"
+                                    android:visibility="gone" />
 
 
 
@@ -1329,21 +1340,13 @@
                                     android:layout_margin="5dp">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue5"
-                                        android:layout_weight="0.98"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
-                                        android:text="@string/max5"
+                                        android:text="@string/label5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView111"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -1490,7 +1493,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:visibility="visible"
@@ -1510,10 +1513,11 @@
                             <LinearLayout
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:background="@android:drawable/screen_background_light_transparent"
                                 android:layout_marginLeft="5dp"
-                                android:padding="@dimen/shape_size">
+                                android:padding="@dimen/shape_size"
+                                android:weightSum="1">
 
                                 <ImageButton
                                     app:srcCompat="@drawable/normal"
@@ -1555,7 +1559,7 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:paddingLeft="13dp"
-                                    android:paddingRight="5dp">
+                                    android:layout_weight="0.23">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -1593,6 +1597,23 @@
                                 android:layout_marginTop="10dp">
 
 
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar13"
+                                    android:max="100"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:progressTint="@color/backGround"
+                                    android:thumb="@drawable/check" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/bar6"
+                                    android:id="@+id/imageView37"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginStart="5dp" />
+
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                     android:layout_width="match_parent"
@@ -1601,7 +1622,10 @@
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
+                                    android:progressTint="@color/cardview_shadow_start_color"
+                                    android:progress="40"
+                                    android:max="100"
+                                    android:visibility="gone" />
 
 
 
@@ -1613,21 +1637,13 @@
                                     android:layout_margin="10dp">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue6"
-                                        android:layout_weight="0.97"
-                                        android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
-
-                                    <TextView
-                                        android:text="@string/max6"
+                                        android:text="@string/label6"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView114"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -1697,15 +1713,6 @@
 
 
                             <TextView
-                                android:text="@string/hdl_abnormal4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/hdl_abnormal4"
-                                android:layout_weight="0.13"
-                                android:layout_marginTop="10dp"
-                                android:visibility="gone" />
-
-                            <TextView
                                 android:text="@string/hdlt_normal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1719,15 +1726,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/hdlt_abnormal3"
-                                android:layout_weight="0.13"
-                                android:layout_marginTop="10dp"
-                                android:visibility="gone" />
-
-                            <TextView
-                                android:text="@string/hdlt_abnormal4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/hdlt_abnormal4"
                                 android:layout_weight="0.13"
                                 android:layout_marginTop="10dp"
                                 android:visibility="gone" />
@@ -1752,7 +1750,7 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_margin="5dp"
                     android:id="@+id/trigry_bd"
@@ -1775,7 +1773,8 @@
                                 android:layout_height="match_parent"
                                 android:background="@android:drawable/screen_background_light_transparent"
                                 android:layout_marginLeft="5dp"
-                                android:padding="@dimen/shape_size">
+                                android:padding="@dimen/shape_size"
+                                android:weightSum="1">
 
                                 <ImageButton
                                     app:srcCompat="@drawable/normal"
@@ -1816,7 +1815,8 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center"
                                     android:paddingLeft="17dp"
-                                    android:paddingRight="5dp">
+                                    android:paddingRight="5dp"
+                                    android:layout_weight="0.28">
 
                                     <TextView
                                         android:layout_width="match_parent"
@@ -1853,6 +1853,22 @@
                                 android:layout_marginTop="10dp">
 
 
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seekBar14"
+                                    android:max="600"
+                                    android:progressBackgroundTint="@color/backGround"
+                                    android:progressTint="@color/backGround"
+                                    android:thumb="@drawable/check" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/imageView38"
+                                    android:paddingEnd="8dp"
+                                    android:paddingStart="5dp"
+                                    app:srcCompat="@drawable/bar7" />
 
                                 <ProgressBar
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -1862,7 +1878,9 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginRight="15dp"
                                     android:progressDrawable="@drawable/custom_progressbar"
-                                    android:progressTint="@color/cardview_shadow_start_color" />
+                                    android:progressTint="@color/cardview_shadow_start_color"
+                                    android:max="700"
+                                    android:visibility="gone" />
 
 
 
@@ -1877,22 +1895,13 @@
                                     android:weightSum="1">
 
                                     <TextView
-                                        android:text="TextView"
-                                        android:layout_height="wrap_content"
-                                        android:id="@+id/seekbarvalue7"
-                                        android:textAlignment="textEnd"
-                                        android:gravity="center"
-                                        android:textStyle="normal|bold"
-                                        android:layout_weight="0.48"
-                                        android:layout_width="277dp" />
-
-                                    <TextView
-                                        android:text="@string/max7"
+                                        android:text="@string/label7"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView117"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold" />
+                                        android:textStyle="normal|bold"
+                                        android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
                             </LinearLayout>

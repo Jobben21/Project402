@@ -613,7 +613,7 @@ public class Fragment_B extends Fragment {
                         message2 = "minus";
                     } else if (sodium < 136) {
                         message2 = "cancell2";
-                    } else if (sodium > 146) {
+                    } else if (sodium >= 146) {
                         message2 = "cancell";
                     } else {
                         message2 = "normal";
@@ -627,7 +627,7 @@ public class Fragment_B extends Fragment {
                         message2 = "minus";
                     } else if (sodium < 136) {
                         message2 = "cancell2";
-                    } else if (sodium > 146) {
+                    } else if (sodium >= 146) {
                         message2 = "cancell";
                     } else {
                         message2 = "normal";
@@ -661,7 +661,7 @@ public class Fragment_B extends Fragment {
                         message3 = "minus";
                     } else if (potassium < 3.5) {
                         message3 = "cancell2";
-                    } else if (potassium > 5.1) {
+                    } else if (potassium >= 5.1) {
                         message3 = "cancell";
                     } else {
                         message3 = "ok";
@@ -685,7 +685,7 @@ public class Fragment_B extends Fragment {
                         message4 = "cancell2";
                     } else if (200 < choles && choles <= 239) {
                         message4 = "cancell";
-                    } else if ( choles > 240) {
+                    } else if ( choles >= 240) {
                         message4 = "cancell3";
                     }
                 }
@@ -699,7 +699,7 @@ public class Fragment_B extends Fragment {
                         message4 = "cancell2";
                     } else if (200 < choles && choles <= 239) {
                         message4 = "cancell";
-                    } else if ( choles > 240) {
+                    } else if ( choles >= 240) {
                         message4 = "cancell3";
                     }
                 }
@@ -719,7 +719,7 @@ public class Fragment_B extends Fragment {
                         message5 = "cancell";
                     } else if (159 < ldl && ldl <= 189) {
                         message5 = "cancell3";
-                    } else if (ldl > 190) {
+                    } else if (ldl >= 190) {
                         message5 = "cancell5";
                     }
                 }
@@ -732,7 +732,7 @@ public class Fragment_B extends Fragment {
                         message5 = "cancell";
                     } else if (130 < ldl && ldl <= 159) {
                         message5 = "cancell3";
-                    } else if (ldl > 190) {
+                    } else if (ldl >= 190) {
                         message5 = "cancell5";
                     }
                 }
@@ -744,27 +744,23 @@ public class Fragment_B extends Fragment {
                 String message6 = "";
 
                 if(hospital1.isChecked()) {
-                    if (40 <= hdl && hdl <= 60) {
+                    if (40 <= hdl && hdl >= 60) {
                         message6 = "ok";
                     } else if (hdl == 0) {
                         message6 = "cancell";
                     } else if (hdl < 39) {
                         message6 = "cancell2";
-                    } else if (hdl > 60) {
-                        message6 = "cancell";
-                    } else {
+                    }  else {
                         message6 = "cancell";
                     }
                 }
                 else {
-                    if (35 <= hdl && hdl <= 60) {
+                    if (35 <= hdl && hdl >= 60) {
                         message6 = "ok";
                     } else if (hdl == 0) {
                         message6 = "minus";
                     } else if (hdl < 39) {
                         message6 = "cancell2";
-                    } else if (hdl > 60) {
-                        message6 = "cancell";
                     } else {
                         message6 = "cancell";
                     }
@@ -784,10 +780,10 @@ public class Fragment_B extends Fragment {
                     } else if (tri < 50) {
                         message7 = "cancell2";
                     } else if (tri > 151 && tri < 199) {
-                        message7 = "cancell";
+                        message7 = "cancell2";
                     }else if (tri > 200 && tri < 499) {
                         message7 = "cancell3";
-                    } else if (tri > 500) {
+                    } else if (tri >= 500) {
                         message7 = "cancell4";
                     } else {
                         message7 = "cancell4";
@@ -802,10 +798,10 @@ public class Fragment_B extends Fragment {
                     } else if (tri < 30) {
                         message7 = "cancell2";
                     } else if (tri > 151 && tri < 199) {
-                        message7 = "cancell";
+                        message7 = "cancell2";
                     }else if (tri > 200 && tri < 499) {
                         message7 = "cancell3";
-                    } else if (tri > 500) {
+                    } else if (tri >= 500) {
                         message7 = "cancell4";
                     } else {
                         message7 = "minus";

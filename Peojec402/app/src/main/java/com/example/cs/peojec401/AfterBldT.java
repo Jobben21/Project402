@@ -33,9 +33,9 @@ public class AfterBldT extends AppCompatActivity {
     final Context context = this;
     private Button next ,home;
     private ProgressBar progressBar,progressBar2,progressBar3,progressBar4,progressBar5,progressBar6,progressBar7;
-    private SeekBar seekBarex,seekBar9;
+    private SeekBar seekBarex,seekBar9,seekBar10,seekBar11,seekBar12,seekBar13,seekBar14;
     private TextView INFO2,INFO3,INFO4,INFO5,INFO6,INFO7,INFO8;
-    private TextView seekBarMin, seekBarvalue2, seekBarvalue3, seekBarvalue4, seekBarvalue5,  seekBarvalue6,  seekBarvalue7;
+
     private TextView blood_normal ,blood_abnormal2 ,blood_abnormal,sodium_normal,
             sodium_abnormal2,sodium_abnormal,potassium_normal, potassium_abnormal2,potassium_abnormal,hdl_normal,hdl_abnormal3,hdl_abnormal4,
             ldl_normal,ldl_abnormal2,ldl_abnormal3,ldl_abnormal4,ldl_abnormal5,chl_normal2,chl_normal,chl_abnormal2,chl_abnormal3,
@@ -88,7 +88,6 @@ public class AfterBldT extends AppCompatActivity {
 
         hdl_normal = (TextView) findViewById(R.id.hdl_normal);
         hdl_abnormal3 = (TextView) findViewById(R.id.hdl_abnormal3);
-        hdl_abnormal4 = (TextView) findViewById(R.id.hdl_abnormal4 );
 
 
 
@@ -123,7 +122,6 @@ public class AfterBldT extends AppCompatActivity {
 
         hdlt_normal = (TextView) findViewById(R.id.hdlt_normal);
         hdlt_abnormal3 = (TextView) findViewById(R.id.hdlt_abnormal3 );
-        hdlt_abnormal4 = (TextView) findViewById(R.id.hdlt_abnormal4 );
 
 
 
@@ -147,13 +145,19 @@ public class AfterBldT extends AppCompatActivity {
         progressBar = (ProgressBar)findViewById(R.id.seekBar);
         progressBar2 = (ProgressBar)findViewById(R.id.seekBar2);
         progressBar3 = (ProgressBar)findViewById(R.id.seekBar3);
-        progressBar4 = (ProgressBar)findViewById(R.id.seekBar4);
+      // progressBar4 = (ProgressBar)findViewById(R.id.seekBar4);
         progressBar5 = (ProgressBar)findViewById(R.id.seekBar5);
         progressBar6 = (ProgressBar)findViewById(R.id.seekBar6);
         progressBar7 = (ProgressBar)findViewById(R.id.seekBar7);
 
         seekBarex = (SeekBar)findViewById(R.id.seekBar8);
         seekBar9 = (SeekBar)findViewById(R.id.seekBar9);
+        seekBar10  = (SeekBar)findViewById(R.id.seekBar10);
+        seekBar11  = (SeekBar)findViewById(R.id.seekBar11);
+        seekBar12  = (SeekBar)findViewById(R.id.seekBar12);
+        seekBar13  = (SeekBar)findViewById(R.id.seekBar13);
+        seekBar14  = (SeekBar)findViewById(R.id.seekBar14);
+
         INFO2 = (TextView)findViewById(R.id.INFO2);
         INFO3 = (TextView)findViewById(R.id.INFO3);
         INFO4 = (TextView)findViewById(R.id.INFO4);
@@ -338,14 +342,12 @@ public class AfterBldT extends AppCompatActivity {
 
             hdl_normal.setVisibility(View.VISIBLE);
             hdl_abnormal3.setVisibility(View.VISIBLE);
-            hdl_abnormal4.setVisibility(View.VISIBLE);
 
 
 
             ldl_normal.setVisibility(View.VISIBLE);
             ldl_abnormal2.setVisibility(View.VISIBLE);
             ldl_abnormal3.setVisibility(View.VISIBLE);
-         //   ldl_abnormal4.setVisibility(View.VISIBLE);
             ldl_abnormal5.setVisibility(View.VISIBLE);
 
             chl_normal.setVisibility(View.VISIBLE);
@@ -377,7 +379,7 @@ public class AfterBldT extends AppCompatActivity {
 
             hdlt_normal.setVisibility(View.VISIBLE);
             hdlt_abnormal3.setVisibility(View.VISIBLE);
-            hdlt_abnormal4.setVisibility(View.VISIBLE);
+          //  hdlt_abnormal4.setVisibility(View.VISIBLE);
 
 
 
@@ -440,46 +442,27 @@ public class AfterBldT extends AppCompatActivity {
     public void seekBar(float sugar_ab1,float sodium_ab1 ,float potass_ab1,float chole_ab1,float ldl_ab1,float hdl_ab1,float tri_ab1){
 
 
-
-        seekBarMin = (TextView)findViewById(R.id.seekbarmin);
-        seekBarvalue2 = (TextView)findViewById(R.id.seekbarvalue2);
-        seekBarvalue3 = (TextView)findViewById(R.id.seekbarvalue3);
-        seekBarvalue4 = (TextView)findViewById(R.id.seekbarvalue4);
-        seekBarvalue5 = (TextView)findViewById(R.id.seekbarvalue5);
-        seekBarvalue6 = (TextView)findViewById(R.id.seekbarvalue6);
-        seekBarvalue7 = (TextView)findViewById(R.id.seekbarvalue7);
-
-        seekBarex.setMax(150);
-        seekBar9.setMax(250);
-        progressBar.setMax(150);
-        progressBar2.setMax(250);
-        progressBar3.setMax(10);
-        progressBar4.setMax(300);
-        progressBar5.setMax(300);
-        progressBar6.setMax(100);
-        progressBar7.setMax(700);
-
         seekBarex.setProgress((int) sugar_ab1);
         seekBarex.setEnabled(false);
         seekBar9.setProgress((int) sodium_ab1);
         seekBar9.setEnabled(false);
-        progressBar.setProgress((int) sugar_ab1);
-        progressBar2.setProgress((int) sodium_ab1);
-        progressBar3.setProgress((int) potass_ab1);
-        progressBar4.setProgress((int) chole_ab1);
-        progressBar5.setProgress((int) ldl_ab1);
-        progressBar6.setProgress((int) hdl_ab1);
-        progressBar7.setProgress((int) tri_ab1);
+        seekBar10.setProgress((int) potass_ab1);
+        seekBar10.setEnabled(false);
+        seekBar11.setProgress((int) chole_ab1);
+        seekBar11.setEnabled(false);
+
+        seekBar12.setProgress((int) ldl_ab1);
+        seekBar12.setEnabled(false);
+//
+        seekBar13.setProgress((int)  hdl_ab1);
+        seekBar13.setEnabled(false);
+
+        seekBar14.setProgress((int) tri_ab1);
+        seekBar14.setEnabled(false);
 
 
 
-        seekBarMin.setText("ระดับน้ำตาล "+sugar_ab1);
-        seekBarvalue2.setText("ระดับโซเดียม " +sodium_ab1);
-        seekBarvalue3.setText("ระดับโพเเทสเซียม " +potass_ab1);
-        seekBarvalue4.setText("ระดับตอลเลสเตอรอล "+chole_ab1);
-        seekBarvalue5.setText("ระดับเเอลดีเอล "+ldl_ab1);
-        seekBarvalue6.setText("ระดับเอซดีเเอล "+hdl_ab1);
-        seekBarvalue7.setText("ระดับไตรกลีเซอไรด์ " +tri_ab1);
+
 
 
     }
@@ -497,8 +480,8 @@ public class AfterBldT extends AppCompatActivity {
 
 
             result = "1";
-            blood_abnormal.setBackgroundResource(R.color.glass_color3);
-            bloodt_abnormal.setBackgroundResource(R.color.glass_color3);
+            blood_abnormal.setBackgroundResource(R.color.glass_color2);
+            bloodt_abnormal.setBackgroundResource(R.color.glass_color2);
             progressBar.setProgressDrawable(drawable3);
 
 
@@ -544,9 +527,9 @@ public class AfterBldT extends AppCompatActivity {
 
             result2 = "1";
 
-            sodium_abnormal2.setBackgroundResource(R.color.glass_color3);
-            sodiumt_abnormal2.setBackgroundResource(R.color.glass_color3);
-            progressBar2.setProgressDrawable(drawable3);
+           sodium_abnormal2.setBackgroundResource(R.color.glass_color2);
+            sodiumt_abnormal2.setBackgroundResource(R.color.glass_color2);
+        //    progressBar2.setProgressDrawable(drawable3);
 
 
         }
@@ -558,7 +541,7 @@ public class AfterBldT extends AppCompatActivity {
             sodium_abnormal.setBackgroundResource(R.color.glass_color2);
             sodiumt_abnormal.setBackgroundResource(R.color.glass_color2);
 
-            progressBar2.setProgressDrawable(drawable2);
+         //   progressBar2.setProgressDrawable(drawable2);
 
         }
         else if (message2.equals("ok"))
@@ -568,7 +551,7 @@ public class AfterBldT extends AppCompatActivity {
             sodium_normal.setBackgroundResource(R.color.glass_color);
             sodiumt_normal.setBackgroundResource(R.color.glass_color);
 
-            progressBar2.setProgressDrawable(drawable);
+          //  progressBar2.setProgressDrawable(drawable);
 
 
 
@@ -587,8 +570,8 @@ public class AfterBldT extends AppCompatActivity {
 
             result3 = "1";
 
-            potassium_abnormal2.setBackgroundResource(R.color.glass_color3);
-            potassiumt_abnormal2.setBackgroundResource(R.color.glass_color3);
+            potassium_abnormal2.setBackgroundResource(R.color.glass_color2);
+            potassiumt_abnormal2.setBackgroundResource(R.color.glass_color2);
 
 
 
@@ -619,10 +602,7 @@ public class AfterBldT extends AppCompatActivity {
     public String recommendFood4(String message4){
 
 
-        Resources res = getResources();
-        Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
-        Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
-        Drawable drawable3 = res.getDrawable(R.drawable.custom_progressbar3);
+
 
 
         String result4 = "";
@@ -634,15 +614,15 @@ public class AfterBldT extends AppCompatActivity {
 
             result4 = "1";
 
-            chl_normal2.setBackgroundResource(R.color.glass_color3);
-            chlt_normal2.setBackgroundResource(R.color.glass_color3);
+            chl_normal2.setBackgroundResource(R.color.glass_color2);
+            chlt_normal2.setBackgroundResource(R.color.glass_color2);
 
 
 
 
         }
 
-        else  if(message4.equals("cancell")) {
+        else  if(message4.equals("cancell3")) {
 
             result4 = "0";
 
@@ -653,13 +633,14 @@ public class AfterBldT extends AppCompatActivity {
 
 
         }
-        else  if(message4.equals("cancell3")) {
+        else  if(message4.equals("cancell2")) {
 
             result4 = "0";
 
 
             chl_abnormal2.setBackgroundResource(R.color.glass_color2);
             chlt_abnormal2.setBackgroundResource(R.color.glass_color2);
+
 
 
 
@@ -735,6 +716,7 @@ public class AfterBldT extends AppCompatActivity {
         return result5;
     }
     public String recommendFood6(String message6){
+
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.custom_progressbar);
         Drawable drawable2 = res.getDrawable(R.drawable.custom_progressbar2);
@@ -755,16 +737,17 @@ public class AfterBldT extends AppCompatActivity {
 
         }
 
-        else if(message6.equals("cancell")){
-
-            result6 = "0";
-
-            hdl_abnormal4.setBackgroundResource(R.color.glass_color2);
-            hdlt_abnormal4.setBackgroundResource(R.color.glass_color2);
-
-            progressBar6.setProgressDrawable(drawable2);
-
-        }
+//        else
+//        if(message6.equals("cancell")){
+//
+//            result6 = "0";
+//
+//            hdl_abnormal4.setBackgroundResource(R.color.glass_color2);
+//            hdlt_abnormal4.setBackgroundResource(R.color.glass_color2);
+//
+//            progressBar6.setProgressDrawable(drawable2);
+//
+//        }
         else if(message6.equals("ok"))
         {
 
@@ -793,8 +776,8 @@ public class AfterBldT extends AppCompatActivity {
 
             result7 = "1";
 
-            tri_abnormal2.setBackgroundResource(R.color.glass_color3);
-            trit_abnormal2.setBackgroundResource(R.color.glass_color3);
+            tri_abnormal2.setBackgroundResource(R.color.glass_color2);
+            trit_abnormal2.setBackgroundResource(R.color.glass_color2);
 
             progressBar7.setProgressDrawable(drawable3);
 
