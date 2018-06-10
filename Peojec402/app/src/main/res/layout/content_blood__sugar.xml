@@ -56,7 +56,7 @@
                                     android:id="@+id/textView99"
                                     android:textStyle="normal|bold"
                                     android:textAlignment="center"
-                                    android:textSize="16sp"
+                                    android:textSize="18sp"
                                     android:layout_weight="1"
                                     android:layout_marginRight="20dp" />
 
@@ -67,9 +67,9 @@
                                     android:id="@+id/textView104"
                                     android:textStyle="normal|bold"
                                     android:textAlignment="center"
-                                    android:textSize="16sp"
+                                    android:textSize="18sp"
                                     android:layout_weight="1"
-                                    android:layout_marginRight="30dp" />
+                                    android:layout_marginRight="60dp" />
                             </LinearLayout>
 
                             <View
@@ -212,7 +212,8 @@
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp">
 
                                     <ImageView
                                         android:layout_width="32dp"
