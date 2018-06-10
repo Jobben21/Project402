@@ -20,7 +20,8 @@
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:title="ไขมันในเส้นเลือด"
             app:titleMarginStart="80dp"
-            app:titleTextAppearance="@style/Toolbar.TitleText" />
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:subtitle="HDL" />
 
     </android.support.design.widget.AppBarLayout>
 

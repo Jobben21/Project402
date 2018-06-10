@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cs.peojec401.ProfileOfBloodsActivity;
 import com.example.cs.peojec401.R;
 
 import org.apache.http.HttpEntity;
@@ -45,6 +44,8 @@ public class Blood_Sugar extends AppCompatActivity {
     private TextView p_sugar3;
     private TextView p_sugar4;
     private JSONArray result;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

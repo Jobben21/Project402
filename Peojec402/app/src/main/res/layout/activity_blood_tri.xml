@@ -18,9 +18,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
-            app:title="ไขมันในเส้นเลือด"
-            app:titleMarginStart="80dp"
-            app:titleTextAppearance="@style/Toolbar.TitleText" />
+            app:title="ไขมันในเส้นเลือด(Triglyceride)"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:titleMarginStart="10dp" />
 
     </android.support.design.widget.AppBarLayout>
 

@@ -20,7 +20,8 @@
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:titleTextAppearance="@style/Toolbar.TitleText"
             app:title="โซเดียม"
-            app:titleMarginStart="100dp" />
+            app:titleMarginStart="100dp"
+            app:subtitle="Sodium" />
 
     </android.support.design.widget.AppBarLayout>
 

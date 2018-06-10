@@ -20,7 +20,8 @@
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:titleMarginStart="100dp"
             app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:title="น้ำตาล" />
+            app:title="น้ำตาล"
+            app:subtitle="Fasting blood sugar (FBS) " />
 
     </android.support.design.widget.AppBarLayout>
 

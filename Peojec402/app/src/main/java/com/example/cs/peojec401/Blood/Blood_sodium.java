@@ -8,12 +8,14 @@ import com.example.cs.peojec401.R;
 
 public class Blood_sodium extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_sodium);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -25,5 +27,9 @@ public class Blood_sodium extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
+
+
+
 
 }
