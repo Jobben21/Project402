@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +46,7 @@ public class Blood_Sugar extends AppCompatActivity {
     private TextView p_sugar4;
     private JSONArray result;
 
+    private SeekBar seekBarex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,8 @@ public class Blood_Sugar extends AppCompatActivity {
         p_sugar3=(TextView)findViewById(R.id.data_sugar3);
         p_sugar4=(TextView)findViewById(R.id.data_sugar4);
 
-
+        seekBarex = (SeekBar)findViewById(R.id.seekBar8);
+        Bar();
         addID();
 
 
@@ -70,7 +73,12 @@ public class Blood_Sugar extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
+    public void Bar(){
 
+        seekBarex = (SeekBar)findViewById(R.id.seekBar8);
+        seekBarex.setProgress(20);
+        seekBarex.setEnabled(false);
+    }
 
        private String addID() {
 

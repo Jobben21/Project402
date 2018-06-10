@@ -18,10 +18,10 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
-            app:titleMarginStart="100dp"
+            app:titleMarginStart="60dp"
             app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:title="น้ำตาล"
-            app:subtitle="Fasting blood sugar (FBS) " />
+            app:title="น้ำตาล (FBS)"
+            app:subtitle=" " />
 
     </android.support.design.widget.AppBarLayout>
 

@@ -315,8 +315,7 @@
                                             android:id="@+id/textView161"
                                             android:textAlignment="textStart"
                                             android:textSize="18sp"
-                                            android:layout_marginTop="5dp"
-                                            android:layout_marginLeft="20dp" />
+                                            android:layout_marginLeft="50dp" />
 
                                         <TextView
                                             android:text="99"
@@ -324,7 +323,6 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/sum_ldl"
                                             android:textSize="18sp"
-                                            android:layout_marginTop="5dp"
                                             android:layout_marginLeft="20dp" />
 
                                         <TextView
@@ -332,23 +330,8 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView2"
-                                            android:layout_marginTop="5dp"
                                             android:layout_marginLeft="10dp" />
 
-                                        <ImageView
-                                            android:layout_height="26dp"
-                                            app:srcCompat="@drawable/info"
-                                            android:id="@+id/sugar_bttt"
-                                            android:background="@android:drawable/screen_background_light_transparent"
-                                            style="@android:style/Widget.DeviceDefault.Light.ImageButton"
-                                            android:scaleType="fitCenter"
-                                            android:foregroundGravity="right"
-                                            android:layout_gravity="bottom|right"
-                                            android:focusable="false"
-                                            android:contextClickable="true"
-                                            android:layout_marginLeft="80dp"
-                                            android:visibility="visible"
-                                            android:layout_width="21dp" />
                                     </LinearLayout>
                                 </LinearLayout>
 

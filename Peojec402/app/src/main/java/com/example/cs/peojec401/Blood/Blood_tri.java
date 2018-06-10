@@ -3,10 +3,13 @@ package com.example.cs.peojec401.Blood;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.SeekBar;
 
 import com.example.cs.peojec401.R;
 
 public class Blood_tri extends AppCompatActivity {
+
+    private SeekBar seekBar14;
 
 
     @Override
@@ -17,6 +20,7 @@ public class Blood_tri extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        Bar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -26,5 +30,13 @@ public class Blood_tri extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
+    public void Bar(){
+
+        seekBar14  = (SeekBar)findViewById(R.id.seekBar14);
+        seekBar14.setProgress(20);
+        seekBar14.setEnabled(false);
+    }
+
 
 }

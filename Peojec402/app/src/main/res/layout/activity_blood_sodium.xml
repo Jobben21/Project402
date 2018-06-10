@@ -19,9 +19,8 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
             app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:title="โซเดียม"
-            app:titleMarginStart="100dp"
-            app:subtitle="Sodium" />
+            app:title="โซเดียม(Sodium)"
+            app:titleMarginStart="60dp" />
 
     </android.support.design.widget.AppBarLayout>
 
