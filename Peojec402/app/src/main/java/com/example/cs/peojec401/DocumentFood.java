@@ -79,34 +79,44 @@ public class DocumentFood extends AppCompatActivity {
        // Toast.makeText(getApplicationContext(),bundle.getInt("energy")+" ",Toast.LENGTH_SHORT).show();
         if(!String.valueOf(bundle.getInt("energy")).equals("0")){
             energy.setText(String.valueOf(bundle.getInt("energy")));
+        }else{
+            energy.setText("-");
         }
         if (!String.valueOf(bundle.getInt("carbo")).equals("0")){
             carbo.setText(String.valueOf(bundle.getInt("carbo")));
+        }else{
+
+            carbo.setText("-");
         }
         if(!String.valueOf(bundle.getInt("fat")).equals("0")){
             fat.setText(String.valueOf(bundle.getInt("fat")));
 
+        }else{
+
+            fat.setText("-");
         }
         if(!String.valueOf(bundle.getInt("protein")).equals("0")){
             protein.setText(String.valueOf(bundle.getInt("protein")));
 
+        }else{
+
+            protein.setText("-");
         }
 
         if(!String.valueOf(bundle.getInt("sugar")).equals("0")){
            sugar.setText(String.valueOf(bundle.getInt("sugar")));
 
+        }else{
+
+            sugar.setText("-");
         }
         if(!String.valueOf(bundle.getInt("sodium")).equals("0")){
             sodium.setText(String.valueOf(bundle.getInt("sodium")));
 
         }else
         {
-            energy.setText(String.valueOf(bundle.getInt("energy")));
-            carbo.setText(String.valueOf(bundle.getInt("carbo")));
-            fat.setText(String.valueOf(bundle.getInt("fat")));
-            protein.setText(String.valueOf(bundle.getInt("protein")));
-            sugar.setText(String.valueOf(bundle.getInt("sugar")));
-            sodium.setText(String.valueOf(bundle.getInt("sodium")));
+
+            sodium.setText("-");
         }
         food_name.setText(bundle.getString("name"));
         ingred.setText(bundle.getString("ingred"));

@@ -1,5 +1,6 @@
 package com.example.cs.peojec401;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener  {
@@ -46,24 +49,27 @@ public class NavigationActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-  }
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//  }
 // else {
-//           // super.onBackPressed();
-//
-//            new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
-//                    .setConfirmText("ใช่").setCancelText("ไม่")
-//                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-//                @Override
-//                public void onClick(SweetAlertDialog sweetAlertDialog) {
-//
-//                    finish();
-//                }
-//
-//
-//            }).show();}
+            super.onBackPressed();
+
+            new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
+                    .setConfirmText("ใช่").setCancelText("ไม่")
+                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+
+                    Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    
+                }
+
+
+            }).show();
 
 
         }

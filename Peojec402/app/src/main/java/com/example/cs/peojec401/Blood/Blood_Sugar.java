@@ -40,12 +40,14 @@ import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 
 
 public class Blood_Sugar extends AppCompatActivity {
+
     private TextView p_sugar;
     private TextView p_sugar2;
     private TextView p_sugar3;
     private TextView p_sugar4;
     private JSONArray result;
-
+    private TextView p_avg;
+    public  int avg;
     private SeekBar seekBarex;
 
     @Override
@@ -61,7 +63,7 @@ public class Blood_Sugar extends AppCompatActivity {
         p_sugar2=(TextView)findViewById(R.id.data_sugar2);
         p_sugar3=(TextView)findViewById(R.id.data_sugar3);
         p_sugar4=(TextView)findViewById(R.id.data_sugar4);
-
+        p_avg=(TextView)findViewById(R.id.sum_sugar);
         seekBarex = (SeekBar)findViewById(R.id.seekBar8);
         Bar();
         addID();
@@ -121,13 +123,19 @@ public class Blood_Sugar extends AppCompatActivity {
 //            Toast.makeText(ProfileOfBloodsActivity.this,row1[0]+row1[1]+"",Toast.LENGTH_SHORT).show();
             if(this.result.length()==1){
                 p_sugar.setText(getSugar(0));
-
+                avg = (Integer.valueOf(getSugar(0)));
+                p_avg.setText(String.valueOf(avg));
             }else if(this.result.length()==2)
             {
                 p_sugar.setText(getSugar(0));
 
 
                 p_sugar2.setText(getSugar(1));
+
+                avg = (Integer.valueOf(getSugar(0))+Integer.valueOf(getSugar(1)))/2;
+
+                p_avg.setText(String.valueOf(avg));
+
 
             }else if(this.result.length()==3)
             {
@@ -138,6 +146,11 @@ public class Blood_Sugar extends AppCompatActivity {
 
 
                 p_sugar3.setText(getSugar(2));
+
+                avg = (Integer.valueOf(getSugar(0))+Integer.valueOf(getSugar(1))
+                        +Integer.valueOf(getSugar(2)))/3;
+
+                p_avg.setText(String.valueOf(avg));
 
             }
             else if(this.result.length()==4)
@@ -153,6 +166,11 @@ public class Blood_Sugar extends AppCompatActivity {
 
                 p_sugar4.setText(getSugar(3));
 
+                avg = (Integer.valueOf(getSugar(0))+Integer.valueOf(getSugar(1))
+                        +Integer.valueOf(getSugar(2))
+                        +Integer.valueOf(getSugar(3)))/4;
+
+                p_avg.setText(String.valueOf(avg));
             }
             else if(this.result.length()>4){
 
@@ -165,7 +183,11 @@ public class Blood_Sugar extends AppCompatActivity {
 
                 p_sugar4.setText(getSugar(this.result.length()-1));
 
+                avg = (Integer.valueOf(getSugar(this.result.length()-4))+Integer.valueOf(getSugar(this.result.length()-3))
+                        +Integer.valueOf(getSugar(this.result.length()-2))
+                        +Integer.valueOf(getSugar(this.result.length()-1)))/4;
 
+                p_avg.setText(String.valueOf(avg));
             }
 
                 return result;
@@ -184,94 +206,7 @@ public class Blood_Sugar extends AppCompatActivity {
     }
 
 
-   /* private void getData(){
-        //Creating a string request
 
-        StringRequest stringRequest = new StringRequest(Config_bt.DATA_URL,
-                new Response.Listener<String>() {
-
-
-                    @Override
-                    public void onResponse(String response) {
-                        JSONObject j = null;
-
-
-
-
-
-
-                        try {
-                            //Parsing the fetched Json String to JSON Object
-                            j = new JSONObject(response);
-
-                            //Storing the Array of JSON String to our JSON Array
-                            result = j.getJSONArray(Config_bt.JSON_ARRAY);
-
-                            if(result.length()==1){
-                            p_sugar.setText(getSugar(0));
-                            p_choles.setText(getCholes(0));
-                            p_hdl.setText(getHdl(0));
-                            p_ldl.setText(getLdl(0));
-                            p_potas.setText(getPotassium(0));
-                            p_tri.setText(getTri(0));
-                            p_so.setText(getSodium(0));
-                            }else if(result.length()==2)
-                            {
-                                p_sugar.setText(getSugar(0));
-                                p_choles.setText(getCholes(0));
-                                p_hdl.setText(getHdl(0));
-                                p_ldl.setText(getLdl(0));
-                                p_potas.setText(getPotassium(0));
-                                p_tri.setText(getTri(0));
-                                p_so.setText(getSodium(0));
-
-                                p_sugar2.setText(getSugar(1));
-                                p_choles2.setText(getCholes(1));
-                                p_hdl2.setText(getHdl(1));
-                                p_ldl2.setText(getLdl(1));
-                                p_potas2.setText(getPotassium(1));
-                                p_tri2.setText(getTri(1));
-                                p_so2.setText(getSodium(1));
-                            }else if(result.length()>2){
-
-                                p_sugar.setText(getSugar(result.length()-2));
-                                p_choles.setText(getCholes(result.length()-2));
-                                p_hdl.setText(getHdl(result.length()-2));
-                                p_ldl.setText(getLdl(result.length()-2));
-                                p_potas.setText(getPotassium(result.length()-2));
-                                p_tri.setText(getTri(result.length()-2));
-                                p_so.setText(getSodium(result.length()-2));
-
-                                p_sugar2.setText(getSugar(result.length()-1));
-                                p_choles2.setText(getCholes(result.length()-1));
-                                p_hdl2.setText(getHdl(result.length()-1));
-                                p_ldl2.setText(getLdl(result.length()-1));
-                                p_potas2.setText(getPotassium(result.length()-1));
-                                p_tri2.setText(getTri(result.length()-1));
-                                p_so2.setText(getSodium(result.length()-1));
-
-                            }
-                            //Calling method getStudents to get the students from the JSON Array
-                            //getStudents(result);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Toast.makeText(ProfileOfBloodsActivity.this, idLogin, Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                });
-
-        //Creating a request queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-
-        //Adding request to the queue
-        requestQueue.add(stringRequest);
-    }*/
 
     public String getHttpPost(String url,List<NameValuePair> params) {
 

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.cs.peojec401.Blood.Blood_hdl"
-    tools:showIn="@layout/activity_blood__hdl"
+    tools:showIn="@layout/activity_blood_hdl"
     android:orientation="vertical">
 
     <LinearLayout
@@ -172,7 +172,7 @@
                                                 android:text="99"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_hdl"
+                                                android:id="@+id/data_hdl"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp" />
 
@@ -180,7 +180,7 @@
                                                 android:text="-"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_hdl2"
+                                                android:id="@+id/data_hdl2"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
                                                 android:visibility="visible"
@@ -190,7 +190,7 @@
                                                 android:text="-"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_hdl3"
+                                                android:id="@+id/data_hdl3"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
                                                 android:visibility="visible"
@@ -200,7 +200,7 @@
                                                 android:text="-"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_hdl4"
+                                                android:id="@+id/data_hdl4"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
                                                 android:visibility="visible"
