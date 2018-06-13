@@ -387,7 +387,7 @@
                                             android:id="@+id/textView98"
                                             android:textAlignment="textEnd"
                                             android:textStyle="normal|bold"
-                                            android:paddingStart="10dp"
+                                            android:paddingStart="10dp"/> //
                                             android:textColor="@color/cast_intro_overlay_background_color" />
                                     </LinearLayout>
 

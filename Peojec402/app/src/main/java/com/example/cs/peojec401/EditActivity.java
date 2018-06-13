@@ -248,7 +248,7 @@ public class EditActivity extends AppCompatActivity {
 //        }
 
 
-        String url = "http://172.20.10.2/android/edit_user.php";
+        String url = "http://192.168.1.10/android/edit_user.php";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
         para.add(new BasicNameValuePair("userid",user_id));

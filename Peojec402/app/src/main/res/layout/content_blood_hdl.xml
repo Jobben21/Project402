@@ -387,7 +387,7 @@
                                             android:layout_height="wrap_content"
                                             android:id="@+id/textView114"
                                             android:textAlignment="textEnd"
-                                            android:textStyle="normal|bold"
+                                            android:textStyle="normal|bold"/> //
                                             android:textColor="@color/cast_intro_overlay_background_color" />
                                     </LinearLayout>
                                 </LinearLayout>

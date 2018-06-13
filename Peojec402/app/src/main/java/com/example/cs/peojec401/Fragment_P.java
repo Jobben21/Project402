@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
 import static com.example.cs.peojec401.EditActivity.age_edit;
@@ -199,4 +201,7 @@ public class Fragment_P extends Fragment{
 
     private class ArrayList<T> {
     }
+
+
+
 }

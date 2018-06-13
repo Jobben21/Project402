@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-                    e_pass.setError("กรอกสข้อมูส่วนสูง");
+                    e_pass.setError("กรุณากรอกรหัสผู้ใช้");
 
                 }
                  if(e_height.getText().length()==0){
@@ -258,7 +258,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-        String url = "http://172.20.10.2/android/addData.php?status=0";
+        String url = "http://192.168.1.10/android/addData.php?status=0";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 

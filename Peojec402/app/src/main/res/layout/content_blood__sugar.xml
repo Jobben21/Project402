@@ -389,7 +389,7 @@
                                             android:textStyle="normal|bold"
                                             android:paddingLeft="10dp"
                                             android:visibility="visible"
-                                            android:text="@string/label"
+                                            android:text="@string/label"/> //
                                             android:textColor="@color/cast_intro_overlay_background_color" />
 
                                     </LinearLayout>

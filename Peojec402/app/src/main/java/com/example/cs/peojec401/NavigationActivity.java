@@ -54,7 +54,7 @@ public class NavigationActivity extends AppCompatActivity
 //            drawer.closeDrawer(GravityCompat.START);
 //  }
 // else {
-            super.onBackPressed();
+       super.onBackPressed();
 
             new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
                     .setConfirmText("ใช่").setCancelText("ไม่")
@@ -78,7 +78,7 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        getMenuInflater().inflate(R.menu.activity_navigation_drawer,menu);
         return true;
     }
 
@@ -90,11 +90,12 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-      //  if (id == R.id.action_settings) {
-        //    return true;
-       // }
-
-        return super.onOptionsItemSelected(item);
+//        if (id == R.id.nav_maimenu) {
+//            return true;
+//        }
+        display(id);
+        //return super.onOptionsItemSelected(item);
+      return true;
     }
 
     private void display(int id){
@@ -116,6 +117,11 @@ public class NavigationActivity extends AppCompatActivity
                 break;
             case R.id.nav_profile:
                 fragment = new Fragment_P();
+                break;
+            case R.id.action_logout:
+                Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
         }
         if(fragment != null){

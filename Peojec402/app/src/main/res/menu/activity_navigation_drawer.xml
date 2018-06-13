@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
 
-    <group android:checkableBehavior="single"
-        android:id="@+id/nav_maimenu">
+    <!--<group android:checkableBehavior="single"-->
+        <!--android:id="@+id/nav_maimenu">-->
 
         <item
             android:id="@+id/nav_home"
@@ -26,8 +26,12 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/icons8_customer_80"
             android:title="ประวัติส่วนตัว" />
+        <item
+            android:id="@+id/action_logout"
 
-    </group>
+            android:orderInCategory="100"
+            android:title="ออกจากระบบ" />
+    <!--</group>-->
 
    <!-- <item android:title="Communicate">
         <menu>

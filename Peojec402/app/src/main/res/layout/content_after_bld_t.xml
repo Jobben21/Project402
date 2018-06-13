@@ -192,8 +192,8 @@
                                         android:textStyle="normal|bold"
                                         android:paddingLeft="10dp"
                                         android:visibility="visible"
-                                        android:text="@string/label"
-                                        android:textColor="@color/cast_intro_overlay_background_color" />
+                                        android:text="@string/label"/>
+                                        //android:textColor="@color/cast_intro_overlay_background_color" />
 
                                 </LinearLayout>
 
@@ -516,7 +516,7 @@
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold"
                                         android:paddingStart="10dp"
-                                        android:textColor="@color/cast_intro_overlay_background_color" />
+                                       /> // android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -798,7 +798,7 @@
                                         android:id="@+id/textView105"
                                         android:textAlignment="textEnd"
                                         android:textStyle="normal|bold"
-                                        android:textColor="@color/cast_intro_overlay_background_color" />
+                                       /> // android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -1059,7 +1059,7 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView108"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
+                                        android:textStyle="normal|bold"/> //
                                         android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
@@ -1345,7 +1345,7 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView111"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
+                                        android:textStyle="normal|bold"/> //
                                         android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -1642,7 +1642,7 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView114"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
+                                        android:textStyle="normal|bold"/> //
                                         android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -1900,7 +1900,7 @@
                                         android:layout_height="wrap_content"
                                         android:id="@+id/textView117"
                                         android:textAlignment="textEnd"
-                                        android:textStyle="normal|bold"
+                                        android:textStyle="normal|bold"/> //
                                         android:textColor="@color/cast_intro_overlay_background_color" />
                                 </LinearLayout>
 
