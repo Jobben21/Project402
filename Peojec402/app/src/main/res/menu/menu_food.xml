@@ -4,4 +4,10 @@
     tools:context="com.example.cs.peojec401.FoodActivity">
 
 
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="logout"
+        android:orderInCategory="100" />
+
 </menu>

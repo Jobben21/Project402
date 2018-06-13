@@ -46,6 +46,10 @@ public class Blood_sodium extends AppCompatActivity {
     private TextView p_so3;
     private TextView p_so4;
     private TextView p_avg;
+    private TextView p_date;
+    private TextView p_date2;
+    private TextView p_date3;
+    private TextView p_date4;
     public  int avg;
     private JSONArray result;
     @Override
@@ -59,6 +63,10 @@ public class Blood_sodium extends AppCompatActivity {
         p_so3=(TextView)findViewById(R.id.data_sodium3);
         p_so4=(TextView)findViewById(R.id.data_sodium4);
         p_avg=(TextView)findViewById(R.id.sum_sodium);
+        p_date =(TextView)findViewById(R.id.date_sodium);
+        p_date2 =(TextView)findViewById(R.id.date_sodium2);
+        p_date3 =(TextView)findViewById(R.id.date_sodium3);
+        p_date4 =(TextView)findViewById(R.id.date_sodium4);
         addID();
 
         Bar();
@@ -123,6 +131,8 @@ public class Blood_sodium extends AppCompatActivity {
                 avg = (Integer.valueOf(getSodium(0)));
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+
             }else if(this.result.length()==2)
             {
                 p_so.setText(getSodium(0));
@@ -133,6 +143,9 @@ public class Blood_sodium extends AppCompatActivity {
                 avg = (Integer.valueOf(getSodium(0))+Integer.valueOf(getSodium(1)))/2;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+
 
             }else if(this.result.length()==3)
             {
@@ -149,6 +162,10 @@ public class Blood_sodium extends AppCompatActivity {
                         +Integer.valueOf(getSodium(2)))/3;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+
 
             }
             else if(this.result.length()==4)
@@ -168,6 +185,10 @@ public class Blood_sodium extends AppCompatActivity {
                         +Integer.valueOf(getSodium(3)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+                p_date4.setText(getDate(3));
 
             }
             else if(this.result.length()>4){
@@ -186,6 +207,15 @@ public class Blood_sodium extends AppCompatActivity {
                         +Integer.valueOf(getSodium(this.result.length()-1)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(this.result.length()-4));
+
+                p_date2.setText(getDate(this.result.length()-3));
+
+                p_date3.setText(getDate(this.result.length()-2));
+
+
+                p_date4.setText(getDate(this.result.length()-1));
             }
 
             return result;
@@ -358,6 +388,21 @@ public class Blood_sodium extends AppCompatActivity {
         }
         //Returning the name
         return sod;
+    }
+    private  String getDate(int position){
+
+        String date="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            date = json.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return date;
     }
 
 }

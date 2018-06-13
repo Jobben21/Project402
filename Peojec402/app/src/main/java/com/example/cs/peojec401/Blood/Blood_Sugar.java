@@ -47,6 +47,10 @@ public class Blood_Sugar extends AppCompatActivity {
     private TextView p_sugar4;
     private JSONArray result;
     private TextView p_avg;
+    private TextView p_date;
+    private TextView p_date2;
+    private TextView p_date3;
+    private TextView p_date4;
     public  int avg;
     private SeekBar seekBarex;
 
@@ -64,6 +68,10 @@ public class Blood_Sugar extends AppCompatActivity {
         p_sugar3=(TextView)findViewById(R.id.data_sugar3);
         p_sugar4=(TextView)findViewById(R.id.data_sugar4);
         p_avg=(TextView)findViewById(R.id.sum_sugar);
+        p_date =(TextView)findViewById(R.id.date_sugar);
+        p_date2 =(TextView)findViewById(R.id.date_sugar2);
+        p_date3 =(TextView)findViewById(R.id.date_sugar3);
+        p_date4 =(TextView)findViewById(R.id.date_sugar4);
         seekBarex = (SeekBar)findViewById(R.id.seekBar8);
         Bar();
         addID();
@@ -125,6 +133,8 @@ public class Blood_Sugar extends AppCompatActivity {
                 p_sugar.setText(getSugar(0));
                 avg = (Integer.valueOf(getSugar(0)));
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+
             }else if(this.result.length()==2)
             {
                 p_sugar.setText(getSugar(0));
@@ -135,6 +145,10 @@ public class Blood_Sugar extends AppCompatActivity {
                 avg = (Integer.valueOf(getSugar(0))+Integer.valueOf(getSugar(1)))/2;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+
 
 
             }else if(this.result.length()==3)
@@ -151,6 +165,11 @@ public class Blood_Sugar extends AppCompatActivity {
                         +Integer.valueOf(getSugar(2)))/3;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+
 
             }
             else if(this.result.length()==4)
@@ -171,6 +190,10 @@ public class Blood_Sugar extends AppCompatActivity {
                         +Integer.valueOf(getSugar(3)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+                p_date4.setText(getDate(3));
             }
             else if(this.result.length()>4){
 
@@ -188,6 +211,14 @@ public class Blood_Sugar extends AppCompatActivity {
                         +Integer.valueOf(getSugar(this.result.length()-1)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(this.result.length()-4));
+
+                p_date2.setText(getDate(this.result.length()-3));
+
+                p_date3.setText(getDate(this.result.length()-2));
+
+
+                p_date4.setText(getDate(this.result.length()-1));
             }
 
                 return result;
@@ -360,6 +391,23 @@ public class Blood_Sugar extends AppCompatActivity {
         }
         //Returning the name
         return sod;
+    }
+
+
+    private  String getDate(int position){
+
+        String date="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            date = json.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return date;
     }
 
     @Override

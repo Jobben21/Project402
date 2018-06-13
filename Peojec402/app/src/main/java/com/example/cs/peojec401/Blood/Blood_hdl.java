@@ -47,6 +47,10 @@ public class Blood_hdl extends AppCompatActivity {
     private TextView p_hdl3;
     private TextView p_hdl4;
     private TextView p_avg;
+    private TextView p_date;
+    private TextView p_date2;
+    private TextView p_date3;
+    private TextView p_date4;
     public  int avg;
     private JSONArray result;
     @Override
@@ -60,6 +64,10 @@ public class Blood_hdl extends AppCompatActivity {
         p_hdl3=(TextView)findViewById(R.id.data_hdl3);
         p_hdl4=(TextView)findViewById(R.id.data_hdl4);
         p_avg=(TextView)findViewById(R.id.sum_hdl);
+        p_date =(TextView)findViewById(R.id.date_hdl);
+        p_date2 =(TextView)findViewById(R.id.date_hdl2);
+        p_date3 =(TextView)findViewById(R.id.date_hdl3);
+        p_date4 =(TextView)findViewById(R.id.date_hdl4);
         addID();
         Bar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -125,6 +133,8 @@ public class Blood_hdl extends AppCompatActivity {
                 avg = (Integer.valueOf(getHdl(0)));
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+
             }else if(this.result.length()==2)
             {
                 p_hdl.setText(getHdl(0));
@@ -135,6 +145,9 @@ public class Blood_hdl extends AppCompatActivity {
                 avg = (Integer.valueOf(getHdl(0))+Integer.valueOf(getHdl(1)))/2;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+
 
             }else if(this.result.length()==3)
             {
@@ -150,6 +163,10 @@ public class Blood_hdl extends AppCompatActivity {
                         +Integer.valueOf(getHdl(2)))/3;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+
 
             }
             else if(this.result.length()==4)
@@ -170,6 +187,10 @@ public class Blood_hdl extends AppCompatActivity {
                         +Integer.valueOf(getHdl(3)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+                p_date4.setText(getDate(3));
 
             }
             else if(this.result.length()>4){
@@ -188,6 +209,15 @@ public class Blood_hdl extends AppCompatActivity {
                         +Integer.valueOf(getHdl(this.result.length()-1)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(this.result.length()-4));
+
+                p_date2.setText(getDate(this.result.length()-3));
+
+                p_date3.setText(getDate(this.result.length()-2));
+
+
+                p_date4.setText(getDate(this.result.length()-1));
             }
 
             return result;
@@ -360,5 +390,20 @@ public class Blood_hdl extends AppCompatActivity {
         }
         //Returning the name
         return sod;
+    }
+    private  String getDate(int position){
+
+        String date="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            date = json.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return date;
     }
 }

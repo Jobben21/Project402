@@ -171,6 +171,7 @@ public class Fragment_B extends Fragment {
 
                 List<NameValuePair> para = new ArrayList<NameValuePair>();
                 para.add(new BasicNameValuePair("user_id", idLogin));
+                para.add(new BasicNameValuePair("date",date_B.getText().toString()));
                 para.add(new BasicNameValuePair("sugar", sugar_t.getText().toString()));
                 para.add(new BasicNameValuePair("choles", choles_t.getText().toString()));
                 para.add(new BasicNameValuePair("hdl", hdl_t.getText().toString()));

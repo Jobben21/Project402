@@ -46,6 +46,10 @@ public class Blood_tri extends AppCompatActivity {
     private TextView p_tri3;
     private TextView p_tri4;
     private TextView p_avg;
+    private TextView p_date;
+    private TextView p_date2;
+    private TextView p_date3;
+    private TextView p_date4;
     public int avg;
     private JSONArray result;
 
@@ -61,7 +65,10 @@ public class Blood_tri extends AppCompatActivity {
         p_tri3=(TextView)findViewById(R.id.data_tri3);
         p_tri4=(TextView)findViewById(R.id.data_tri4);
         p_avg = (TextView)findViewById(R.id.sum_tri);
-
+        p_date =(TextView)findViewById(R.id.date_tri);
+        p_date2 =(TextView)findViewById(R.id.date_tri2);
+        p_date3 =(TextView)findViewById(R.id.date_tri3);
+        p_date4 =(TextView)findViewById(R.id.date_tri4);
         addID();
 
         Bar();
@@ -125,6 +132,7 @@ public class Blood_tri extends AppCompatActivity {
                 p_tri.setText(getTri(0));
                 avg = Integer.valueOf(getTri(0));
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
             }else if(this.result.length()==2)
             {
                 p_tri.setText(getTri(0));
@@ -134,6 +142,8 @@ public class Blood_tri extends AppCompatActivity {
                 avg = (Integer.valueOf(getTri(0))+Integer.valueOf(getTri(1)))/2;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
             }else if(this.result.length()==3)
             {
                 p_tri.setText(getTri(0));
@@ -146,6 +156,9 @@ public class Blood_tri extends AppCompatActivity {
 
                 avg = (Integer.valueOf(getTri(0))+Integer.valueOf(getTri(1))+Integer.valueOf(getTri(2)))/3;
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
             }
             else if(this.result.length()==4)
             {
@@ -163,6 +176,10 @@ public class Blood_tri extends AppCompatActivity {
                 avg = (Integer.valueOf(getTri(0))+Integer.valueOf(getTri(1))+Integer.valueOf(getTri(2))
                 +Integer.valueOf(getTri(3)))/4;
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+                p_date4.setText(getDate(3));
             }
             else if(this.result.length()>4){
 
@@ -180,6 +197,14 @@ public class Blood_tri extends AppCompatActivity {
                         +Integer.valueOf(getTri(this.result.length()-1)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(this.result.length()-4));
+
+                p_date2.setText(getDate(this.result.length()-3));
+
+                p_date3.setText(getDate(this.result.length()-2));
+
+
+                p_date4.setText(getDate(this.result.length()-1));
             }
 
             return result;
@@ -352,5 +377,21 @@ public class Blood_tri extends AppCompatActivity {
         }
         //Returning the name
         return sod;
+    }
+
+    private  String getDate(int position){
+
+        String date="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            date = json.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return date;
     }
 }

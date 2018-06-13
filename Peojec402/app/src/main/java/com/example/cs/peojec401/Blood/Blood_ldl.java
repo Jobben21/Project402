@@ -46,6 +46,10 @@ public class Blood_ldl extends AppCompatActivity {
     private TextView p_ldl3;
     private TextView p_ldl4;
     private TextView p_avg;
+    private TextView p_date;
+    private TextView p_date2;
+    private TextView p_date3;
+    private TextView p_date4;
     public int avg;
     private JSONArray result;
     @Override
@@ -59,6 +63,10 @@ public class Blood_ldl extends AppCompatActivity {
         p_ldl3=(TextView)findViewById(R.id.data_ldl3);
         p_ldl4=(TextView)findViewById(R.id.data_ldl4);
         p_avg=(TextView)findViewById(R.id.sum_ldl);
+        p_date =(TextView)findViewById(R.id.date_ldl);
+        p_date2 =(TextView)findViewById(R.id.date_ldl2);
+        p_date3 =(TextView)findViewById(R.id.date_ldl3);
+        p_date4 =(TextView)findViewById(R.id.date_ldl4);
         addID();
 
         Bar();
@@ -123,6 +131,8 @@ public class Blood_ldl extends AppCompatActivity {
                 avg = (Integer.valueOf(getLdl(0)));
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+
             }else if(this.result.length()==2)
             {
                 p_ldl.setText(getLdl(0));
@@ -134,6 +144,9 @@ public class Blood_ldl extends AppCompatActivity {
                 avg = (Integer.valueOf(getLdl(0))+Integer.valueOf(getLdl(1)))/2;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+
             }else if(this.result.length()==3)
             {
                 p_ldl.setText(getLdl(0));
@@ -147,6 +160,10 @@ public class Blood_ldl extends AppCompatActivity {
                         +Integer.valueOf(getLdl(2)))/3;
 
                 p_avg.setText(String.valueOf(avg));
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+
             }
             else if(this.result.length()==4)
             {
@@ -165,6 +182,12 @@ public class Blood_ldl extends AppCompatActivity {
                         +Integer.valueOf(getLdl(3)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(0));
+                p_date2.setText(getDate(1));
+                p_date3.setText(getDate(2));
+                p_date4.setText(getDate(3));
+
             }
             else if(this.result.length()>4){
 
@@ -182,6 +205,15 @@ public class Blood_ldl extends AppCompatActivity {
                         +Integer.valueOf(getLdl(this.result.length()-1)))/4;
 
                 p_avg.setText(String.valueOf(avg));
+
+                p_date.setText(getDate(this.result.length()-4));
+
+                p_date2.setText(getDate(this.result.length()-3));
+
+                p_date3.setText(getDate(this.result.length()-2));
+
+
+                p_date4.setText(getDate(this.result.length()-1));
 
             }
 
@@ -355,5 +387,20 @@ public class Blood_ldl extends AppCompatActivity {
         }
         //Returning the name
         return sod;
+    }
+    private  String getDate(int position){
+
+        String date="";
+        try {
+            //Getting object of given index
+            JSONObject json = result.getJSONObject(position);
+
+            //Fetching name from that object
+            date = json.getString("date");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        //Returning the name
+        return date;
     }
 }

@@ -65,7 +65,7 @@ public class NavigationActivity extends AppCompatActivity
                     Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    
+
                 }
 
 
