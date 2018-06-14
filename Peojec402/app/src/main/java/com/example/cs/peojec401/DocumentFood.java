@@ -3,7 +3,6 @@ package com.example.cs.peojec401;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.util.CircularArray;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,29 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.cs.peojec401.ConnectData.Config;
-import com.example.cs.peojec401.ConnectData.Config_food;
 import com.example.cs.peojec401.FoodCon.FoodList;
-import com.example.cs.peojec401.FoodCon.PicassoDown;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import static com.example.cs.peojec401.AfterBldT.bt;
-import static com.example.cs.peojec401.Fragment_F4.i;
 
 /**
  * Created by hp on 12/3/2561.

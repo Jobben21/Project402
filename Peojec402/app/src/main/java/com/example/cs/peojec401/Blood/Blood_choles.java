@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,6 +51,9 @@ public class Blood_choles extends AppCompatActivity {
     private TextView p_date3;
     private TextView p_date4;
     public  int avg;
+    public  int id;
+    public  int id2;
+    private ImageView p_img;
     private SeekBar seekBar11;
 
     @Override
@@ -67,6 +71,10 @@ public class Blood_choles extends AppCompatActivity {
         p_date2 =(TextView)findViewById(R.id.date_choles2);
         p_date3 =(TextView)findViewById(R.id.date_choles3);
         p_date4 =(TextView)findViewById(R.id.date_choles4);
+        p_img = (ImageView)findViewById(R.id.img_choles);
+
+        id = this.getResources().getIdentifier("drawable/up_r",null,this.getPackageName());
+        id2 = this.getResources().getIdentifier("drawable/down_g",null,this.getPackageName());
         addID();
         Bar();
 
@@ -83,7 +91,7 @@ public class Blood_choles extends AppCompatActivity {
     public void Bar(){
         seekBar11  = (SeekBar)findViewById(R.id.seekBar11);
 
-        seekBar11.setProgress(20);
+        seekBar11.setProgress(avg);
         seekBar11.setEnabled(false);
     }
     private String addID() {
@@ -146,7 +154,11 @@ public class Blood_choles extends AppCompatActivity {
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
 
-
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
 
             }else if(this.result.length()==3)
             {
@@ -166,7 +178,11 @@ public class Blood_choles extends AppCompatActivity {
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
-
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
 
             }
             else if(this.result.length()==4)
@@ -191,6 +207,12 @@ public class Blood_choles extends AppCompatActivity {
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
                 p_date4.setText(getDate(3));
+
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
             }
             else if(this.result.length()>4){
 
@@ -217,6 +239,11 @@ public class Blood_choles extends AppCompatActivity {
 
 
                 p_date4.setText(getDate(this.result.length()-1));
+                if(Integer.valueOf(getTri(this.result.length()-4))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
             }
 
             return result;

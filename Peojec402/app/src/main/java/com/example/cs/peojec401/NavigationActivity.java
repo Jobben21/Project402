@@ -12,15 +12,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
+
+import static com.example.cs.peojec401.Register_LoginActivity.nameLogin;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener  {
 
 
+        private TextView headname;
 
-            ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class NavigationActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+//        headname =(TextView) findViewById(R.id.head_name);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -41,7 +46,9 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         display(R.id.nav_home);
-
+//        Intent i=getIntent();
+//        String name = i.getStringExtra("name");
+//        headname.setText(name);
 
     }
 
@@ -54,22 +61,22 @@ public class NavigationActivity extends AppCompatActivity
 //            drawer.closeDrawer(GravityCompat.START);
 //  }
 // else {
-       super.onBackPressed();
+//       super.onBackPressed();
 
-            new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
-                    .setConfirmText("ใช่").setCancelText("ไม่")
-                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                @Override
-                public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                    Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-
-                }
-
-
-            }).show();
+//            new SweetAlertDialog(NavigationActivity.this, SweetAlertDialog.SUCCESS_TYPE).setTitleText("ออกจากระบบ")
+//                    .setConfirmText("ใช่").setCancelText("ไม่")
+//                    .showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                @Override
+//                public void onClick(SweetAlertDialog sweetAlertDialog) {
+//
+//                    Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    startActivity(intent);
+//
+//                }
+//
+//
+//            }).show();
 
 
         }
@@ -78,7 +85,7 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_navigation_drawer,menu);
+        getMenuInflater().inflate(R.menu.navigation,menu);
         return true;
     }
 
@@ -89,13 +96,16 @@ public class NavigationActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.nav_maimenu) {
-//            return true;
-//        }
-        display(id);
-        //return super.onOptionsItemSelected(item);
-      return true;
+//        noinspection SimplifiableIfStatement
+        if (id == R.id.action_logout) {
+            Intent intent = new Intent(NavigationActivity.this,Register_LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+
     }
 
     private void display(int id){

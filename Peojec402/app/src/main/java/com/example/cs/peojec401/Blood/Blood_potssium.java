@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +52,9 @@ public class Blood_potssium extends AppCompatActivity {
     private TextView p_date3;
     private TextView p_date4;
     public int avg;
+    public  int id;
+    public  int id2;
+    private ImageView p_img;
     private JSONArray result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +67,15 @@ public class Blood_potssium extends AppCompatActivity {
         p_pos2=(TextView)findViewById(R.id.data_Potassium2);
         p_pos3=(TextView)findViewById(R.id.data_Potassium3);
         p_pos4=(TextView)findViewById(R.id.data_Potassium4);
-        p_avg =(TextView)findViewById(R.id.sum_potass);
+        p_avg =(TextView)findViewById(R.id.sum_potas);
         p_date =(TextView)findViewById(R.id.date_potassium);
         p_date2 =(TextView)findViewById(R.id.date_potassium2);
         p_date3 =(TextView)findViewById(R.id.date_potassium3);
         p_date4 =(TextView)findViewById(R.id.date_potassium4);
+        p_img = (ImageView)findViewById(R.id.img_potas);
+
+        id = this.getResources().getIdentifier("drawable/up_r",null,this.getPackageName());
+        id2 = this.getResources().getIdentifier("drawable/down_g",null,this.getPackageName());
         addID();
         Bar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -83,7 +91,7 @@ public class Blood_potssium extends AppCompatActivity {
     public void Bar(){
         seekBar10  = (SeekBar)findViewById(R.id.seekBar10);
 
-        seekBar10.setProgress(20);
+        seekBar10.setProgress(avg);
         seekBar10.setEnabled(false);
     }
 
@@ -146,7 +154,11 @@ public class Blood_potssium extends AppCompatActivity {
 
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
-
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
 
             }else if(this.result.length()==3)
             {
@@ -166,7 +178,11 @@ public class Blood_potssium extends AppCompatActivity {
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
-
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
 
             }
             else if(this.result.length()==4)
@@ -192,6 +208,11 @@ public class Blood_potssium extends AppCompatActivity {
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
                 p_date4.setText(getDate(3));
+                if(Integer.valueOf(getTri(0))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
             }
             else if(this.result.length()>4){
 
@@ -217,6 +238,12 @@ public class Blood_potssium extends AppCompatActivity {
 
 
                 p_date4.setText(getDate(this.result.length()-1));
+
+                if(Integer.valueOf(getTri(this.result.length()-4))>avg){
+                    p_img.setImageResource(id2);
+                }else{
+                    p_img.setImageResource(id);
+                }
             }
 
             return result;

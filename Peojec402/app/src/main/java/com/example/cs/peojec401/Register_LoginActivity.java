@@ -123,7 +123,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                 String resultServer  = getHttpPost(url,params);
                 String name= "0";
 
-                String pass ="";
+                String pas ="";
                 String id= "";
 
                 String age = "";
@@ -142,7 +142,7 @@ public class Register_LoginActivity extends AppCompatActivity {
                     c = new JSONObject(resultServer);
 
                     name = c.getString("name");
-                    pass = c.getString("pass");
+                    pas = c.getString("pass");
                     age = c.getString("age");
 
                     height = c.getString("height");
@@ -192,11 +192,13 @@ public class Register_LoginActivity extends AppCompatActivity {
 
                     nameLogin = name;
                     ageLogin = age;
-                    passLogin=pass;
+                    passLogin=pas;
                     idLogin=id;
                     heightLogin=height;
                     weightLogin=weight;
                     genderLogin=gender;
+                    username.setText(nameLogin);
+                    pass.setText(passLogin);
                     SweetAlertDialog pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
 
                     //  pDialog = new SweetAlertDialog(Register_LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
@@ -209,7 +211,7 @@ public class Register_LoginActivity extends AppCompatActivity {
 //                    pDialog.show();
 
                     Intent intent = new Intent(Register_LoginActivity.this,NavigationActivity.class);
-
+                    intent.putExtra("name",name);
                     startActivity(intent);
 
 

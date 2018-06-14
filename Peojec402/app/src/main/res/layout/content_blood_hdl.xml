@@ -44,33 +44,34 @@
                             android:visibility="visible">
 
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
                                 android:layout_marginTop="10dp"
-                                android:layout_marginBottom="5dp">
+                                android:orientation="horizontal"
+                                android:weightSum="1">
 
                                 <TextView
-                                    android:text="วัน เดือน ปี"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/textView99"
-                                    android:textStyle="normal|bold"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="0.21"
+                                    android:text="วัน เดือน ปี"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:layout_weight="1"
-                                    android:layout_marginRight="20dp" />
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="ผลตรวจเลือด"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/textView104"
-                                    android:textStyle="normal|bold"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="60dp"
+                                    android:layout_weight="0.16"
+                                    android:text="ผลตรวจเลือด"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:layout_weight="1"
-                                    android:layout_marginRight="60dp" />
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
 
                             <View
@@ -109,12 +110,12 @@
                                             android:layout_weight="1">
 
                                             <TextView
-                                                android:text="15/06/2018"
+                                                android:id="@+id/date_hdl"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_hdl"
-                                                android:textSize="18sp"
-                                                android:textAlignment="center" />
+                                                android:text="-"
+                                                android:textAlignment="center"
+                                                android:textSize="18sp" />
 
                                             <TextView
                                                 android:text="-"
@@ -169,10 +170,10 @@
                                             android:textAlignment="center">
 
                                             <TextView
-                                                android:text="99"
+                                                android:id="@+id/data_hdl"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/data_hdl"
+                                                android:text="-"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp" />
 
@@ -210,40 +211,6 @@
 
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="20dp">
-
-                                    <ImageView
-                                        android:layout_width="32dp"
-                                        android:layout_height="33dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/imageView14"
-                                        android:visibility="invisible" />
-
-                                    <ImageView
-                                        android:layout_width="35dp"
-                                        android:layout_height="30dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/im_sugar2" />
-
-                                    <ImageView
-                                        android:layout_width="35dp"
-                                        android:layout_height="32dp"
-                                        app:srcCompat="@drawable/up"
-                                        android:id="@+id/im_sugar3"
-                                        android:layout_marginTop="5dp" />
-
-                                    <ImageView
-                                        android:layout_height="32dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/im_sugar4"
-                                        android:layout_width="35dp"
-                                        android:layout_marginTop="5dp" />
-                                </LinearLayout>
-
                             </LinearLayout>
 
                             <View
@@ -276,62 +243,74 @@
                                     android:layout_marginBottom="10dp">
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
 
                                         <ImageButton
-                                            app:srcCompat="@drawable/blooddrop"
-                                            android:background="@android:drawable/screen_background_light_transparent"
-                                            android:scaleType="fitCenter"
-                                            android:paddingRight="10dp"
                                             android:id="@+id/image"
-                                            android:layout_marginLeft="10dp"
                                             android:layout_width="39dp"
-                                            android:layout_height="41dp" />
+                                            android:layout_height="41dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@android:drawable/screen_background_light_transparent"
+                                            android:paddingRight="10dp"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/blooddrop" />
 
                                         <TextView
-                                            android:text="ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง"
+                                            android:id="@+id/textView159"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView159"
-                                            android:textStyle="normal|bold"
-                                            android:textSize="18sp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง"
                                             android:textAlignment="center"
-                                            android:layout_marginTop="10dp" />
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
                                     </LinearLayout>
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp">
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="horizontal">
 
                                         <TextView
-                                            android:text="ค่าเฉลี่ย เท่ากับ"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
                                             android:id="@+id/textView161"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="50dp"
+                                            android:text="ค่าเฉลี่ย เท่ากับ"
                                             android:textAlignment="textStart"
-                                            android:textSize="18sp"
-                                            android:layout_marginLeft="50dp" />
+                                            android:textSize="18sp" />
 
                                         <TextView
-                                            android:text="99"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
                                             android:id="@+id/sum_hdl"
-                                            android:textSize="18sp"
-                                            android:layout_marginLeft="20dp" />
-
-                                        <TextView
-                                            android:text="mg/dl"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:text="-"
+                                            android:textSize="18sp" />
+
+                                        <TextView
                                             android:id="@+id/textView2"
-                                            android:layout_marginLeft="10dp" />
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="mg/dl" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:id="@+id/img_hdl"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="30dp" />
+                                        </LinearLayout>
 
                                     </LinearLayout>
+
                                 </LinearLayout>
 
 

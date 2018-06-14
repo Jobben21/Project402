@@ -11,9 +11,9 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -22,226 +22,193 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:cardElevation="3dp"
+                    android:layout_margin="10dp"
                     app:cardCornerRadius="10dp"
-                    android:layout_margin="10dp">
+                    app:cardElevation="3dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:orientation="vertical"
                             android:visibility="visible">
 
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginBottom="5dp"
                                 android:layout_marginTop="10dp"
-                                android:layout_marginBottom="5dp">
+                                android:orientation="horizontal"
+                                android:weightSum="1">
 
                                 <TextView
-                                    android:text="วัน เดือน ปี"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/textView99"
-                                    android:textStyle="normal|bold"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="0.21"
+                                    android:text="วัน เดือน ปี"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:layout_weight="1"
-                                    android:layout_marginRight="20dp" />
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="ผลตรวจเลือด"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/textView104"
-                                    android:textStyle="normal|bold"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="60dp"
+                                    android:layout_weight="0.16"
+                                    android:text="ผลตรวจเลือด"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
-                                    android:layout_weight="1"
-                                    android:layout_marginRight="60dp" />
+                                    android:textStyle="normal|bold" />
                             </LinearLayout>
 
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:background="@color/ligthGray"
+                                android:layout_margin="5dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_margin="5dp" />
+                                android:background="@color/ligthGray" />
 
                             <LinearLayout
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginBottom="10dp">
+                                android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="1">
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="1"
+                                        android:layout_marginLeft="20dp"
                                         android:layout_marginTop="10dp"
-                                        android:layout_marginLeft="20dp">
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
 
                                         <LinearLayout
-                                            android:orientation="vertical"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="10dp"
-                                            android:layout_weight="1">
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
 
                                             <TextView
-                                                android:text="15/06/2018"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
                                                 android:id="@+id/date_potassium"
-                                                android:textSize="18sp"
-                                                android:textAlignment="center" />
-
-                                            <TextView
-                                                android:text="-"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/date_potassium2"
-                                                android:textSize="18sp"
-                                                android:layout_marginTop="10dp"
-                                                android:visibility="visible"
-                                                android:textAlignment="center" />
-
-                                            <TextView
-                                                android:text="-"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:id="@+id/date_potassium3"
-                                                android:textSize="18sp"
-                                                android:layout_marginTop="10dp"
-                                                android:visibility="visible"
-                                                android:textAlignment="center" />
-
-                                            <TextView
-                                                android:text="-"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:id="@+id/date_potassium4"
-                                                android:textSize="18sp"
-                                                android:layout_marginTop="10dp"
-                                                android:visibility="visible"
-                                                android:textAlignment="center" />
-                                        </LinearLayout>
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1">
-
-                                    <LinearLayout
-                                        android:orientation="horizontal"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginTop="10dp">
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:textAlignment="center">
-
-                                            <TextView
-                                                android:text="99"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:id="@+id/data_Potassium"
+                                                android:text="15/06/2018"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp" />
 
                                             <TextView
-                                                android:text="-"
+                                                android:id="@+id/date_potassium2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/data_Potassium2"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
-                                                android:visibility="visible"
-                                                android:layout_marginTop="10dp" />
+                                                android:visibility="visible" />
 
                                             <TextView
-                                                android:text="-"
+                                                android:id="@+id/date_potassium3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/data_Potassium3"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
-                                                android:visibility="visible"
-                                                android:layout_marginTop="10dp" />
+                                                android:visibility="visible" />
 
                                             <TextView
-                                                android:text="-"
+                                                android:id="@+id/date_potassium4"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:id="@+id/data_Potassium4"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
                                                 android:textAlignment="center"
                                                 android:textSize="18sp"
-                                                android:visibility="visible"
-                                                android:layout_marginTop="10dp" />
+                                                android:visibility="visible" />
                                         </LinearLayout>
                                     </LinearLayout>
 
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginRight="20dp">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
 
-                                    <ImageView
-                                        android:layout_width="32dp"
-                                        android:layout_height="33dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/imageView14"
-                                        android:visibility="invisible" />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
 
-                                    <ImageView
-                                        android:layout_width="35dp"
-                                        android:layout_height="30dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/im_sugar2" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:textAlignment="center">
 
-                                    <ImageView
-                                        android:layout_width="35dp"
-                                        android:layout_height="32dp"
-                                        app:srcCompat="@drawable/up"
-                                        android:id="@+id/im_sugar3"
-                                        android:layout_marginTop="5dp" />
+                                            <TextView
+                                                android:id="@+id/data_Potassium"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="99"
+                                                android:textAlignment="center"
+                                                android:textSize="18sp" />
 
-                                    <ImageView
-                                        android:layout_height="32dp"
-                                        app:srcCompat="@drawable/down"
-                                        android:id="@+id/im_sugar4"
-                                        android:layout_width="35dp"
-                                        android:layout_marginTop="5dp" />
+                                            <TextView
+                                                android:id="@+id/data_Potassium2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
+                                                android:textAlignment="center"
+                                                android:textSize="18sp"
+                                                android:visibility="visible" />
+
+                                            <TextView
+                                                android:id="@+id/data_Potassium3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
+                                                android:textAlignment="center"
+                                                android:textSize="18sp"
+                                                android:visibility="visible" />
+
+                                            <TextView
+                                                android:id="@+id/data_Potassium4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:text="-"
+                                                android:textAlignment="center"
+                                                android:textSize="18sp"
+                                                android:visibility="visible" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -249,233 +216,248 @@
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:background="@color/ligthGray"
+                                android:layout_margin="5dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_margin="5dp" />
+                                android:background="@color/ligthGray" />
                         </LinearLayout>
 
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:animateLayoutChanges="true">
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:orientation="vertical"
+                                android:id="@+id/Headerlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:id="@+id/Headerlayout"
-                                android:animateLayoutChanges="true">
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical">
 
                                 <LinearLayout
-                                    android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginBottom="10dp">
+                                    android:layout_marginBottom="10dp"
+                                    android:orientation="vertical">
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
 
                                         <ImageButton
-                                            app:srcCompat="@drawable/blooddrop"
-                                            android:background="@android:drawable/screen_background_light_transparent"
-                                            android:scaleType="fitCenter"
-                                            android:paddingRight="10dp"
                                             android:id="@+id/image"
-                                            android:layout_marginLeft="10dp"
                                             android:layout_width="39dp"
-                                            android:layout_height="41dp" />
+                                            android:layout_height="41dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:background="@android:drawable/screen_background_light_transparent"
+                                            android:paddingRight="10dp"
+                                            android:scaleType="fitCenter"
+                                            app:srcCompat="@drawable/blooddrop" />
 
                                         <TextView
-                                            android:text="ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง"
+                                            android:id="@+id/textView159"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView159"
-                                            android:textStyle="normal|bold"
-                                            android:textSize="18sp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง"
                                             android:textAlignment="center"
-                                            android:layout_marginTop="10dp" />
+                                            android:textSize="18sp"
+                                            android:textStyle="normal|bold" />
                                     </LinearLayout>
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="5dp">
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="horizontal">
 
                                         <TextView
-                                            android:text="ค่าเฉลี่ย เท่ากับ"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
                                             android:id="@+id/textView161"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="50dp"
+                                            android:text="ค่าเฉลี่ย เท่ากับ"
                                             android:textAlignment="textStart"
-                                            android:textSize="18sp"
-                                            android:layout_marginLeft="50dp" />
+                                            android:textSize="18sp" />
 
                                         <TextView
-                                            android:text="99"
+                                            android:id="@+id/sum_potas"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/sum_potass"
-                                            android:textSize="18sp"
-                                            android:layout_marginLeft="20dp" />
+                                            android:layout_marginLeft="20dp"
+                                            android:text="-"
+                                            android:textSize="18sp" />
 
                                         <TextView
-                                            android:text="mg/dl"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
                                             android:id="@+id/textView2"
-                                            android:layout_marginLeft="10dp" />
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="mg/dl" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:id="@+id/img_potas"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="30dp" />
+                                        </LinearLayout>
 
                                     </LinearLayout>
+
                                 </LinearLayout>
 
 
                                 <LinearLayout
-                                    android:orientation="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="10dp">
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
 
                                     <SeekBar
+                                        android:id="@+id/seekBar10"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/seekBar10"
-                                        android:thumb="@drawable/check"
                                         android:max="7"
+                                        android:paddingEnd="10dp"
+                                        android:paddingStart="10dp"
                                         android:progressBackgroundTint="@color/backGround"
                                         android:progressTint="@color/backGround"
-                                        android:paddingStart="10dp"
-                                        android:paddingEnd="10dp" />
+                                        android:thumb="@drawable/check" />
 
                                     <ImageView
+                                        android:id="@+id/imageView16"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        app:srcCompat="@drawable/bar3"
-                                        android:id="@+id/imageView16"
-                                        android:layout_weight="1"
                                         android:layout_marginEnd="5dp"
-                                        android:layout_marginStart="5dp" />
+                                        android:layout_marginStart="5dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/bar3" />
 
                                     <ProgressBar
+                                        android:id="@+id/seekBar3"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/seekBar3"
                                         android:layout_marginLeft="5dp"
                                         android:layout_marginRight="5dp"
+                                        android:max="7"
+                                        android:progress="3"
                                         android:progressDrawable="@drawable/custom_progressbar"
                                         android:progressTint="@color/cardview_shadow_start_color"
-                                        android:progress="3"
-                                        android:max="7"
                                         android:visibility="gone" />
 
 
                                     <LinearLayout
-                                        android:orientation="horizontal"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
                                         android:layout_marginTop="7dp"
-                                        android:layout_margin="5dp">
+                                        android:orientation="horizontal">
 
                                         <TextView
-                                            android:text="@string/label3"
+                                            android:id="@+id/textView105"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:id="@+id/textView105"
+                                            android:text="@string/label3"
                                             android:textAlignment="textEnd"
-                                            android:textStyle="normal|bold"/> //
-                                            android:textColor="@color/cast_intro_overlay_background_color" />
+                                            android:textStyle="normal|bold" />
+                                        //
+                                        android:textColor="@color/cast_intro_overlay_background_color"
+                                        />
                                     </LinearLayout>
                                 </LinearLayout>
 
                             </LinearLayout>
+
                             <LinearLayout
-                                android:orientation="vertical"
+                                android:id="@+id/Childlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:id="@+id/Childlayout"
                                 android:animateLayoutChanges="true"
+                                android:orientation="vertical"
                                 android:padding="15dp"
                                 android:visibility="visible">
 
                                 <TextView
+                                    android:id="@+id/nameofblood"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/nameofblood"
-                                    android:layout_weight="0.13"
                                     android:layout_marginTop="5dp"
+                                    android:layout_weight="0.13"
                                     android:text="ระดับโพเเทสเซียม"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="18sp" />
+                                    android:textSize="18sp"
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="Potassium"
+                                    android:id="@+id/Englishname"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/Englishname"
-                                    android:layout_weight="0.13" />
+                                    android:layout_weight="0.13"
+                                    android:text="Potassium" />
 
                                 <View
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
-                                    android:background="@color/ligthGray"
+                                    android:layout_marginTop="5dp"
                                     android:layout_weight="0.13"
-                                    android:layout_marginTop="5dp" />
+                                    android:background="@color/ligthGray" />
 
                                 <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/dialog_header"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="0.13"
                                     android:text="เกณฑ์มาตราฐาน"
-                                    android:textStyle="normal|bold"
+                                    android:textAlignment="textStart"
                                     android:textSize="16sp"
-                                    android:layout_weight="0.13"
-                                    android:layout_marginTop="10dp"
-                                    android:textAlignment="textStart" />
+                                    android:textStyle="normal|bold" />
 
                                 <TextView
-                                    android:text="@string/potassium_normal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/potassium_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:layout_weight="0.13"
+                                    android:text="@string/potassium_normal"
                                     android:visibility="visible" />
 
                                 <TextView
-                                    android:text="@string/potassium_abnormal2"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/potassium_abnormal2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:layout_weight="0.13"
+                                    android:text="@string/potassium_abnormal2"
                                     android:visibility="visible" />
 
                                 <TextView
-                                    android:text="@string/potassium_abnormal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
                                     android:id="@+id/potassium_abnormal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:paddingRight="40dp"
                                     android:layout_weight="0.13"
+                                    android:paddingRight="40dp"
+                                    android:text="@string/potassium_abnormal"
                                     android:visibility="visible" />
 
 
                                 <TextView
-                                    android:text="@string/INFO"
+                                    android:id="@+id/INFO4"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/INFO4"
-                                    android:textStyle="normal|bold"
-                                    android:textSize="16sp"
                                     android:layout_marginTop="15dp"
-                                    android:layout_weight="0.13" />
+                                    android:layout_weight="0.13"
+                                    android:text="@string/INFO"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal|bold" />
 
                             </LinearLayout>
                         </LinearLayout>
