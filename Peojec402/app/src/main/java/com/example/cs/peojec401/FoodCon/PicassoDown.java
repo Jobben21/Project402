@@ -20,7 +20,7 @@ public class PicassoDown {
            Picasso.with(ctx).load(imgurl).into(img);
         }
         else{
-           Picasso.with(ctx).load(R.drawable.arrow).into(img);
+           Picasso.with(ctx).load(R.drawable.bg_home).into(img);
         }
     }
 }

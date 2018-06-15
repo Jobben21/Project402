@@ -13,11 +13,13 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+import static com.example.cs.peojec401.AfterBldT.bt;
 import static com.example.cs.peojec401.AfterCalCulat.bmiValue;
 import static com.example.cs.peojec401.AfterCalCulat.bmrValue;
 import static com.example.cs.peojec401.EditActivity.age_edit;
@@ -25,6 +27,7 @@ import static com.example.cs.peojec401.EditActivity.gender_edit;
 import static com.example.cs.peojec401.EditActivity.height_edit;
 import static com.example.cs.peojec401.EditActivity.seti;
 import static com.example.cs.peojec401.EditActivity.weight_edit;
+import static com.example.cs.peojec401.NavigationActivity.bt_sugar;
 import static com.example.cs.peojec401.Register_LoginActivity.ageLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.genderLogin;
 import static com.example.cs.peojec401.Register_LoginActivity.heightLogin;
@@ -43,6 +46,7 @@ public class Fragment_P extends Fragment{
     private Button bloodprofile,logout;
     private ImageButton editprofile;
     private CardView cardView;
+    private CardView menufood;
     private JSONArray result;
     private WebView webView;
     private String name, gender,weight,height,age2;
@@ -61,6 +65,7 @@ public class Fragment_P extends Fragment{
         weight_profile = (TextView) view.findViewById(R.id.weight_profile);
         gender_profile = (TextView) view.findViewById(R.id.gender_profile);
         cardView = (CardView)view.findViewById(R.id.bloodProfile);
+        menufood = (CardView)view.findViewById(R.id.bloodfood);
         bloodprofile = (Button)view.findViewById(R.id.bloodprofile);
         editprofile = (ImageButton)view.findViewById(R.id.editprofile);
         BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
@@ -82,13 +87,31 @@ public class Fragment_P extends Fragment{
         }
 
 
-
+        Toast.makeText(getActivity(),bt_sugar+" ",Toast.LENGTH_SHORT).show();
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getBaseContext(),ProfileOfBloodsActivity.class);
                 startActivity(intent);
 
+            }
+        });
+        menufood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(bt_sugar==null){
+
+                   new SweetAlertDialog(getActivity(),SweetAlertDialog.WARNING_TYPE)
+                           .setTitleText("เมนูอาหารจากผลตรวจเลือด")
+                           .setContentText("กรุณาใส่ข้อมูลผลตรวจเลือด")
+                           .setConfirmText("ตกลง")
+                           .show();
+
+               }else {
+                   bt = 7;
+                   Intent intent = new Intent(getActivity().getBaseContext(), DisplayList1.class);
+                   startActivity(intent);
+               }
             }
         });
 

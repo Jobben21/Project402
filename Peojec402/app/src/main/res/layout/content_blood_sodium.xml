@@ -258,11 +258,11 @@
                                             app:srcCompat="@drawable/blooddrop" />
 
                                         <TextView
-                                            android:id="@+id/textView159"
+                                            android:id="@+id/count_bt"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="10dp"
-                                            android:text="ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง"
+                                            android:text="ค่าเฉลี่ยผลตรวจเลือด"
                                             android:textAlignment="center"
                                             android:textSize="18sp"
                                             android:textStyle="normal|bold" />

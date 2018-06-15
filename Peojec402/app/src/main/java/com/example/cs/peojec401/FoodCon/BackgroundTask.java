@@ -49,6 +49,13 @@ import static com.example.cs.peojec401.FoodRecod_F4.checkedLabelsugar;
 import static com.example.cs.peojec401.FoodRecod_F4.checkedLabeltrigly;
 import static com.example.cs.peojec401.FoodRecod_F4.se;
 import static com.example.cs.peojec401.Fragment_F4.i;
+import static com.example.cs.peojec401.NavigationActivity.bt_choles;
+import static com.example.cs.peojec401.NavigationActivity.bt_hld;
+import static com.example.cs.peojec401.NavigationActivity.bt_ldl;
+import static com.example.cs.peojec401.NavigationActivity.bt_potass;
+import static com.example.cs.peojec401.NavigationActivity.bt_sodium;
+import static com.example.cs.peojec401.NavigationActivity.bt_sugar;
+import static com.example.cs.peojec401.NavigationActivity.bt_tri;
 import static com.example.cs.peojec401.Register_LoginActivity.idLogin;
 
 /**
@@ -381,6 +388,83 @@ public class BackgroundTask extends AsyncTask<Void,FoodList,Void>
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String post_data = URLEncoder.encode("resugar", "UTF-8") + "=" + URLEncoder.encode(resugar, "UTF-8")+"&"+
                URLEncoder.encode("resodium", "UTF-8") + "=" + URLEncoder.encode(resodium, "UTF-8")+"&"+
+                        URLEncoder.encode("repotassium", "UTF-8") + "=" + URLEncoder.encode(repotassium, "UTF-8")+"&"+
+                        URLEncoder.encode("recholes", "UTF-8") + "=" + URLEncoder.encode(recholes, "UTF-8") +"&"+
+                        URLEncoder.encode("rehdl", "UTF-8") + "=" + URLEncoder.encode(rehdl, "UTF-8")+"&"+
+                        URLEncoder.encode("reldl", "UTF-8") + "=" + URLEncoder.encode(reldl, "UTF-8") +"&"+
+                        URLEncoder.encode("retrigly", "UTF-8") + "=" + URLEncoder.encode(retrigly, "UTF-8");
+
+
+
+                bufferedWriter.write(post_data);
+
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    stringBuilder.append(line + "\n");
+                }
+
+                httpURLConnection.disconnect();
+                String json_string = stringBuilder.toString().trim();
+
+                JSONObject jsonObject = new JSONObject(json_string);
+                JSONArray jsonArray = jsonObject.getJSONArray("result");
+
+
+                int count = 0;
+                while (count < jsonArray.length()) {
+
+                    JSONObject jo = jsonArray.getJSONObject(count);
+                    count++;
+                    FoodList food_recyc = new FoodList(jo.getString("name")
+                            , jo.getString("foodpic")
+                            , jo.getInt("energy")
+                            , jo.getInt("fat")
+                            , jo.getInt("carbohydrate")
+                            , jo.getInt("protein")
+                            , jo.getInt("sugar")
+                            ,jo.getString("method")
+                            ,jo.getString("ingred")
+                            ,jo.getString("typeingred")
+                            ,jo.getString("foodtype")
+                            ,jo.getString("food_disease"));
+                    if(jo.getString("foodtype").equals(typefood)){publishProgress(food_recyc);}
+                    else if(typefood.equals("เมนูทั้งหมด")){
+                        publishProgress(food_recyc);
+                    }
+
+                }
+
+            }
+            if (bt == 7) {
+
+                String resugar = bt_sugar;
+                String resodium = bt_sodium;
+                String repotassium = bt_potass;
+                String recholes = bt_choles;
+                String rehdl = bt_hld;
+                String reldl = bt_ldl;
+                String retrigly = bt_tri;
+
+                //  Toast.makeText(activity,resugar+" ",Toast.LENGTH_SHORT).show();
+
+
+                json_string = json_string6;
+                URL url = new URL(json_string);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("resugar", "UTF-8") + "=" + URLEncoder.encode(resugar, "UTF-8")+"&"+
+                        URLEncoder.encode("resodium", "UTF-8") + "=" + URLEncoder.encode(resodium, "UTF-8")+"&"+
                         URLEncoder.encode("repotassium", "UTF-8") + "=" + URLEncoder.encode(repotassium, "UTF-8")+"&"+
                         URLEncoder.encode("recholes", "UTF-8") + "=" + URLEncoder.encode(recholes, "UTF-8") +"&"+
                         URLEncoder.encode("rehdl", "UTF-8") + "=" + URLEncoder.encode(rehdl, "UTF-8")+"&"+

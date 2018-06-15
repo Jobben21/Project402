@@ -34,7 +34,7 @@ public class DisplayList1 extends AppCompatActivity {
         else if (i==4){toolbar.setTitle("เมนูอาหารโรคความดันสูง");}
         else if (i==5){toolbar.setTitle("เมนูอาหารแนะนำ");}
         else if (bt==6){toolbar.setTitle("เมนูอาหารจากผลตรวจเลือด");}
-
+        else if (bt==7){toolbar.setTitle("เมนูอาหารจากผลตรวจเลือด");}
        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

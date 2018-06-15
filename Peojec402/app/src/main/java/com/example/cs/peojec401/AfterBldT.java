@@ -51,13 +51,13 @@ public class AfterBldT extends AppCompatActivity {
     LinearLayout ChildLayout,ChildLayout2,ChildLayout3,ChildLayout4,ChildLayout5,ChildLayout6,ChildLayout7;
     CardView Main,Main2,Main3,Main4,Main5,Main6,Main7;
 
-     public static String Resultone;
-     public static String Resulttwo;
-     public static String Resultthree;
+    public static String Resultone;
+    public static String Resulttwo;
+    public static String Resultthree;
     public static String Resultfour;
     public static String Resultfive;
     public static String Resultsix;
-    public  static String Resultseven;
+    public static String Resultseven;
     public static int bt = 0;
 
 
@@ -252,7 +252,7 @@ public class AfterBldT extends AppCompatActivity {
 
 
             bt =6;
-                Toast.makeText(AfterBldT.this,bt+" ",Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(getApplicationContext(),DisplayList1.class);
                 startActivity(intent);
 
@@ -479,7 +479,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message1.equals("cancell2")){
 
 
-            result = "1";
+            result = "0";
             blood_abnormal.setBackgroundResource(R.color.glass_color2);
             bloodt_abnormal.setBackgroundResource(R.color.glass_color2);
             progressBar.setProgressDrawable(drawable3);
@@ -525,7 +525,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message2.equals("cancell2")){
 
 
-            result2 = "1";
+            result2 = "0";
 
            sodium_abnormal2.setBackgroundResource(R.color.glass_color2);
             sodiumt_abnormal2.setBackgroundResource(R.color.glass_color2);
@@ -568,7 +568,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message3.equals("cancell2")){
 
 
-            result3 = "1";
+            result3 = "0";
 
             potassium_abnormal2.setBackgroundResource(R.color.glass_color2);
             potassiumt_abnormal2.setBackgroundResource(R.color.glass_color2);
@@ -612,7 +612,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message4.equals("cancell2")){
 
 
-            result4 = "1";
+            result4 = "0";
 
             chl_normal2.setBackgroundResource(R.color.glass_color2);
             chlt_normal2.setBackgroundResource(R.color.glass_color2);
@@ -727,7 +727,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message6.equals("cancell2")){
 
 
-            result6 = "1";
+            result6 = "0";
 
             hdl_abnormal3.setBackgroundResource(R.color.glass_color3);
             hdlt_abnormal3.setBackgroundResource(R.color.glass_color3);
@@ -774,7 +774,7 @@ public class AfterBldT extends AppCompatActivity {
         if(message7.equals("cancell2")){
 
 
-            result7 = "1";
+            result7 = "0";
 
             tri_abnormal2.setBackgroundResource(R.color.glass_color2);
             trit_abnormal2.setBackgroundResource(R.color.glass_color2);

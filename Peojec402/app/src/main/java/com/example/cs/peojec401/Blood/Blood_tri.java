@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -51,6 +52,7 @@ public class Blood_tri extends AppCompatActivity {
     private TextView p_date2;
     private TextView p_date3;
     private TextView p_date4;
+    private TextView p_count;
     public int avg;
     public  int id;
     public  int id2;
@@ -74,6 +76,7 @@ public class Blood_tri extends AppCompatActivity {
         p_date3 =(TextView)findViewById(R.id.date_tri3);
         p_date4 =(TextView)findViewById(R.id.date_tri4);
         p_img = (ImageView)findViewById(R.id.img_tri);
+        p_count = (TextView)findViewById(R.id.count_bt);
 
          id = this.getResources().getIdentifier("drawable/up_r",null,this.getPackageName());
          id2 = this.getResources().getIdentifier("drawable/down_g",null,this.getPackageName());
@@ -141,6 +144,7 @@ public class Blood_tri extends AppCompatActivity {
                 avg = Integer.valueOf(getTri(0));
                 p_avg.setText(String.valueOf(avg));
                 p_date.setText(getDate(0));
+                p_count.setText("ค่าเฉลี่ยผลตรวจเลือด 1 ครั้ง");
             }else if(this.result.length()==2)
             {
                 p_tri.setText(getTri(0));
@@ -152,11 +156,13 @@ public class Blood_tri extends AppCompatActivity {
                 p_avg.setText(String.valueOf(avg));
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
-
+                p_count.setText("ค่าเฉลี่ยผลตรวจเลือด 2 ครั้ง");
                 if(Integer.valueOf(getTri(0))>avg){
-                   p_img.setImageResource(id2);
-                }else{
+                    p_img.setImageResource(id2);
+                }else if(Integer.valueOf(getTri(0))<avg){
                     p_img.setImageResource(id);
+                }else{
+                    p_img.setVisibility(View.GONE);
                 }
             }else if(this.result.length()==3)
             {
@@ -173,10 +179,13 @@ public class Blood_tri extends AppCompatActivity {
                 p_date.setText(getDate(0));
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
+                p_count.setText("ค่าเฉลี่ยผลตรวจเลือด 3 ครั้ง");
                 if(Integer.valueOf(getTri(0))>avg){
                     p_img.setImageResource(id2);
-                }else{
+                }else if(Integer.valueOf(getTri(0))<avg){
                     p_img.setImageResource(id);
+                }else{
+                    p_img.setVisibility(View.GONE);
                 }
             }
             else if(this.result.length()==4)
@@ -199,10 +208,13 @@ public class Blood_tri extends AppCompatActivity {
                 p_date2.setText(getDate(1));
                 p_date3.setText(getDate(2));
                 p_date4.setText(getDate(3));
+                p_count.setText("ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง");
                 if(Integer.valueOf(getTri(0))>avg){
                     p_img.setImageResource(id2);
-                }else{
+                }else if(Integer.valueOf(getTri(0))<avg){
                     p_img.setImageResource(id);
+                }else{
+                    p_img.setVisibility(View.GONE);
                 }
             }
             else if(this.result.length()>4){
@@ -227,12 +239,16 @@ public class Blood_tri extends AppCompatActivity {
 
                 p_date3.setText(getDate(this.result.length()-2));
 
-
                 p_date4.setText(getDate(this.result.length()-1));
+
+                p_count.setText("ค่าเฉลี่ยผลตรวจเลือด 4 ครั้ง");
+
                 if(Integer.valueOf(getTri(this.result.length()-4))>avg){
                     p_img.setImageResource(id2);
-                }else{
+                }else if(Integer.valueOf(getTri(this.result.length()-4))<avg){
                     p_img.setImageResource(id);
+                }else{
+                    p_img.setVisibility(View.GONE);
                 }
             }
 

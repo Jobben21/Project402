@@ -79,6 +79,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
                 holder.name.setText(foodList.getName());
                // holder.energy.setText(Integer.toString(foodList.getEnergy()));
                 //holder.disease.setText(foodList.getFood_di());
+                if(foodList.getFood_di().equals("เบาหวาน")){
+                    holder.disease.setText("ควบคุมน้ำตาล");
+                }else if(foodList.getFood_di().equals("ไตรกลีเซอไรด์")){
+                    holder.disease.setText("ควบคุมไขมัน");
+                }else if(foodList.getFood_di().equals("คอเลสเตอรอล")){
+                    holder.disease.setText("ควบคุมไขมัน");
+                }else if(foodList.getFood_di().equals("หัวใจ")){
+                    holder.disease.setText("ควบคุมไขมัน");
+                }else if(foodList.getFood_di().equals("โรคไต")){
+                    holder.disease.setText("ควบคุมโซเดียม,โพแทสเซียม,โปรตีน");
+                }else if(foodList.getFood_di().equals("ความดันโลหิต")){
+                    holder.disease.setText("ควบคุมโซเดียม,ไขมัน");
+                }
+
 
                 PicassoDown.downloadImage(c, foodList.getFoodpic(), holder.imgfood);
 

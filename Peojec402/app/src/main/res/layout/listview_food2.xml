@@ -16,7 +16,8 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        android:layout_weight="5.60">
 
         <LinearLayout
             android:id="@+id/layout2"
@@ -80,7 +81,7 @@
                                 android:id="@+id/textView62"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="เมนูอาหารเกี่ยวกับ :  "
+                                android:text="อาหาร :  "
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -90,46 +91,11 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentRight="false"
                                 android:layout_weight="1"
-                                android:text="date"
+                                android:text="-"
                                 android:textAlignment="textStart"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:visibility="visible" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="32dp"
-                            android:orientation="horizontal"
-                            android:visibility="visible">
-
-                            <TextView
-                                android:id="@+id/textView142"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="พลังงานที่ได้รับ :"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/date"
-                                android:layout_width="82dp"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="false"
-                                android:text="date"
-                                android:textAlignment="center"
-                                android:textSize="16sp"
-                                android:textStyle="bold"
-                                android:visibility="visible" />
-
-                            <TextView
-                                android:id="@+id/textView144"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="กิโลแคลอรี่"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
 
                         </LinearLayout>
 
