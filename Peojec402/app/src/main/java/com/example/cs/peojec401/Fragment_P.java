@@ -87,7 +87,7 @@ public class Fragment_P extends Fragment{
         }
 
 
-        
+
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

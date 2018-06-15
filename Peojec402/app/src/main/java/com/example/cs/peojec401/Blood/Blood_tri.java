@@ -102,7 +102,7 @@ public class Blood_tri extends AppCompatActivity {
 
     private String addID() {
 
-        String login_url = "http://192.168.1.10/android/get_bt.php?status=0";
+        String login_url = "http://172.25.74.91/android/get_bt.php?status=0";
 
         JSONObject j = null;
 
