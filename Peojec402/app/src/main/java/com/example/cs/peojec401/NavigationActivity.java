@@ -58,9 +58,16 @@ public class NavigationActivity extends AppCompatActivity
     public static String bt_tri;
 
     private JSONArray result;
-        private TextView headname;
 
+    private TextView headname;
 
+    public int sum_sugar;
+    public int sum_sodium;
+    public int sum_potass;
+    public int sum_choles;
+    public int sum_hld;
+    public int sum_ldl;
+    public int sum_tri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -236,32 +243,72 @@ public class NavigationActivity extends AppCompatActivity
 //                bt_hld=getHdl(this.result.length()-1);
 //                bt_ldl=getLdl(this.result.length()-1);
 //                bt_tri=getTri(this.result.length()-1);
+            if(getSugar(this.result.length())==""){
 
-            if(Integer.valueOf(getSugar(this.result.length()-1))>=70 &&Integer.valueOf(getSugar(this.result.length()-1))<=110){
+                sum_sugar=0;
+            }else if(getSugar(this.result.length())!=""){
+               sum_sugar=Integer.valueOf(getSugar(this.result.length()-1));
+            }  if(getSodium(this.result.length())==""){
+
+                sum_sodium=0;
+            }else if(getSodium(this.result.length())!=""){
+                sum_sodium=Integer.valueOf(getSodium(this.result.length()-1));
+            }  if(getPotassium(this.result.length())==""){
+
+                sum_potass=0;
+            }else if(getPotassium(this.result.length())!=""){
+                sum_potass=Integer.valueOf(getPotassium(this.result.length()-1));
+            }  if(getCholes(this.result.length())==""){
+
+                sum_choles=0;
+            }else if(getCholes(this.result.length())!=""){
+                sum_choles=Integer.valueOf(getCholes(this.result.length()-1));
+            }  if(getHdl(this.result.length())==""){
+
+                sum_hld=0;
+            }else if(getHdl(this.result.length())!=""){
+
+               sum_hld=Integer.valueOf(getHdl(this.result.length()-1));
+            }  if(getLdl(this.result.length())==""){
+
+                sum_ldl=0;
+            }else if(getLdl(this.result.length())!=""){
+                sum_ldl=Integer.valueOf(getLdl(this.result.length()-1));
+            }  if(getTri(this.result.length())==""){
+
+                sum_tri=0;
+            }else if(getTri(this.result.length())!=""){
+                sum_tri=Integer.valueOf(getTri(this.result.length()-1));
+            }
+
+
+
+            ///
+            if(sum_sugar>=70 &&sum_sugar<=110){
                 bt_sugar="1";
             }else{
                 bt_sugar="0";
-            } if(Integer.valueOf(getSodium(this.result.length()-1))>=136 &&Integer.valueOf(getSodium(this.result.length()-1))<=145){
+            } if(sum_sodium>=136 &&sum_sodium<=145){
                 bt_sodium="1";
             }else{
                 bt_sodium="0";
-            } if(Integer.valueOf(getPotassium(this.result.length()-1))>=3.5 &&Integer.valueOf(getPotassium(this.result.length()-1))<=4.5){
+            } if(sum_potass>=3.5 &&sum_potass<=4.5){
                 bt_potass="1";
             }else{
                 bt_potass="0";
-            } if(Integer.valueOf(getCholes(this.result.length()-1))>=50 &&Integer.valueOf(getCholes(this.result.length()-1))<=200){
+            } if(sum_choles>=50 &&sum_choles<=200){
                 bt_choles="1";
             }else{
                 bt_choles="0";
-            } if(Integer.valueOf(getLdl(this.result.length()-1))>=129 &&Integer.valueOf(getLdl(this.result.length()-1))<130){
+            } if(sum_ldl>=129 &&sum_ldl<130){
                 bt_ldl="1";
             }else{
                 bt_ldl="0";
-            } if(Integer.valueOf(getHdl(this.result.length()-1))>=40){
+            } if(sum_hld>=40){
                 bt_hld="1";
             }else{
                 bt_hld="0";
-            } if(Integer.valueOf(getTri(this.result.length()-1))>=50 &&Integer.valueOf(getTri(this.result.length()-1))<=150){
+            } if(sum_tri>=50 &&sum_tri<=150){
                 bt_tri="1";
             }else{
                 bt_tri="0";
