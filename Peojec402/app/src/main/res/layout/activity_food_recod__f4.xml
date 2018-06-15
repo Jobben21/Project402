@@ -365,7 +365,7 @@
                                         android:layout_marginLeft="10dp"
                                         android:layout_marginTop="15dp"
                                         android:paddingBottom="10dp"
-                                        android:text="โซเเดียม"
+                                        android:text="โซเดียม"
                                         android:textSize="18sp"
                                         android:textStyle="normal|bold" />
                                 </LinearLayout>

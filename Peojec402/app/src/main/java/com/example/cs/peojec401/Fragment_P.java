@@ -87,7 +87,7 @@ public class Fragment_P extends Fragment{
         }
 
 
-        Toast.makeText(getActivity(),bt_sugar+" ",Toast.LENGTH_SHORT).show();
+        
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
