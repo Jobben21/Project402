@@ -9,16 +9,13 @@
     mysqli_set_charset($con, "utf8");
 
 	
-    if (!$_POST["resugar"] or !$_POST["resodium"] or !$_POST["repotassium"] or !$_POST["recholes"] or !$_POST["reldl"] or !$_POST["rehdl"] or !$_POST["retrigly"]) {
+    if (!$_POST["se_choles"] or !$_POST["se_trigly"] or !$_POST["se_sugar"] or !$_POST["se_sodium"] ) {
         $sql = "SELECT * FROM foodmenu WHERE food_disease IN (";
-        $sql .= (!$_POST["resugar"]) ? "'เบาหวาน'," : "";
-        $sql .= (!$_POST["resodium"]) ? "'โรคไต'," : "";
-        $sql .= (!$_POST["repotassium"]) ?"'โพแทสเซียม','โรคไต'," : "";
-        $sql .= (!$_POST["recholes"]) ? "'คอเลสเตอรอล'," : "";
-        $sql .= (!$_POST["reldl"]) ? "'หัวใจ','ความดันโลหิต'," : "";
-        $sql .= (!$_POST["rehdl"]) ? "'หัวใจ'," : "";
-        $sql .= (!$_POST["retrigly"]) ? "'ไตรกลีเซอไรด์','หัวใจ'," : "";
-        $sql = substr($sql, 0,-1);
+        $sql .= (!$_POST["se_choles"]) ? "'คอเลสเตอรอล'," : "";
+        $sql .= (!$_POST["se_trigly"]) ? "'ไตรกลีเซอไรด์'," : "";
+        $sql .= (!$_POST["se_sugar"]) ? "'เบาหวาน'," : "";
+        $sql .= (!$_POST["se_sodium"]) ? "'โรคไต'," : "";
+        $sql = substr($sql, 0, -1);
         $sql .= ")";
 		
     }
@@ -47,7 +44,6 @@
 			'sugar'=>$row['sugar'],
 			'sodium'=>$row['sodium'],
 			'food_disease'=>$row['food_disease']
-			
             )
         );
 		

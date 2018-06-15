@@ -24,7 +24,8 @@
      {
         $result= array();
         while($row=mysqli_fetch_array($res))
-            array_push($result, array('sugar'=>$row['sugar'],
+            array_push($result, array('date'=>$row['date'],
+			'sugar'=>$row['sugar'],
 			'choles'=>$row['choles'],
 			'hdl'=>$row['hdl'],
 			'ldl'=>$row['ldl'],

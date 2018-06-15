@@ -19,6 +19,7 @@
 		$strage=$_POST["age"];
 		$strheight=$_POST["height"];
 		$strweight=$_POST["weight"];
+		$strgender=$_POST["gender"];
 	
 			
 			//$strSql= "INSERT INTO user SELECT 1 WHERE user_id = '$struserid' ";
@@ -30,7 +31,8 @@
 				$strSql="UPDATE user SET pass='$strpass' ,
 				age='$strage',
 				height='$strheight',
-				weight='$strweight'
+				weight='$strweight',
+				gender='$strgender'
 				WHERE user_id = '$strUserid'";
 				
 				

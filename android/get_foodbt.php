@@ -45,7 +45,8 @@ header("user-type:text/javascript;charset=utf-8");
 			'fat'=>$row['fat'],
 			'protein'=>$row['protein'],
 			'sugar'=>$row['sugar'],
-			'sodium'=>$row['sodium']
+			'sodium'=>$row['sodium'],
+			'food_disease'=>$row['food_disease']
 			
 			
     ));

@@ -34,22 +34,15 @@
 			'fat'=>$row['fat'],
 			'protein'=>$row['protein'],
 			'sugar'=>$row['sugar'],
-			'sodium'=>$row['sodium']
+			'sodium'=>$row['sodium'],
+			'food_disease'=>$row['food_disease']
 			
     ));
 }
 
 echo json_encode(array('result'=>$result));
 			
-			
-			
-			
-		
-		
-		
-		
-		
-		
+
 		
 		mysqli_close($con);
 		}

@@ -20,9 +20,9 @@
 		
 		
 		$strSql= "INSERT INTO blood_test";
-		$strSql.="(user_id,sugar,choles,hdl,ldl,potassium,trigly,sodium)";
+		$strSql.="(user_id,date,sugar,choles,hdl,ldl,potassium,trigly,sodium)";
 		$strSql.="VALUES";
-		$strSql .="('".$_POST["user_id"]."','".$_POST["sugar"]."','".$_POST["choles"]."','".$_POST["hdl"]."' ";
+		$strSql .="('".$_POST["user_id"]."','".$_POST["date"]."','".$_POST["sugar"]."','".$_POST["choles"]."','".$_POST["hdl"]."' ";
 		$strSql .=",'".$_POST["ldl"]."','".$_POST["potassium"]."'";	
 		$strSql .=",'".$_POST["trigly"]."','".$_POST["sodium"]."')";
 			

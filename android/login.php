@@ -10,13 +10,15 @@ header("user-type:text/javascript;charset=utf-8");
 		$con = mysqli_connect(HOST, USER, PASS, DB) or die('Unable to Connect');
 
 		
-		mysqli_set_charset($con, "utf8");
-		mysqli_query($con,"SET NAMES UTF8");
+		
 		
 		
 		$strUsername = $_POST["struser"];
 		$strPass=$_POST["strpass"];
-		
+		//$strUsername = "นครินทร์";
+		//$strPass="saiifah";
+		$objQuery =mysqli_set_charset($con, "utf8");
+		$objQuery =mysqli_query($con,"SET NAMES UTF8");
 		$strSQL = "SELECT * FROM user where name like '$strUsername' AND pass like '$strPass'";
 		
 
