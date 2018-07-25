@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -74,8 +74,8 @@
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="40dp">
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="35dp">
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -126,12 +126,12 @@
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp">
 
                             <android.support.design.widget.TextInputLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
-
 
 
                                 <EditText
@@ -143,6 +143,16 @@
                                     android:layout_marginLeft="10dp"
                                     android:autoText="false"
                                     android:inputType="number" />
+
+                                <TextView
+                                    android:text="@string/error_input"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/textView"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blood_primary" />
 
 
                             </android.support.design.widget.TextInputLayout>
@@ -272,17 +282,18 @@
 
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
                         android:layout_marginTop="10dp">
 
                         <Button
                             android:text="Confirm"
-                            android:layout_width="match_parent"
+                            android:layout_width="265dp"
                             android:layout_height="match_parent"
                             android:id="@+id/confirm"
-                            android:background="@drawable/mybutton" />
+                            android:background="@drawable/mybutton"
+                            android:layout_marginBottom="20dp" />
                     </LinearLayout>
                 </LinearLayout>
 

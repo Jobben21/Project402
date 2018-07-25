@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/blood"
+        android:icon="@drawable/blood"
+        android:enabled="true"
+        android:title="Bloods"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/knowledge"
+        android:icon="@drawable/knowledge"
+        android:title="Knowledge"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/history"
+        android:title="History"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+</menu>

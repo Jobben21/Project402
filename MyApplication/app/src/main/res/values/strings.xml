@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="title_activity_inseer">InseerActivity</string>
+
+    <string name="error_input">*please input a value</string>
+    <string name="title_activity_button_navigation">ButtonNavigationActivity</string>
+
+
+    <!--buttomnavigation-->
+    <string name="Blood">blood</string>
+    <string name="Knowledge">knowledge</string>
+    <string name="History">history</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

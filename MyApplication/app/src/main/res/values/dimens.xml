@@ -7,4 +7,7 @@
     <dimen name="firstPage">25dp</dimen>
     <dimen name="firstsize">18sp</dimen>
 
+    <dimen name="errorsize">20dp</dimen>
+    <dimen name="errorfont">16sp</dimen>
+
 </resources>
