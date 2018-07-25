@@ -13,7 +13,6 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 
@@ -71,13 +70,7 @@ public class Fragment_P extends Fragment{
         BMI_profile = (TextView)view.findViewById(R.id.BMI_Profile);
         BMR_profile = (TextView)view.findViewById(R.id.BMR_Profile);
         logout = (Button)view.findViewById(R.id.logout);
-//        webView = (WebView)view.findViewById(R.id.pdf);
-//        String myPdfUrl = "https://drive.google.com/open?id=0Bwjc-xrXV84UNURoTnVCSzVQWVJwdUk2SUtpNzRicTl2Wi1z";
-//        String url = "http://docs.google.com/gview?embedded=true&url=" + myPdfUrl;
-//
-//      //  Log.i(TAG, "Opening PDF: " + url);
-//        webView.getSettings().setJavaScriptEnabled(true);
-//        webView.loadUrl(url);
+
 
         if (Build.VERSION.SDK_INT > 9) {
 
@@ -189,13 +182,7 @@ public class Fragment_P extends Fragment{
 
     }
 
-//    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//        //Setting the values to textviews for a selected item
-//        name_profile.setText(getName(position));
-//        age_profile.setText(getAge(position));
-//        height_profile.setText(getHeight(position));
-//        weight_profile.setText(getWeight(position));
-//    }
+
 
     @Override
     public void onPause() {

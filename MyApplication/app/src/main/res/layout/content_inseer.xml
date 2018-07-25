@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.cs.myapplication.SQLite.InseerActivity"
+    tools:showIn="@layout/activity_inseer"
+    android:orientation="vertical"
+    android:background="@color/cardview_light_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Bloods Test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:elevation="4dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="Input Bloods Test From Hospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:elevation="0dp"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray_btn_bg_color"
+                android:layout_marginTop="5dp"
+                android:layout_height="1dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="40dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/sugar"
+                                android:id="@+id/imageView"
+                                android:scaleType="fitXY"
+                                android:layout_marginTop="10dp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/tomato"
+                                android:id="@+id/imageView2"
+                                android:layout_marginTop="20dp" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/apple"
+                                android:id="@+id/imageView3"
+                                android:layout_marginTop="20dp" />
+                             <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/straw"
+                            android:id="@+id/imageView4"
+                                 android:layout_marginTop="20dp" />
+                              <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/veet"
+                            android:id="@+id/imageView5"
+                                  android:layout_marginTop="@dimen/firstPage" />
+                            <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/lemon"
+                            android:id="@+id/imageView6"
+                                android:layout_marginTop="15dp" />
+                            <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/carrot"
+                            android:id="@+id/imageView7"
+                                android:layout_marginTop="@dimen/firstPage" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_sugar"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="Suagr 90-110 mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:autoText="false"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_sodium"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="Sodium 135-145 mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_potass"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="Potassium 3.5-4.0 mg/dl "
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="numberDecimal" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_chol"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="Choresteral 40-60 mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_ldl"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="LDL 100mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_hdl"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint=" HDL 80 mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                <EditText
+                                    android:id="@+id/e_tri"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:hint="Trigriseride 110-200 mg/dl"
+                                    android:textSize="16sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:text="Confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/confirm"
+                            android:background="@drawable/mybutton" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

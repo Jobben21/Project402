@@ -32,7 +32,7 @@ android:background="@drawable/bglogin2">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="สมัครสมาชิกเเละเข้าสู่ระบบ"
+            android:text="เข้าสู่ระบบ"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="normal|bold" />
@@ -57,14 +57,16 @@ android:background="@drawable/bglogin2">
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:layout_marginLeft="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="2.80"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="1"
+                    android:layout_marginLeft="10dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -116,7 +118,7 @@ android:background="@drawable/bglogin2">
                             android:weightSum="1">
 
                             <android.support.design.widget.TextInputLayout
-                                android:layout_width="213dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
 
                                 <EditText
@@ -132,12 +134,11 @@ android:background="@drawable/bglogin2">
 
                             <TextView
                                 android:id="@+id/eyeview"
-                                android:layout_width="wrap_content"
+                                android:layout_width="23dp"
                                 android:layout_height="25dp"
                                 android:layout_margin="15dp"
                                 android:background="@drawable/eye"
                                 android:textAlignment="viewStart"
-                                android:paddingLeft="30dp"
                                 android:layout_weight="1" />
 
                         </LinearLayout>

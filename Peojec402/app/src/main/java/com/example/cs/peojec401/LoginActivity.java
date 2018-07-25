@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -258,7 +257,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-        String url = "http://172.25.74.91/android/addData.php?status=0";
+        String url = "http://192.168.0.91/android/addData.php?status=0";
 
         List<NameValuePair> para = new ArrayList<NameValuePair>();
 
