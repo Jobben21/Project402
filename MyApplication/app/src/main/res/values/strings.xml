@@ -10,6 +10,8 @@
     <string name="Blood">blood</string>
     <string name="Knowledge">knowledge</string>
     <string name="History">history</string>
+    <string name="Date">Date 12/08/2018</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
