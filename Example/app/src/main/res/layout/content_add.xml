@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.AddActivity"
+    tools:showIn="@layout/activity_add">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:text="Bloods Test"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:text="Input Bloods Test From Hospital"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray_btn_bg_color" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/calendar" />
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/sugar" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/tomato" />
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/apple" />
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/straw" />
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/firstPage"
+                                app:srcCompat="@drawable/veet" />
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                app:srcCompat="@drawable/lemon" />
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/firstPage"
+                                app:srcCompat="@drawable/carrot" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/dateTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/e_date"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:autoText="false"
+                                    android:hint="Date 12/08/2018"
+                                    android:inputType="date"
+                                    android:textSize="16sp" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/e_sugar"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:autoText="false"
+                                    android:hint="Suagr 90-110 mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_sodium"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint="Sodium 135-145 mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_potass"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint="Potassium 3.5-4.0 mg/dl "
+                                    android:inputType="numberDecimal"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_chol"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint="Choresteral 40-60 mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_ldl"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint="LDL 100mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_hdl"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint=" HDL 80 mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <EditText
+                                    android:id="@+id/e_tri"
+                                    android:layout_width="203dp"
+                                    android:layout_height="43dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:hint="Trigriseride 110-200 mg/dl"
+                                    android:inputType="number"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/error7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/errorsize"
+                                    android:layout_weight="1"
+                                    android:text="@string/error_input"
+                                    android:textColor="@color/blood_primary"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/confirmb"
+                            android:layout_width="246dp"
+                            android:layout_height="38dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/mybutton"
+                            android:text="Confirm"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

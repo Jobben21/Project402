@@ -10,4 +10,18 @@
     <string name="error_input">*please input blood test value</string>
     <string name="title_activity_mainn">MainnActivity</string>
 
+
+    <string name="Calendar">calendar</string>
+    <string name="Sugar">sugar</string>
+    <string name="Sodium">sodium</string>
+    <string name="Potassiumn">potassium</string>
+    <string name="cholesteral">cholesteral</string>
+    <string name="ldl">ldl</string>
+    <string name="hdl">hdl</string>
+    <string name="Trigryceride">trigryceride</string>
+    <string name="add">Add</string>
+    <string name="cancel">Delete</string>
+    <string name="title_activity_add">AddActivity</string>
+
+
 </resources>

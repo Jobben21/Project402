@@ -2,6 +2,7 @@ package com.example.ben.example.Data;
 
 public class BloodTest {
 
+
     public int sugar;
     public int sodium;
     public double potassium;
